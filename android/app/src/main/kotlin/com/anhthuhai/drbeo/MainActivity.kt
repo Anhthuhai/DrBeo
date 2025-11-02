@@ -1,4 +1,4 @@
-package com.example.dr_icu
+package com.anhthuhai.drbeo
 
 import io.flutter.embedding.android.FlutterActivity
 
