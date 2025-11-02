@@ -15,9 +15,7 @@ DR_ICU là một ứng dụng healthcare toàn diện được phát triển b�
    - Thông tin lâm sàng chi tiết
 
 ### 🔄 Đang phát triển:
-- Drug Calculator (Tính liều thuốc)
 - Medical Scoring (Thang điểm y học)
-- Emergency Guidelines (Hướng dẫn cấp cứu)
 
 ## 📊 Danh sách xét nghiệm được hỗ trợ
 
