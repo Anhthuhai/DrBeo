@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>method</key>
-    <string>app-store-connect</string>
+    <string>app-store</string>
     <key>uploadBitcode</key>
     <false/>
     <key>compileBitcode</key>
@@ -22,8 +22,8 @@
     <string>&lt;none&gt;</string>
     <key>provisioningProfiles</key>
     <dict>
-        <key>com.anhthuhai.drIcu</key>
-        <string>DR-ICU App Store Distribution</string>
+        <key>com.anhthuhai.drbeo</key>
+        <string>Dr Beo Development</string>
     </dict>
 </dict>
 </plist>
