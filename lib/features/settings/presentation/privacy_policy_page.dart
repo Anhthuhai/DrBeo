@@ -37,7 +37,7 @@ class PrivacyPolicyPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    'DR-ICU does not collect, store, or transmit any personal data. All information is stored locally on your device.',
+                    'Dr Bèo does not collect, store, or transmit any personal data. All information is stored locally on your device.',
                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       color: Colors.green.shade600,
                       fontWeight: FontWeight.w500,
@@ -55,7 +55,7 @@ class PrivacyPolicyPage extends StatelessWidget {
               '1. Information We Collect',
               'We do not collect any personal information.',
               [
-                'DR-ICU operates completely offline and does not:',
+                'Dr Bèo operates completely offline and does not:',
                 '• Collect personal information',
                 '• Require user registration or accounts',
                 '• Access contacts, photos, or other personal data',
@@ -75,7 +75,7 @@ class PrivacyPolicyPage extends StatelessWidget {
             _buildSection(
               context,
               '3. Data Storage',
-              'All medical protocols, guidelines, and user preferences (such as bookmarks) are stored locally on your device only.',
+              'All clinical scores, medical references, and user preferences (such as bookmarks) are stored locally on your device only.',
               [
                 'This data:',
                 '• Remains on your device at all times',
@@ -88,21 +88,21 @@ class PrivacyPolicyPage extends StatelessWidget {
             _buildSection(
               context,
               '4. Third-Party Services',
-              'DR-ICU does not integrate with any third-party services, analytics platforms, or advertising networks.',
+              'Dr Bèo does not integrate with any third-party services, analytics platforms, or advertising networks.',
               [],
             ),
             
             _buildSection(
               context,
               '5. Children\'s Privacy',
-              'DR-ICU is designed for qualified healthcare professionals and is not intended for use by children under 13. We do not knowingly collect information from children.',
+              'Dr Bèo is designed for qualified healthcare professionals and is not intended for use by children under 13. We do not knowingly collect information from children.',
               [],
             ),
             
             _buildSection(
               context,
               '6. Medical Information Disclaimer',
-              'The medical protocols and information provided in DR-ICU are for reference purposes only and intended for qualified healthcare professionals.',
+              'The clinical scores and medical information provided in Dr Bèo are for reference purposes only and intended for qualified healthcare professionals.',
               [
                 'This information:',
                 '• Should not replace clinical judgment',
@@ -115,7 +115,7 @@ class PrivacyPolicyPage extends StatelessWidget {
             _buildSection(
               context,
               '7. App Permissions',
-              'DR-ICU may request minimal device permissions only for core functionality:',
+              'Dr Bèo may request minimal device permissions only for core functionality:',
               [
                 '• Storage: To save bookmarks and user preferences locally',
                 '• No network access required: App works completely offline',
@@ -134,9 +134,9 @@ class PrivacyPolicyPage extends StatelessWidget {
               '9. Contact Information',
               'If you have any questions about this Privacy Policy, please contact us:',
               [
-                '• Email: privacy.dricu@gmail.com',
+                '• Email: support@drbeo.com',
                 '• Developer: Anh Luong Thi Ngoc',
-                '• App: DR-ICU: Emergency Medical Protocols for Critical Care',
+                '• App: Dr Bèo: Professional Medical Reference Tool',
               ],
             ),
             
@@ -163,7 +163,7 @@ class PrivacyPolicyPage extends StatelessWidget {
               child: Column(
                 children: [
                   Text(
-                    'Last Updated: October 19, 2025',
+                    'Last updated: November 2, 2025',
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       fontWeight: FontWeight.w600,
                       color: Colors.blue.shade700,
@@ -171,7 +171,7 @@ class PrivacyPolicyPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    'Effective Date: October 19, 2025',
+                    'Effective Date: November 2, 2025',
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       color: Colors.blue.shade600,
                     ),
