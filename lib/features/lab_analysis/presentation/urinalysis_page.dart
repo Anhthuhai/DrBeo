@@ -3,6 +3,39 @@ import 'package:flutter/services.dart';
 import '../../../core/theme/colors.dart';
 import '../domain/entities/urinalysis_result.dart';
 
+// Formatter để chuyển dấu phẩy thành dấu chấm và chỉ cho phép số thập phân
+class CommaToDotFormatter extends TextInputFormatter {
+  final RegExp _allowed = RegExp(r'[0-9\.,]');
+  
+  @override
+  TextEditingValue formatEditUpdate(TextEditingValue oldValue, TextEditingValue newValue) {
+    // Lọc các ký tự không hợp lệ
+    final filtered = newValue.text.characters.where((c) => _allowed.hasMatch(c)).join();
+    // Chuyển ',' thành '.'
+    final transformed = filtered.replaceAll(',', '.');
+    // Đảm bảo chỉ có một dấu chấm
+    final parts = transformed.split('.');
+    String result;
+    if (parts.length > 2) {
+      result = '${parts[0]}.${parts.sublist(1).join('')}';
+    } else {
+      result = transformed;
+    }
+    
+    return TextEditingValue(
+      text: result,
+      selection: TextSelection.collapsed(offset: result.length),
+    );
+  }
+}
+
+// Hàm parse số có hỗ trợ dấu phẩy
+double parseLocalizedDouble(String text) {
+  if (text.trim().isEmpty) return 0.0;
+  final normalized = text.replaceAll(',', '.');
+  return double.tryParse(normalized) ?? 0.0;
+}
+
 class UrinalysisPage extends StatefulWidget {
   const UrinalysisPage({super.key});
 
@@ -62,8 +95,8 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
         _currentResult = UrinalysisResult(
           color: _selectedColor,
           clarity: _selectedClarity,
-          specificGravity: double.parse(_specificGravityController.text),
-          ph: double.parse(_phController.text),
+          specificGravity: parseLocalizedDouble(_specificGravityController.text),
+          ph: parseLocalizedDouble(_phController.text),
           protein: _selectedProtein,
           glucose: _selectedGlucose,
           ketones: _selectedKetones,
@@ -838,7 +871,10 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
       keyboardType: TextInputType.numberWithOptions(decimal: !isInteger),
       inputFormatters: isInteger
           ? [FilteringTextInputFormatter.digitsOnly]
-          : [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d*'))],
+          : [
+              CommaToDotFormatter(),
+              FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d*')),
+            ],
       validator: validator,
     );
   }
@@ -848,8 +884,8 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
     if (value == null || value.isEmpty) {
       return 'Vui lòng nhập giá trị';
     }
-    final number = double.tryParse(value);
-    if (number == null || number < 0) {
+    final number = parseLocalizedDouble(value);
+    if (number < 0) {
       return 'Giá trị không hợp lệ';
     }
     return null;

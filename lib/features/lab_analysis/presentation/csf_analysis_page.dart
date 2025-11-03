@@ -3,6 +3,39 @@ import 'package:flutter/services.dart';
 import '../../../core/theme/colors.dart';
 import '../domain/entities/csf_result.dart';
 
+// Formatter để chuyển dấu phẩy thành dấu chấm và chỉ cho phép số thập phân
+class CommaToDotFormatter extends TextInputFormatter {
+  final RegExp _allowed = RegExp(r'[0-9\.,]');
+  
+  @override
+  TextEditingValue formatEditUpdate(TextEditingValue oldValue, TextEditingValue newValue) {
+    // Lọc các ký tự không hợp lệ
+    final filtered = newValue.text.characters.where((c) => _allowed.hasMatch(c)).join();
+    // Chuyển ',' thành '.'
+    final transformed = filtered.replaceAll(',', '.');
+    // Đảm bảo chỉ có một dấu chấm
+    final parts = transformed.split('.');
+    String result;
+    if (parts.length > 2) {
+      result = '${parts[0]}.${parts.sublist(1).join('')}';
+    } else {
+      result = transformed;
+    }
+    
+    return TextEditingValue(
+      text: result,
+      selection: TextSelection.collapsed(offset: result.length),
+    );
+  }
+}
+
+// Hàm parse số có hỗ trợ dấu phẩy
+double parseLocalizedDouble(String text) {
+  if (text.trim().isEmpty) return 0.0;
+  final normalized = text.replaceAll(',', '.');
+  return double.tryParse(normalized) ?? 0.0;
+}
+
 class CsfAnalysisPage extends StatefulWidget {
   const CsfAnalysisPage({super.key});
 
@@ -54,17 +87,17 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
       setState(() {
         // Use default serum glucose of 90 mg/dL if not provided
         final serumGlucose = _serumGlucoseController.text.isNotEmpty 
-            ? double.parse(_serumGlucoseController.text)
+            ? parseLocalizedDouble(_serumGlucoseController.text)
             : 90.0; // Default normal serum glucose
         
         // Use default pressure of 150 mmH2O if not provided
         final pressure = _pressureController.text.isNotEmpty
-            ? double.parse(_pressureController.text)
+            ? parseLocalizedDouble(_pressureController.text)
             : 150.0; // Default normal CSF pressure
             
         _currentResult = CsfResult(
-          protein: double.parse(_proteinController.text),
-          glucose: double.parse(_glucoseController.text),
+          protein: parseLocalizedDouble(_proteinController.text),
+          glucose: parseLocalizedDouble(_glucoseController.text),
           cellCount: int.parse(_cellCountController.text),
           neutrophils: _neutrophilsController.text.isNotEmpty 
               ? int.parse(_neutrophilsController.text) : 0,
@@ -77,7 +110,7 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
           timestamp: DateTime.now(),
           serumGlucose: serumGlucose,
           lactate: _lactateController.text.isNotEmpty 
-              ? double.parse(_lactateController.text) : null,
+              ? parseLocalizedDouble(_lactateController.text) : null,
           notes: _notesController.text.isNotEmpty ? _notesController.text : null,
         );
         _showResults = true;
@@ -489,7 +522,10 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
       keyboardType: TextInputType.numberWithOptions(decimal: !isInteger),
       inputFormatters: isInteger
           ? [FilteringTextInputFormatter.digitsOnly]
-          : [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d*'))],
+          : [
+              CommaToDotFormatter(),
+              FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d*')),
+            ],
       validator: validator,
     );
   }
@@ -499,8 +535,8 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
     if (value == null || value.isEmpty) {
       return 'Vui lòng nhập giá trị';
     }
-    final number = double.tryParse(value);
-    if (number == null || number < 0) {
+    final number = parseLocalizedDouble(value);
+    if (number < 0) {
       return 'Giá trị không hợp lệ';
     }
     return null;

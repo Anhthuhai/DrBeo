@@ -3,6 +3,39 @@ import 'package:flutter/services.dart';
 import '../../../core/theme/colors.dart';
 import '../domain/entities/abg_result.dart';
 
+// Formatter để chuyển dấu phẩy thành dấu chấm và chỉ cho phép số thập phân
+class CommaToDotFormatter extends TextInputFormatter {
+  final RegExp _allowed = RegExp(r'[0-9\.,]');
+  
+  @override
+  TextEditingValue formatEditUpdate(TextEditingValue oldValue, TextEditingValue newValue) {
+    // Lọc các ký tự không hợp lệ
+    final filtered = newValue.text.characters.where((c) => _allowed.hasMatch(c)).join();
+    // Chuyển ',' thành '.'
+    final transformed = filtered.replaceAll(',', '.');
+    // Đảm bảo chỉ có một dấu chấm
+    final parts = transformed.split('.');
+    String result;
+    if (parts.length > 2) {
+      result = '${parts[0]}.${parts.sublist(1).join('')}';
+    } else {
+      result = transformed;
+    }
+    
+    return TextEditingValue(
+      text: result,
+      selection: TextSelection.collapsed(offset: result.length),
+    );
+  }
+}
+
+// Hàm parse số có hỗ trợ dấu phẩy
+double parseLocalizedDouble(String text) {
+  if (text.trim().isEmpty) return 0.0;
+  final normalized = text.replaceAll(',', '.');
+  return double.tryParse(normalized) ?? 0.0;
+}
+
 class ABGAnalysisPage extends StatefulWidget {
   const ABGAnalysisPage({super.key});
 
@@ -41,13 +74,13 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
     if (_formKey.currentState!.validate()) {
       setState(() {
         _currentResult = ABGResult(
-          ph: double.parse(_phController.text),
-          pco2: double.parse(_pco2Controller.text),
-          po2: double.parse(_po2Controller.text),
-          hco3: double.parse(_hco3Controller.text),
-          baseExcess: double.parse(_baseExcessController.text),
-          sao2: double.parse(_sao2Controller.text),
-          fio2: double.parse(_fio2Controller.text) / 100,
+          ph: parseLocalizedDouble(_phController.text),
+          pco2: parseLocalizedDouble(_pco2Controller.text),
+          po2: parseLocalizedDouble(_po2Controller.text),
+          hco3: parseLocalizedDouble(_hco3Controller.text),
+          baseExcess: parseLocalizedDouble(_baseExcessController.text),
+          sao2: parseLocalizedDouble(_sao2Controller.text),
+          fio2: parseLocalizedDouble(_fio2Controller.text) / 100,
           timestamp: DateTime.now(),
           notes: _notesController.text.isNotEmpty ? _notesController.text : null,
         );
@@ -384,6 +417,7 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
       ),
       keyboardType: const TextInputType.numberWithOptions(decimal: true),
       inputFormatters: [
+        CommaToDotFormatter(),
         FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d*')),
       ],
       validator: validator,
