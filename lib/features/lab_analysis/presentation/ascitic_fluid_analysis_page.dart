@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../../../core/theme/colors.dart';
+import '../../../l10n/app_localizations.dart';
 import '../domain/entities/ascitic_fluid_result.dart';
 
 class AsciticFluidAnalysisPage extends StatefulWidget {
@@ -159,26 +160,29 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
     }
   }
 
-  String _getAppearanceText(AsciticFluidAppearance appearance) {
+  String _getAppearanceText(AsciticFluidAppearance appearance, BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     switch (appearance) {
       case AsciticFluidAppearance.clear:
-        return 'Trong';
+        return localizations.appearanceClear;
       case AsciticFluidAppearance.turbid:
-        return 'Đục';
+        return localizations.appearanceTurbid;
       case AsciticFluidAppearance.bloody:
-        return 'Có máu';
+        return localizations.appearanceBloody;
       case AsciticFluidAppearance.milky:
-        return 'Màu sữa';
+        return localizations.appearanceMilky;
       case AsciticFluidAppearance.purulent:
-        return 'Mủ';
+        return localizations.appearancePurulent;
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+    
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Phân tích dịch màng bụng'),
+        title: Text(localizations.asciticFluidAnalysisTitle),
         backgroundColor: AppColors.primary,
         foregroundColor: Colors.white,
         actions: [
@@ -238,9 +242,9 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
                           children: [
                             Icon(Icons.water_drop, color: AppColors.primary),
                             const SizedBox(width: 8),
-                            const Text(
-                              'Thông số dịch màng bụng',
-                              style: TextStyle(
+                            Text(
+                              localizations.asciticFluidParameters,
+                              style: const TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -248,9 +252,9 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
                           ],
                         ),
                         const SizedBox(height: 8),
-                        const Text(
-                          '* Bắt buộc cho tính SAAG',
-                          style: TextStyle(
+                        Text(
+                          localizations.requiredForSAAG,
+                          style: const TextStyle(
                             fontSize: 12,
                             color: Colors.grey,
                             fontStyle: FontStyle.italic,
@@ -264,7 +268,7 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _proteinController,
-                                label: 'Protein (g/dL) *',
+                                label: localizations.proteinLabel,
                                 hint: '0.5-6.0',
                                 validator: _validateRequiredNumber,
                               ),
@@ -273,7 +277,7 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _albuminController,
-                                label: 'Albumin (g/dL) *',
+                                label: localizations.albuminLabel,
                                 hint: '0.2-4.0',
                                 validator: _validateRequiredNumber,
                               ),
@@ -288,7 +292,7 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _ldhController,
-                                label: 'LDH (U/L)',
+                                label: localizations.ldhLabel,
                                 hint: '50-500',
                                 validator: _validateOptionalNumber,
                               ),
@@ -297,7 +301,7 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _glucoseController,
-                                label: 'Glucose (mg/dL)',
+                                label: localizations.glucoseLabel,
                                 hint: '30-150',
                                 validator: _validateOptionalNumber,
                               ),
@@ -312,7 +316,7 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _amylaseController,
-                                label: 'Amylase (U/L)',
+                                label: localizations.amylaseLabel,
                                 hint: '10-500',
                                 validator: _validateOptionalNumber,
                               ),
@@ -321,7 +325,7 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _cellCountController,
-                                label: 'Số tế bào (/μL)',
+                                label: localizations.cellCountLabel,
                                 hint: '100-5000',
                                 isInteger: true,
                                 validator: _validateOptionalInteger,
@@ -337,7 +341,7 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _neutrophilsController,
-                                label: 'Neutrophils (/μL)',
+                                label: localizations.neutrophilsLabel,
                                 hint: '0-1000',
                                 isInteger: true,
                                 validator: _validateOptionalInteger,
@@ -347,7 +351,7 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _lymphocytesController,
-                                label: 'Lymphocytes (/μL)',
+                                label: localizations.lymphocytesLabel,
                                 hint: '0-1000',
                                 isInteger: true,
                                 validator: _validateOptionalInteger,
@@ -363,7 +367,7 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _rbcController,
-                                label: 'Hồng cầu (/μL)',
+                                label: localizations.redBloodCellsLabel,
                                 hint: '0-10000',
                                 isInteger: true,
                                 validator: _validateOptionalInteger,
@@ -373,7 +377,7 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _triglyceridesController,
-                                label: 'Triglycerides (mg/dL)',
+                                label: localizations.triglyceridesLabel,
                                 hint: '10-200',
                                 validator: _validateOptionalNumber,
                               ),
@@ -385,14 +389,14 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
                         // Appearance
                         DropdownButtonFormField<AsciticFluidAppearance>(
                           initialValue: _selectedAppearance,
-                          decoration: const InputDecoration(
-                            labelText: 'Tính chất dịch',
-                            border: OutlineInputBorder(),
+                          decoration: InputDecoration(
+                            labelText: localizations.fluidAppearance,
+                            border: const OutlineInputBorder(),
                           ),
                           items: AsciticFluidAppearance.values.map((appearance) {
                             return DropdownMenuItem(
                               value: appearance,
-                              child: Text(_getAppearanceText(appearance)),
+                              child: Text(_getAppearanceText(appearance, context)),
                             );
                           }).toList(),
                           onChanged: (value) {
@@ -418,9 +422,9 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
                           children: [
                             Icon(Icons.bloodtype, color: AppColors.secondary),
                             const SizedBox(width: 8),
-                            const Text(
-                              'Thông số máu',
-                              style: TextStyle(
+                            Text(
+                              localizations.serumParameters,
+                              style: const TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -428,9 +432,9 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
                           ],
                         ),
                         const SizedBox(height: 8),
-                        const Text(
-                          '* Bắt buộc cho tính SAAG',
-                          style: TextStyle(
+                        Text(
+                          localizations.requiredForSAAG,
+                          style: const TextStyle(
                             fontSize: 12,
                             color: Colors.grey,
                             fontStyle: FontStyle.italic,
@@ -443,7 +447,7 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _serumProteinController,
-                                label: 'Serum Protein (g/dL) *',
+                                label: localizations.serumProteinLabel,
                                 hint: '6.0-8.0',
                                 validator: _validateRequiredNumber,
                               ),
@@ -452,7 +456,7 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _serumAlbuminController,
-                                label: 'Serum Albumin (g/dL) *',
+                                label: localizations.serumAlbuminLabel,
                                 hint: '3.5-5.0',
                                 validator: _validateRequiredNumber,
                               ),
@@ -466,7 +470,7 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _serumLdhController,
-                                label: 'Serum LDH (U/L)',
+                                label: localizations.serumLdhLabel,
                                 hint: '100-250',
                                 validator: _validateOptionalNumber,
                               ),
@@ -475,7 +479,7 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _serumGlucoseController,
-                                label: 'Serum Glucose (mg/dL)',
+                                label: localizations.serumGlucoseLabel,
                                 hint: '70-110',
                                 validator: _validateOptionalNumber,
                               ),
@@ -491,10 +495,10 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
                 // Notes
                 TextFormField(
                   controller: _notesController,
-                  decoration: const InputDecoration(
-                    labelText: 'Ghi chú (tùy chọn)',
-                    hintText: 'Thông tin bổ sung...',
-                    border: OutlineInputBorder(),
+                  decoration: InputDecoration(
+                    labelText: localizations.notesOptional,
+                    hintText: localizations.additionalInformation,
+                    border: const OutlineInputBorder(),
                   ),
                   maxLines: 3,
                 ),
@@ -511,9 +515,9 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
-                  child: const Text(
-                    'Phân tích dịch màng bụng',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  child: Text(
+                    localizations.analyzeAsciticFluid,
+                    style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                 ),
               ],
@@ -522,7 +526,7 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
 
               // Medical Citation
               const SizedBox(height: 16),
-              _buildCitationWidget(),
+              _buildCitationWidget(context),
             ],
           ),
         ),
@@ -1053,7 +1057,9 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
     );
   }
 
-  Widget _buildCitationWidget() {
+  Widget _buildCitationWidget(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+    
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
@@ -1069,7 +1075,7 @@ class _AsciticFluidAnalysisPageState extends State<AsciticFluidAnalysisPage> {
               Icon(Icons.article, color: Colors.blue.shade700, size: 16),
               const SizedBox(width: 6),
               Text(
-                'Tài liệu tham khảo',
+                localizations.references,
                 style: TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.bold,

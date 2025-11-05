@@ -25,23 +25,11 @@ class AppLocalizationsVi extends AppLocalizations {
   String get clinicalScoresDescription => 'Glasgow, APACHE, SOFA...';
 
   @override
-  String get emergencyProtocols => 'Quy trình cấp cứu';
-
-  @override
-  String get emergencyProtocolsDescription => 'Quy trình hồi sức cấp cứu';
-
-  @override
   String get diagnosticTools => 'Công cụ chẩn đoán';
 
   @override
   String get diagnosticToolsDescription =>
       'Phân tích xét nghiệm, hướng dẫn hình ảnh';
-
-  @override
-  String get calculationTools => 'Công cụ tính toán';
-
-  @override
-  String get calculationToolsDescription => 'Tính BMI, BSA, các chỉ số y tế';
 
   @override
   String get unitConverter => 'Chuyển đổi';
@@ -54,6 +42,389 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get labAnalysisDescription => 'Phân tích kết quả xét nghiệm';
+
+  @override
+  String get abgAnalysisTitle => 'Phân tích khí máu động mạch';
+
+  @override
+  String get enterAbgResults => 'Nhập kết quả ABG';
+
+  @override
+  String get abgClearAll => 'Xóa tất cả';
+
+  @override
+  String get phLabel => 'pH';
+
+  @override
+  String get phHint => '7.35-7.45';
+
+  @override
+  String get pleaseEnterPh => 'Vui lòng nhập pH';
+
+  @override
+  String get invalidPh => 'pH không hợp lệ (6.8-8.0)';
+
+  @override
+  String get pco2Label => 'PCO₂ (mmHg)';
+
+  @override
+  String get pco2Hint => '35-45';
+
+  @override
+  String get pleaseEnterPco2 => 'Vui lòng nhập PCO₂';
+
+  @override
+  String get invalidPco2 => 'PCO₂ không hợp lệ';
+
+  @override
+  String get po2Label => 'PO₂ (mmHg)';
+
+  @override
+  String get po2Hint => '80-100';
+
+  @override
+  String get pleaseEnterPo2 => 'Vui lòng nhập PO₂';
+
+  @override
+  String get invalidPo2 => 'PO₂ không hợp lệ';
+
+  @override
+  String get hco3Label => 'HCO₃⁻ (mEq/L)';
+
+  @override
+  String get hco3Hint => '22-26';
+
+  @override
+  String get pleaseEnterHco3 => 'Vui lòng nhập HCO₃⁻';
+
+  @override
+  String get invalidHco3 => 'HCO₃⁻ không hợp lệ';
+
+  @override
+  String get baseExcessLabel => 'Base Excess (mEq/L)';
+
+  @override
+  String get baseExcessHint => '-2 đến +2';
+
+  @override
+  String get pleaseEnterBe => 'Vui lòng nhập BE';
+
+  @override
+  String get invalidBe => 'BE không hợp lệ';
+
+  @override
+  String get sao2Label => 'SaO₂ (%)';
+
+  @override
+  String get sao2Hint => '95-100';
+
+  @override
+  String get pleaseEnterSao2 => 'Vui lòng nhập SaO₂';
+
+  @override
+  String get invalidSao2 => 'SaO₂ không hợp lệ (0-100)';
+
+  @override
+  String get fio2Label => 'FiO₂ (%)';
+
+  @override
+  String get fio2Hint => '21-100';
+
+  @override
+  String get pleaseEnterFio2 => 'Vui lòng nhập FiO₂';
+
+  @override
+  String get invalidFio2 => 'FiO₂ không hợp lệ (21-100)';
+
+  @override
+  String get abgNotesLabel => 'Ghi chú (tùy chọn)';
+
+  @override
+  String get abgNotesHint => 'Thông tin bổ sung...';
+
+  @override
+  String get analyzeAbg => 'Phân tích ABG';
+
+  @override
+  String get abgAnalysisResults => 'Kết quả phân tích';
+
+  @override
+  String get acidBaseStatus => 'Tình trạng Acid-Base';
+
+  @override
+  String get oxygenationStatus => 'Tình trạng Oxy hóa';
+
+  @override
+  String get calculatedIndices => 'Chỉ số tính toán';
+
+  @override
+  String get compensationAnalysis => 'Phân tích bù trừ';
+
+  @override
+  String expectedPco2(String value) {
+    return 'PCO₂ dự kiến: $value ± 2 mmHg';
+  }
+
+  @override
+  String actualPco2(String value) {
+    return 'PCO₂ thực tế: $value mmHg';
+  }
+
+  @override
+  String expectedHco3(String value) {
+    return 'HCO₃⁻ dự kiến: $value mEq/L';
+  }
+
+  @override
+  String actualHco3(String value) {
+    return 'HCO₃⁻ thực tế: $value mEq/L';
+  }
+
+  @override
+  String get abgNotes => 'Ghi chú';
+
+  @override
+  String get abgReferences => 'Tài liệu tham khảo';
+
+  @override
+  String get abgInterpretationNormal => 'Bình thường';
+
+  @override
+  String get abgInterpretationRespAcidosis => 'Toan hô hấp cấp';
+
+  @override
+  String get abgInterpretationRespAlkalosis => 'Kiềm hô hấp cấp';
+
+  @override
+  String get abgInterpretationMetAcidosis => 'Toan chuyển hóa cấp';
+
+  @override
+  String get abgInterpretationMetAlkalosis => 'Kiềm chuyển hóa cấp';
+
+  @override
+  String get abgInterpretationCompRespAcidosis => 'Toan hô hấp có bù trừ';
+
+  @override
+  String get abgInterpretationCompRespAlkalosis => 'Kiềm hô hấp có bù trừ';
+
+  @override
+  String get abgInterpretationCompMetAcidosis => 'Toan chuyển hóa có bù trừ';
+
+  @override
+  String get abgInterpretationCompMetAlkalosis => 'Kiềm chuyển hóa có bù trừ';
+
+  @override
+  String get abgInterpretationMixed => 'Rối loạn hỗn hợp';
+
+  @override
+  String get oxygenationNormal => 'Oxy hóa bình thường';
+
+  @override
+  String get oxygenationMildHypoxemia => 'Thiếu oxy nhẹ';
+
+  @override
+  String get oxygenationModerateHypoxemia => 'Thiếu oxy vừa';
+
+  @override
+  String get oxygenationSevereHypoxemia => 'Thiếu oxy nặng';
+
+  @override
+  String get oxygenationNormalWithO2 => 'Oxy hóa tốt với O2 bổ sung';
+
+  @override
+  String get labAnalysisHomeTitle => 'Phân tích cận lâm sàng';
+
+  @override
+  String get selectAnalysisType => 'Chọn loại phân tích';
+
+  @override
+  String get labAnalysisToolDescription =>
+      'Công cụ hỗ trợ phân tích và diễn giải kết quả xét nghiệm';
+
+  @override
+  String get abgAnalysisCardTitle => 'Khí máu động mạch';
+
+  @override
+  String get abgAnalysisCardSubtitle =>
+      'ABG Analysis - Phân tích khí máu động mạch, pH, CO2, O2';
+
+  @override
+  String get pleuralFluidCardTitle => 'Dịch màng phổi';
+
+  @override
+  String get pleuralFluidCardSubtitle =>
+      'Pleural Fluid - Phân tích dịch màng phổi, Light\'s criteria';
+
+  @override
+  String get asciticFluidCardTitle => 'Dịch màng bụng';
+
+  @override
+  String get asciticFluidCardSubtitle =>
+      'Ascitic Fluid - Phân tích dịch cổ trướng, SAAG gradient';
+
+  @override
+  String get csfAnalysisCardTitle => 'Dịch não tủy';
+
+  @override
+  String get csfAnalysisCardSubtitle =>
+      'CSF Analysis - Phân tích dịch não tủy, viêm màng não';
+
+  @override
+  String get urinalysisCardTitle => 'Phân tích nước tiểu';
+
+  @override
+  String get urinalysisCardSubtitle =>
+      'Urinalysis - Phân tích nước tiểu, protein, hồng cầu';
+
+  @override
+  String get pleuralFluidAnalysisTitle => 'Phân tích dịch màng phổi';
+
+  @override
+  String get pleuralFluidParameters => 'Thông số dịch màng phổi';
+
+  @override
+  String get requiredForLight => '* Bắt buộc cho tiêu chuẩn Light';
+
+  @override
+  String get fluidAppearance => 'Tính chất dịch';
+
+  @override
+  String get appearanceClear => 'Trong suốt';
+
+  @override
+  String get appearanceTurbid => 'Đục';
+
+  @override
+  String get appearanceBloody => 'Có máu';
+
+  @override
+  String get appearancePurulent => 'Mủ';
+
+  @override
+  String get appearanceMilky => 'Trắng đục';
+
+  @override
+  String get appearanceCholesterol => 'Vàng cholesterol';
+
+  @override
+  String get proteinLabel => 'Protein (g/dL) *';
+
+  @override
+  String get ldhLabel => 'LDH (U/L) *';
+
+  @override
+  String get glucoseLabel => 'Glucose (mg/dL)';
+
+  @override
+  String get cellCountLabel => 'Số lượng tế bào (/μL)';
+
+  @override
+  String get neutrophilsLabel => 'Bạch cầu trung tính (%)';
+
+  @override
+  String get lymphocytesLabel => 'Bạch cầu lympho (%)';
+
+  @override
+  String get cholesterolLabel => 'Cholesterol (mg/dL)';
+
+  @override
+  String get triglyceridesLabel => 'Triglyceride (mg/dL)';
+
+  @override
+  String get serumParameters => 'Thông số huyết thanh';
+
+  @override
+  String get serumProteinLabel => 'Protein huyết thanh (g/dL) *';
+
+  @override
+  String get serumLdhLabel => 'LDH huyết thanh (U/L) *';
+
+  @override
+  String get serumGlucoseLabel => 'Glucose huyết thanh (mg/dL)';
+
+  @override
+  String get analyzePleuralFluid => 'Phân tích dịch màng phổi';
+
+  @override
+  String get fluidTypeTransudate => 'Thẩm xuất';
+
+  @override
+  String get fluidTypeExudate => 'Xuất tiết';
+
+  @override
+  String get fluidTypeIndeterminate => 'Không xác định';
+
+  @override
+  String get causeHeartFailure => 'Suy tim';
+
+  @override
+  String get causeCirrhosis => 'Xơ gan';
+
+  @override
+  String get causeNephrotic => 'Hội chứng thận hư';
+
+  @override
+  String get causeHypoalbuminemia => 'Giảm albumin máu';
+
+  @override
+  String get causePneumonia => 'Viêm phổi';
+
+  @override
+  String get causeMalignancy => 'Ung thư';
+
+  @override
+  String get causeTuberculosis => 'Lao';
+
+  @override
+  String get causePulmonaryEmbolism => 'Thuyên tắc phổi';
+
+  @override
+  String get causePancreatitis => 'Viêm tụy';
+
+  @override
+  String get causeRheumatoid => 'Viêm khớp dạng thấp';
+
+  @override
+  String get causeLupus => 'Lupus ban đỏ hệ thống';
+
+  @override
+  String get causeEmpyema => 'Mủ màng phổi';
+
+  @override
+  String get causeUnknown => 'Nguyên nhân không rõ';
+
+  @override
+  String get pleaseEnterValue => 'Vui lòng nhập giá trị';
+
+  @override
+  String get invalidValue => 'Giá trị không hợp lệ';
+
+  @override
+  String get invalidPercentage => 'Phải nằm trong khoảng 0-100';
+
+  @override
+  String get fluidCharacteristics => 'Đặc điểm dịch';
+
+  @override
+  String get lightCriteria => 'Tiêu chuẩn Light';
+
+  @override
+  String get proteinRatio => 'Tỉ lệ Protein';
+
+  @override
+  String get ldhRatio => 'Tỉ lệ LDH';
+
+  @override
+  String get likelyCauses => 'Nguyên nhân có thể';
+
+  @override
+  String get notes => 'Ghi chú';
+
+  @override
+  String get notesOptional => 'Ghi chú (tuỳ chọn)';
+
+  @override
+  String get additionalInformation => 'Thông tin bổ sung...';
 
   @override
   String get guidelines => 'Hướng dẫn';
@@ -256,16 +627,6 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get emergency_medicine => 'Y học cấp cứu';
-
-  @override
-  String get emergency_protocols => 'Sơ đồ xử lý cấp cứu';
-
-  @override
-  String get emergency_protocols_title => 'Protocols Cấp Cứu';
-
-  @override
-  String get emergency_protocols_subtitle =>
-      'Sơ đồ xử lý nhanh các tình huống cấp cứu thường gặp';
 
   @override
   String get hypertensive_crisis_title => 'Cơn Tăng Huyết Áp';
@@ -520,6 +881,71 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get references => 'Tài liệu tham khảo';
+
+  @override
+  String get asciticFluidAnalysisTitle => 'Phân tích dịch màng bụng';
+
+  @override
+  String get asciticFluidParameters => 'Thông số dịch màng bụng';
+
+  @override
+  String get requiredForSAAG => '* Bắt buộc cho tính toán SAAG';
+
+  @override
+  String get albuminLabel => 'Albumin (g/dL) *';
+
+  @override
+  String get amylaseLabel => 'Amylase (U/L)';
+
+  @override
+  String get redBloodCellsLabel => 'Hồng cầu (/μL)';
+
+  @override
+  String get serumAlbuminLabel => 'Albumin huyết thanh (g/dL) *';
+
+  @override
+  String get analyzeAsciticFluid => 'Phân tích dịch màng bụng';
+
+  @override
+  String get fluidTypeTransudateSAAG => 'Thẩm xuất (SAAG cao)';
+
+  @override
+  String get fluidTypeExudateSAAG => 'Xuất tiết (SAAG thấp)';
+
+  @override
+  String get saagLabel => 'SAAG';
+
+  @override
+  String get albuminRatio => 'Tỉ lệ Albumin';
+
+  @override
+  String get causePeritonitis => 'Viêm phúc mạc';
+
+  @override
+  String get causeNephrogenicAscites => 'Cổ trướng do thận';
+
+  @override
+  String get causeSpontaneousBacterialPeritonitis =>
+      'Viêm phúc mạc do vi khuẩn tự phát';
+
+  @override
+  String get causeSecondaryBacterialPeritonitis =>
+      'Viêm phúc mạc do vi khuẩn thứ phát';
+
+  @override
+  String get causeChylousAscites => 'Cổ trướng chylomicron';
+
+  @override
+  String get causeHemorrhagicAscites => 'Cổ trướng xuất huyết';
+
+  @override
+  String get specialTests => 'Xét nghiệm đặc biệt';
+
+  @override
+  String get positive => 'Dương tính';
+
+  @override
+  String get negative => 'Âm tính';
 
   @override
   String get medical_disclaimer =>
@@ -6106,16 +6532,16 @@ class AppLocalizationsVi extends AppLocalizations {
       'Tư duy không logic, không nhất quán, hoặc nói chuyện không rõ ràng?';
 
   @override
-  String get cam_icu_feature_1_present => 'Feature 1 present';
+  String get cam_icu_feature_1_present => 'Có thay đổi cấp tính hoặc dao động';
 
   @override
-  String get cam_icu_feature_2_present => 'Feature 2 present';
+  String get cam_icu_feature_2_present => 'Có thiếu chú ý';
 
   @override
-  String get cam_icu_feature_3_present => 'Feature 3 present';
+  String get cam_icu_feature_3_present => 'Có thay đổi mức độ ý thức';
 
   @override
-  String get cam_icu_feature_4_present => 'Feature 4 present';
+  String get cam_icu_feature_4_present => 'Có tư duy không tổ chức';
 
   @override
   String get cam_icu_results_title => 'Kết quả CAM-ICU';
@@ -6247,26 +6673,25 @@ class AppLocalizationsVi extends AppLocalizations {
   String get rass_description_column => 'Mô tả';
 
   @override
-  String get cam_icu_result_positive => 'CAM-ICU POSITIVE';
+  String get cam_icu_result_positive => 'CAM-ICU dương tính';
 
   @override
-  String get cam_icu_result_negative => 'CAM-ICU NEGATIVE';
+  String get cam_icu_result_negative => 'CAM-ICU âm tính';
 
   @override
-  String get cam_icu_delirium_present => 'Delirium present';
+  String get cam_icu_delirium_present => 'Có dấu hiệu lú lẫn';
 
   @override
-  String get cam_icu_delirium_absent => 'Delirium absent';
+  String get cam_icu_delirium_absent => 'Không có lú lẫn';
 
   @override
-  String get cam_icu_clinical_features => 'Clinical Features Assessment';
+  String get cam_icu_clinical_features => 'Đặc điểm lâm sàng';
 
   @override
-  String get cam_icu_assessment_criteria => 'Assessment Criteria';
+  String get cam_icu_assessment_criteria => 'Tiêu chí đánh giá';
 
   @override
-  String get cam_icu_diagnosis_criteria =>
-      'Diagnosis: Features 1 AND 2 AND (3 OR 4)';
+  String get cam_icu_diagnosis_criteria => 'Tiêu chí chẩn đoán';
 
   @override
   String get cam_icu_clinical_info_title => 'Thông tin lâm sàng';
@@ -6276,17 +6701,17 @@ class AppLocalizationsVi extends AppLocalizations {
       'CAM-ICU (Confusion Assessment Method for ICU) là công cụ đánh giá lú lẫn ở bệnh nhân ICU\n\nƯu điểm:\n• Đánh giá nhanh chóng và chính xác\n• Phù hợp cho bệnh nhân thở máy\n• Độ nhạy và độ đặc hiệu cao\n• Không cần khám thần kinh chuyên sâu\n\nCách thực hiện:\n• Đánh giá tất cả 4 feature\n• Có thể kết hợp với RASS\n• Thực hiện hàng ngày ở ICU\n• Ghi nhận thay đổi theo thời gian\n\nLưu ý quan trọng:\n• Cần đào tạo sử dụng CAM-ICU\n• Phân biệt với dementia\n• Theo dõi nguyên nhân gây lú lẫn\n• Điều trị kịp thời khi phát hiện';
 
   @override
-  String get cam_icu_cannot_assess => 'Cannot assess (RASS -4 or -5)';
+  String get cam_icu_cannot_assess => 'Không thể đánh giá';
 
   @override
-  String get cam_icu_references_title => 'References';
+  String get cam_icu_references_title => 'Tài liệu tham khảo CAM-ICU';
 
   @override
   String get cam_icu_reference_text =>
       'Ely EW, et al. Delirium in mechanically ventilated patients: validity and reliability of the confusion assessment method for the intensive care unit (CAM-ICU). JAMA. 2001;286(21):2703-10.';
 
   @override
-  String get rass_score_title => 'RASS Score';
+  String get rass_score_title => 'Điểm RASS';
 
   @override
   String get rass_title => 'Thang RASS';
@@ -6298,123 +6723,117 @@ class AppLocalizationsVi extends AppLocalizations {
   String get rass_score_subtitle => 'Richmond Agitation-Sedation Scale';
 
   @override
-  String get rass_level_combative => '+4 Combative';
+  String get rass_level_combative => 'Hung hăng (+4)';
 
   @override
   String get rass_description_combative =>
-      'Combative: Overly combative or violent; immediate danger to staff';
+      'Tấn công nhân viên hoặc cố gắng rút ống';
 
   @override
-  String get rass_level_very_agitated => '+3 Very agitated';
+  String get rass_level_very_agitated => 'Rất kích động (+3)';
 
   @override
   String get rass_description_very_agitated =>
-      'Very agitated: Pulls on or removes tube(s) or catheter(s) or has aggressive behavior toward staff';
+      'Kéo hoặc tháo catheter/ống; tấn công';
 
   @override
-  String get rass_level_agitated => '+2 Agitated';
+  String get rass_level_agitated => 'Kích động (+2)';
 
   @override
   String get rass_description_agitated =>
-      'Agitated: Frequent nonpurposeful movement or patient-ventilator dyssynchrony';
+      'Chuyển động thường xuyên, chống lại thở máy';
 
   @override
-  String get rass_level_restless => '+1 Restless';
+  String get rass_level_restless => 'Bồn chồn (+1)';
 
   @override
   String get rass_description_restless =>
-      'Restless: Anxious or apprehensive but movements not aggressive or vigorous';
+      'Lo lắng nhưng chuyển động không hung hăng';
 
   @override
-  String get rass_level_alert => '0 Alert and calm';
+  String get rass_level_alert => 'Tỉnh táo (0)';
 
   @override
-  String get rass_description_alert =>
-      'Alert and calm: Spontaneously pays attention to caregiver';
+  String get rass_description_alert => 'Tỉnh táo và bình tĩnh';
 
   @override
-  String get rass_level_drowsy => '-1 Drowsy';
+  String get rass_level_drowsy => 'Buồn ngủ (-1)';
 
   @override
   String get rass_description_drowsy =>
-      'Drowsy: Not fully alert, but has sustained (more than 10 seconds) awakening, with eye contact, to voice';
+      'Không hoàn toàn tỉnh táo, tỉnh >10s khi gọi';
 
   @override
-  String get rass_level_light_sedation => '-2 Light sedation';
+  String get rass_level_light_sedation => 'An thần nhẹ (-2)';
 
   @override
-  String get rass_description_light_sedation =>
-      'Light sedation: Briefly (less than 10 seconds) awakens with eye contact to voice';
+  String get rass_description_light_sedation => 'Tỉnh ngắn <10s khi gọi tên';
 
   @override
-  String get rass_level_moderate_sedation => '-3 Moderate sedation';
+  String get rass_level_moderate_sedation => 'An thần trung bình (-3)';
 
   @override
   String get rass_description_moderate_sedation =>
-      'Moderate sedation: Any movement (but no eye contact) to voice';
+      'Chuyển động hoặc mở mắt khi gọi tên, không tiếp xúc ánh mắt';
 
   @override
-  String get rass_level_deep_sedation => '-4 Deep sedation';
+  String get rass_level_deep_sedation => 'An thần sâu (-4)';
 
   @override
   String get rass_description_deep_sedation =>
-      'Deep sedation: No response to voice, but any movement to physical stimulation';
+      'Không phản ứng với tiếng gọi, chuyển động khi kích thích vật lý';
 
   @override
-  String get rass_level_unarousable => '-5 Unarousable';
+  String get rass_level_unarousable => 'Không tỉnh được (-5)';
 
   @override
   String get rass_description_unarousable =>
-      'Unarousable: No response to voice or physical stimulation';
+      'Không phản ứng với tiếng gọi hoặc kích thích vật lý';
 
   @override
-  String get rass_interpretation_agitation => 'Agitation';
+  String get rass_interpretation_agitation => 'Kích động';
 
   @override
-  String get rass_interpretation_calm => 'Alert and calm';
+  String get rass_interpretation_calm => 'Bình tĩnh';
 
   @override
-  String get rass_interpretation_sedation => 'Sedation';
+  String get rass_interpretation_sedation => 'An thần';
 
   @override
-  String get rass_target_light_moderate => 'Target: Light to moderate sedation';
+  String get rass_target_light_moderate => 'Mục tiêu: RASS -1 đến -2';
 
   @override
-  String get rass_target_alert_calm => 'Target: Alert and calm';
+  String get rass_target_alert_calm => 'Mục tiêu: RASS 0';
 
   @override
-  String get rass_avoid_deep_sedation => 'Avoid: Deep sedation when possible';
+  String get rass_avoid_deep_sedation => 'Tránh: RASS -4 hoặc -5';
 
   @override
-  String get rass_current_level => 'Current RASS Level';
+  String get rass_current_level => 'Mức độ hiện tại';
 
   @override
-  String get rass_select_level => 'Select current patient level:';
+  String get rass_select_level => 'Chọn mức độ RASS';
 
   @override
-  String get rass_sedation_goals => 'Sedation Goals';
+  String get rass_sedation_goals => 'Mục tiêu an thần';
 
   @override
-  String get rass_clinical_management => 'Clinical Management';
+  String get rass_clinical_management => 'Quản lý lâm sàng';
 
   @override
-  String get rass_management_agitation =>
-      'Consider causes of agitation, pain assessment, environmental factors';
+  String get rass_management_agitation => 'Giảm kích động, xem xét nguyên nhân';
 
   @override
-  String get rass_management_calm =>
-      'Maintain current care, reassess regularly';
+  String get rass_management_calm => 'Duy trì tình trạng hiện tại';
 
   @override
-  String get rass_management_light =>
-      'Appropriate sedation level, continue monitoring';
+  String get rass_management_light => 'An thần nhẹ thích hợp';
 
   @override
-  String get rass_management_moderate => 'Assess need for sedation reduction';
+  String get rass_management_moderate => 'Cân nhắc giảm an thần';
 
   @override
-  String get rass_management_deep =>
-      'Consider sedation interruption, assess readiness for awakening';
+  String get rass_management_deep => 'Giảm an thần, đánh giá nguyên nhân';
 
   @override
   String get rass_clinical_info_title => 'Thông tin lâm sàng';
@@ -6424,7 +6843,7 @@ class AppLocalizationsVi extends AppLocalizations {
       'RASS (Richmond Agitation-Sedation Scale) là công cụ đánh giá mức độ kích động và an thần\n\nƯu điểm:\n• Đơn giản, dễ sử dụng\n• Độ tin cậy cao giữa các người đánh giá\n• Phù hợp cho bệnh nhân ICU\n• Kết hợp tốt với CAM-ICU\n\nCách sử dụng:\n• Đánh giá trước tiên không kích thích\n• Sau đó gọi tên bệnh nhân\n• Cuối cùng kích thích vật lý nếu cần\n• Ghi nhận phản ứng đầu tiên\n\nMục tiêu điều trị:\n• RASS 0 hoặc -1 ở hầu hết bệnh nhân\n• RASS -2 đến -3 nếu cần an thần sâu\n• Tránh RASS +2 trở lên (kích động)\n• Tránh RASS -4 hoặc -5 trừ khi cần thiết\n\nGhi chú quan trọng:\n• Đánh giá định kỳ mỗi ca\n• Điều chỉnh thuốc an thần theo RASS\n• Phối hợp với đánh giá đau và delirium';
 
   @override
-  String get rass_references_title => 'References';
+  String get rass_references_title => 'Tài liệu tham khảo RASS';
 
   @override
   String get rass_reference_text =>
@@ -6762,34 +7181,33 @@ class AppLocalizationsVi extends AppLocalizations {
       '• Giữ bệnh nhân bình tĩnh\n• Hạn chế hoạt động';
 
   @override
-  String get calm_patient_subtitle =>
-      'Prevent venom spread through circulation';
+  String get calm_patient_subtitle => 'Giữ bệnh nhân bình tĩnh';
 
   @override
   String get immobilize_bite_area => '• Cố định vùng cắn\n• Tháo bỏ trang sức';
 
   @override
-  String get immobilize_subtitle => 'Splint bitten limb below heart level';
+  String get immobilize_subtitle => 'Cố định vùng cắn';
 
   @override
   String get call_emergency_services => '• Gọi cấp cứu 115\n• Báo cáo chi tiết';
 
   @override
-  String get emergency_services_subtitle => 'Immediate transport to hospital';
+  String get emergency_services_subtitle => 'Gọi cấp cứu';
 
   @override
   String get transport_hospital =>
       '• Vận chuyển nhanh\n• Giữ vùng cắn thấp hơn tim';
 
   @override
-  String get transport_subtitle => 'Antivenom therapy needed urgently';
+  String get transport_subtitle => 'Vận chuyển bệnh viện';
 
   @override
   String get snake_identification => 'Nhận diện loài rắn';
 
   @override
   String get snake_identification_content =>
-      '• Description of snake (size, color, pattern)\n• Photo if safe to take\n• Geographic location\n• Time of bite\n• Bring dead snake if available';
+      '• Ghi nhận thời gian và địa điểm\n• Mô tả hình dáng, màu sắc rắn\n• Chụp ảnh nếu an toàn\n• Không bắt hoặc giết rắn';
 
   @override
   String get bite_assessment => 'Đánh giá vết cắn';
@@ -6803,34 +7221,34 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get severity_signs_content =>
-      '• Systemic symptoms (nausea, vomiting)\n• Neurological signs (weakness, paralysis)\n• Respiratory distress\n• Cardiovascular instability\n• Coagulation disorders';
+      '• Đau dữ dội lan rộng\n• Phù nề tiến triển nhanh\n• Tê bì, yếu cơ\n• Buồn nôn, nôn\n• Khó thở, rối loạn ý thức\n• Chảy máu bất thường';
 
   @override
-  String get treatment_protocol => 'Treatment protocol';
+  String get treatment_protocol => 'Quy trình điều trị';
 
   @override
-  String get first_aid => 'First aid';
+  String get first_aid => 'Sơ cứu';
 
   @override
   String get first_aid_steps =>
       '• Rửa vết thương bằng nước sạch\n• Băng vết thương nhẹ nhàng\n• KHÔNG cắt, hút hoặc prép vết thương\n• KHÔNG bó garo quá chặt\n• KHÔNG cho uống rượu';
 
   @override
-  String get antivenom_therapy => 'Antivenom therapy';
+  String get antivenom_therapy => 'Điều trị huyết thanh kháng nọc';
 
   @override
   String get antivenom_therapy_steps =>
-      '• Assess indications for antivenom\n• Skin test if time permits\n• Premedicate with antihistamines\n• Dilute antivenom in normal saline\n• Infuse slowly with monitoring';
+      '• Đánh giá chỉ định\n• Pha chế đúng cách\n• Truyền từ từ\n• Theo dõi phản ứng';
 
   @override
-  String get supportive_care => 'Supportive care';
+  String get supportive_care => 'Điều trị hỗ trợ';
 
   @override
   String get supportive_care_steps =>
-      '• IV access and fluid resuscitation\n• Pain management\n• Tetanus prophylaxis\n• Wound care\n• Monitor for complications';
+      '• Duy trì đường thở\n• Hỗ trợ tuần hoàn\n• Kiểm soát đau\n• Phòng ngừa nhiễm trùng';
 
   @override
-  String get antivenom_guidelines => 'Antivenom guidelines';
+  String get antivenom_guidelines => 'Hướng dẫn huyết thanh';
 
   @override
   String get antivenom_indications => 'Chỉ định sử dụng';
@@ -6844,80 +7262,80 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get antivenom_dosage_content =>
-      '• Initial: 4-6 vials IV\n• Severe cases: 8-10 vials\n• Pediatric: Same dose as adults\n• Repeat if no improvement in 1-2 hours\n• Maximum: No established limit';
+      '• Khởi đầu: 4-6 lọ\n• Đánh giá sau 1-2h\n• Lặp lại nếu cần\n• Tối đa: 10-15 lọ/24h';
 
   @override
-  String get antivenom_administration => 'Administration';
+  String get antivenom_administration => 'Cách truyền';
 
   @override
   String get antivenom_administration_content =>
-      '• Dilute in 250-500mL normal saline\n• Start at 25-50mL/hr\n• Increase gradually if no reaction\n• Complete infusion in 1-2 hours\n• Monitor closely for allergic reactions';
+      '• Pha trong 100-200ml NaCl 0.9%\n• Truyền chậm 15-30 phút\n• Sẵn sàng xử lý dị ứng\n• Theo dõi chặt chẽ';
 
   @override
-  String get complications_management => 'Complications management';
+  String get complications_management => 'Xử lý biến chứng';
 
   @override
-  String get systemic_envenomation => 'Systemic envenomation';
+  String get systemic_envenomation => 'Ngộ độc toàn thân';
 
   @override
   String get systemic_envenomation_content =>
-      '• Respiratory support if needed\n• Blood pressure management\n• Coagulation factor replacement\n• Renal function monitoring\n• Neurological assessment';
+      '• Rối loạn đông máu\n• Suy thận cấp\n• Sốc\n• Suy hô hấp';
 
   @override
-  String get local_complications => 'Local complications';
+  String get local_complications => 'Biến chứng tại chỗ';
 
   @override
   String get local_complications_content =>
-      '• Compartment syndrome assessment\n• Surgical debridement if necrosis\n• Secondary infection prevention\n• Physical therapy\n• Wound reconstruction';
+      '• Hội chứng khoang\n• Hoại tử mô\n• Nhiễm trùng thứ phát\n• Mất chức năng chi';
 
   @override
   String get allergic_reactions => 'Phản ứng dị ứng';
 
   @override
   String get allergic_reactions_content =>
-      '• Stop antivenom immediately\n• Epinephrine 0.3-0.5mg IM\n• IV corticosteroids\n• H1 and H2 antihistamines\n• Resume antivenom if needed';
+      '• Epinephrine ngay lập tức\n• Corticosteroid\n• Antihistamine\n• Hỗ trợ hô hấp';
 
   @override
-  String get monitoring_followup => 'Monitoring and follow-up';
+  String get monitoring_followup => 'Theo dõi và tái khám';
 
   @override
-  String get immediate_monitoring => 'Immediate monitoring';
+  String get immediate_monitoring => 'Theo dõi tức thì';
 
   @override
   String get immediate_monitoring_content =>
-      '• Vital signs every 15 minutes\n• Neurological assessment\n• Swelling progression marking\n• Coagulation studies\n• Urine output monitoring';
+      '• Vital signs mỗi 15 phút\n• Đông máu mỗi 6h\n• Chức năng thận\n• Dấu hiệu nhiễm trùng';
 
   @override
-  String get discharge_criteria => 'Discharge criteria';
+  String get discharge_criteria => 'Tiêu chí xuất viện';
 
   @override
   String get discharge_criteria_content =>
-      '• No systemic symptoms for 8-12 hours\n• Stable vital signs\n• Normal coagulation studies\n• Minimal local progression\n• Adequate follow-up arranged';
+      '• Ổn định >24h\n• Đông máu bình thường\n• Không tiến triển xấu\n• Không nhiễm trùng';
 
   @override
-  String get algorithm_snake_bite => 'Snake bite suspected';
+  String get algorithm_snake_bite => 'Thuật toán rắn cắn';
 
   @override
-  String get algorithm_calm_immobilize => 'Calm patient + Immobilize limb';
+  String get algorithm_calm_immobilize => 'Bình tĩnh + Cố định';
 
   @override
-  String get algorithm_assess_severity => 'Assess severity';
+  String get algorithm_assess_severity => 'Đánh giá mức độ nặng';
 
   @override
-  String get algorithm_mild => 'Mild';
+  String get algorithm_mild => 'Nhẹ: Theo dõi';
 
   @override
-  String get algorithm_severe => 'Severe';
+  String get algorithm_severe => 'Nặng: Huyết thanh';
 
   @override
-  String get algorithm_observation => 'Observation + Supportive care';
+  String get algorithm_observation => 'Theo dõi 24-48h';
 
   @override
-  String get algorithm_antivenom => 'Antivenom + ICU monitoring';
+  String get algorithm_antivenom => 'Huyết thanh kháng nọc';
 
   @override
   String get snake_bite_medical_disclaimer =>
-      'This snake bite protocol is for reference only and does not replace professional clinical assessment. All treatment decisions must be based on individual patient evaluation and guidance from qualified physicians. Snake bite emergencies require immediate medical attention and antivenom therapy in a hospital environment with full emergency equipment.';
+      'Thông tin này chỉ mang tính tham khảo. Luôn tìm kiếm chăm sóc y tế khẩn cấp khi bị rắn cắn.';
 
   @override
   String get vietnamese_snakes_title => '🐍 Nhận diện loài rắn Việt Nam';
@@ -7092,4 +7510,93 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String get references_content =>
       '1. WHO Guidelines for Snakebite Management\n2. Vietnamese Ministry of Health Protocol\n3. SEARO Regional Guidelines\n4. Clinical Toxinology Resources\n5. Antivenom Producer Guidelines\n6. Regional Poisoning Centers\n7. Emergency Medicine Textbooks';
+
+  @override
+  String get csfAnalysisTitle => 'Phân tích dịch não tủy';
+
+  @override
+  String get csfAnalysisSubtitle =>
+      'Chẩn đoán viêm màng não và bệnh lý thần kinh';
+
+  @override
+  String get csfParameters => 'Thông số dịch não tủy';
+
+  @override
+  String get requiredForDiagnosis => '* Bắt buộc để chẩn đoán';
+
+  @override
+  String get pressureLabel => 'Áp lực (mmH2O)';
+
+  @override
+  String get lactateLabel => 'Lactate (mmol/L)';
+
+  @override
+  String get appearanceXanthochromic => 'Vàng (xanthochromic)';
+
+  @override
+  String get serumGlucoseRatioNote =>
+      '* Để tính tỷ lệ glucose DNT/máu (mặc định 90 mg/dL)';
+
+  @override
+  String get analyzeCsf => 'Phân tích DNT';
+
+  @override
+  String get csfTypeNormal => 'Bình thường';
+
+  @override
+  String get csfTypeBacterial => 'Viêm màng não do vi khuẩn';
+
+  @override
+  String get csfTypeViral => 'Viêm màng não do virus';
+
+  @override
+  String get csfTypeTuberculous => 'Viêm màng não do lao';
+
+  @override
+  String get csfTypeFungal => 'Viêm màng não do nấm';
+
+  @override
+  String get csfTypeMalignant => 'Viêm màng não do ác tính';
+
+  @override
+  String get csfTypeHemorrhagic => 'Xuất huyết dưới nhện';
+
+  @override
+  String get csfTypeTraumatic => 'Chọc nhầm mạch máu';
+
+  @override
+  String get keyParameters => 'Thông số chính:';
+
+  @override
+  String get cellsLabel => 'Tế bào';
+
+  @override
+  String get riskLevel => 'Mức độ nguy cơ:';
+
+  @override
+  String get likelyDiagnoses => 'Chẩn đoán có thể:';
+
+  @override
+  String get usingDefaultValues => 'Sử dụng giá trị mặc định:';
+
+  @override
+  String get defaultSerumGlucose => '• Glucose máu: 90 mg/dL';
+
+  @override
+  String get defaultCsfPressure => '• Áp lực DNT: 150 mmH2O';
+
+  @override
+  String get fluidAppearanceLabel => 'Tính chất dịch';
+
+  @override
+  String get bloodParametersLabel => 'Thông số máu';
+
+  @override
+  String get notesLabel => 'Ghi chú';
+
+  @override
+  String get notesHint => 'Thông tin bổ sung...';
+
+  @override
+  String get referencesLabel => 'Tài liệu tham khảo';
 }

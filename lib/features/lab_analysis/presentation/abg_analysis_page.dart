@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import '../../../l10n/app_localizations.dart';
 import '../../../core/theme/colors.dart';
 import '../domain/entities/abg_result.dart';
 
@@ -104,43 +105,45 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
     });
   }
 
-  String _getInterpretationText(ABGInterpretation interpretation) {
+  String _getInterpretationText(ABGInterpretation interpretation, BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     switch (interpretation) {
       case ABGInterpretation.normal:
-        return 'Bình thường';
+        return l10n.abgInterpretationNormal;
       case ABGInterpretation.respiratoryAcidosis:
-        return 'Toan hô hấp cấp';
+        return l10n.abgInterpretationRespAcidosis;
       case ABGInterpretation.respiratoryAlkalosis:
-        return 'Kiềm hô hấp cấp';
+        return l10n.abgInterpretationRespAlkalosis;
       case ABGInterpretation.metabolicAcidosis:
-        return 'Toan chuyển hóa cấp';
+        return l10n.abgInterpretationMetAcidosis;
       case ABGInterpretation.metabolicAlkalosis:
-        return 'Kiềm chuyển hóa cấp';
+        return l10n.abgInterpretationMetAlkalosis;
       case ABGInterpretation.compensatedRespiratoryAcidosis:
-        return 'Toan hô hấp có bù trừ';
+        return l10n.abgInterpretationCompRespAcidosis;
       case ABGInterpretation.compensatedRespiratoryAlkalosis:
-        return 'Kiềm hô hấp có bù trừ';
+        return l10n.abgInterpretationCompRespAlkalosis;
       case ABGInterpretation.compensatedMetabolicAcidosis:
-        return 'Toan chuyển hóa có bù trừ';
+        return l10n.abgInterpretationCompMetAcidosis;
       case ABGInterpretation.compensatedMetabolicAlkalosis:
-        return 'Kiềm chuyển hóa có bù trừ';
+        return l10n.abgInterpretationCompMetAlkalosis;
       case ABGInterpretation.mixedDisorder:
-        return 'Rối loạn hỗn hợp';
+        return l10n.abgInterpretationMixed;
     }
   }
 
-  String _getOxygenationText(OxygenationStatus status) {
+  String _getOxygenationText(OxygenationStatus status, BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     switch (status) {
       case OxygenationStatus.normal:
-        return 'Oxy hóa bình thường';
+        return l10n.oxygenationNormal;
       case OxygenationStatus.mildHypoxemia:
-        return 'Thiếu oxy nhẹ';
+        return l10n.oxygenationMildHypoxemia;
       case OxygenationStatus.moderateHypoxemia:
-        return 'Thiếu oxy vừa';
+        return l10n.oxygenationModerateHypoxemia;
       case OxygenationStatus.severeHypoxemia:
-        return 'Thiếu oxy nặng';
+        return l10n.oxygenationSevereHypoxemia;
       case OxygenationStatus.normalWithSupplementalO2:
-        return 'Oxy hóa tốt với O2 bổ sung';
+        return l10n.oxygenationNormalWithO2;
     }
   }
 
@@ -179,16 +182,17 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Phân tích khí máu động mạch'),
+        title: Text(l10n.abgAnalysisTitle),
         backgroundColor: AppColors.primary,
         foregroundColor: Colors.white,
         actions: [
           IconButton(
             onPressed: _clearForm,
             icon: const Icon(Icons.clear_all),
-            tooltip: 'Xóa tất cả',
+            tooltip: l10n.abgClearAll,
           ),
         ],
       ),
@@ -207,9 +211,9 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
                       children: [
                         Icon(Icons.local_hospital, color: AppColors.primary),
                         const SizedBox(width: 8),
-                        const Text(
-                          'Nhập kết quả ABG',
-                          style: TextStyle(
+                        Text(
+                          l10n.enterAbgResults,
+                          style: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),
@@ -225,16 +229,17 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
                             children: [
                               Expanded(
                                 child: _buildNumberField(
+                                  context: context,
                                   controller: _phController,
-                                  label: 'pH',
-                                  hint: '7.35-7.45',
+                                  label: l10n.phLabel,
+                                  hint: l10n.phHint,
                                   validator: (value) {
                                     if (value == null || value.isEmpty) {
-                                      return 'Vui lòng nhập pH';
+                                      return l10n.pleaseEnterPh;
                                     }
                                     final ph = double.tryParse(value);
                                     if (ph == null || ph < 6.8 || ph > 8.0) {
-                                      return 'pH không hợp lệ (6.8-8.0)';
+                                      return l10n.invalidPh;
                                     }
                                     return null;
                                   },
@@ -243,16 +248,17 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
                               const SizedBox(width: 16),
                               Expanded(
                                 child: _buildNumberField(
+                                  context: context,
                                   controller: _pco2Controller,
-                                  label: 'PCO₂ (mmHg)',
-                                  hint: '35-45',
+                                  label: l10n.pco2Label,
+                                  hint: l10n.pco2Hint,
                                   validator: (value) {
                                     if (value == null || value.isEmpty) {
-                                      return 'Vui lòng nhập PCO₂';
+                                      return l10n.pleaseEnterPco2;
                                     }
                                     final pco2 = double.tryParse(value);
                                     if (pco2 == null || pco2 < 10 || pco2 > 150) {
-                                      return 'PCO₂ không hợp lệ';
+                                      return l10n.invalidPco2;
                                     }
                                     return null;
                                   },
@@ -265,16 +271,17 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
                             children: [
                               Expanded(
                                 child: _buildNumberField(
+                                  context: context,
                                   controller: _po2Controller,
-                                  label: 'PO₂ (mmHg)',
-                                  hint: '80-100',
+                                  label: l10n.po2Label,
+                                  hint: l10n.po2Hint,
                                   validator: (value) {
                                     if (value == null || value.isEmpty) {
-                                      return 'Vui lòng nhập PO₂';
+                                      return l10n.pleaseEnterPo2;
                                     }
                                     final po2 = double.tryParse(value);
                                     if (po2 == null || po2 < 20 || po2 > 600) {
-                                      return 'PO₂ không hợp lệ';
+                                      return l10n.invalidPo2;
                                     }
                                     return null;
                                   },
@@ -283,16 +290,17 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
                               const SizedBox(width: 16),
                               Expanded(
                                 child: _buildNumberField(
+                                  context: context,
                                   controller: _hco3Controller,
-                                  label: 'HCO₃⁻ (mEq/L)',
-                                  hint: '22-26',
+                                  label: l10n.hco3Label,
+                                  hint: l10n.hco3Hint,
                                   validator: (value) {
                                     if (value == null || value.isEmpty) {
-                                      return 'Vui lòng nhập HCO₃⁻';
+                                      return l10n.pleaseEnterHco3;
                                     }
                                     final hco3 = double.tryParse(value);
                                     if (hco3 == null || hco3 < 5 || hco3 > 50) {
-                                      return 'HCO₃⁻ không hợp lệ';
+                                      return l10n.invalidHco3;
                                     }
                                     return null;
                                   },
@@ -305,16 +313,17 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
                             children: [
                               Expanded(
                                 child: _buildNumberField(
+                                  context: context,
                                   controller: _baseExcessController,
-                                  label: 'Base Excess (mEq/L)',
-                                  hint: '-2 đến +2',
+                                  label: l10n.baseExcessLabel,
+                                  hint: l10n.baseExcessHint,
                                   validator: (value) {
                                     if (value == null || value.isEmpty) {
-                                      return 'Vui lòng nhập BE';
+                                      return l10n.pleaseEnterBe;
                                     }
                                     final be = double.tryParse(value);
                                     if (be == null || be < -30 || be > 30) {
-                                      return 'BE không hợp lệ';
+                                      return l10n.invalidBe;
                                     }
                                     return null;
                                   },
@@ -323,16 +332,17 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
                               const SizedBox(width: 16),
                               Expanded(
                                 child: _buildNumberField(
+                                  context: context,
                                   controller: _sao2Controller,
-                                  label: 'SaO₂ (%)',
-                                  hint: '95-100',
+                                  label: l10n.sao2Label,
+                                  hint: l10n.sao2Hint,
                                   validator: (value) {
                                     if (value == null || value.isEmpty) {
-                                      return 'Vui lòng nhập SaO₂';
+                                      return l10n.pleaseEnterSao2;
                                     }
                                     final sao2 = double.tryParse(value);
                                     if (sao2 == null || sao2 < 0 || sao2 > 100) {
-                                      return 'SaO₂ không hợp lệ (0-100)';
+                                      return l10n.invalidSao2;
                                     }
                                     return null;
                                   },
@@ -342,16 +352,17 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
                           ),
                           const SizedBox(height: 16),
                           _buildNumberField(
+                            context: context,
                             controller: _fio2Controller,
-                            label: 'FiO₂ (%)',
-                            hint: '21-100',
+                            label: l10n.fio2Label,
+                            hint: l10n.fio2Hint,
                             validator: (value) {
                               if (value == null || value.isEmpty) {
-                                return 'Vui lòng nhập FiO₂';
+                                return l10n.pleaseEnterFio2;
                               }
                               final fio2 = double.tryParse(value);
                               if (fio2 == null || fio2 < 21 || fio2 > 100) {
-                                return 'FiO₂ không hợp lệ (21-100)';
+                                return l10n.invalidFio2;
                               }
                               return null;
                             },
@@ -359,10 +370,10 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
                           const SizedBox(height: 16),
                           TextFormField(
                             controller: _notesController,
-                            decoration: const InputDecoration(
-                              labelText: 'Ghi chú (tùy chọn)',
-                              hintText: 'Thông tin bổ sung...',
-                              border: OutlineInputBorder(),
+                            decoration: InputDecoration(
+                              labelText: l10n.abgNotesLabel,
+                              hintText: l10n.abgNotesHint,
+                              border: const OutlineInputBorder(),
                             ),
                             maxLines: 2,
                           ),
@@ -373,7 +384,7 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
                                 child: ElevatedButton.icon(
                                   onPressed: _analyzeABG,
                                   icon: const Icon(Icons.analytics),
-                                  label: const Text('Phân tích ABG'),
+                                  label: Text(l10n.analyzeAbg),
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: AppColors.primary,
                                     foregroundColor: Colors.white,
@@ -392,10 +403,10 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
             ),
             if (_showResults && _currentResult != null) ...[
               const SizedBox(height: 16),
-              _buildResultsCard(),
+              _buildResultsCard(context),
             ],
             const SizedBox(height: 16),
-            _buildCitationWidget(),
+            _buildCitationWidget(context),
           ],
         ),
       ),
@@ -403,6 +414,7 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
   }
 
   Widget _buildNumberField({
+    required BuildContext context,
     required TextEditingController controller,
     required String label,
     required String hint,
@@ -424,7 +436,8 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
     );
   }
 
-  Widget _buildResultsCard() {
+  Widget _buildResultsCard(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final result = _currentResult!;
     final interpretation = result.acidBaseInterpretation;
     final oxygenation = result.oxygenationStatus;
@@ -439,9 +452,9 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
               children: [
                 Icon(Icons.assignment_turned_in, color: AppColors.primary),
                 const SizedBox(width: 8),
-                const Text(
-                  'Kết quả phân tích',
-                  style: TextStyle(
+                Text(
+                  l10n.abgAnalysisResults,
+                  style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -465,7 +478,7 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Tình trạng Acid-Base',
+                    l10n.acidBaseStatus,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: _getInterpretationColor(interpretation),
@@ -473,7 +486,7 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    _getInterpretationText(interpretation),
+                    _getInterpretationText(interpretation, context),
                     style: const TextStyle(fontSize: 16),
                   ),
                 ],
@@ -497,7 +510,7 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Tình trạng Oxy hóa',
+                    l10n.oxygenationStatus,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: _getOxygenationColor(oxygenation),
@@ -505,7 +518,7 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    _getOxygenationText(oxygenation),
+                    _getOxygenationText(oxygenation, context),
                     style: const TextStyle(fontSize: 16),
                   ),
                 ],
@@ -515,9 +528,9 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
             const SizedBox(height: 16),
             
             // Calculated Values
-            const Text(
-              'Chỉ số tính toán',
-              style: TextStyle(
+            Text(
+              l10n.calculatedIndices,
+              style: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
               ),
@@ -548,9 +561,9 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
             
             // Compensation Analysis
             if (interpretation != ABGInterpretation.normal) ...[
-              const Text(
-                'Phân tích bù trừ',
-                style: TextStyle(
+              Text(
+                l10n.compensationAnalysis,
+                style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
@@ -559,20 +572,20 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
               
               if (interpretation.toString().contains('metabolic')) ...[
                 Text(
-                  'PCO₂ dự kiến: ${result.expectedPco2ForMetabolicCompensation.toStringAsFixed(1)} ± 2 mmHg',
+                  l10n.expectedPco2(result.expectedPco2ForMetabolicCompensation.toStringAsFixed(1)),
                   style: const TextStyle(fontSize: 14),
                 ),
                 Text(
-                  'PCO₂ thực tế: ${result.pco2.toStringAsFixed(1)} mmHg',
+                  l10n.actualPco2(result.pco2.toStringAsFixed(1)),
                   style: const TextStyle(fontSize: 14),
                 ),
               ] else if (interpretation.toString().contains('respiratory')) ...[
                 Text(
-                  'HCO₃⁻ dự kiến: ${result.expectedHco3ForRespiratoryCompensation.toStringAsFixed(1)} mEq/L',
+                  l10n.expectedHco3(result.expectedHco3ForRespiratoryCompensation.toStringAsFixed(1)),
                   style: const TextStyle(fontSize: 14),
                 ),
                 Text(
-                  'HCO₃⁻ thực tế: ${result.hco3.toStringAsFixed(1)} mEq/L',
+                  l10n.actualHco3(result.hco3.toStringAsFixed(1)),
                   style: const TextStyle(fontSize: 14),
                 ),
               ],
@@ -580,9 +593,9 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
             
             if (result.notes != null) ...[
               const SizedBox(height: 16),
-              const Text(
-                'Ghi chú',
-                style: TextStyle(
+              Text(
+                l10n.abgNotes,
+                style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
@@ -626,7 +639,8 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
     );
   }
 
-  Widget _buildCitationWidget() {
+  Widget _buildCitationWidget(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
@@ -642,7 +656,7 @@ class _ABGAnalysisPageState extends State<ABGAnalysisPage> {
               Icon(Icons.article, color: Colors.blue.shade700, size: 16),
               const SizedBox(width: 6),
               Text(
-                'Tài liệu tham khảo',
+                l10n.abgReferences,
                 style: TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.bold,

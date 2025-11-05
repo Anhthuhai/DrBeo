@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../../../core/theme/colors.dart';
+import '../../../l10n/app_localizations.dart';
 import '../domain/entities/pleural_fluid_result.dart';
 
 class PleuralFluidAnalysisPage extends StatefulWidget {
@@ -107,62 +108,65 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
     });
   }
 
-  String _getAppearanceText(PleuralFluidAppearance appearance) {
+  String _getAppearanceText(PleuralFluidAppearance appearance, BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     switch (appearance) {
       case PleuralFluidAppearance.clear:
-        return 'Trong suốt';
+        return localizations.appearanceClear;
       case PleuralFluidAppearance.turbid:
-        return 'Đục';
+        return localizations.appearanceTurbid;
       case PleuralFluidAppearance.bloody:
-        return 'Có máu';
+        return localizations.appearanceBloody;
       case PleuralFluidAppearance.purulent:
-        return 'Mủ';
+        return localizations.appearancePurulent;
       case PleuralFluidAppearance.milky:
-        return 'Trắng đục';
+        return localizations.appearanceMilky;
       case PleuralFluidAppearance.cholesterol:
-        return 'Vàng cholesterol';
+        return localizations.appearanceCholesterol;
     }
   }
 
-  String _getFluidTypeText(PleuralFluidType type) {
+  String _getFluidTypeText(PleuralFluidType type, BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     switch (type) {
       case PleuralFluidType.transudate:
-        return 'Dịch thấm xuất (Transudate)';
+        return localizations.fluidTypeTransudate;
       case PleuralFluidType.exudate:
-        return 'Dịch thẩm xuất (Exudate)';
+        return localizations.fluidTypeExudate;
       case PleuralFluidType.indeterminate:
-        return 'Không xác định';
+        return localizations.fluidTypeIndeterminate;
     }
   }
 
-  String _getCauseText(PleuralFluidCause cause) {
+  String _getCauseText(PleuralFluidCause cause, BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     switch (cause) {
       case PleuralFluidCause.heartFailure:
-        return 'Suy tim';
+        return localizations.causeHeartFailure;
       case PleuralFluidCause.cirrhosis:
-        return 'Xơ gan';
+        return localizations.causeCirrhosis;
       case PleuralFluidCause.nephrotic:
-        return 'Hội chứng thận hư';
+        return localizations.causeNephrotic;
       case PleuralFluidCause.hypoalbuminemia:
-        return 'Hạ albumin máu';
+        return localizations.causeHypoalbuminemia;
       case PleuralFluidCause.pneumonia:
-        return 'Viêm phổi';
+        return localizations.causePneumonia;
       case PleuralFluidCause.malignancy:
-        return 'Ung thư';
+        return localizations.causeMalignancy;
       case PleuralFluidCause.tuberculosis:
-        return 'Lao phổi';
+        return localizations.causeTuberculosis;
       case PleuralFluidCause.pulmonaryEmbolism:
-        return 'Thuyên tắc phổi';
+        return localizations.causePulmonaryEmbolism;
       case PleuralFluidCause.pancreatitis:
-        return 'Viêm tụy';
+        return localizations.causePancreatitis;
       case PleuralFluidCause.rheumatoid:
-        return 'Viêm khớp dạng thấp';
+        return localizations.causeRheumatoid;
       case PleuralFluidCause.lupus:
-        return 'Lupus ban đỏ hệ thống';
+        return localizations.causeLupus;
       case PleuralFluidCause.empyema:
-        return 'Tụ mủ màng phổi';
+        return localizations.causeEmpyema;
       case PleuralFluidCause.unknown:
-        return 'Chưa xác định nguyên nhân';
+        return localizations.causeUnknown;
     }
   }
 
@@ -179,9 +183,11 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+    
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Phân tích dịch màng phổi'),
+        title: Text(localizations.pleuralFluidAnalysisTitle),
         backgroundColor: AppColors.primary,
         foregroundColor: Colors.white,
         actions: [
@@ -210,9 +216,9 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
                         children: [
                           Icon(Icons.water_drop, color: AppColors.primary),
                           const SizedBox(width: 8),
-                          const Text(
-                            'Thông số dịch màng phổi',
-                            style: TextStyle(
+                          Text(
+                            localizations.pleuralFluidParameters,
+                            style: const TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                             ),
@@ -220,9 +226,9 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
                         ],
                       ),
                       const SizedBox(height: 8),
-                      const Text(
-                        '* Bắt buộc cho tiêu chuẩn Light',
-                        style: TextStyle(
+                      Text(
+                        localizations.requiredForLight,
+                        style: const TextStyle(
                           fontSize: 12,
                           color: Colors.grey,
                           fontStyle: FontStyle.italic,
@@ -233,14 +239,14 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
                       // Appearance
                       DropdownButtonFormField<PleuralFluidAppearance>(
                         initialValue: _selectedAppearance,
-                        decoration: const InputDecoration(
-                          labelText: 'Tính chất dịch',
-                          border: OutlineInputBorder(),
+                        decoration: InputDecoration(
+                          labelText: localizations.fluidAppearance,
+                          border: const OutlineInputBorder(),
                         ),
                         items: PleuralFluidAppearance.values.map((appearance) {
                           return DropdownMenuItem(
                             value: appearance,
-                            child: Text(_getAppearanceText(appearance)),
+                            child: Text(_getAppearanceText(appearance, context)),
                           );
                         }).toList(),
                         onChanged: (value) {
@@ -257,7 +263,7 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
                           Expanded(
                             child: _buildNumberField(
                               controller: _proteinController,
-                              label: 'Protein (g/dL) *',
+                              label: localizations.proteinLabel,
                               hint: '0.5-6.0',
                               validator: _validateRequiredNumber,
                             ),
@@ -266,7 +272,7 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
                           Expanded(
                             child: _buildNumberField(
                               controller: _ldhController,
-                              label: 'LDH (U/L) *',
+                              label: localizations.ldhLabel,
                               hint: '50-1000',
                               validator: _validateRequiredNumber,
                             ),
@@ -281,7 +287,7 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
                           Expanded(
                             child: _buildNumberField(
                               controller: _glucoseController,
-                              label: 'Glucose (mg/dL)',
+                              label: localizations.glucoseLabel,
                               hint: '30-150',
                               validator: _validateOptionalNumber,
                             ),
@@ -305,7 +311,7 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
                           Expanded(
                             child: _buildNumberField(
                               controller: _cellCountController,
-                              label: 'Số tế bào (/μL)',
+                              label: localizations.cellCountLabel,
                               hint: '100-10000',
                               isInteger: true,
                               validator: _validateOptionalInteger,
@@ -315,7 +321,7 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
                           Expanded(
                             child: _buildNumberField(
                               controller: _neutrophilsController,
-                              label: 'Neutrophils (%)',
+                              label: localizations.neutrophilsLabel,
                               hint: '0-100',
                               isInteger: true,
                               validator: _validateOptionalPercentage,
@@ -331,7 +337,7 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
                           Expanded(
                             child: _buildNumberField(
                               controller: _lymphocytesController,
-                              label: 'Lymphocytes (%)',
+                              label: localizations.lymphocytesLabel,
                               hint: '0-100',
                               isInteger: true,
                               validator: _validateOptionalPercentage,
@@ -341,7 +347,7 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
                           Expanded(
                             child: _buildNumberField(
                               controller: _cholesterolController,
-                              label: 'Cholesterol (mg/dL)',
+                              label: localizations.cholesterolLabel,
                               hint: '20-200',
                               validator: _validateOptionalNumber,
                             ),
@@ -352,7 +358,7 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
                       
                       _buildNumberField(
                         controller: _triglyceridesController,
-                        label: 'Triglycerides (mg/dL)',
+                        label: localizations.triglyceridesLabel,
                         hint: '10-200',
                         validator: _validateOptionalNumber,
                       ),
@@ -373,9 +379,9 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
                         children: [
                           Icon(Icons.bloodtype, color: AppColors.secondary),
                           const SizedBox(width: 8),
-                          const Text(
-                            'Thông số máu',
-                            style: TextStyle(
+                          Text(
+                            localizations.serumParameters,
+                            style: const TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                             ),
@@ -383,9 +389,9 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
                         ],
                       ),
                       const SizedBox(height: 8),
-                      const Text(
-                        '* Bắt buộc cho tiêu chuẩn Light',
-                        style: TextStyle(
+                      Text(
+                        localizations.requiredForLight,
+                        style: const TextStyle(
                           fontSize: 12,
                           color: Colors.grey,
                           fontStyle: FontStyle.italic,
@@ -398,7 +404,7 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
                           Expanded(
                             child: _buildNumberField(
                               controller: _serumProteinController,
-                              label: 'Serum Protein (g/dL) *',
+                              label: localizations.serumProteinLabel,
                               hint: '6.0-8.0',
                               validator: _validateRequiredNumber,
                             ),
@@ -407,7 +413,7 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
                           Expanded(
                             child: _buildNumberField(
                               controller: _serumLdhController,
-                              label: 'Serum LDH (U/L) *',
+                              label: localizations.serumLdhLabel,
                               hint: '100-250',
                               validator: _validateRequiredNumber,
                             ),
@@ -418,7 +424,7 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
                       
                       _buildNumberField(
                         controller: _serumGlucoseController,
-                        label: 'Serum Glucose (mg/dL)',
+                        label: localizations.serumGlucoseLabel,
                         hint: '70-110',
                         validator: _validateOptionalNumber,
                       ),
@@ -431,10 +437,10 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
               // Notes
               TextFormField(
                 controller: _notesController,
-                decoration: const InputDecoration(
-                  labelText: 'Ghi chú (tùy chọn)',
-                  hintText: 'Thông tin bổ sung...',
-                  border: OutlineInputBorder(),
+                decoration: InputDecoration(
+                  labelText: localizations.notesOptional,
+                  hintText: localizations.additionalInformation,
+                  border: const OutlineInputBorder(),
                 ),
                 maxLines: 2,
               ),
@@ -444,7 +450,7 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
               ElevatedButton.icon(
                 onPressed: _analyzePleuralFluid,
                 icon: const Icon(Icons.analytics),
-                label: const Text('Phân tích dịch màng phổi'),
+                label: Text(localizations.analyzePleuralFluid),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppColors.primary,
                   foregroundColor: Colors.white,
@@ -459,7 +465,7 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
 
               // Medical Citation
               const SizedBox(height: 16),
-              _buildCitationWidget(),
+              _buildCitationWidget(context),
             ],
           ),
         ),
@@ -491,46 +497,50 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
 
   // Required validators for Light's criteria
   String? _validateRequiredNumber(String? value) {
+    final localizations = AppLocalizations.of(context)!;
     if (value == null || value.isEmpty) {
-      return 'Vui lòng nhập giá trị';
+      return localizations.pleaseEnterValue;
     }
     final number = double.tryParse(value);
     if (number == null || number < 0) {
-      return 'Giá trị không hợp lệ';
+      return localizations.invalidValue;
     }
     return null;
   }
 
   // Optional validators for additional parameters
   String? _validateOptionalNumber(String? value) {
+    final localizations = AppLocalizations.of(context)!;
     if (value == null || value.isEmpty) {
       return null; // Allow empty for optional fields
     }
     final number = double.tryParse(value);
     if (number == null || number < 0) {
-      return 'Giá trị không hợp lệ';
+      return localizations.invalidValue;
     }
     return null;
   }
 
   String? _validateOptionalInteger(String? value) {
+    final localizations = AppLocalizations.of(context)!;
     if (value == null || value.isEmpty) {
       return null; // Allow empty for optional fields
     }
     final number = int.tryParse(value);
     if (number == null || number < 0) {
-      return 'Giá trị không hợp lệ';
+      return localizations.invalidValue;
     }
     return null;
   }
 
   String? _validateOptionalPercentage(String? value) {
+    final localizations = AppLocalizations.of(context)!;
     if (value == null || value.isEmpty) {
       return null; // Allow empty for optional fields
     }
     final number = int.tryParse(value);
     if (number == null || number < 0 || number > 100) {
-      return 'Phần trăm không hợp lệ (0-100)';
+      return localizations.invalidPercentage;
     }
     return null;
   }
@@ -539,6 +549,7 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
     final result = _currentResult!;
     final fluidType = result.fluidType;
     final likelyCauses = result.likelyCauses;
+    final localizations = AppLocalizations.of(context)!;
 
     return Card(
       child: Padding(
@@ -584,7 +595,7 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    _getFluidTypeText(fluidType),
+                    _getFluidTypeText(fluidType, context),
                     style: const TextStyle(fontSize: 16),
                   ),
                 ],
@@ -645,8 +656,8 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
                 const SizedBox(width: 16),
                 Expanded(
                   child: _buildParameterCard(
-                    'Tính chất',
-                    _getAppearanceText(result.appearance),
+                    localizations.fluidAppearance,
+                    _getAppearanceText(result.appearance, context),
                     '',
                   ),
                 ),
@@ -689,7 +700,7 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
               runSpacing: 8,
               children: likelyCauses.map((cause) {
                 return Chip(
-                  label: Text(_getCauseText(cause)),
+                  label: Text(_getCauseText(cause, context)),
                   backgroundColor: _getFluidTypeColor(fluidType).withValues(alpha: 0.1),
                   side: BorderSide(color: _getFluidTypeColor(fluidType)),
                 );
@@ -785,7 +796,8 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
     );
   }
 
-  Widget _buildCitationWidget() {
+  Widget _buildCitationWidget(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
@@ -801,7 +813,7 @@ class _PleuralFluidAnalysisPageState extends State<PleuralFluidAnalysisPage> {
               Icon(Icons.article, color: Colors.blue.shade700, size: 16),
               const SizedBox(width: 6),
               Text(
-                'Tài liệu tham khảo',
+                localizations.references,
                 style: TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.bold,

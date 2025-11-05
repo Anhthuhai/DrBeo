@@ -25,22 +25,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get clinicalScoresDescription => 'Glasgow, APACHE, SOFA...';
 
   @override
-  String get emergencyProtocols => 'Emergency Protocols';
-
-  @override
-  String get emergencyProtocolsDescription => 'Critical care procedures';
-
-  @override
   String get diagnosticTools => 'Diagnostic Tools';
 
   @override
   String get diagnosticToolsDescription => 'Lab analysis, imaging guides';
-
-  @override
-  String get calculationTools => 'Calculation Tools';
-
-  @override
-  String get calculationToolsDescription => 'BMI, BSA, dosage calculations';
 
   @override
   String get unitConverter => 'Unit Converter';
@@ -53,6 +41,393 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get labAnalysisDescription => 'Interpret laboratory results';
+
+  @override
+  String get abgAnalysisTitle => 'Arterial Blood Gas Analysis';
+
+  @override
+  String get enterAbgResults => 'Enter ABG Results';
+
+  @override
+  String get abgClearAll => 'Clear All';
+
+  @override
+  String get phLabel => 'pH';
+
+  @override
+  String get phHint => '7.35-7.45';
+
+  @override
+  String get pleaseEnterPh => 'Please enter pH';
+
+  @override
+  String get invalidPh => 'Invalid pH (6.8-8.0)';
+
+  @override
+  String get pco2Label => 'PCO₂ (mmHg)';
+
+  @override
+  String get pco2Hint => '35-45';
+
+  @override
+  String get pleaseEnterPco2 => 'Please enter PCO₂';
+
+  @override
+  String get invalidPco2 => 'Invalid PCO₂';
+
+  @override
+  String get po2Label => 'PO₂ (mmHg)';
+
+  @override
+  String get po2Hint => '80-100';
+
+  @override
+  String get pleaseEnterPo2 => 'Please enter PO₂';
+
+  @override
+  String get invalidPo2 => 'Invalid PO₂';
+
+  @override
+  String get hco3Label => 'HCO₃⁻ (mEq/L)';
+
+  @override
+  String get hco3Hint => '22-26';
+
+  @override
+  String get pleaseEnterHco3 => 'Please enter HCO₃⁻';
+
+  @override
+  String get invalidHco3 => 'Invalid HCO₃⁻';
+
+  @override
+  String get baseExcessLabel => 'Base Excess (mEq/L)';
+
+  @override
+  String get baseExcessHint => '-2 to +2';
+
+  @override
+  String get pleaseEnterBe => 'Please enter BE';
+
+  @override
+  String get invalidBe => 'Invalid BE';
+
+  @override
+  String get sao2Label => 'SaO₂ (%)';
+
+  @override
+  String get sao2Hint => '95-100';
+
+  @override
+  String get pleaseEnterSao2 => 'Please enter SaO₂';
+
+  @override
+  String get invalidSao2 => 'Invalid SaO₂ (0-100)';
+
+  @override
+  String get fio2Label => 'FiO₂ (%)';
+
+  @override
+  String get fio2Hint => '21-100';
+
+  @override
+  String get pleaseEnterFio2 => 'Please enter FiO₂';
+
+  @override
+  String get invalidFio2 => 'Invalid FiO₂ (21-100)';
+
+  @override
+  String get abgNotesLabel => 'Notes (optional)';
+
+  @override
+  String get abgNotesHint => 'Additional information...';
+
+  @override
+  String get analyzeAbg => 'Analyze ABG';
+
+  @override
+  String get abgAnalysisResults => 'Analysis Results';
+
+  @override
+  String get acidBaseStatus => 'Acid-Base Status';
+
+  @override
+  String get oxygenationStatus => 'Oxygenation Status';
+
+  @override
+  String get calculatedIndices => 'Calculated Indices';
+
+  @override
+  String get compensationAnalysis => 'Compensation Analysis';
+
+  @override
+  String expectedPco2(String value) {
+    return 'Expected PCO₂: $value ± 2 mmHg';
+  }
+
+  @override
+  String actualPco2(String value) {
+    return 'Actual PCO₂: $value mmHg';
+  }
+
+  @override
+  String expectedHco3(String value) {
+    return 'Expected HCO₃⁻: $value mEq/L';
+  }
+
+  @override
+  String actualHco3(String value) {
+    return 'Actual HCO₃⁻: $value mEq/L';
+  }
+
+  @override
+  String get abgNotes => 'Notes';
+
+  @override
+  String get abgReferences => 'References';
+
+  @override
+  String get abgInterpretationNormal => 'Normal';
+
+  @override
+  String get abgInterpretationRespAcidosis => 'Acute respiratory acidosis';
+
+  @override
+  String get abgInterpretationRespAlkalosis => 'Acute respiratory alkalosis';
+
+  @override
+  String get abgInterpretationMetAcidosis => 'Acute metabolic acidosis';
+
+  @override
+  String get abgInterpretationMetAlkalosis => 'Acute metabolic alkalosis';
+
+  @override
+  String get abgInterpretationCompRespAcidosis =>
+      'Compensated respiratory acidosis';
+
+  @override
+  String get abgInterpretationCompRespAlkalosis =>
+      'Compensated respiratory alkalosis';
+
+  @override
+  String get abgInterpretationCompMetAcidosis =>
+      'Compensated metabolic acidosis';
+
+  @override
+  String get abgInterpretationCompMetAlkalosis =>
+      'Compensated metabolic alkalosis';
+
+  @override
+  String get abgInterpretationMixed => 'Mixed disorder';
+
+  @override
+  String get oxygenationNormal => 'Normal oxygenation';
+
+  @override
+  String get oxygenationMildHypoxemia => 'Mild hypoxemia';
+
+  @override
+  String get oxygenationModerateHypoxemia => 'Moderate hypoxemia';
+
+  @override
+  String get oxygenationSevereHypoxemia => 'Severe hypoxemia';
+
+  @override
+  String get oxygenationNormalWithO2 => 'Good oxygenation with supplemental O₂';
+
+  @override
+  String get labAnalysisHomeTitle => 'Laboratory Analysis';
+
+  @override
+  String get selectAnalysisType => 'Select Analysis Type';
+
+  @override
+  String get labAnalysisToolDescription =>
+      'Tools to support analysis and interpretation of laboratory results';
+
+  @override
+  String get abgAnalysisCardTitle => 'Arterial Blood Gas';
+
+  @override
+  String get abgAnalysisCardSubtitle =>
+      'ABG Analysis - Arterial blood gas analysis, pH, CO2, O2';
+
+  @override
+  String get pleuralFluidCardTitle => 'Pleural Fluid';
+
+  @override
+  String get pleuralFluidCardSubtitle =>
+      'Pleural Fluid - Pleural fluid analysis, Light\'s criteria';
+
+  @override
+  String get asciticFluidCardTitle => 'Ascitic Fluid';
+
+  @override
+  String get asciticFluidCardSubtitle =>
+      'Ascitic Fluid - Ascites analysis, SAAG gradient';
+
+  @override
+  String get csfAnalysisCardTitle => 'Cerebrospinal Fluid';
+
+  @override
+  String get csfAnalysisCardSubtitle =>
+      'CSF Analysis - Cerebrospinal fluid analysis, meningitis';
+
+  @override
+  String get urinalysisCardTitle => 'Urinalysis';
+
+  @override
+  String get urinalysisCardSubtitle =>
+      'Urinalysis - Urine analysis, protein, red blood cells';
+
+  @override
+  String get pleuralFluidAnalysisTitle => 'Pleural Fluid Analysis';
+
+  @override
+  String get pleuralFluidParameters => 'Pleural Fluid Parameters';
+
+  @override
+  String get requiredForLight => '* Required for Light\'s criteria';
+
+  @override
+  String get fluidAppearance => 'Fluid Appearance';
+
+  @override
+  String get appearanceClear => 'Clear';
+
+  @override
+  String get appearanceTurbid => 'Turbid';
+
+  @override
+  String get appearanceBloody => 'Bloody';
+
+  @override
+  String get appearancePurulent => 'Purulent';
+
+  @override
+  String get appearanceMilky => 'Milky';
+
+  @override
+  String get appearanceCholesterol => 'Cholesterol yellow';
+
+  @override
+  String get proteinLabel => 'Protein (g/dL) *';
+
+  @override
+  String get ldhLabel => 'LDH (U/L) *';
+
+  @override
+  String get glucoseLabel => 'Glucose (mg/dL)';
+
+  @override
+  String get cellCountLabel => 'Cell Count (/μL)';
+
+  @override
+  String get neutrophilsLabel => 'Neutrophils (%)';
+
+  @override
+  String get lymphocytesLabel => 'Lymphocytes (%)';
+
+  @override
+  String get cholesterolLabel => 'Cholesterol (mg/dL)';
+
+  @override
+  String get triglyceridesLabel => 'Triglycerides (mg/dL)';
+
+  @override
+  String get serumParameters => 'Serum Parameters';
+
+  @override
+  String get serumProteinLabel => 'Serum Protein (g/dL) *';
+
+  @override
+  String get serumLdhLabel => 'Serum LDH (U/L) *';
+
+  @override
+  String get serumGlucoseLabel => 'Serum Glucose (mg/dL)';
+
+  @override
+  String get analyzePleuralFluid => 'Analyze Pleural Fluid';
+
+  @override
+  String get fluidTypeTransudate => 'Transudate';
+
+  @override
+  String get fluidTypeExudate => 'Exudate';
+
+  @override
+  String get fluidTypeIndeterminate => 'Indeterminate';
+
+  @override
+  String get causeHeartFailure => 'Heart failure';
+
+  @override
+  String get causeCirrhosis => 'Cirrhosis';
+
+  @override
+  String get causeNephrotic => 'Nephrotic syndrome';
+
+  @override
+  String get causeHypoalbuminemia => 'Hypoalbuminemia';
+
+  @override
+  String get causePneumonia => 'Pneumonia';
+
+  @override
+  String get causeMalignancy => 'Malignancy';
+
+  @override
+  String get causeTuberculosis => 'Tuberculosis';
+
+  @override
+  String get causePulmonaryEmbolism => 'Pulmonary embolism';
+
+  @override
+  String get causePancreatitis => 'Pancreatitis';
+
+  @override
+  String get causeRheumatoid => 'Rheumatoid arthritis';
+
+  @override
+  String get causeLupus => 'Systemic lupus erythematosus';
+
+  @override
+  String get causeEmpyema => 'Empyema';
+
+  @override
+  String get causeUnknown => 'Unknown cause';
+
+  @override
+  String get pleaseEnterValue => 'Please enter a value';
+
+  @override
+  String get invalidValue => 'Invalid value';
+
+  @override
+  String get invalidPercentage => 'Must be between 0-100';
+
+  @override
+  String get fluidCharacteristics => 'Fluid Characteristics';
+
+  @override
+  String get lightCriteria => 'Light\'s Criteria';
+
+  @override
+  String get proteinRatio => 'Protein Ratio';
+
+  @override
+  String get ldhRatio => 'LDH Ratio';
+
+  @override
+  String get likelyCauses => 'Likely Causes';
+
+  @override
+  String get notes => 'Notes';
+
+  @override
+  String get notesOptional => 'Notes (optional)';
+
+  @override
+  String get additionalInformation => 'Additional information...';
 
   @override
   String get guidelines => 'Guidelines';
@@ -255,16 +630,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get emergency_medicine => 'Emergency Medicine';
-
-  @override
-  String get emergency_protocols => 'Emergency Protocols';
-
-  @override
-  String get emergency_protocols_title => 'Emergency Protocols';
-
-  @override
-  String get emergency_protocols_subtitle =>
-      'Quick management algorithms for common emergency situations';
 
   @override
   String get hypertensive_crisis_title => 'Hypertensive Crisis';
@@ -521,6 +886,71 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get references => 'References';
+
+  @override
+  String get asciticFluidAnalysisTitle => 'Ascitic Fluid Analysis';
+
+  @override
+  String get asciticFluidParameters => 'Ascitic Fluid Parameters';
+
+  @override
+  String get requiredForSAAG => '* Required for SAAG calculation';
+
+  @override
+  String get albuminLabel => 'Albumin (g/dL) *';
+
+  @override
+  String get amylaseLabel => 'Amylase (U/L)';
+
+  @override
+  String get redBloodCellsLabel => 'Red Blood Cells (/μL)';
+
+  @override
+  String get serumAlbuminLabel => 'Serum Albumin (g/dL) *';
+
+  @override
+  String get analyzeAsciticFluid => 'Analyze Ascitic Fluid';
+
+  @override
+  String get fluidTypeTransudateSAAG => 'Transudate (High SAAG)';
+
+  @override
+  String get fluidTypeExudateSAAG => 'Exudate (Low SAAG)';
+
+  @override
+  String get saagLabel => 'SAAG';
+
+  @override
+  String get albuminRatio => 'Albumin Ratio';
+
+  @override
+  String get causePeritonitis => 'Peritonitis';
+
+  @override
+  String get causeNephrogenicAscites => 'Nephrogenic ascites';
+
+  @override
+  String get causeSpontaneousBacterialPeritonitis =>
+      'Spontaneous bacterial peritonitis';
+
+  @override
+  String get causeSecondaryBacterialPeritonitis =>
+      'Secondary bacterial peritonitis';
+
+  @override
+  String get causeChylousAscites => 'Chylous ascites';
+
+  @override
+  String get causeHemorrhagicAscites => 'Hemorrhagic ascites';
+
+  @override
+  String get specialTests => 'Special Tests';
+
+  @override
+  String get positive => 'Positive';
+
+  @override
+  String get negative => 'Negative';
 
   @override
   String get medical_disclaimer =>
@@ -7225,4 +7655,93 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get references_content =>
       '1. WHO Guidelines for Snakebite Management\n2. Vietnamese Ministry of Health Protocol\n3. SEARO Regional Guidelines\n4. Clinical Toxinology Resources\n5. Antivenom Producer Guidelines\n6. Regional Poisoning Centers\n7. Emergency Medicine Textbooks';
+
+  @override
+  String get csfAnalysisTitle => 'CSF Analysis';
+
+  @override
+  String get csfAnalysisSubtitle =>
+      'Diagnosis of meningitis and neurological diseases';
+
+  @override
+  String get csfParameters => 'CSF Parameters';
+
+  @override
+  String get requiredForDiagnosis => '* Required for diagnosis';
+
+  @override
+  String get pressureLabel => 'Pressure (mmH2O)';
+
+  @override
+  String get lactateLabel => 'Lactate (mmol/L)';
+
+  @override
+  String get appearanceXanthochromic => 'Yellow (xanthochromic)';
+
+  @override
+  String get serumGlucoseRatioNote =>
+      '* To calculate CSF/serum glucose ratio (default 90 mg/dL)';
+
+  @override
+  String get analyzeCsf => 'Analyze CSF';
+
+  @override
+  String get csfTypeNormal => 'Normal';
+
+  @override
+  String get csfTypeBacterial => 'Bacterial meningitis';
+
+  @override
+  String get csfTypeViral => 'Viral meningitis';
+
+  @override
+  String get csfTypeTuberculous => 'Tuberculous meningitis';
+
+  @override
+  String get csfTypeFungal => 'Fungal meningitis';
+
+  @override
+  String get csfTypeMalignant => 'Malignant meningitis';
+
+  @override
+  String get csfTypeHemorrhagic => 'Subarachnoid hemorrhage';
+
+  @override
+  String get csfTypeTraumatic => 'Traumatic tap';
+
+  @override
+  String get keyParameters => 'Key Parameters:';
+
+  @override
+  String get cellsLabel => 'Cells';
+
+  @override
+  String get riskLevel => 'Risk Level:';
+
+  @override
+  String get likelyDiagnoses => 'Likely Diagnoses:';
+
+  @override
+  String get usingDefaultValues => 'Using default values:';
+
+  @override
+  String get defaultSerumGlucose => '• Serum glucose: 90 mg/dL';
+
+  @override
+  String get defaultCsfPressure => '• CSF pressure: 150 mmH2O';
+
+  @override
+  String get fluidAppearanceLabel => 'Fluid appearance';
+
+  @override
+  String get bloodParametersLabel => 'Blood parameters';
+
+  @override
+  String get notesLabel => 'Notes';
+
+  @override
+  String get notesHint => 'Additional information...';
+
+  @override
+  String get referencesLabel => 'References';
 }

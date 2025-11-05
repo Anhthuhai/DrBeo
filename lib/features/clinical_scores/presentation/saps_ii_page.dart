@@ -403,7 +403,7 @@ class _SAPSIIState extends State<SAPSII> {
               heartRateScore = 7;
             }
           });
-        }, heartRateScore),
+        }, heartRateScore, l10n),
         
         _buildVitalSignRow(l10n.systolic_bp_mmhg, sbpController, (value) {
           int sbp = int.tryParse(value) ?? 0;
@@ -421,7 +421,7 @@ class _SAPSIIState extends State<SAPSII> {
               systolicBPScore = 2;
             }
           });
-        }, systolicBPScore),
+        }, systolicBPScore, l10n),
         
         _buildVitalSignRow(l10n.temperature_celsius, tempController, (value) {
           double temp = double.tryParse(value) ?? 0;
@@ -433,7 +433,7 @@ class _SAPSIIState extends State<SAPSII> {
               tempScore = 3;
             }
           });
-        }, tempScore),
+        }, tempScore, l10n),
       ],
     );
   }
@@ -460,7 +460,7 @@ class _SAPSIIState extends State<SAPSII> {
               pao2fio2Score = 6;
             }
           });
-        }, pao2fio2Score),
+        }, pao2fio2Score, l10n),
         
         _buildVitalSignRow(l10n.urine_output_l_day, urineController, (value) {
           double urine = double.tryParse(value) ?? 0;
@@ -475,7 +475,7 @@ class _SAPSIIState extends State<SAPSII> {
               urineScore = 0;
             }
           });
-        }, urineScore),
+        }, urineScore, l10n),
         
         // Bilirubin with unit conversion
         _buildLabValueWithUnit(
@@ -491,6 +491,7 @@ class _SAPSIIState extends State<SAPSII> {
           },
           (value) => calculateBilirubinScore(value),
           bilirubiScore,
+          l10n,
         ),
         
         // BUN with unit conversion  
@@ -507,6 +508,7 @@ class _SAPSIIState extends State<SAPSII> {
           },
           (value) => calculateBUNScore(value),
           bunScore,
+          l10n,
         ),
 
         _buildVitalSignRow(l10n.wbc_count, wbcController, (value) {
@@ -522,7 +524,7 @@ class _SAPSIIState extends State<SAPSII> {
               wbcScore = 3;
             }
           });
-        }, wbcScore),
+        }, wbcScore, l10n),
 
         _buildVitalSignRow(l10n.potassium_mmol, kController, (value) {
           double k = double.tryParse(value) ?? 0;
@@ -537,7 +539,7 @@ class _SAPSIIState extends State<SAPSII> {
               potassiumScore = 3;
             }
           });
-        }, potassiumScore),
+        }, potassiumScore, l10n),
 
         _buildVitalSignRow(l10n.sodium_mmol, naController, (value) {
           double na = double.tryParse(value) ?? 0;
@@ -552,7 +554,7 @@ class _SAPSIIState extends State<SAPSII> {
               sodiumScore = 1;
             }
           });
-        }, sodiumScore),
+        }, sodiumScore, l10n),
 
         _buildVitalSignRow(l10n.bicarbonate_mmol, hco3Controller, (value) {
           double hco3 = double.tryParse(value) ?? 0;
@@ -567,7 +569,7 @@ class _SAPSIIState extends State<SAPSII> {
               bicarboScore = 0;
             }
           });
-        }, bicarboScore),
+        }, bicarboScore, l10n),
       ],
     );
   }
@@ -751,6 +753,7 @@ class _SAPSIIState extends State<SAPSII> {
     Function(String) onUnitChanged,
     Function(String) onValueChanged,
     int score,
+    AppLocalizations l10n,
   ) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
@@ -804,7 +807,7 @@ class _SAPSIIState extends State<SAPSII> {
                   borderRadius: BorderRadius.circular(4),
                 ),
                 child: Text(
-                  'Điểm: $score',
+                  '${l10n.score}: $score',
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
                     color: score > 0 ? Colors.red : Colors.grey,
@@ -819,7 +822,7 @@ class _SAPSIIState extends State<SAPSII> {
     );
   }
 
-  Widget _buildVitalSignRow(String label, TextEditingController controller, Function(String) onChanged, int score) {
+  Widget _buildVitalSignRow(String label, TextEditingController controller, Function(String) onChanged, int score, AppLocalizations l10n) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: Row(
@@ -845,7 +848,7 @@ class _SAPSIIState extends State<SAPSII> {
               borderRadius: BorderRadius.circular(4),
             ),
             child: Text(
-              'Điểm: $score',
+              '${l10n.score}: $score',
               style: TextStyle(
                 fontWeight: FontWeight.w600,
                 color: score > 0 ? Colors.red : Colors.grey,

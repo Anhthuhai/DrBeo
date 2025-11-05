@@ -5,12 +5,8 @@
   "welcomeSubtitle": "Công cụ hỗ trợ cho bác sĩ và sinh viên thực hành tại khoa hồi sức tích cực",
   "clinicalScores": "Thang điểm lâm sàng",
   "clinicalScoresDescription": "Glasgow, APACHE, SOFA...",
-  "emergencyProtocols": "Quy trình cấp cứu",
-  "emergencyProtocolsDescription": "Quy trình hồi sức cấp cứu",
   "diagnosticTools": "Công cụ chẩn đoán",
   "diagnosticToolsDescription": "Phân tích xét nghiệm, hướng dẫn hình ảnh",
-  "calculationTools": "Công cụ tính toán",
-  "calculationToolsDescription": "Tính BMI, BSA, các chỉ số y tế",
   "cha2ds2_vasc_score": "Thang điểm CHA₂DS₂-VASc",
   "@cha2ds2_vasc_score": {
     "description": "CHA2DS2-VASc score title"
@@ -76,6 +72,518 @@
   "unitConverterDescription": "Chuyển đổi đơn vị y tế",
   "labAnalysis": "Xét nghiệm",
   "labAnalysisDescription": "Phân tích kết quả xét nghiệm",
+  "abgAnalysisTitle": "Phân tích khí máu động mạch",
+  "@abgAnalysisTitle": {
+    "description": "ABG analysis page title"
+  },
+  "enterAbgResults": "Nhập kết quả ABG",
+  "@enterAbgResults": {
+    "description": "Section title for ABG input form"
+  },
+  "abgClearAll": "Xóa tất cả",
+  "@abgClearAll": {
+    "description": "Clear all button tooltip for ABG"
+  },
+  "phLabel": "pH",
+  "@phLabel": {
+    "description": "pH input field label"
+  },
+  "phHint": "7.35-7.45",
+  "@phHint": {
+    "description": "pH input field hint"
+  },
+  "pleaseEnterPh": "Vui lòng nhập pH",
+  "@pleaseEnterPh": {
+    "description": "pH validation error message"
+  },
+  "invalidPh": "pH không hợp lệ (6.8-8.0)",
+  "@invalidPh": {
+    "description": "pH range validation error"
+  },
+  "pco2Label": "PCO₂ (mmHg)",
+  "@pco2Label": {
+    "description": "PCO2 input field label"
+  },
+  "pco2Hint": "35-45",
+  "@pco2Hint": {
+    "description": "PCO2 input field hint"
+  },
+  "pleaseEnterPco2": "Vui lòng nhập PCO₂",
+  "@pleaseEnterPco2": {
+    "description": "PCO2 validation error message"
+  },
+  "invalidPco2": "PCO₂ không hợp lệ",
+  "@invalidPco2": {
+    "description": "PCO2 range validation error"
+  },
+  "po2Label": "PO₂ (mmHg)",
+  "@po2Label": {
+    "description": "PO2 input field label"
+  },
+  "po2Hint": "80-100",
+  "@po2Hint": {
+    "description": "PO2 input field hint"
+  },
+  "pleaseEnterPo2": "Vui lòng nhập PO₂",
+  "@pleaseEnterPo2": {
+    "description": "PO2 validation error message"
+  },
+  "invalidPo2": "PO₂ không hợp lệ",
+  "@invalidPo2": {
+    "description": "PO2 range validation error"
+  },
+  "hco3Label": "HCO₃⁻ (mEq/L)",
+  "@hco3Label": {
+    "description": "HCO3 input field label"
+  },
+  "hco3Hint": "22-26",
+  "@hco3Hint": {
+    "description": "HCO3 input field hint"
+  },
+  "pleaseEnterHco3": "Vui lòng nhập HCO₃⁻",
+  "@pleaseEnterHco3": {
+    "description": "HCO3 validation error message"
+  },
+  "invalidHco3": "HCO₃⁻ không hợp lệ",
+  "@invalidHco3": {
+    "description": "HCO3 range validation error"
+  },
+  "baseExcessLabel": "Base Excess (mEq/L)",
+  "@baseExcessLabel": {
+    "description": "Base excess input field label"
+  },
+  "baseExcessHint": "-2 đến +2",
+  "@baseExcessHint": {
+    "description": "Base excess input field hint"
+  },
+  "pleaseEnterBe": "Vui lòng nhập BE",
+  "@pleaseEnterBe": {
+    "description": "Base excess validation error message"
+  },
+  "invalidBe": "BE không hợp lệ",
+  "@invalidBe": {
+    "description": "Base excess range validation error"
+  },
+  "sao2Label": "SaO₂ (%)",
+  "@sao2Label": {
+    "description": "SaO2 input field label"
+  },
+  "sao2Hint": "95-100",
+  "@sao2Hint": {
+    "description": "SaO2 input field hint"
+  },
+  "pleaseEnterSao2": "Vui lòng nhập SaO₂",
+  "@pleaseEnterSao2": {
+    "description": "SaO2 validation error message"
+  },
+  "invalidSao2": "SaO₂ không hợp lệ (0-100)",
+  "@invalidSao2": {
+    "description": "SaO2 range validation error"
+  },
+  "fio2Label": "FiO₂ (%)",
+  "@fio2Label": {
+    "description": "FiO2 input field label"
+  },
+  "fio2Hint": "21-100",
+  "@fio2Hint": {
+    "description": "FiO2 input field hint"
+  },
+  "pleaseEnterFio2": "Vui lòng nhập FiO₂",
+  "@pleaseEnterFio2": {
+    "description": "FiO2 validation error message"
+  },
+  "invalidFio2": "FiO₂ không hợp lệ (21-100)",
+  "@invalidFio2": {
+    "description": "FiO2 range validation error"
+  },
+  "abgNotesLabel": "Ghi chú (tùy chọn)",
+  "@abgNotesLabel": {
+    "description": "Notes input field label for ABG"
+  },
+  "abgNotesHint": "Thông tin bổ sung...",
+  "@abgNotesHint": {
+    "description": "Notes input field hint for ABG"
+  },
+  "analyzeAbg": "Phân tích ABG",
+  "@analyzeAbg": {
+    "description": "Analyze ABG button text"
+  },
+  "abgAnalysisResults": "Kết quả phân tích",
+  "@abgAnalysisResults": {
+    "description": "ABG results section title"
+  },
+  "acidBaseStatus": "Tình trạng Acid-Base",
+  "@acidBaseStatus": {
+    "description": "Acid-base status section title"
+  },
+  "oxygenationStatus": "Tình trạng Oxy hóa",
+  "@oxygenationStatus": {
+    "description": "Oxygenation status section title"
+  },
+  "calculatedIndices": "Chỉ số tính toán",
+  "@calculatedIndices": {
+    "description": "Calculated indices section title"
+  },
+  "compensationAnalysis": "Phân tích bù trừ",
+  "@compensationAnalysis": {
+    "description": "Compensation analysis section title"
+  },
+  "expectedPco2": "PCO₂ dự kiến: {value} ± 2 mmHg",
+  "@expectedPco2": {
+    "description": "Expected PCO2 for metabolic compensation",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "actualPco2": "PCO₂ thực tế: {value} mmHg",
+  "@actualPco2": {
+    "description": "Actual PCO2 value",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "expectedHco3": "HCO₃⁻ dự kiến: {value} mEq/L",
+  "@expectedHco3": {
+    "description": "Expected HCO3 for respiratory compensation",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "actualHco3": "HCO₃⁻ thực tế: {value} mEq/L",
+  "@actualHco3": {
+    "description": "Actual HCO3 value",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "abgNotes": "Ghi chú",
+  "@abgNotes": {
+    "description": "Notes section title for ABG"
+  },
+  "abgReferences": "Tài liệu tham khảo",
+  "@abgReferences": {
+    "description": "References section title for ABG"
+  },
+  "abgInterpretationNormal": "Bình thường",
+  "@abgInterpretationNormal": {
+    "description": "Normal ABG interpretation"
+  },
+  "abgInterpretationRespAcidosis": "Toan hô hấp cấp",
+  "@abgInterpretationRespAcidosis": {
+    "description": "Respiratory acidosis interpretation"
+  },
+  "abgInterpretationRespAlkalosis": "Kiềm hô hấp cấp",
+  "@abgInterpretationRespAlkalosis": {
+    "description": "Respiratory alkalosis interpretation"
+  },
+  "abgInterpretationMetAcidosis": "Toan chuyển hóa cấp",
+  "@abgInterpretationMetAcidosis": {
+    "description": "Metabolic acidosis interpretation"
+  },
+  "abgInterpretationMetAlkalosis": "Kiềm chuyển hóa cấp",
+  "@abgInterpretationMetAlkalosis": {
+    "description": "Metabolic alkalosis interpretation"
+  },
+  "abgInterpretationCompRespAcidosis": "Toan hô hấp có bù trừ",
+  "@abgInterpretationCompRespAcidosis": {
+    "description": "Compensated respiratory acidosis interpretation"
+  },
+  "abgInterpretationCompRespAlkalosis": "Kiềm hô hấp có bù trừ",
+  "@abgInterpretationCompRespAlkalosis": {
+    "description": "Compensated respiratory alkalosis interpretation"
+  },
+  "abgInterpretationCompMetAcidosis": "Toan chuyển hóa có bù trừ",
+  "@abgInterpretationCompMetAcidosis": {
+    "description": "Compensated metabolic acidosis interpretation"
+  },
+  "abgInterpretationCompMetAlkalosis": "Kiềm chuyển hóa có bù trừ",
+  "@abgInterpretationCompMetAlkalosis": {
+    "description": "Compensated metabolic alkalosis interpretation"
+  },
+  "abgInterpretationMixed": "Rối loạn hỗn hợp",
+  "@abgInterpretationMixed": {
+    "description": "Mixed disorder interpretation"
+  },
+  "oxygenationNormal": "Oxy hóa bình thường",
+  "@oxygenationNormal": {
+    "description": "Normal oxygenation status"
+  },
+  "oxygenationMildHypoxemia": "Thiếu oxy nhẹ",
+  "@oxygenationMildHypoxemia": {
+    "description": "Mild hypoxemia status"
+  },
+  "oxygenationModerateHypoxemia": "Thiếu oxy vừa",
+  "@oxygenationModerateHypoxemia": {
+    "description": "Moderate hypoxemia status"
+  },
+  "oxygenationSevereHypoxemia": "Thiếu oxy nặng",
+  "@oxygenationSevereHypoxemia": {
+    "description": "Severe hypoxemia status"
+  },
+  "oxygenationNormalWithO2": "Oxy hóa tốt với O2 bổ sung",
+  "@oxygenationNormalWithO2": {
+    "description": "Normal oxygenation with supplemental oxygen"
+  },
+  "labAnalysisHomeTitle": "Phân tích cận lâm sàng",
+  "@labAnalysisHomeTitle": {
+    "description": "Lab analysis home page title"
+  },
+  "selectAnalysisType": "Chọn loại phân tích",
+  "@selectAnalysisType": {
+    "description": "Section title for selecting analysis type"
+  },
+  "labAnalysisToolDescription": "Công cụ hỗ trợ phân tích và diễn giải kết quả xét nghiệm",
+  "@labAnalysisToolDescription": {
+    "description": "Description of lab analysis tools"
+  },
+  "abgAnalysisCardTitle": "Khí máu động mạch",
+  "@abgAnalysisCardTitle": {
+    "description": "ABG analysis card title"
+  },
+  "abgAnalysisCardSubtitle": "ABG Analysis - Phân tích khí máu động mạch, pH, CO2, O2",
+  "@abgAnalysisCardSubtitle": {
+    "description": "ABG analysis card subtitle"
+  },
+  "pleuralFluidCardTitle": "Dịch màng phổi",
+  "@pleuralFluidCardTitle": {
+    "description": "Pleural fluid analysis card title"
+  },
+  "pleuralFluidCardSubtitle": "Pleural Fluid - Phân tích dịch màng phổi, Light's criteria",
+  "@pleuralFluidCardSubtitle": {
+    "description": "Pleural fluid analysis card subtitle"
+  },
+  "asciticFluidCardTitle": "Dịch màng bụng",
+  "@asciticFluidCardTitle": {
+    "description": "Ascitic fluid analysis card title"
+  },
+  "asciticFluidCardSubtitle": "Ascitic Fluid - Phân tích dịch cổ trướng, SAAG gradient",
+  "@asciticFluidCardSubtitle": {
+    "description": "Ascitic fluid analysis card subtitle"
+  },
+  "csfAnalysisCardTitle": "Dịch não tủy",
+  "@csfAnalysisCardTitle": {
+    "description": "CSF analysis card title"
+  },
+  "csfAnalysisCardSubtitle": "CSF Analysis - Phân tích dịch não tủy, viêm màng não",
+  "@csfAnalysisCardSubtitle": {
+    "description": "CSF analysis card subtitle"
+  },
+  "urinalysisCardTitle": "Phân tích nước tiểu",
+  "@urinalysisCardTitle": {
+    "description": "Urinalysis card title"
+  },
+  "urinalysisCardSubtitle": "Urinalysis - Phân tích nước tiểu, protein, hồng cầu",
+  "@urinalysisCardSubtitle": {
+    "description": "Urinalysis card subtitle"
+  },
+  "pleuralFluidAnalysisTitle": "Phân tích dịch màng phổi",
+  "@pleuralFluidAnalysisTitle": {
+    "description": "Pleural fluid analysis page title"
+  },
+  "pleuralFluidParameters": "Thông số dịch màng phổi",
+  "@pleuralFluidParameters": {
+    "description": "Pleural fluid parameters section title"
+  },
+  "requiredForLight": "* Bắt buộc cho tiêu chuẩn Light",
+  "@requiredForLight": {
+    "description": "Note about required fields for Light's criteria"
+  },
+  "fluidAppearance": "Tính chất dịch",
+  "@fluidAppearance": {
+    "description": "Fluid appearance dropdown label"
+  },
+  "appearanceClear": "Trong suốt",
+  "@appearanceClear": {
+    "description": "Clear fluid appearance"
+  },
+  "appearanceTurbid": "Đục",
+  "@appearanceTurbid": {
+    "description": "Turbid fluid appearance"
+  },
+  "appearanceBloody": "Có máu",
+  "@appearanceBloody": {
+    "description": "Bloody fluid appearance"
+  },
+  "appearancePurulent": "Mủ",
+  "@appearancePurulent": {
+    "description": "Purulent fluid appearance"
+  },
+  "appearanceMilky": "Trắng đục",
+  "@appearanceMilky": {
+    "description": "Milky fluid appearance"
+  },
+  "appearanceCholesterol": "Vàng cholesterol",
+  "@appearanceCholesterol": {
+    "description": "Cholesterol yellow fluid appearance"
+  },
+  "proteinLabel": "Protein (g/dL) *",
+  "@proteinLabel": {
+    "description": "Protein field label"
+  },
+  "ldhLabel": "LDH (U/L) *",
+  "@ldhLabel": {
+    "description": "LDH field label"
+  },
+  "glucoseLabel": "Glucose (mg/dL)",
+  "@glucoseLabel": {
+    "description": "Glucose field label"
+  },
+  "cellCountLabel": "Số lượng tế bào (/μL)",
+  "@cellCountLabel": {
+    "description": "Cell count field label"
+  },
+  "neutrophilsLabel": "Bạch cầu trung tính (%)",
+  "@neutrophilsLabel": {
+    "description": "Neutrophils field label"
+  },
+  "lymphocytesLabel": "Bạch cầu lympho (%)",
+  "@lymphocytesLabel": {
+    "description": "Lymphocytes field label"
+  },
+  "cholesterolLabel": "Cholesterol (mg/dL)",
+  "@cholesterolLabel": {
+    "description": "Cholesterol field label"
+  },
+  "triglyceridesLabel": "Triglyceride (mg/dL)",
+  "@triglyceridesLabel": {
+    "description": "Triglycerides field label"
+  },
+  "serumParameters": "Thông số huyết thanh",
+  "@serumParameters": {
+    "description": "Serum parameters section title"
+  },
+  "serumProteinLabel": "Protein huyết thanh (g/dL) *",
+  "@serumProteinLabel": {
+    "description": "Serum protein field label"
+  },
+  "serumLdhLabel": "LDH huyết thanh (U/L) *",
+  "@serumLdhLabel": {
+    "description": "Serum LDH field label"
+  },
+  "serumGlucoseLabel": "Glucose huyết thanh (mg/dL)",
+  "@serumGlucoseLabel": {
+    "description": "Serum glucose field label"
+  },
+  "analyzePleuralFluid": "Phân tích dịch màng phổi",
+  "@analyzePleuralFluid": {
+    "description": "Analyze pleural fluid button text"
+  },
+  "fluidTypeTransudate": "Thẩm xuất",
+  "@fluidTypeTransudate": {
+    "description": "Transudate fluid type"
+  },
+  "fluidTypeExudate": "Xuất tiết",
+  "@fluidTypeExudate": {
+    "description": "Exudate fluid type"
+  },
+  "fluidTypeIndeterminate": "Không xác định",
+  "@fluidTypeIndeterminate": {
+    "description": "Indeterminate fluid type"
+  },
+  "causeHeartFailure": "Suy tim",
+  "@causeHeartFailure": {
+    "description": "Heart failure cause"
+  },
+  "causeCirrhosis": "Xơ gan",
+  "@causeCirrhosis": {
+    "description": "Cirrhosis cause"
+  },
+  "causeNephrotic": "Hội chứng thận hư",
+  "@causeNephrotic": {
+    "description": "Nephrotic syndrome cause"
+  },
+  "causeHypoalbuminemia": "Giảm albumin máu",
+  "@causeHypoalbuminemia": {
+    "description": "Hypoalbuminemia cause"
+  },
+  "causePneumonia": "Viêm phổi",
+  "@causePneumonia": {
+    "description": "Pneumonia cause"
+  },
+  "causeMalignancy": "Ung thư",
+  "@causeMalignancy": {
+    "description": "Malignancy cause"
+  },
+  "causeTuberculosis": "Lao",
+  "@causeTuberculosis": {
+    "description": "Tuberculosis cause"
+  },
+  "causePulmonaryEmbolism": "Thuyên tắc phổi",
+  "@causePulmonaryEmbolism": {
+    "description": "Pulmonary embolism cause"
+  },
+  "causePancreatitis": "Viêm tụy",
+  "@causePancreatitis": {
+    "description": "Pancreatitis cause"
+  },
+  "causeRheumatoid": "Viêm khớp dạng thấp",
+  "@causeRheumatoid": {
+    "description": "Rheumatoid arthritis cause"
+  },
+  "causeLupus": "Lupus ban đỏ hệ thống",
+  "@causeLupus": {
+    "description": "Systemic lupus erythematosus cause"
+  },
+  "causeEmpyema": "Mủ màng phổi",
+  "@causeEmpyema": {
+    "description": "Empyema cause"
+  },
+  "causeUnknown": "Nguyên nhân không rõ",
+  "@causeUnknown": {
+    "description": "Unknown cause"
+  },
+  "pleaseEnterValue": "Vui lòng nhập giá trị",
+  "@pleaseEnterValue": {
+    "description": "Required field validation message"
+  },
+  "invalidValue": "Giá trị không hợp lệ",
+  "@invalidValue": {
+    "description": "Invalid value validation message"
+  },
+  "invalidPercentage": "Phải nằm trong khoảng 0-100",
+  "@invalidPercentage": {
+    "description": "Invalid percentage validation message"
+  },
+  "fluidCharacteristics": "Đặc điểm dịch",
+  "@fluidCharacteristics": {
+    "description": "Fluid characteristics section title"
+  },
+  "lightCriteria": "Tiêu chuẩn Light",
+  "@lightCriteria": {
+    "description": "Light's criteria section title"
+  },
+  "proteinRatio": "Tỉ lệ Protein",
+  "@proteinRatio": {
+    "description": "Protein ratio label"
+  },
+  "ldhRatio": "Tỉ lệ LDH",
+  "@ldhRatio": {
+    "description": "LDH ratio label"
+  },
+  "likelyCauses": "Nguyên nhân có thể",
+  "@likelyCauses": {
+    "description": "Likely causes section title"
+  },
+  "notes": "Ghi chú",
+  "@notes": {
+    "description": "Notes section title"
+  },
+  "notesOptional": "Ghi chú (tuỳ chọn)",
+  "@notesOptional": {
+    "description": "Notes field label with optional indication"
+  },
+  "additionalInformation": "Thông tin bổ sung...",
+  "@additionalInformation": {
+    "description": "Notes field placeholder text"
+  },
   "guidelines": "Hướng dẫn",
   "guidelinesDescription": "Hướng dẫn thực hành lâm sàng",
   "entertainment": "Giải trí",
@@ -148,13 +656,6 @@
   
   "intensive_care": "Hồi sức tích cực",
   "emergency_medicine": "Y học cấp cứu",
-  
-  "emergency_protocols": "Sơ đồ xử lý cấp cứu",
-  "@emergency_protocols": {"description": "Emergency protocols title"},
-  "emergency_protocols_title": "Protocols Cấp Cứu",
-  "@emergency_protocols_title": {"description": "Emergency protocols main title"},
-  "emergency_protocols_subtitle": "Sơ đồ xử lý nhanh các tình huống cấp cứu thường gặp",
-  "@emergency_protocols_subtitle": {"description": "Emergency protocols subtitle"},
   
   "hypertensive_crisis_title": "Cơn Tăng Huyết Áp",
   "@hypertensive_crisis_title": {"description": "Hypertensive crisis protocol title"},
@@ -326,6 +827,90 @@
   "references": "Tài liệu tham khảo",
   "@references": {
     "description": "References section"
+  },
+  "asciticFluidAnalysisTitle": "Phân tích dịch màng bụng",
+  "@asciticFluidAnalysisTitle": {
+    "description": "Ascitic fluid analysis page title"
+  },
+  "asciticFluidParameters": "Thông số dịch màng bụng",
+  "@asciticFluidParameters": {
+    "description": "Ascitic fluid parameters section title"
+  },
+  "requiredForSAAG": "* Bắt buộc cho tính toán SAAG",
+  "@requiredForSAAG": {
+    "description": "Note about required fields for SAAG"
+  },
+  "albuminLabel": "Albumin (g/dL) *",
+  "@albuminLabel": {
+    "description": "Albumin field label"
+  },
+  "amylaseLabel": "Amylase (U/L)",
+  "@amylaseLabel": {
+    "description": "Amylase field label"
+  },
+  "redBloodCellsLabel": "Hồng cầu (/μL)",
+  "@redBloodCellsLabel": {
+    "description": "Red blood cells field label"
+  },
+  "serumAlbuminLabel": "Albumin huyết thanh (g/dL) *",
+  "@serumAlbuminLabel": {
+    "description": "Serum albumin field label"
+  },
+  "analyzeAsciticFluid": "Phân tích dịch màng bụng",
+  "@analyzeAsciticFluid": {
+    "description": "Analyze ascitic fluid button text"
+  },
+  "fluidTypeTransudateSAAG": "Thẩm xuất (SAAG cao)",
+  "@fluidTypeTransudateSAAG": {
+    "description": "Transudate fluid type with SAAG"
+  },
+  "fluidTypeExudateSAAG": "Xuất tiết (SAAG thấp)",
+  "@fluidTypeExudateSAAG": {
+    "description": "Exudate fluid type with SAAG"
+  },
+  "saagLabel": "SAAG",
+  "@saagLabel": {
+    "description": "SAAG label"
+  },
+  "albuminRatio": "Tỉ lệ Albumin",
+  "@albuminRatio": {
+    "description": "Albumin ratio label"
+  },
+  "causePeritonitis": "Viêm phúc mạc",
+  "@causePeritonitis": {
+    "description": "Peritonitis cause"
+  },
+  "causeNephrogenicAscites": "Cổ trướng do thận",
+  "@causeNephrogenicAscites": {
+    "description": "Nephrogenic ascites cause"
+  },
+  "causeSpontaneousBacterialPeritonitis": "Viêm phúc mạc do vi khuẩn tự phát",
+  "@causeSpontaneousBacterialPeritonitis": {
+    "description": "Spontaneous bacterial peritonitis cause"
+  },
+  "causeSecondaryBacterialPeritonitis": "Viêm phúc mạc do vi khuẩn thứ phát",
+  "@causeSecondaryBacterialPeritonitis": {
+    "description": "Secondary bacterial peritonitis cause"
+  },
+  "causeChylousAscites": "Cổ trướng chylomicron",
+  "@causeChylousAscites": {
+    "description": "Chylous ascites cause"
+  },
+  "causeHemorrhagicAscites": "Cổ trướng xuất huyết",
+  "@causeHemorrhagicAscites": {
+    "description": "Hemorrhagic ascites cause"
+  },
+  "specialTests": "Xét nghiệm đặc biệt",
+  "@specialTests": {
+    "description": "Special tests section title"
+  },
+  "positive": "Dương tính",
+  "@positive": {
+    "description": "Positive test result"
+  },
+  "negative": "Âm tính",
+  "@negative": {
+    "description": "Negative test result"
   },
   "medical_disclaimer": "DÀNH CHO NHÂN VIÊN Y TẾ\nCông cụ tham khảo - Không thay thế phán đoán lâm sàng",
   "@medical_disclaimer": {
@@ -3122,34 +3707,6 @@
   "@antivenom_indications_title": {"description": "Antivenom indications title"},
   "antivenom_indications_content": "• Phù nề lan rộng\n• Triệu chứng toàn thân\n• Rối loạn đông máu\n• Tổn thương thần kinh\n• Suy tuần hoàn",
   "@antivenom_indications_content": {"description": "Antivenom indications content"},
-  "antivenom_types_title": "Các loại huyết thanh kháng nọc",
-  "@antivenom_types_title": {"description": "Antivenom types title"},
-  "antivenom_types_content": "🐍 MONOVALENT (đơn giá):\n• Anti-Cobra (Naja): Chống nọc rắn hổ mang\n• Anti-Krait (Bungarus): Chống nọc rắn cạp nia\n• Anti-Russell Viper: Chống nọc rắn lục\n\n🐍 POLYVALENT (đa giá):\n• Queen Saovabha Memorial Institute (Thái Lan)\n• Vietnamese Polyvalent (Việt Nam)\n• Regional Southeast Asian Polyvalent",
-  "@antivenom_types_content": {"description": "Antivenom types content"},
-  "fab_fragments_title": "🧬 FAB FRAGMENTS - Công nghệ tiên tiến",
-  "@fab_fragments_title": {"description": "FAB fragments title"},
-  "fab_fragments_content": "📚 ĐỊNH NGHĨA:\n• FAB = Fragment Antigen Binding\n• Là phần nhỏ của kháng thể (chỉ chứa vùng liên kết kháng nguyên)\n• Loại bỏ phần Fc (Fragment crystallizable)\n• Kích thước nhỏ hơn 50% so với kháng thể nguyên vẹn\n\n✅ ƯU ĐIỂM VƯỢT TRỘI:\n• Thấm vào mô nhanh hơn do kích thước nhỏ\n• Ít gây phản ứng dị ứng (anaphylaxis < 1%)\n• Có thể dùng nhiều lần mà không bị kháng thuốc\n• Thải trừ qua thận nhanh hơn\n• An toàn cho trẻ em và người già\n• Tương tác thuốc ít hơn\n\n🔬 CƠ CHẾ HOẠT ĐỘNG:\n• Liên kết trực tiếp với nọc độc\n• Vô hiệu hóa enzyme phospholipase A2\n• Ngăn chặn tác dụng hemolytic và coagulant\n• Không kích hoạt hệ bổ thể\n\n🌍 SẢN PHẨM HIỆN CÓ:\n• CroFab® (Mỹ): Chống nọc rắn chuông\n• DigiFab® (Mỹ): Chống ngộ độc Digitalis\n• EchiTAb® (Úc): Chống nọc rắn Echis\n• Polyvalent Fab (Thái Lan): Đang phát triển",
-  "@fab_fragments_content": {"description": "FAB fragments content"},
-  "preparation_methods_title": "Cách pha chế khác nhau",
-  "@preparation_methods_title": {"description": "Preparation methods title"},
-  "preparation_methods_content": "📋 HUYẾT THANH LỎNG (Liquid):\n• Pha trực tiếp 1:1 với NaCl 0.9%\n• Thể tích: 50-100ml/lọ\n• Truyền trong 60-90 phút\n• Tốc độ: 1-2ml/phút ban đầu\n\n📋 HUYẾT THANH KHÔ (Lyophilized):\n• Hòa tan với 10ml nước cất vô trùng\n• Sau đó pha trong 100-200ml NaCl 0.9%\n• Lắc nhẹ, không tạo bọt\n• Truyền trong 30-60 phút\n• Kiểm tra không có cặn\n\n🧬 FAB FRAGMENTS (Đặc biệt):\n• Pha trong 250ml NaCl 0.9% hoặc D5W\n• Truyền chậm: 4-6 giờ (đầu tiên)\n• Tốc độ: 25-50ml/giờ ban đầu\n• Có thể tăng tốc độ nếu dung nạp tốt\n• Theo dõi sát trong 30 phút đầu\n• Ít phản ứng dị ứng nhưng vẫn cần cảnh giác",
-  "@preparation_methods_content": {"description": "Preparation methods content"},
-  "dosage_title": "Liều dùng cụ thể",
-  "@dosage_title": {"description": "Dosage title"},
-  "dosage_content": "💊 POLYVALENT ANTIVENOM:\n• Khởi đầu: 4-6 lọ (40-60ml)\n• Nặng: 8-12 lọ\n• Tối đa: 20 lọ/24h\n• Lặp lại: mỗi 6-12 giờ nếu cần\n\n💊 MONOVALENT ANTIVENOM:\n• Cobra: 3-5 lọ khởi đầu\n• Krait: 5-10 lọ (nọc độc hơn)\n• Russell Viper: 4-8 lọ\n• Có thể cần liều cao hơn\n\n🧬 FAB FRAGMENTS (Liều khác biệt):\n• Khởi đầu: 4-6 lọ (tương đương 40-60ml)\n• Nặng: 8-12 lọ\n• Tần suất: Có thể lặp lại mỗi 6-8 giờ\n• Ưu điểm: Liều thấp hơn nhưng hiệu quả cao\n• Trẻ em: 0.25-0.5ml/kg\n• Theo dõi đáp ứng sau 2-4 giờ",
-  "@dosage_content": {"description": "Dosage content"},
-  "storage_title": "Bảo quản",
-  "@storage_title": {"description": "Storage title"},
-  "storage_content": "🧊 BẢO QUẢN:\n• Nhiệt độ: 2-8°C (không đông lạnh)\n• Tránh ánh sáng trực tiếp\n• Kiểm tra hạn sử dụng\n• Không sử dụng nếu có cặn, đục\n• FAB Fragments: Bảo quản đặc biệt, hạn sử dụng ngắn hơn\n\n🌏 TÌNH HÌNH VIỆT NAM:\n• FAB Fragments: Chưa có sản xuất trong nước\n• Cần nhập khẩu từ Mỹ, Úc, châu Âu\n• Đang nghiên cứu sản xuất tại IVAC\n• Dự kiến có trong 2-3 năm tới",
-  "@storage_content": {"description": "Storage content"},
-  "monitoring_adjustment_title": "Theo dõi và điều chỉnh",
-  "@monitoring_adjustment_title": {"description": "Monitoring adjustment title"},
-  "monitoring_adjustment_content": "⏰ ĐÁNH GIÁ SAU 1-2 GIỜ:\n• Phù nề có giảm?\n• PT/aPTT cải thiện?\n• Triệu chứng thần kinh thuyên giảm?\n\n🔄 NẾU KHÔNG CẢI THIỆN:\n• Lặp lại liều ban đầu\n• Kiểm tra loại huyết thanh\n• Xem xét chuyển tuyến cao hơn\n\n⚠️ DẤU HIỆU NGỪNG:\n• Cải thiện lâm sàng rõ rệt\n• Đông máu bình thường\n• Không tiến triển thêm",
-  "@monitoring_adjustment_content": {"description": "Monitoring adjustment content"},
-  "fab_indications_title": "🎯 CHỈ ĐỊNH SỬ DỤNG FAB FRAGMENTS",
-  "@fab_indications_title": {"description": "FAB indications title"},
-  "fab_indications_content": "✅ ƯU TIÊN SỬ DỤNG KHI:\n• Bệnh nhân có tiền sử dị ứng huyết thanh\n• Trẻ em dưới 12 tuổi\n• Người cao tuổi >65 tuổi\n• Bệnh nhân suy giảm miễn dịch\n• Cần dùng huyết thanh nhiều lần\n• Rắn cắn ở vùng đầu cổ (nguy hiểm)\n\n🚨 CHỈ ĐỊNH TUYỆT ĐỐI:\n• Phản ứng anaphylaxis với huyết thanh thường\n• Rắn cực độc (King Cobra, Sea Snake)\n• Ngộ độc nặng với rối loạn đông máu\n• Bệnh nhân có bệnh lý tim mạch nặng\n\n⚠️ CHÚ Ý ĐẶC BIỆT:\n• Vẫn cần theo dõi phản ứng dị ứng\n• Hiệu quả cao hơn nhưng đắt tiền\n• Cần đào tạo nhân viên sử dụng\n• Ưu tiên cho các trường hợp nặng",
-  "@fab_indications_content": {"description": "FAB indications content"},
   "allergic_reaction_title": "Phản ứng dị ứng",
   "@allergic_reaction_title": {"description": "Allergic reaction title"},
   "allergic_reaction_content": "• Epinephrine 0.5mg IM\n• Methylprednisolone 1-2mg/kg\n• H1, H2 blocker\n• Bronchodilator nếu cần",
@@ -3178,16 +3735,189 @@
   "@vietnam_moh_guidelines": {"description": "Vietnam MOH guidelines"},
   "toxinology_guidelines": "• International Society on Toxinology Guidelines",
   "@toxinology_guidelines": {"description": "Toxinology guidelines"},
-  "vietnam_suppliers": "🏥 NGUỒN CUNG CẤP HUYẾT THANH VIỆT NAM:",
-  "@vietnam_suppliers": {"description": "Vietnam suppliers"},
-  "vietnam_suppliers_list": "• Viện Vệ sinh Dịch tễ Trung ương\n• Bệnh viện Nhiệt đới Trung ương\n• Bệnh viện Chợ Rẫy (TP.HCM)\n• Bệnh viện Bạch Mai (Hà Nội)",
-  "@vietnam_suppliers_list": {"description": "Vietnam suppliers list"},
-  "international_suppliers": "🌏 HUYẾT THANH NHẬP KHẨU:",
-  "@international_suppliers": {"description": "International suppliers"},
-  "international_suppliers_list": "• Queen Saovabha Memorial Institute (Thái Lan)\n• Myanmar Pharmaceutical Factory\n• Haffkine Bio-Pharmaceutical (Ấn Độ)",
-  "@international_suppliers_list": {"description": "International suppliers list"},
-  "medical_disclaimer_text": "Thông tin này chỉ mang tính chất tham khảo và không thay thế cho tư vấn y tế chuyên nghiệp. Luôn tìm kiếm sự chăm sóc y tế khẩn cấp trong trường hợp rắn cắn. Việc điều trị huyết thanh kháng nọc phải được thực hiện bởi nhân viên y tế có kinh nghiệm và trong môi trường bệnh viện có đầy đủ trang thiết bị cấp cứu.",
+  "medical_disclaimer_text": "Thông tin này chỉ mang tính chất tham khảo và không thay thế cho tư vấn y tế chuyên nghiệp. Luôn tìm kiếm sự chăm sóc y tế khẩn cấp trong trường hợp rắn cắn. Việc điều trị huyết thanh kháng nọc phải được thực hiện bởi nhân viên y tế có kinh nghiệp và trong môi trường bệnh viện có đầy đủ trang thiết bị cấp cứu.",
   "@medical_disclaimer_text": {"description": "Medical disclaimer text"},
+  
+  "cam_icu_subtitle": "Confusion Assessment Method for ICU",
+  "@cam_icu_subtitle": {"description": "CAM-ICU subtitle"},
+  "cam_icu_feature_1_present": "Có thay đổi cấp tính hoặc dao động",
+  "@cam_icu_feature_1_present": {"description": "CAM-ICU feature 1 present"},
+  "cam_icu_feature_2_present": "Có thiếu chú ý",
+  "@cam_icu_feature_2_present": {"description": "CAM-ICU feature 2 present"},
+  "cam_icu_feature_3_present": "Có thay đổi mức độ ý thức",
+  "@cam_icu_feature_3_present": {"description": "CAM-ICU feature 3 present"},
+  "cam_icu_feature_4_present": "Có tư duy không tổ chức",
+  "@cam_icu_feature_4_present": {"description": "CAM-ICU feature 4 present"},
+  "cam_icu_result_positive": "CAM-ICU dương tính",
+  "@cam_icu_result_positive": {"description": "CAM-ICU positive result"},
+  "cam_icu_result_negative": "CAM-ICU âm tính",
+  "@cam_icu_result_negative": {"description": "CAM-ICU negative result"},
+  "cam_icu_delirium_present": "Có dấu hiệu lú lẫn",
+  "@cam_icu_delirium_present": {"description": "Delirium present"},
+  "cam_icu_delirium_absent": "Không có lú lẫn",
+  "@cam_icu_delirium_absent": {"description": "Delirium absent"},
+  "cam_icu_clinical_features": "Đặc điểm lâm sàng",
+  "@cam_icu_clinical_features": {"description": "Clinical features"},
+  "cam_icu_assessment_criteria": "Tiêu chí đánh giá",
+  "@cam_icu_assessment_criteria": {"description": "Assessment criteria"},
+  "cam_icu_diagnosis_criteria": "Tiêu chí chẩn đoán",
+  "@cam_icu_diagnosis_criteria": {"description": "Diagnosis criteria"},
+  "cam_icu_cannot_assess": "Không thể đánh giá",
+  "@cam_icu_cannot_assess": {"description": "Cannot assess"},
+  "cam_icu_references_title": "Tài liệu tham khảo CAM-ICU",
+  "@cam_icu_references_title": {"description": "CAM-ICU references title"},
+  
+  "rass_score_title": "Điểm RASS",
+  "@rass_score_title": {"description": "RASS score title"},
+  "rass_score_subtitle": "Richmond Agitation-Sedation Scale",
+  "@rass_score_subtitle": {"description": "RASS score subtitle"},
+  "rass_level_combative": "Hung hăng (+4)",
+  "@rass_level_combative": {"description": "RASS combative level"},
+  "rass_description_combative": "Tấn công nhân viên hoặc cố gắng rút ống",
+  "@rass_description_combative": {"description": "RASS combative description"},
+  "rass_level_very_agitated": "Rất kích động (+3)",
+  "@rass_level_very_agitated": {"description": "RASS very agitated level"},
+  "rass_description_very_agitated": "Kéo hoặc tháo catheter/ống; tấn công",
+  "@rass_description_very_agitated": {"description": "RASS very agitated description"},
+  "rass_level_agitated": "Kích động (+2)",
+  "@rass_level_agitated": {"description": "RASS agitated level"},
+  "rass_description_agitated": "Chuyển động thường xuyên, chống lại thở máy",
+  "@rass_description_agitated": {"description": "RASS agitated description"},
+  "rass_level_restless": "Bồn chồn (+1)",
+  "@rass_level_restless": {"description": "RASS restless level"},
+  "rass_description_restless": "Lo lắng nhưng chuyển động không hung hăng",
+  "@rass_description_restless": {"description": "RASS restless description"},
+  "rass_level_alert": "Tỉnh táo (0)",
+  "@rass_level_alert": {"description": "RASS alert level"},
+  "rass_description_alert": "Tỉnh táo và bình tĩnh",
+  "@rass_description_alert": {"description": "RASS alert description"},
+  "rass_level_drowsy": "Buồn ngủ (-1)",
+  "@rass_level_drowsy": {"description": "RASS drowsy level"},
+  "rass_description_drowsy": "Không hoàn toàn tỉnh táo, tỉnh >10s khi gọi",
+  "@rass_description_drowsy": {"description": "RASS drowsy description"},
+  "rass_level_light_sedation": "An thần nhẹ (-2)",
+  "@rass_level_light_sedation": {"description": "RASS light sedation level"},
+  "rass_description_light_sedation": "Tỉnh ngắn <10s khi gọi tên",
+  "@rass_description_light_sedation": {"description": "RASS light sedation description"},
+  "rass_level_moderate_sedation": "An thần trung bình (-3)",
+  "@rass_level_moderate_sedation": {"description": "RASS moderate sedation level"},
+  "rass_description_moderate_sedation": "Chuyển động hoặc mở mắt khi gọi tên, không tiếp xúc ánh mắt",
+  "@rass_description_moderate_sedation": {"description": "RASS moderate sedation description"},
+  "rass_level_deep_sedation": "An thần sâu (-4)",
+  "@rass_level_deep_sedation": {"description": "RASS deep sedation level"},
+  "rass_description_deep_sedation": "Không phản ứng với tiếng gọi, chuyển động khi kích thích vật lý",
+  "@rass_description_deep_sedation": {"description": "RASS deep sedation description"},
+  "rass_level_unarousable": "Không tỉnh được (-5)",
+  "@rass_level_unarousable": {"description": "RASS unarousable level"},
+  "rass_description_unarousable": "Không phản ứng với tiếng gọi hoặc kích thích vật lý",
+  "@rass_description_unarousable": {"description": "RASS unarousable description"},
+  "rass_interpretation_agitation": "Kích động",
+  "@rass_interpretation_agitation": {"description": "RASS agitation interpretation"},
+  "rass_interpretation_calm": "Bình tĩnh",
+  "@rass_interpretation_calm": {"description": "RASS calm interpretation"},
+  "rass_interpretation_sedation": "An thần",
+  "@rass_interpretation_sedation": {"description": "RASS sedation interpretation"},
+  "rass_target_light_moderate": "Mục tiêu: RASS -1 đến -2",
+  "@rass_target_light_moderate": {"description": "RASS target light to moderate"},
+  "rass_target_alert_calm": "Mục tiêu: RASS 0",
+  "@rass_target_alert_calm": {"description": "RASS target alert calm"},
+  "rass_avoid_deep_sedation": "Tránh: RASS -4 hoặc -5",
+  "@rass_avoid_deep_sedation": {"description": "Avoid deep sedation"},
+  "rass_current_level": "Mức độ hiện tại",
+  "@rass_current_level": {"description": "RASS current level"},
+  "rass_select_level": "Chọn mức độ RASS",
+  "@rass_select_level": {"description": "Select RASS level"},
+  "rass_sedation_goals": "Mục tiêu an thần",
+  "@rass_sedation_goals": {"description": "Sedation goals"},
+  "rass_clinical_management": "Quản lý lâm sàng",
+  "@rass_clinical_management": {"description": "Clinical management"},
+  "rass_management_agitation": "Giảm kích động, xem xét nguyên nhân",
+  "@rass_management_agitation": {"description": "Management for agitation"},
+  "rass_management_calm": "Duy trì tình trạng hiện tại",
+  "@rass_management_calm": {"description": "Management for calm state"},
+  "rass_management_light": "An thần nhẹ thích hợp",
+  "@rass_management_light": {"description": "Management for light sedation"},
+  "rass_management_moderate": "Cân nhắc giảm an thần",
+  "@rass_management_moderate": {"description": "Management for moderate sedation"},
+  "rass_management_deep": "Giảm an thần, đánh giá nguyên nhân",
+  "@rass_management_deep": {"description": "Management for deep sedation"},
+  "rass_references_title": "Tài liệu tham khảo RASS",
+  "@rass_references_title": {"description": "RASS references title"},
+  
+  "calm_patient_subtitle": "Giữ bệnh nhân bình tĩnh",
+  "@calm_patient_subtitle": {"description": "Calm patient subtitle"},
+  "immobilize_subtitle": "Cố định vùng cắn",
+  "@immobilize_subtitle": {"description": "Immobilize subtitle"},
+  "emergency_services_subtitle": "Gọi cấp cứu",
+  "@emergency_services_subtitle": {"description": "Emergency services subtitle"},
+  "transport_subtitle": "Vận chuyển bệnh viện",
+  "@transport_subtitle": {"description": "Transport subtitle"},
+  "snake_identification_content": "• Ghi nhận thời gian và địa điểm\n• Mô tả hình dáng, màu sắc rắn\n• Chụp ảnh nếu an toàn\n• Không bắt hoặc giết rắn",
+  "@snake_identification_content": {"description": "Snake identification content"},
+  "severity_signs_content": "• Đau dữ dội lan rộng\n• Phù nề tiến triển nhanh\n• Tê bì, yếu cơ\n• Buồn nôn, nôn\n• Khó thở, rối loạn ý thức\n• Chảy máu bất thường",
+  "@severity_signs_content": {"description": "Severity signs content"},
+  
+  "treatment_protocol": "Quy trình điều trị",
+  "@treatment_protocol": {"description": "Treatment protocol"},
+  "first_aid": "Sơ cứu",
+  "@first_aid": {"description": "First aid"},
+  "antivenom_therapy": "Điều trị huyết thanh kháng nọc",
+  "@antivenom_therapy": {"description": "Antivenom therapy"},
+  "antivenom_therapy_steps": "• Đánh giá chỉ định\n• Pha chế đúng cách\n• Truyền từ từ\n• Theo dõi phản ứng",
+  "@antivenom_therapy_steps": {"description": "Antivenom therapy steps"},
+  "supportive_care": "Điều trị hỗ trợ",
+  "@supportive_care": {"description": "Supportive care"},
+  "supportive_care_steps": "• Duy trì đường thở\n• Hỗ trợ tuần hoàn\n• Kiểm soát đau\n• Phòng ngừa nhiễm trùng",
+  "@supportive_care_steps": {"description": "Supportive care steps"},
+  "antivenom_guidelines": "Hướng dẫn huyết thanh",
+  "@antivenom_guidelines": {"description": "Antivenom guidelines"},
+  "antivenom_dosage_content": "• Khởi đầu: 4-6 lọ\n• Đánh giá sau 1-2h\n• Lặp lại nếu cần\n• Tối đa: 10-15 lọ/24h",
+  "@antivenom_dosage_content": {"description": "Antivenom dosage content"},
+  "antivenom_administration": "Cách truyền",
+  "@antivenom_administration": {"description": "Antivenom administration"},
+  "antivenom_administration_content": "• Pha trong 100-200ml NaCl 0.9%\n• Truyền chậm 15-30 phút\n• Sẵn sàng xử lý dị ứng\n• Theo dõi chặt chẽ",
+  "@antivenom_administration_content": {"description": "Antivenom administration content"},
+  
+  "complications_management": "Xử lý biến chứng",
+  "@complications_management": {"description": "Complications management"},
+  "systemic_envenomation": "Ngộ độc toàn thân",
+  "@systemic_envenomation": {"description": "Systemic envenomation"},
+  "systemic_envenomation_content": "• Rối loạn đông máu\n• Suy thận cấp\n• Sốc\n• Suy hô hấp",
+  "@systemic_envenomation_content": {"description": "Systemic envenomation content"},
+  "local_complications": "Biến chứng tại chỗ",
+  "@local_complications": {"description": "Local complications"},
+  "local_complications_content": "• Hội chứng khoang\n• Hoại tử mô\n• Nhiễm trùng thứ phát\n• Mất chức năng chi",
+  "@local_complications_content": {"description": "Local complications content"},
+  "allergic_reactions_content": "• Epinephrine ngay lập tức\n• Corticosteroid\n• Antihistamine\n• Hỗ trợ hô hấp",
+  "@allergic_reactions_content": {"description": "Allergic reactions content"},
+  
+  "monitoring_followup": "Theo dõi và tái khám",
+  "@monitoring_followup": {"description": "Monitoring and follow-up"},
+  "immediate_monitoring": "Theo dõi tức thì",
+  "@immediate_monitoring": {"description": "Immediate monitoring"},
+  "immediate_monitoring_content": "• Vital signs mỗi 15 phút\n• Đông máu mỗi 6h\n• Chức năng thận\n• Dấu hiệu nhiễm trùng",
+  "@immediate_monitoring_content": {"description": "Immediate monitoring content"},
+  "discharge_criteria": "Tiêu chí xuất viện",
+  "@discharge_criteria": {"description": "Discharge criteria"},
+  "discharge_criteria_content": "• Ổn định >24h\n• Đông máu bình thường\n• Không tiến triển xấu\n• Không nhiễm trùng",
+  "@discharge_criteria_content": {"description": "Discharge criteria content"},
+  
+  "algorithm_snake_bite": "Thuật toán rắn cắn",
+  "@algorithm_snake_bite": {"description": "Snake bite algorithm"},
+  "algorithm_calm_immobilize": "Bình tĩnh + Cố định",
+  "@algorithm_calm_immobilize": {"description": "Calm and immobilize"},
+  "algorithm_assess_severity": "Đánh giá mức độ nặng",
+  "@algorithm_assess_severity": {"description": "Assess severity"},
+  "algorithm_mild": "Nhẹ: Theo dõi",
+  "@algorithm_mild": {"description": "Mild: observation"},
+  "algorithm_severe": "Nặng: Huyết thanh",
+  "@algorithm_severe": {"description": "Severe: antivenom"},
+  "algorithm_observation": "Theo dõi 24-48h",
+  "@algorithm_observation": {"description": "Observation 24-48h"},
+  "algorithm_antivenom": "Huyết thanh kháng nọc",
+  "@algorithm_antivenom": {"description": "Antivenom therapy"},
+  "snake_bite_medical_disclaimer": "Thông tin này chỉ mang tính tham khảo. Luôn tìm kiếm chăm sóc y tế khẩn cấp khi bị rắn cắn.",
+  "@snake_bite_medical_disclaimer": {"description": "Snake bite medical disclaimer"},
   
   "first_aid_content": "• Giữ bình tĩnh, không hoảng sợ\n• Rửa vết thương bằng nước sạch\n• Tháo trang sức ở vùng bị cắn\n• Không cắt vết thương\n• Không hút nọc bằng miệng\n• Băng ép giảm áp lực lympho\n• Cố định chi bị cắn\n• Vận chuyển ngay đến bệnh viện",
   "@first_aid_content": {"description": "First aid content"},
@@ -3205,5 +3935,121 @@
   "@monitoring_care_content": {"description": "Monitoring and care content"},
   
   "references_content": "1. WHO Guidelines for Snakebite Management\n2. Vietnamese Ministry of Health Protocol\n3. SEARO Regional Guidelines\n4. Clinical Toxinology Resources\n5. Antivenom Producer Guidelines\n6. Regional Poisoning Centers\n7. Emergency Medicine Textbooks",
-  "@references_content": {"description": "References content"}
+  "@references_content": {"description": "References content"},
+  "csfAnalysisTitle": "Phân tích dịch não tủy",
+  "@csfAnalysisTitle": {
+    "description": "CSF analysis page title"
+  },
+  "csfAnalysisSubtitle": "Chẩn đoán viêm màng não và bệnh lý thần kinh",
+  "@csfAnalysisSubtitle": {
+    "description": "CSF analysis page subtitle"
+  },
+  "csfParameters": "Thông số dịch não tủy",
+  "@csfParameters": {
+    "description": "CSF parameters section title"
+  },
+  "requiredForDiagnosis": "* Bắt buộc để chẩn đoán",
+  "@requiredForDiagnosis": {
+    "description": "Note about required fields for diagnosis"
+  },
+  "pressureLabel": "Áp lực (mmH2O)",
+  "@pressureLabel": {
+    "description": "Pressure field label"
+  },
+  "lactateLabel": "Lactate (mmol/L)",
+  "@lactateLabel": {
+    "description": "Lactate field label"
+  },
+  "appearanceXanthochromic": "Vàng (xanthochromic)",
+  "@appearanceXanthochromic": {
+    "description": "Xanthochromic fluid appearance"
+  },
+  "serumGlucoseRatioNote": "* Để tính tỷ lệ glucose DNT/máu (mặc định 90 mg/dL)",
+  "@serumGlucoseRatioNote": {
+    "description": "Note about serum glucose ratio calculation"
+  },
+  "analyzeCsf": "Phân tích DNT",
+  "@analyzeCsf": {
+    "description": "Analyze CSF button text"
+  },
+  "csfTypeNormal": "Bình thường",
+  "@csfTypeNormal": {
+    "description": "Normal CSF type"
+  },
+  "csfTypeBacterial": "Viêm màng não do vi khuẩn",
+  "@csfTypeBacterial": {
+    "description": "Bacterial meningitis CSF type"
+  },
+  "csfTypeViral": "Viêm màng não do virus",
+  "@csfTypeViral": {
+    "description": "Viral meningitis CSF type"
+  },
+  "csfTypeTuberculous": "Viêm màng não do lao",
+  "@csfTypeTuberculous": {
+    "description": "Tuberculous meningitis CSF type"
+  },
+  "csfTypeFungal": "Viêm màng não do nấm",
+  "@csfTypeFungal": {
+    "description": "Fungal meningitis CSF type"
+  },
+  "csfTypeMalignant": "Viêm màng não do ác tính",
+  "@csfTypeMalignant": {
+    "description": "Malignant meningitis CSF type"
+  },
+  "csfTypeHemorrhagic": "Xuất huyết dưới nhện",
+  "@csfTypeHemorrhagic": {
+    "description": "Hemorrhagic CSF type"
+  },
+  "csfTypeTraumatic": "Chọc nhầm mạch máu",
+  "@csfTypeTraumatic": {
+    "description": "Traumatic tap CSF type"
+  },
+  "keyParameters": "Thông số chính:",
+  "@keyParameters": {
+    "description": "Key parameters section title"
+  },
+  "cellsLabel": "Tế bào",
+  "@cellsLabel": {
+    "description": "Cells parameter label"
+  },
+  "riskLevel": "Mức độ nguy cơ:",
+  "@riskLevel": {
+    "description": "Risk level label"
+  },
+  "likelyDiagnoses": "Chẩn đoán có thể:",
+  "@likelyDiagnoses": {
+    "description": "Likely diagnoses section title"
+  },
+  "usingDefaultValues": "Sử dụng giá trị mặc định:",
+  "@usingDefaultValues": {
+    "description": "Default values notice"
+  },
+  "defaultSerumGlucose": "• Glucose máu: 90 mg/dL",
+  "@defaultSerumGlucose": {
+    "description": "Default serum glucose notice"
+  },
+  "defaultCsfPressure": "• Áp lực DNT: 150 mmH2O",
+  "@defaultCsfPressure": {
+    "description": "Default CSF pressure notice"
+  },
+  "fluidAppearanceLabel": "Tính chất dịch",
+  "@fluidAppearanceLabel": {
+    "description": "Fluid appearance field label"
+  },
+  "bloodParametersLabel": "Thông số máu",
+  "@bloodParametersLabel": {
+    "description": "Blood parameters section label"
+  },
+  "notesLabel": "Ghi chú",
+  "@notesLabel": {
+    "description": "Notes field label"
+  },
+  "notesHint": "Thông tin bổ sung...",
+  "@notesHint": {
+    "description": "Notes field hint text"
+  },
+  "referencesLabel": "Tài liệu tham khảo",
+  "@referencesLabel": {
+    "description": "References section label"
+  }
 }

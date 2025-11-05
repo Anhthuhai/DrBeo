@@ -20,14 +20,6 @@
   "@clinicalScoresDescription": {
     "description": "Clinical scores feature description"
   },
-  "emergencyProtocols": "Emergency Protocols",
-  "@emergencyProtocols": {
-    "description": "Emergency protocols feature title"
-  },
-  "emergencyProtocolsDescription": "Critical care procedures",
-  "@emergencyProtocolsDescription": {
-    "description": "Emergency protocols feature description"
-  },
   "diagnosticTools": "Diagnostic Tools",
   "@diagnosticTools": {
     "description": "Diagnostic tools feature title"
@@ -35,14 +27,6 @@
   "diagnosticToolsDescription": "Lab analysis, imaging guides",
   "@diagnosticToolsDescription": {
     "description": "Diagnostic tools feature description"
-  },
-  "calculationTools": "Calculation Tools",
-  "@calculationTools": {
-    "description": "Calculation tools feature title"
-  },
-  "calculationToolsDescription": "BMI, BSA, dosage calculations",
-  "@calculationToolsDescription": {
-    "description": "Calculation tools feature description"
   },
   "unitConverter": "Unit Converter",
   "@unitConverter": {
@@ -59,6 +43,518 @@
   "labAnalysisDescription": "Interpret laboratory results",
   "@labAnalysisDescription": {
     "description": "Lab analysis feature description"
+  },
+  "abgAnalysisTitle": "Arterial Blood Gas Analysis",
+  "@abgAnalysisTitle": {
+    "description": "ABG analysis page title"
+  },
+  "enterAbgResults": "Enter ABG Results",
+  "@enterAbgResults": {
+    "description": "Section title for ABG input form"
+  },
+  "abgClearAll": "Clear All",
+  "@abgClearAll": {
+    "description": "Clear all button tooltip for ABG"
+  },
+  "phLabel": "pH",
+  "@phLabel": {
+    "description": "pH input field label"
+  },
+  "phHint": "7.35-7.45",
+  "@phHint": {
+    "description": "pH input field hint"
+  },
+  "pleaseEnterPh": "Please enter pH",
+  "@pleaseEnterPh": {
+    "description": "pH validation error message"
+  },
+  "invalidPh": "Invalid pH (6.8-8.0)",
+  "@invalidPh": {
+    "description": "pH range validation error"
+  },
+  "pco2Label": "PCO₂ (mmHg)",
+  "@pco2Label": {
+    "description": "PCO2 input field label"
+  },
+  "pco2Hint": "35-45",
+  "@pco2Hint": {
+    "description": "PCO2 input field hint"
+  },
+  "pleaseEnterPco2": "Please enter PCO₂",
+  "@pleaseEnterPco2": {
+    "description": "PCO2 validation error message"
+  },
+  "invalidPco2": "Invalid PCO₂",
+  "@invalidPco2": {
+    "description": "PCO2 range validation error"
+  },
+  "po2Label": "PO₂ (mmHg)",
+  "@po2Label": {
+    "description": "PO2 input field label"
+  },
+  "po2Hint": "80-100",
+  "@po2Hint": {
+    "description": "PO2 input field hint"
+  },
+  "pleaseEnterPo2": "Please enter PO₂",
+  "@pleaseEnterPo2": {
+    "description": "PO2 validation error message"
+  },
+  "invalidPo2": "Invalid PO₂",
+  "@invalidPo2": {
+    "description": "PO2 range validation error"
+  },
+  "hco3Label": "HCO₃⁻ (mEq/L)",
+  "@hco3Label": {
+    "description": "HCO3 input field label"
+  },
+  "hco3Hint": "22-26",
+  "@hco3Hint": {
+    "description": "HCO3 input field hint"
+  },
+  "pleaseEnterHco3": "Please enter HCO₃⁻",
+  "@pleaseEnterHco3": {
+    "description": "HCO3 validation error message"
+  },
+  "invalidHco3": "Invalid HCO₃⁻",
+  "@invalidHco3": {
+    "description": "HCO3 range validation error"
+  },
+  "baseExcessLabel": "Base Excess (mEq/L)",
+  "@baseExcessLabel": {
+    "description": "Base excess input field label"
+  },
+  "baseExcessHint": "-2 to +2",
+  "@baseExcessHint": {
+    "description": "Base excess input field hint"
+  },
+  "pleaseEnterBe": "Please enter BE",
+  "@pleaseEnterBe": {
+    "description": "Base excess validation error message"
+  },
+  "invalidBe": "Invalid BE",
+  "@invalidBe": {
+    "description": "Base excess range validation error"
+  },
+  "sao2Label": "SaO₂ (%)",
+  "@sao2Label": {
+    "description": "SaO2 input field label"
+  },
+  "sao2Hint": "95-100",
+  "@sao2Hint": {
+    "description": "SaO2 input field hint"
+  },
+  "pleaseEnterSao2": "Please enter SaO₂",
+  "@pleaseEnterSao2": {
+    "description": "SaO2 validation error message"
+  },
+  "invalidSao2": "Invalid SaO₂ (0-100)",
+  "@invalidSao2": {
+    "description": "SaO2 range validation error"
+  },
+  "fio2Label": "FiO₂ (%)",
+  "@fio2Label": {
+    "description": "FiO2 input field label"
+  },
+  "fio2Hint": "21-100",
+  "@fio2Hint": {
+    "description": "FiO2 input field hint"
+  },
+  "pleaseEnterFio2": "Please enter FiO₂",
+  "@pleaseEnterFio2": {
+    "description": "FiO2 validation error message"
+  },
+  "invalidFio2": "Invalid FiO₂ (21-100)",
+  "@invalidFio2": {
+    "description": "FiO2 range validation error"
+  },
+  "abgNotesLabel": "Notes (optional)",
+  "@abgNotesLabel": {
+    "description": "Notes input field label for ABG"
+  },
+  "abgNotesHint": "Additional information...",
+  "@abgNotesHint": {
+    "description": "Notes input field hint for ABG"
+  },
+  "analyzeAbg": "Analyze ABG",
+  "@analyzeAbg": {
+    "description": "Analyze ABG button text"
+  },
+  "abgAnalysisResults": "Analysis Results",
+  "@abgAnalysisResults": {
+    "description": "ABG results section title"
+  },
+  "acidBaseStatus": "Acid-Base Status",
+  "@acidBaseStatus": {
+    "description": "Acid-base status section title"
+  },
+  "oxygenationStatus": "Oxygenation Status",
+  "@oxygenationStatus": {
+    "description": "Oxygenation status section title"
+  },
+  "calculatedIndices": "Calculated Indices",
+  "@calculatedIndices": {
+    "description": "Calculated indices section title"
+  },
+  "compensationAnalysis": "Compensation Analysis",
+  "@compensationAnalysis": {
+    "description": "Compensation analysis section title"
+  },
+  "expectedPco2": "Expected PCO₂: {value} ± 2 mmHg",
+  "@expectedPco2": {
+    "description": "Expected PCO2 for metabolic compensation",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "actualPco2": "Actual PCO₂: {value} mmHg",
+  "@actualPco2": {
+    "description": "Actual PCO2 value",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "expectedHco3": "Expected HCO₃⁻: {value} mEq/L",
+  "@expectedHco3": {
+    "description": "Expected HCO3 for respiratory compensation",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "actualHco3": "Actual HCO₃⁻: {value} mEq/L",
+  "@actualHco3": {
+    "description": "Actual HCO3 value",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "abgNotes": "Notes",
+  "@abgNotes": {
+    "description": "Notes section title for ABG"
+  },
+  "abgReferences": "References",
+  "@abgReferences": {
+    "description": "References section title for ABG"
+  },
+  "abgInterpretationNormal": "Normal",
+  "@abgInterpretationNormal": {
+    "description": "Normal ABG interpretation"
+  },
+  "abgInterpretationRespAcidosis": "Acute respiratory acidosis",
+  "@abgInterpretationRespAcidosis": {
+    "description": "Respiratory acidosis interpretation"
+  },
+  "abgInterpretationRespAlkalosis": "Acute respiratory alkalosis",
+  "@abgInterpretationRespAlkalosis": {
+    "description": "Respiratory alkalosis interpretation"
+  },
+  "abgInterpretationMetAcidosis": "Acute metabolic acidosis",
+  "@abgInterpretationMetAcidosis": {
+    "description": "Metabolic acidosis interpretation"
+  },
+  "abgInterpretationMetAlkalosis": "Acute metabolic alkalosis",
+  "@abgInterpretationMetAlkalosis": {
+    "description": "Metabolic alkalosis interpretation"
+  },
+  "abgInterpretationCompRespAcidosis": "Compensated respiratory acidosis",
+  "@abgInterpretationCompRespAcidosis": {
+    "description": "Compensated respiratory acidosis interpretation"
+  },
+  "abgInterpretationCompRespAlkalosis": "Compensated respiratory alkalosis",
+  "@abgInterpretationCompRespAlkalosis": {
+    "description": "Compensated respiratory alkalosis interpretation"
+  },
+  "abgInterpretationCompMetAcidosis": "Compensated metabolic acidosis",
+  "@abgInterpretationCompMetAcidosis": {
+    "description": "Compensated metabolic acidosis interpretation"
+  },
+  "abgInterpretationCompMetAlkalosis": "Compensated metabolic alkalosis",
+  "@abgInterpretationCompMetAlkalosis": {
+    "description": "Compensated metabolic alkalosis interpretation"
+  },
+  "abgInterpretationMixed": "Mixed disorder",
+  "@abgInterpretationMixed": {
+    "description": "Mixed disorder interpretation"
+  },
+  "oxygenationNormal": "Normal oxygenation",
+  "@oxygenationNormal": {
+    "description": "Normal oxygenation status"
+  },
+  "oxygenationMildHypoxemia": "Mild hypoxemia",
+  "@oxygenationMildHypoxemia": {
+    "description": "Mild hypoxemia status"
+  },
+  "oxygenationModerateHypoxemia": "Moderate hypoxemia",
+  "@oxygenationModerateHypoxemia": {
+    "description": "Moderate hypoxemia status"
+  },
+  "oxygenationSevereHypoxemia": "Severe hypoxemia",
+  "@oxygenationSevereHypoxemia": {
+    "description": "Severe hypoxemia status"
+  },
+  "oxygenationNormalWithO2": "Good oxygenation with supplemental O₂",
+  "@oxygenationNormalWithO2": {
+    "description": "Normal oxygenation with supplemental oxygen"
+  },
+  "labAnalysisHomeTitle": "Laboratory Analysis",
+  "@labAnalysisHomeTitle": {
+    "description": "Lab analysis home page title"
+  },
+  "selectAnalysisType": "Select Analysis Type",
+  "@selectAnalysisType": {
+    "description": "Section title for selecting analysis type"
+  },
+  "labAnalysisToolDescription": "Tools to support analysis and interpretation of laboratory results",
+  "@labAnalysisToolDescription": {
+    "description": "Description of lab analysis tools"
+  },
+  "abgAnalysisCardTitle": "Arterial Blood Gas",
+  "@abgAnalysisCardTitle": {
+    "description": "ABG analysis card title"
+  },
+  "abgAnalysisCardSubtitle": "ABG Analysis - Arterial blood gas analysis, pH, CO2, O2",
+  "@abgAnalysisCardSubtitle": {
+    "description": "ABG analysis card subtitle"
+  },
+  "pleuralFluidCardTitle": "Pleural Fluid",
+  "@pleuralFluidCardTitle": {
+    "description": "Pleural fluid analysis card title"
+  },
+  "pleuralFluidCardSubtitle": "Pleural Fluid - Pleural fluid analysis, Light's criteria",
+  "@pleuralFluidCardSubtitle": {
+    "description": "Pleural fluid analysis card subtitle"
+  },
+  "asciticFluidCardTitle": "Ascitic Fluid",
+  "@asciticFluidCardTitle": {
+    "description": "Ascitic fluid analysis card title"
+  },
+  "asciticFluidCardSubtitle": "Ascitic Fluid - Ascites analysis, SAAG gradient",
+  "@asciticFluidCardSubtitle": {
+    "description": "Ascitic fluid analysis card subtitle"
+  },
+  "csfAnalysisCardTitle": "Cerebrospinal Fluid",
+  "@csfAnalysisCardTitle": {
+    "description": "CSF analysis card title"
+  },
+  "csfAnalysisCardSubtitle": "CSF Analysis - Cerebrospinal fluid analysis, meningitis",
+  "@csfAnalysisCardSubtitle": {
+    "description": "CSF analysis card subtitle"
+  },
+  "urinalysisCardTitle": "Urinalysis",
+  "@urinalysisCardTitle": {
+    "description": "Urinalysis card title"
+  },
+  "urinalysisCardSubtitle": "Urinalysis - Urine analysis, protein, red blood cells",
+  "@urinalysisCardSubtitle": {
+    "description": "Urinalysis card subtitle"
+  },
+  "pleuralFluidAnalysisTitle": "Pleural Fluid Analysis",
+  "@pleuralFluidAnalysisTitle": {
+    "description": "Pleural fluid analysis page title"
+  },
+  "pleuralFluidParameters": "Pleural Fluid Parameters",
+  "@pleuralFluidParameters": {
+    "description": "Pleural fluid parameters section title"
+  },
+  "requiredForLight": "* Required for Light's criteria",
+  "@requiredForLight": {
+    "description": "Note about required fields for Light's criteria"
+  },
+  "fluidAppearance": "Fluid Appearance",
+  "@fluidAppearance": {
+    "description": "Fluid appearance dropdown label"
+  },
+  "appearanceClear": "Clear",
+  "@appearanceClear": {
+    "description": "Clear fluid appearance"
+  },
+  "appearanceTurbid": "Turbid",
+  "@appearanceTurbid": {
+    "description": "Turbid fluid appearance"
+  },
+  "appearanceBloody": "Bloody",
+  "@appearanceBloody": {
+    "description": "Bloody fluid appearance"
+  },
+  "appearancePurulent": "Purulent",
+  "@appearancePurulent": {
+    "description": "Purulent fluid appearance"
+  },
+  "appearanceMilky": "Milky",
+  "@appearanceMilky": {
+    "description": "Milky fluid appearance"
+  },
+  "appearanceCholesterol": "Cholesterol yellow",
+  "@appearanceCholesterol": {
+    "description": "Cholesterol yellow fluid appearance"
+  },
+  "proteinLabel": "Protein (g/dL) *",
+  "@proteinLabel": {
+    "description": "Protein field label"
+  },
+  "ldhLabel": "LDH (U/L) *",
+  "@ldhLabel": {
+    "description": "LDH field label"
+  },
+  "glucoseLabel": "Glucose (mg/dL)",
+  "@glucoseLabel": {
+    "description": "Glucose field label"
+  },
+  "cellCountLabel": "Cell Count (/μL)",
+  "@cellCountLabel": {
+    "description": "Cell count field label"
+  },
+  "neutrophilsLabel": "Neutrophils (%)",
+  "@neutrophilsLabel": {
+    "description": "Neutrophils field label"
+  },
+  "lymphocytesLabel": "Lymphocytes (%)",
+  "@lymphocytesLabel": {
+    "description": "Lymphocytes field label"
+  },
+  "cholesterolLabel": "Cholesterol (mg/dL)",
+  "@cholesterolLabel": {
+    "description": "Cholesterol field label"
+  },
+  "triglyceridesLabel": "Triglycerides (mg/dL)",
+  "@triglyceridesLabel": {
+    "description": "Triglycerides field label"
+  },
+  "serumParameters": "Serum Parameters",
+  "@serumParameters": {
+    "description": "Serum parameters section title"
+  },
+  "serumProteinLabel": "Serum Protein (g/dL) *",
+  "@serumProteinLabel": {
+    "description": "Serum protein field label"
+  },
+  "serumLdhLabel": "Serum LDH (U/L) *",
+  "@serumLdhLabel": {
+    "description": "Serum LDH field label"
+  },
+  "serumGlucoseLabel": "Serum Glucose (mg/dL)",
+  "@serumGlucoseLabel": {
+    "description": "Serum glucose field label"
+  },
+  "analyzePleuralFluid": "Analyze Pleural Fluid",
+  "@analyzePleuralFluid": {
+    "description": "Analyze pleural fluid button text"
+  },
+  "fluidTypeTransudate": "Transudate",
+  "@fluidTypeTransudate": {
+    "description": "Transudate fluid type"
+  },
+  "fluidTypeExudate": "Exudate",
+  "@fluidTypeExudate": {
+    "description": "Exudate fluid type"
+  },
+  "fluidTypeIndeterminate": "Indeterminate",
+  "@fluidTypeIndeterminate": {
+    "description": "Indeterminate fluid type"
+  },
+  "causeHeartFailure": "Heart failure",
+  "@causeHeartFailure": {
+    "description": "Heart failure cause"
+  },
+  "causeCirrhosis": "Cirrhosis",
+  "@causeCirrhosis": {
+    "description": "Cirrhosis cause"
+  },
+  "causeNephrotic": "Nephrotic syndrome",
+  "@causeNephrotic": {
+    "description": "Nephrotic syndrome cause"
+  },
+  "causeHypoalbuminemia": "Hypoalbuminemia",
+  "@causeHypoalbuminemia": {
+    "description": "Hypoalbuminemia cause"
+  },
+  "causePneumonia": "Pneumonia",
+  "@causePneumonia": {
+    "description": "Pneumonia cause"
+  },
+  "causeMalignancy": "Malignancy",
+  "@causeMalignancy": {
+    "description": "Malignancy cause"
+  },
+  "causeTuberculosis": "Tuberculosis",
+  "@causeTuberculosis": {
+    "description": "Tuberculosis cause"
+  },
+  "causePulmonaryEmbolism": "Pulmonary embolism",
+  "@causePulmonaryEmbolism": {
+    "description": "Pulmonary embolism cause"
+  },
+  "causePancreatitis": "Pancreatitis",
+  "@causePancreatitis": {
+    "description": "Pancreatitis cause"
+  },
+  "causeRheumatoid": "Rheumatoid arthritis",
+  "@causeRheumatoid": {
+    "description": "Rheumatoid arthritis cause"
+  },
+  "causeLupus": "Systemic lupus erythematosus",
+  "@causeLupus": {
+    "description": "Systemic lupus erythematosus cause"
+  },
+  "causeEmpyema": "Empyema",
+  "@causeEmpyema": {
+    "description": "Empyema cause"
+  },
+  "causeUnknown": "Unknown cause",
+  "@causeUnknown": {
+    "description": "Unknown cause"
+  },
+  "pleaseEnterValue": "Please enter a value",
+  "@pleaseEnterValue": {
+    "description": "Required field validation message"
+  },
+  "invalidValue": "Invalid value",
+  "@invalidValue": {
+    "description": "Invalid value validation message"
+  },
+  "invalidPercentage": "Must be between 0-100",
+  "@invalidPercentage": {
+    "description": "Invalid percentage validation message"
+  },
+  "fluidCharacteristics": "Fluid Characteristics",
+  "@fluidCharacteristics": {
+    "description": "Fluid characteristics section title"
+  },
+  "lightCriteria": "Light's Criteria",
+  "@lightCriteria": {
+    "description": "Light's criteria section title"
+  },
+  "proteinRatio": "Protein Ratio",
+  "@proteinRatio": {
+    "description": "Protein ratio label"
+  },
+  "ldhRatio": "LDH Ratio",
+  "@ldhRatio": {
+    "description": "LDH ratio label"
+  },
+  "likelyCauses": "Likely Causes",
+  "@likelyCauses": {
+    "description": "Likely causes section title"
+  },
+  "notes": "Notes",
+  "@notes": {
+    "description": "Notes section title"
+  },
+  "notesOptional": "Notes (optional)",
+  "@notesOptional": {
+    "description": "Notes field label with optional indication"
+  },
+  "additionalInformation": "Additional information...",
+  "@additionalInformation": {
+    "description": "Notes field placeholder text"
   },
   "guidelines": "Guidelines",
   "@guidelines": {
@@ -334,13 +830,6 @@
     "description": "Emergency medicine"
   },
   
-  "emergency_protocols": "Emergency Protocols",
-  "@emergency_protocols": {"description": "Emergency protocols title"},
-  "emergency_protocols_title": "Emergency Protocols",
-  "@emergency_protocols_title": {"description": "Emergency protocols main title"},
-  "emergency_protocols_subtitle": "Quick management algorithms for common emergency situations",
-  "@emergency_protocols_subtitle": {"description": "Emergency protocols subtitle"},
-  
   "hypertensive_crisis_title": "Hypertensive Crisis",
   "@hypertensive_crisis_title": {"description": "Hypertensive crisis protocol title"},
   "hypertensive_crisis_description": "Emergency management for BP ≥180/120 mmHg",
@@ -520,6 +1009,90 @@
   "references": "References",
   "@references": {
     "description": "References section"
+  },
+  "asciticFluidAnalysisTitle": "Ascitic Fluid Analysis",
+  "@asciticFluidAnalysisTitle": {
+    "description": "Ascitic fluid analysis page title"
+  },
+  "asciticFluidParameters": "Ascitic Fluid Parameters",
+  "@asciticFluidParameters": {
+    "description": "Ascitic fluid parameters section title"
+  },
+  "requiredForSAAG": "* Required for SAAG calculation",
+  "@requiredForSAAG": {
+    "description": "Note about required fields for SAAG"
+  },
+  "albuminLabel": "Albumin (g/dL) *",
+  "@albuminLabel": {
+    "description": "Albumin field label"
+  },
+  "amylaseLabel": "Amylase (U/L)",
+  "@amylaseLabel": {
+    "description": "Amylase field label"
+  },
+  "redBloodCellsLabel": "Red Blood Cells (/μL)",
+  "@redBloodCellsLabel": {
+    "description": "Red blood cells field label"
+  },
+  "serumAlbuminLabel": "Serum Albumin (g/dL) *",
+  "@serumAlbuminLabel": {
+    "description": "Serum albumin field label"
+  },
+  "analyzeAsciticFluid": "Analyze Ascitic Fluid",
+  "@analyzeAsciticFluid": {
+    "description": "Analyze ascitic fluid button text"
+  },
+  "fluidTypeTransudateSAAG": "Transudate (High SAAG)",
+  "@fluidTypeTransudateSAAG": {
+    "description": "Transudate fluid type with SAAG"
+  },
+  "fluidTypeExudateSAAG": "Exudate (Low SAAG)",
+  "@fluidTypeExudateSAAG": {
+    "description": "Exudate fluid type with SAAG"
+  },
+  "saagLabel": "SAAG",
+  "@saagLabel": {
+    "description": "SAAG label"
+  },
+  "albuminRatio": "Albumin Ratio",
+  "@albuminRatio": {
+    "description": "Albumin ratio label"
+  },
+  "causePeritonitis": "Peritonitis",
+  "@causePeritonitis": {
+    "description": "Peritonitis cause"
+  },
+  "causeNephrogenicAscites": "Nephrogenic ascites",
+  "@causeNephrogenicAscites": {
+    "description": "Nephrogenic ascites cause"
+  },
+  "causeSpontaneousBacterialPeritonitis": "Spontaneous bacterial peritonitis",
+  "@causeSpontaneousBacterialPeritonitis": {
+    "description": "Spontaneous bacterial peritonitis cause"
+  },
+  "causeSecondaryBacterialPeritonitis": "Secondary bacterial peritonitis",
+  "@causeSecondaryBacterialPeritonitis": {
+    "description": "Secondary bacterial peritonitis cause"
+  },
+  "causeChylousAscites": "Chylous ascites",
+  "@causeChylousAscites": {
+    "description": "Chylous ascites cause"
+  },
+  "causeHemorrhagicAscites": "Hemorrhagic ascites",
+  "@causeHemorrhagicAscites": {
+    "description": "Hemorrhagic ascites cause"
+  },
+  "specialTests": "Special Tests",
+  "@specialTests": {
+    "description": "Special tests section title"
+  },
+  "positive": "Positive",
+  "@positive": {
+    "description": "Positive test result"
+  },
+  "negative": "Negative",
+  "@negative": {
+    "description": "Negative test result"
   },
   "medical_disclaimer": "FOR HEALTHCARE PROFESSIONALS ONLY\nReference tool - Not a substitute for clinical judgment",
   "@medical_disclaimer": {
@@ -6195,5 +6768,121 @@
   "@monitoring_care_content": {"description": "Monitoring and care content"},
   
   "references_content": "1. WHO Guidelines for Snakebite Management\n2. Vietnamese Ministry of Health Protocol\n3. SEARO Regional Guidelines\n4. Clinical Toxinology Resources\n5. Antivenom Producer Guidelines\n6. Regional Poisoning Centers\n7. Emergency Medicine Textbooks",
-  "@references_content": {"description": "References content"}
+  "@references_content": {"description": "References content"},
+  "csfAnalysisTitle": "CSF Analysis",
+  "@csfAnalysisTitle": {
+    "description": "CSF analysis page title"
+  },
+  "csfAnalysisSubtitle": "Diagnosis of meningitis and neurological diseases",
+  "@csfAnalysisSubtitle": {
+    "description": "CSF analysis page subtitle"
+  },
+  "csfParameters": "CSF Parameters",
+  "@csfParameters": {
+    "description": "CSF parameters section title"
+  },
+  "requiredForDiagnosis": "* Required for diagnosis",
+  "@requiredForDiagnosis": {
+    "description": "Note about required fields for diagnosis"
+  },
+  "pressureLabel": "Pressure (mmH2O)",
+  "@pressureLabel": {
+    "description": "Pressure field label"
+  },
+  "lactateLabel": "Lactate (mmol/L)",
+  "@lactateLabel": {
+    "description": "Lactate field label"
+  },
+  "appearanceXanthochromic": "Yellow (xanthochromic)",
+  "@appearanceXanthochromic": {
+    "description": "Xanthochromic fluid appearance"
+  },
+  "serumGlucoseRatioNote": "* To calculate CSF/serum glucose ratio (default 90 mg/dL)",
+  "@serumGlucoseRatioNote": {
+    "description": "Note about serum glucose ratio calculation"
+  },
+  "analyzeCsf": "Analyze CSF",
+  "@analyzeCsf": {
+    "description": "Analyze CSF button text"
+  },
+  "csfTypeNormal": "Normal",
+  "@csfTypeNormal": {
+    "description": "Normal CSF type"
+  },
+  "csfTypeBacterial": "Bacterial meningitis",
+  "@csfTypeBacterial": {
+    "description": "Bacterial meningitis CSF type"
+  },
+  "csfTypeViral": "Viral meningitis",
+  "@csfTypeViral": {
+    "description": "Viral meningitis CSF type"
+  },
+  "csfTypeTuberculous": "Tuberculous meningitis",
+  "@csfTypeTuberculous": {
+    "description": "Tuberculous meningitis CSF type"
+  },
+  "csfTypeFungal": "Fungal meningitis",
+  "@csfTypeFungal": {
+    "description": "Fungal meningitis CSF type"
+  },
+  "csfTypeMalignant": "Malignant meningitis",
+  "@csfTypeMalignant": {
+    "description": "Malignant meningitis CSF type"
+  },
+  "csfTypeHemorrhagic": "Subarachnoid hemorrhage",
+  "@csfTypeHemorrhagic": {
+    "description": "Hemorrhagic CSF type"
+  },
+  "csfTypeTraumatic": "Traumatic tap",
+  "@csfTypeTraumatic": {
+    "description": "Traumatic tap CSF type"
+  },
+  "keyParameters": "Key Parameters:",
+  "@keyParameters": {
+    "description": "Key parameters section title"
+  },
+  "cellsLabel": "Cells",
+  "@cellsLabel": {
+    "description": "Cells parameter label"
+  },
+  "riskLevel": "Risk Level:",
+  "@riskLevel": {
+    "description": "Risk level label"
+  },
+  "likelyDiagnoses": "Likely Diagnoses:",
+  "@likelyDiagnoses": {
+    "description": "Likely diagnoses section title"
+  },
+  "usingDefaultValues": "Using default values:",
+  "@usingDefaultValues": {
+    "description": "Default values notice"
+  },
+  "defaultSerumGlucose": "• Serum glucose: 90 mg/dL",
+  "@defaultSerumGlucose": {
+    "description": "Default serum glucose notice"
+  },
+  "defaultCsfPressure": "• CSF pressure: 150 mmH2O",
+  "@defaultCsfPressure": {
+    "description": "Default CSF pressure notice"
+  },
+  "fluidAppearanceLabel": "Fluid appearance",
+  "@fluidAppearanceLabel": {
+    "description": "Fluid appearance field label"
+  },
+  "bloodParametersLabel": "Blood parameters",
+  "@bloodParametersLabel": {
+    "description": "Blood parameters section label"
+  },
+  "notesLabel": "Notes",
+  "@notesLabel": {
+    "description": "Notes field label"
+  },
+  "notesHint": "Additional information...",
+  "@notesHint": {
+    "description": "Notes field hint text"
+  },
+  "referencesLabel": "References",
+  "@referencesLabel": {
+    "description": "References section label"
+  }
 }

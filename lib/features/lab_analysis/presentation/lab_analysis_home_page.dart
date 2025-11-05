@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../l10n/app_localizations.dart';
 import '../../../core/theme/colors.dart';
 import 'abg_analysis_page.dart';
 import 'pleural_fluid_analysis_page.dart';
@@ -11,9 +12,10 @@ class LabAnalysisHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Phân tích cận lâm sàng'),
+        title: Text(l10n.labAnalysisHomeTitle),
         backgroundColor: AppColors.primary,
         foregroundColor: Colors.white,
       ),
@@ -23,16 +25,16 @@ class LabAnalysisHomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Chọn loại phân tích',
+              l10n.selectAnalysisType,
               style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                 fontWeight: FontWeight.bold,
                 color: AppColors.primary,
               ),
             ),
             const SizedBox(height: 8),
-            const Text(
-              'Công cụ hỗ trợ phân tích và diễn giải kết quả xét nghiệm',
-              style: TextStyle(
+            Text(
+              l10n.labAnalysisToolDescription,
+              style: const TextStyle(
                 color: Colors.grey,
                 fontSize: 14,
               ),
@@ -43,8 +45,8 @@ class LabAnalysisHomePage extends StatelessWidget {
                 children: [
                   _buildAnalysisListItem(
                     context,
-                    title: 'Khí máu động mạch',
-                    subtitle: 'ABG Analysis - Phân tích khí máu động mạch, pH, CO2, O2',
+                    title: l10n.abgAnalysisCardTitle,
+                    subtitle: l10n.abgAnalysisCardSubtitle,
                     icon: Icons.air,
                     color: Colors.red.shade400,
                     onTap: () {
@@ -58,8 +60,8 @@ class LabAnalysisHomePage extends StatelessWidget {
                   ),
                   _buildAnalysisListItem(
                     context,
-                    title: 'Dịch màng phổi',
-                    subtitle: 'Pleural Fluid - Phân tích dịch màng phổi, Light\'s criteria',
+                    title: l10n.pleuralFluidCardTitle,
+                    subtitle: l10n.pleuralFluidCardSubtitle,
                     icon: Icons.water_drop,
                     color: Colors.teal.shade400,
                     onTap: () {
@@ -73,8 +75,8 @@ class LabAnalysisHomePage extends StatelessWidget {
                   ),
                   _buildAnalysisListItem(
                     context,
-                    title: 'Dịch màng bụng',
-                    subtitle: 'Ascitic Fluid - Phân tích dịch cổ trướng, SAAG gradient',
+                    title: l10n.asciticFluidCardTitle,
+                    subtitle: l10n.asciticFluidCardSubtitle,
                     icon: Icons.local_hospital,
                     color: Colors.orange.shade400,
                     onTap: () {
@@ -88,8 +90,8 @@ class LabAnalysisHomePage extends StatelessWidget {
                   ),
                   _buildAnalysisListItem(
                     context,
-                    title: 'Dịch não tủy',
-                    subtitle: 'CSF Analysis - Phân tích dịch não tủy, viêm màng não',
+                    title: l10n.csfAnalysisCardTitle,
+                    subtitle: l10n.csfAnalysisCardSubtitle,
                     icon: Icons.psychology,
                     color: Colors.purple.shade400,
                     onTap: () {
@@ -103,8 +105,8 @@ class LabAnalysisHomePage extends StatelessWidget {
                   ),
                   _buildAnalysisListItem(
                     context,
-                    title: 'Phân tích nước tiểu',
-                    subtitle: 'Urinalysis - Phân tích nước tiểu, protein, hồng cầu',
+                    title: l10n.urinalysisCardTitle,
+                    subtitle: l10n.urinalysisCardSubtitle,
                     icon: Icons.opacity,
                     color: Colors.amber.shade400,
                     onTap: () {

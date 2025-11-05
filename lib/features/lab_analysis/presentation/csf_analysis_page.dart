@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../../../core/theme/colors.dart';
 import '../domain/entities/csf_result.dart';
+import '../../../l10n/app_localizations.dart';
 
 // Formatter để chuyển dấu phẩy thành dấu chấm và chỉ cho phép số thập phân
 class CommaToDotFormatter extends TextInputFormatter {
@@ -136,24 +137,24 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
     });
   }
 
-  String _getCsfTypeText(CsfType type) {
+  String _getCsfTypeText(CsfType type, AppLocalizations localizations) {
     switch (type) {
       case CsfType.normal:
-        return 'Bình thường';
+        return localizations.csfTypeNormal;
       case CsfType.bacterial:
-        return 'Viêm màng não do vi khuẩn';
+        return localizations.csfTypeBacterial;
       case CsfType.viral:
-        return 'Viêm màng não do virus';
+        return localizations.csfTypeViral;
       case CsfType.tuberculous:
-        return 'Viêm màng não lao';
+        return localizations.csfTypeTuberculous;
       case CsfType.fungal:
-        return 'Viêm màng não do nấm';
+        return localizations.csfTypeFungal;
       case CsfType.malignant:
-        return 'Viêm màng não ung thư';
+        return localizations.csfTypeMalignant;
       case CsfType.hemorrhagic:
-        return 'Xuất huyết dưới nhện';
+        return localizations.csfTypeHemorrhagic;
       case CsfType.traumatic:
-        return 'Chọc dò có máu';
+        return localizations.csfTypeTraumatic;
     }
   }
 
@@ -196,26 +197,28 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
     }
   }
 
-  String _getAppearanceText(CsfAppearance appearance) {
+  String _getAppearanceText(CsfAppearance appearance, AppLocalizations localizations) {
     switch (appearance) {
       case CsfAppearance.clear:
-        return 'Trong';
+        return localizations.appearanceClear;
       case CsfAppearance.turbid:
-        return 'Đục';
+        return localizations.appearanceTurbid;
       case CsfAppearance.purulent:
-        return 'Mủ';
+        return localizations.appearancePurulent;
       case CsfAppearance.bloody:
-        return 'Có máu';
+        return localizations.appearanceBloody;
       case CsfAppearance.xanthochromic:
-        return 'Vàng (xanthochromic)';
+        return localizations.appearanceXanthochromic;
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+    
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Phân tích dịch não tủy'),
+        title: Text(localizations.csfAnalysisTitle),
         backgroundColor: AppColors.primary,
         foregroundColor: Colors.white,
         actions: [
@@ -245,17 +248,17 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
                            size: 48, 
                            color: AppColors.primary),
                       const SizedBox(height: 8),
-                      const Text(
-                        'Phân tích dịch não tủy',
-                        style: TextStyle(
+                      Text(
+                        localizations.csfAnalysisTitle,
+                        style: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       const SizedBox(height: 4),
-                      const Text(
-                        'Chẩn đoán viêm màng não và các bệnh lý thần kinh',
-                        style: TextStyle(fontSize: 14, color: Colors.grey),
+                      Text(
+                        localizations.csfAnalysisSubtitle,
+                        style: const TextStyle(fontSize: 14, color: Colors.grey),
                       ),
                     ],
                   ),
@@ -275,9 +278,9 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
                           children: [
                             Icon(Icons.water_drop, color: AppColors.primary),
                             const SizedBox(width: 8),
-                            const Text(
-                              'Thông số dịch não tủy',
-                              style: TextStyle(
+                            Text(
+                              localizations.csfParameters,
+                              style: const TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -285,9 +288,9 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
                           ],
                         ),
                         const SizedBox(height: 8),
-                        const Text(
-                          '* Bắt buộc cho chẩn đoán',
-                          style: TextStyle(
+                        Text(
+                          localizations.requiredForDiagnosis,
+                          style: const TextStyle(
                             fontSize: 12,
                             color: Colors.grey,
                             fontStyle: FontStyle.italic,
@@ -325,7 +328,7 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _cellCountController,
-                                label: 'Số tế bào (/μL) *',
+                                label: localizations.cellCountLabel,
                                 hint: '0-5',
                                 isInteger: true,
                                 validator: _validateRequiredInteger,
@@ -335,7 +338,7 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _pressureController,
-                                label: 'Áp lực (mmH2O)',
+                                label: localizations.pressureLabel,
                                 hint: '70-180 (tùy chọn)',
                                 validator: _validateOptionalNumber,
                               ),
@@ -376,7 +379,7 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _rbcController,
-                                label: 'Hồng cầu (/μL)',
+                                label: localizations.redBloodCellsLabel,
                                 hint: '0-5',
                                 isInteger: true,
                                 validator: _validateOptionalInteger,
@@ -386,7 +389,7 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _lactateController,
-                                label: 'Lactate (mmol/L)',
+                                label: localizations.lactateLabel,
                                 hint: '1.5-2.1 (tùy chọn)',
                                 validator: _validateOptionalNumber,
                               ),
@@ -398,14 +401,14 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
                         // Appearance
                         DropdownButtonFormField<CsfAppearance>(
                           initialValue: _selectedAppearance,
-                          decoration: const InputDecoration(
-                            labelText: 'Tính chất dịch',
-                            border: OutlineInputBorder(),
+                          decoration: InputDecoration(
+                            labelText: localizations.fluidAppearanceLabel,
+                            border: const OutlineInputBorder(),
                           ),
                           items: CsfAppearance.values.map((appearance) {
                             return DropdownMenuItem(
                               value: appearance,
-                              child: Text(_getAppearanceText(appearance)),
+                              child: Text(_getAppearanceText(appearance, localizations)),
                             );
                           }).toList(),
                           onChanged: (value) {
@@ -431,9 +434,9 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
                           children: [
                             Icon(Icons.bloodtype, color: AppColors.secondary),
                             const SizedBox(width: 8),
-                            const Text(
-                              'Thông số máu',
-                              style: TextStyle(
+                            Text(
+                              localizations.bloodParametersLabel,
+                              style: const TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -441,9 +444,9 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
                           ],
                         ),
                         const SizedBox(height: 8),
-                        const Text(
-                          '* Để tính tỷ lệ glucose CSF/máu (mặc định 90 mg/dL)',
-                          style: TextStyle(
+                        Text(
+                          localizations.serumGlucoseRatioNote,
+                          style: const TextStyle(
                             fontSize: 12,
                             color: Colors.grey,
                             fontStyle: FontStyle.italic,
@@ -466,10 +469,10 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
                 // Notes
                 TextFormField(
                   controller: _notesController,
-                  decoration: const InputDecoration(
-                    labelText: 'Ghi chú (tùy chọn)',
-                    hintText: 'Thông tin bổ sung...',
-                    border: OutlineInputBorder(),
+                  decoration: InputDecoration(
+                    labelText: '${localizations.notesLabel} (tùy chọn)',
+                    hintText: localizations.notesHint,
+                    border: const OutlineInputBorder(),
                   ),
                   maxLines: 3,
                 ),
@@ -486,9 +489,9 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
-                  child: const Text(
-                    'Phân tích dịch não tủy',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  child: Text(
+                    localizations.analyzeCsf,
+                    style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                 ),
               ],
@@ -497,7 +500,7 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
 
               // Medical Citation
               const SizedBox(height: 16),
-              _buildCitationWidget(),
+              _buildCitationWidget(localizations),
             ],
           ),
         ),
@@ -577,6 +580,7 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
   }
 
   Widget _buildResultsCard() {
+    final localizations = AppLocalizations.of(context)!;
     final result = _currentResult!;
     final csfType = result.csfType;
     final likelyCauses = result.likelyCauses;
@@ -621,7 +625,7 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
                         Icon(Icons.info, color: Colors.blue, size: 20),
                         const SizedBox(width: 8),
                         Text(
-                          'Sử dụng giá trị mặc định:',
+                          localizations.usingDefaultValues,
                           style: TextStyle(
                             color: Colors.blue.shade700,
                             fontSize: 14,
@@ -633,7 +637,7 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
                     const SizedBox(height: 4),
                     if (isDefaultSerum)
                       Text(
-                        '• Glucose máu: 90 mg/dL',
+                        localizations.defaultSerumGlucose,
                         style: TextStyle(
                           color: Colors.blue.shade700,
                           fontSize: 12,
@@ -641,7 +645,7 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
                       ),
                     if (isDefaultPressure)
                       Text(
-                        '• Áp lực CSF: 150 mmH2O',
+                        localizations.defaultCsfPressure,
                         style: TextStyle(
                           color: Colors.blue.shade700,
                           fontSize: 12,
@@ -676,7 +680,7 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
                       const SizedBox(width: 8),
                       Expanded(
                         child: Text(
-                          _getCsfTypeText(csfType),
+                          _getCsfTypeText(csfType, localizations),
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -692,14 +696,14 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
             const SizedBox(height: 16),
             
             // Key parameters
-            const Text(
-              'Thông số chính:',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            Text(
+              localizations.keyParameters,
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
             
             _buildParameterRow(
-              'Tế bào',
+              localizations.cellsLabel,
               '${result.cellCount} /μL',
               result.cellCount <= 5 ? 'Bình thường (≤5)' : 'Tăng cao',
               result.cellCount <= 5,
@@ -735,13 +739,13 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
             const SizedBox(height: 16),
             
             // Risk and urgency assessment
-            _buildUrgencyCard(result.riskLevel, result.urgencyLevel),
+            _buildUrgencyCard(result.riskLevel, result.urgencyLevel, localizations),
             const SizedBox(height: 16),
             
             // Likely causes
-            const Text(
-              'Chẩn đoán có thể:',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            Text(
+              localizations.likelyDiagnoses,
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
             
@@ -806,7 +810,7 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
     );
   }
 
-  Widget _buildUrgencyCard(String riskLevel, String urgencyLevel) {
+  Widget _buildUrgencyCard(String riskLevel, String urgencyLevel, AppLocalizations localizations) {
     Color color = _getRiskColor(riskLevel);
     IconData icon = _getRiskIcon(riskLevel);
 
@@ -825,7 +829,7 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
               Icon(icon, color: color),
               const SizedBox(width: 8),
               Text(
-                'Mức độ nguy cơ: $riskLevel',
+                '${localizations.riskLevel} $riskLevel',
                 style: TextStyle(
                   color: color,
                   fontWeight: FontWeight.bold,
@@ -917,7 +921,7 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
     }
   }
 
-  Widget _buildCitationWidget() {
+  Widget _buildCitationWidget(AppLocalizations localizations) {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
@@ -933,7 +937,7 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
               Icon(Icons.article, color: Colors.blue.shade700, size: 16),
               const SizedBox(width: 6),
               Text(
-                'Tài liệu tham khảo',
+                localizations.referencesLabel,
                 style: TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.bold,

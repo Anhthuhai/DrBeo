@@ -3,6 +3,39 @@ import 'package:flutter/services.dart';
 import '../../../l10n/app_localizations.dart';
 import '../../../core/theme/app_theme.dart';
 
+// Formatter để chuyển dấu phẩy thành dấu chấm và chỉ cho phép số thập phân
+class CommaToDotFormatter extends TextInputFormatter {
+  final RegExp _allowed = RegExp(r'[0-9\.,]');
+  
+  @override
+  TextEditingValue formatEditUpdate(TextEditingValue oldValue, TextEditingValue newValue) {
+    // Lọc các ký tự không hợp lệ
+    final filtered = newValue.text.characters.where((c) => _allowed.hasMatch(c)).join();
+    // Chuyển ',' thành '.'
+    final transformed = filtered.replaceAll(',', '.');
+    // Đảm bảo chỉ có một dấu chấm
+    final parts = transformed.split('.');
+    String result;
+    if (parts.length > 2) {
+      result = '${parts[0]}.${parts.sublist(1).join('')}';
+    } else {
+      result = transformed;
+    }
+    
+    return TextEditingValue(
+      text: result,
+      selection: TextSelection.collapsed(offset: result.length),
+    );
+  }
+}
+
+// Hàm parse số có hỗ trợ dấu phẩy
+double parseLocalizedDouble(String text) {
+  if (text.trim().isEmpty) return 0.0;
+  final normalized = text.replaceAll(',', '.');
+  return double.tryParse(normalized) ?? 0.0;
+}
+
 class ApacheIIPage extends StatefulWidget {
   const ApacheIIPage({super.key});
 
@@ -199,36 +232,6 @@ class _ApacheIIPageState extends State<ApacheIIPage> {
             ),
           ),
 
-          // Medical Disclaimer Banner
-          Container(
-            width: double.infinity,
-            margin: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-            padding: const EdgeInsets.all(12),
-            decoration: BoxDecoration(
-              color: Colors.red.shade50,
-              borderRadius: BorderRadius.circular(8),
-              border: Border.all(color: Colors.red.shade200),
-            ),
-            child: Row(
-              children: [
-                Icon(Icons.warning, color: Colors.red.shade700, size: 20),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: Text(
-                    Localizations.localeOf(context).languageCode == 'vi'
-                        ? 'LƯU Ý Y KHOA: Kết quả chỉ mang tính tham khảo. Luôn tham khảo ý kiến bác sĩ chuyên khoa hồi sức cấp cứu trước khi đưa ra quyết định điều trị.'
-                        : 'MEDICAL DISCLAIMER: Results are for reference only. Always consult with an intensive care specialist before making treatment decisions.',
-                    style: TextStyle(
-                      fontSize: 11,
-                      color: Colors.red.shade700,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-
           // Input Sections
           Expanded(
             child: ListView(
@@ -242,6 +245,37 @@ class _ApacheIIPageState extends State<ApacheIIPage> {
                 const SizedBox(height: 16),
                 _buildChronicHealthSection(),
                 const SizedBox(height: 16),
+                
+                // Medical Disclaimer (moved to bottom)
+                Container(
+                  width: double.infinity,
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: Colors.red.shade50,
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(color: Colors.red.shade200),
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(Icons.warning, color: Colors.red.shade700, size: 20),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Text(
+                          Localizations.localeOf(context).languageCode == 'vi'
+                              ? 'LƯU Ý Y KHOA: Kết quả chỉ mang tính tham khảo. Luôn tham khảo ý kiến bác sĩ chuyên khoa hồi sức cấp cứu trước khi đưa ra quyết định điều trị.'
+                              : 'MEDICAL DISCLAIMER: Results are for reference only. Always consult with an intensive care specialist before making treatment decisions.',
+                          style: TextStyle(
+                            fontSize: 11,
+                            color: Colors.red.shade700,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 16),
+                
                 _buildCitationWidget(),
                 const SizedBox(height: 20),
               ],
@@ -267,7 +301,6 @@ class _ApacheIIPageState extends State<ApacheIIPage> {
             border: const OutlineInputBorder(),
             suffixText: l10n.years,
           ),
-          // ignore: deprecated_member_use
           onChanged: (value) {
             int age = int.tryParse(value) ?? 0;
             setState(() {
@@ -301,7 +334,7 @@ class _ApacheIIPageState extends State<ApacheIIPage> {
       Colors.red.shade600,
       [
         _buildVitalSignRow(l10n.temperature_celsius, tempController, (value) {
-          double temp = double.tryParse(value) ?? 0;
+          double temp = parseLocalizedDouble(value);
           setState(() {
             if (temp < 30 || temp >= 41) {
               tempScore = 4;
@@ -315,7 +348,7 @@ class _ApacheIIPageState extends State<ApacheIIPage> {
               tempScore = 0;
             }
           });
-        }, tempScore),
+        }, tempScore, l10n),
         
         _buildVitalSignRow(l10n.map_mmhg, mapController, (value) {
           int map = int.tryParse(value) ?? 0;
@@ -330,7 +363,7 @@ class _ApacheIIPageState extends State<ApacheIIPage> {
               mapScore = 0;
             }
           });
-        }, mapScore),
+        }, mapScore, l10n),
         
         _buildVitalSignRow(l10n.heart_rate_per_min, hrController, (value) {
           int hr = int.tryParse(value) ?? 0;
@@ -345,7 +378,7 @@ class _ApacheIIPageState extends State<ApacheIIPage> {
               hrScore = 0;
             }
           });
-        }, hrScore),
+        }, hrScore, l10n),
         
         _buildVitalSignRow(l10n.respiratory_rate_per_min, rrController, (value) {
           int rr = int.tryParse(value) ?? 0;
@@ -360,7 +393,7 @@ class _ApacheIIPageState extends State<ApacheIIPage> {
               rrScore = 0;
             }
           });
-        }, rrScore),
+        }, rrScore, l10n),
       ],
     );
   }
@@ -372,7 +405,7 @@ class _ApacheIIPageState extends State<ApacheIIPage> {
       Colors.purple.shade600,
       [
         _buildVitalSignRow(l10n.blood_ph, pHController, (value) {
-          double ph = double.tryParse(value) ?? 0;
+          double ph = parseLocalizedDouble(value);
           setState(() {
             if (ph < 7.15 || ph >= 7.7) {
               pHScore = 4;
@@ -384,7 +417,7 @@ class _ApacheIIPageState extends State<ApacheIIPage> {
               pHScore = 0;
             }
           });
-        }, pHScore),
+        }, pHScore, l10n),
         
         _buildVitalSignRow(l10n.sodium_meq_l, naController, (value) {
           int na = int.tryParse(value) ?? 0;
@@ -399,10 +432,10 @@ class _ApacheIIPageState extends State<ApacheIIPage> {
               naScore = 0;
             }
           });
-        }, naScore),
+        }, naScore, l10n),
         
         _buildVitalSignRow(l10n.potassium_meq_l, kController, (value) {
-          double k = double.tryParse(value) ?? 0;
+          double k = parseLocalizedDouble(value);
           setState(() {
             if (k < 2.5 || k >= 7) {
               kScore = 4;
@@ -414,7 +447,7 @@ class _ApacheIIPageState extends State<ApacheIIPage> {
               kScore = 0;
             }
           });
-        }, kScore),
+        }, kScore, l10n),
       ],
     );
   }
@@ -430,30 +463,9 @@ class _ApacheIIPageState extends State<ApacheIIPage> {
           children: [
             Text(l10n.chronic_disease_history, style: const TextStyle(fontWeight: FontWeight.w600)),
             const SizedBox(height: 8),
-            RadioListTile<int>(
-              title: Text(l10n.none),
-              value: 0,
-              // ignore: deprecated_member_use
-              groupValue: chronicHealthScore,
-              // ignore: deprecated_member_use
-              onChanged: (value) => setState(() => chronicHealthScore = value!),
-            ),
-            RadioListTile<int>(
-              title: Text(l10n.has_non_surgical_or_emergency),
-              value: 5,
-              // ignore: deprecated_member_use
-              groupValue: chronicHealthScore,
-              // ignore: deprecated_member_use
-              onChanged: (value) => setState(() => chronicHealthScore = value!),
-            ),
-            RadioListTile<int>(
-              title: Text(l10n.has_elective_surgery),
-              value: 2,
-              // ignore: deprecated_member_use
-              groupValue: chronicHealthScore,
-              // ignore: deprecated_member_use
-              onChanged: (value) => setState(() => chronicHealthScore = value!),
-            ),
+            _buildChronicHealthOption(l10n.none, 0),
+            _buildChronicHealthOption(l10n.has_non_surgical_or_emergency, 5),
+            _buildChronicHealthOption(l10n.has_elective_surgery, 2),
           ],
         ),
       ],
@@ -486,7 +498,7 @@ class _ApacheIIPageState extends State<ApacheIIPage> {
     );
   }
 
-  Widget _buildVitalSignRow(String label, TextEditingController controller, Function(String) onChanged, int score) {
+  Widget _buildVitalSignRow(String label, TextEditingController controller, Function(String) onChanged, int score, AppLocalizations l10n) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: Row(
@@ -496,13 +508,16 @@ class _ApacheIIPageState extends State<ApacheIIPage> {
             child: TextField(
               controller: controller,
               keyboardType: const TextInputType.numberWithOptions(decimal: true),
+              inputFormatters: [
+                CommaToDotFormatter(),
+                FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d*')),
+              ],
               decoration: InputDecoration(
                 labelText: label,
                 border: const OutlineInputBorder(),
                 isDense: true,
               ),
-              // ignore: deprecated_member_use
-              onChanged: null,
+              onChanged: onChanged,
             ),
           ),
           const SizedBox(width: 12),
@@ -513,7 +528,7 @@ class _ApacheIIPageState extends State<ApacheIIPage> {
               borderRadius: BorderRadius.circular(4),
             ),
             child: Text(
-              'Điểm: $score',
+              '${l10n.score}: $score',
               style: TextStyle(
                 fontWeight: FontWeight.w600,
                 color: score > 0 ? Colors.red : Colors.grey,
@@ -521,6 +536,36 @@ class _ApacheIIPageState extends State<ApacheIIPage> {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildChronicHealthOption(String title, int value) {
+    return InkWell(
+      onTap: () => setState(() => chronicHealthScore = value),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8),
+        child: Row(
+          children: [
+            Container(
+              width: 20,
+              height: 20,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(
+                  color: chronicHealthScore == value ? Colors.blue : Colors.grey,
+                  width: 2,
+                ),
+                color: chronicHealthScore == value ? Colors.blue : Colors.transparent,
+              ),
+              child: chronicHealthScore == value
+                  ? const Icon(Icons.check, size: 14, color: Colors.white)
+                  : null,
+            ),
+            const SizedBox(width: 12),
+            Expanded(child: Text(title)),
+          ],
+        ),
       ),
     );
   }

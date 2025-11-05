@@ -128,18 +128,6 @@ abstract class AppLocalizations {
   /// **'Glasgow, APACHE, SOFA...'**
   String get clinicalScoresDescription;
 
-  /// Emergency protocols feature title
-  ///
-  /// In en, this message translates to:
-  /// **'Emergency Protocols'**
-  String get emergencyProtocols;
-
-  /// Emergency protocols feature description
-  ///
-  /// In en, this message translates to:
-  /// **'Critical care procedures'**
-  String get emergencyProtocolsDescription;
-
   /// Diagnostic tools feature title
   ///
   /// In en, this message translates to:
@@ -151,18 +139,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Lab analysis, imaging guides'**
   String get diagnosticToolsDescription;
-
-  /// Calculation tools feature title
-  ///
-  /// In en, this message translates to:
-  /// **'Calculation Tools'**
-  String get calculationTools;
-
-  /// Calculation tools feature description
-  ///
-  /// In en, this message translates to:
-  /// **'BMI, BSA, dosage calculations'**
-  String get calculationToolsDescription;
 
   /// Unit converter feature title
   ///
@@ -187,6 +163,744 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Interpret laboratory results'**
   String get labAnalysisDescription;
+
+  /// ABG analysis page title
+  ///
+  /// In en, this message translates to:
+  /// **'Arterial Blood Gas Analysis'**
+  String get abgAnalysisTitle;
+
+  /// Section title for ABG input form
+  ///
+  /// In en, this message translates to:
+  /// **'Enter ABG Results'**
+  String get enterAbgResults;
+
+  /// Clear all button tooltip for ABG
+  ///
+  /// In en, this message translates to:
+  /// **'Clear All'**
+  String get abgClearAll;
+
+  /// pH input field label
+  ///
+  /// In en, this message translates to:
+  /// **'pH'**
+  String get phLabel;
+
+  /// pH input field hint
+  ///
+  /// In en, this message translates to:
+  /// **'7.35-7.45'**
+  String get phHint;
+
+  /// pH validation error message
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter pH'**
+  String get pleaseEnterPh;
+
+  /// pH range validation error
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid pH (6.8-8.0)'**
+  String get invalidPh;
+
+  /// PCO2 input field label
+  ///
+  /// In en, this message translates to:
+  /// **'PCO₂ (mmHg)'**
+  String get pco2Label;
+
+  /// PCO2 input field hint
+  ///
+  /// In en, this message translates to:
+  /// **'35-45'**
+  String get pco2Hint;
+
+  /// PCO2 validation error message
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter PCO₂'**
+  String get pleaseEnterPco2;
+
+  /// PCO2 range validation error
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid PCO₂'**
+  String get invalidPco2;
+
+  /// PO2 input field label
+  ///
+  /// In en, this message translates to:
+  /// **'PO₂ (mmHg)'**
+  String get po2Label;
+
+  /// PO2 input field hint
+  ///
+  /// In en, this message translates to:
+  /// **'80-100'**
+  String get po2Hint;
+
+  /// PO2 validation error message
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter PO₂'**
+  String get pleaseEnterPo2;
+
+  /// PO2 range validation error
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid PO₂'**
+  String get invalidPo2;
+
+  /// HCO3 input field label
+  ///
+  /// In en, this message translates to:
+  /// **'HCO₃⁻ (mEq/L)'**
+  String get hco3Label;
+
+  /// HCO3 input field hint
+  ///
+  /// In en, this message translates to:
+  /// **'22-26'**
+  String get hco3Hint;
+
+  /// HCO3 validation error message
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter HCO₃⁻'**
+  String get pleaseEnterHco3;
+
+  /// HCO3 range validation error
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid HCO₃⁻'**
+  String get invalidHco3;
+
+  /// Base excess input field label
+  ///
+  /// In en, this message translates to:
+  /// **'Base Excess (mEq/L)'**
+  String get baseExcessLabel;
+
+  /// Base excess input field hint
+  ///
+  /// In en, this message translates to:
+  /// **'-2 to +2'**
+  String get baseExcessHint;
+
+  /// Base excess validation error message
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter BE'**
+  String get pleaseEnterBe;
+
+  /// Base excess range validation error
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid BE'**
+  String get invalidBe;
+
+  /// SaO2 input field label
+  ///
+  /// In en, this message translates to:
+  /// **'SaO₂ (%)'**
+  String get sao2Label;
+
+  /// SaO2 input field hint
+  ///
+  /// In en, this message translates to:
+  /// **'95-100'**
+  String get sao2Hint;
+
+  /// SaO2 validation error message
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter SaO₂'**
+  String get pleaseEnterSao2;
+
+  /// SaO2 range validation error
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid SaO₂ (0-100)'**
+  String get invalidSao2;
+
+  /// FiO2 input field label
+  ///
+  /// In en, this message translates to:
+  /// **'FiO₂ (%)'**
+  String get fio2Label;
+
+  /// FiO2 input field hint
+  ///
+  /// In en, this message translates to:
+  /// **'21-100'**
+  String get fio2Hint;
+
+  /// FiO2 validation error message
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter FiO₂'**
+  String get pleaseEnterFio2;
+
+  /// FiO2 range validation error
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid FiO₂ (21-100)'**
+  String get invalidFio2;
+
+  /// Notes input field label for ABG
+  ///
+  /// In en, this message translates to:
+  /// **'Notes (optional)'**
+  String get abgNotesLabel;
+
+  /// Notes input field hint for ABG
+  ///
+  /// In en, this message translates to:
+  /// **'Additional information...'**
+  String get abgNotesHint;
+
+  /// Analyze ABG button text
+  ///
+  /// In en, this message translates to:
+  /// **'Analyze ABG'**
+  String get analyzeAbg;
+
+  /// ABG results section title
+  ///
+  /// In en, this message translates to:
+  /// **'Analysis Results'**
+  String get abgAnalysisResults;
+
+  /// Acid-base status section title
+  ///
+  /// In en, this message translates to:
+  /// **'Acid-Base Status'**
+  String get acidBaseStatus;
+
+  /// Oxygenation status section title
+  ///
+  /// In en, this message translates to:
+  /// **'Oxygenation Status'**
+  String get oxygenationStatus;
+
+  /// Calculated indices section title
+  ///
+  /// In en, this message translates to:
+  /// **'Calculated Indices'**
+  String get calculatedIndices;
+
+  /// Compensation analysis section title
+  ///
+  /// In en, this message translates to:
+  /// **'Compensation Analysis'**
+  String get compensationAnalysis;
+
+  /// Expected PCO2 for metabolic compensation
+  ///
+  /// In en, this message translates to:
+  /// **'Expected PCO₂: {value} ± 2 mmHg'**
+  String expectedPco2(String value);
+
+  /// Actual PCO2 value
+  ///
+  /// In en, this message translates to:
+  /// **'Actual PCO₂: {value} mmHg'**
+  String actualPco2(String value);
+
+  /// Expected HCO3 for respiratory compensation
+  ///
+  /// In en, this message translates to:
+  /// **'Expected HCO₃⁻: {value} mEq/L'**
+  String expectedHco3(String value);
+
+  /// Actual HCO3 value
+  ///
+  /// In en, this message translates to:
+  /// **'Actual HCO₃⁻: {value} mEq/L'**
+  String actualHco3(String value);
+
+  /// Notes section title for ABG
+  ///
+  /// In en, this message translates to:
+  /// **'Notes'**
+  String get abgNotes;
+
+  /// References section title for ABG
+  ///
+  /// In en, this message translates to:
+  /// **'References'**
+  String get abgReferences;
+
+  /// Normal ABG interpretation
+  ///
+  /// In en, this message translates to:
+  /// **'Normal'**
+  String get abgInterpretationNormal;
+
+  /// Respiratory acidosis interpretation
+  ///
+  /// In en, this message translates to:
+  /// **'Acute respiratory acidosis'**
+  String get abgInterpretationRespAcidosis;
+
+  /// Respiratory alkalosis interpretation
+  ///
+  /// In en, this message translates to:
+  /// **'Acute respiratory alkalosis'**
+  String get abgInterpretationRespAlkalosis;
+
+  /// Metabolic acidosis interpretation
+  ///
+  /// In en, this message translates to:
+  /// **'Acute metabolic acidosis'**
+  String get abgInterpretationMetAcidosis;
+
+  /// Metabolic alkalosis interpretation
+  ///
+  /// In en, this message translates to:
+  /// **'Acute metabolic alkalosis'**
+  String get abgInterpretationMetAlkalosis;
+
+  /// Compensated respiratory acidosis interpretation
+  ///
+  /// In en, this message translates to:
+  /// **'Compensated respiratory acidosis'**
+  String get abgInterpretationCompRespAcidosis;
+
+  /// Compensated respiratory alkalosis interpretation
+  ///
+  /// In en, this message translates to:
+  /// **'Compensated respiratory alkalosis'**
+  String get abgInterpretationCompRespAlkalosis;
+
+  /// Compensated metabolic acidosis interpretation
+  ///
+  /// In en, this message translates to:
+  /// **'Compensated metabolic acidosis'**
+  String get abgInterpretationCompMetAcidosis;
+
+  /// Compensated metabolic alkalosis interpretation
+  ///
+  /// In en, this message translates to:
+  /// **'Compensated metabolic alkalosis'**
+  String get abgInterpretationCompMetAlkalosis;
+
+  /// Mixed disorder interpretation
+  ///
+  /// In en, this message translates to:
+  /// **'Mixed disorder'**
+  String get abgInterpretationMixed;
+
+  /// Normal oxygenation status
+  ///
+  /// In en, this message translates to:
+  /// **'Normal oxygenation'**
+  String get oxygenationNormal;
+
+  /// Mild hypoxemia status
+  ///
+  /// In en, this message translates to:
+  /// **'Mild hypoxemia'**
+  String get oxygenationMildHypoxemia;
+
+  /// Moderate hypoxemia status
+  ///
+  /// In en, this message translates to:
+  /// **'Moderate hypoxemia'**
+  String get oxygenationModerateHypoxemia;
+
+  /// Severe hypoxemia status
+  ///
+  /// In en, this message translates to:
+  /// **'Severe hypoxemia'**
+  String get oxygenationSevereHypoxemia;
+
+  /// Normal oxygenation with supplemental oxygen
+  ///
+  /// In en, this message translates to:
+  /// **'Good oxygenation with supplemental O₂'**
+  String get oxygenationNormalWithO2;
+
+  /// Lab analysis home page title
+  ///
+  /// In en, this message translates to:
+  /// **'Laboratory Analysis'**
+  String get labAnalysisHomeTitle;
+
+  /// Section title for selecting analysis type
+  ///
+  /// In en, this message translates to:
+  /// **'Select Analysis Type'**
+  String get selectAnalysisType;
+
+  /// Description of lab analysis tools
+  ///
+  /// In en, this message translates to:
+  /// **'Tools to support analysis and interpretation of laboratory results'**
+  String get labAnalysisToolDescription;
+
+  /// ABG analysis card title
+  ///
+  /// In en, this message translates to:
+  /// **'Arterial Blood Gas'**
+  String get abgAnalysisCardTitle;
+
+  /// ABG analysis card subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'ABG Analysis - Arterial blood gas analysis, pH, CO2, O2'**
+  String get abgAnalysisCardSubtitle;
+
+  /// Pleural fluid analysis card title
+  ///
+  /// In en, this message translates to:
+  /// **'Pleural Fluid'**
+  String get pleuralFluidCardTitle;
+
+  /// Pleural fluid analysis card subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Pleural Fluid - Pleural fluid analysis, Light\'s criteria'**
+  String get pleuralFluidCardSubtitle;
+
+  /// Ascitic fluid analysis card title
+  ///
+  /// In en, this message translates to:
+  /// **'Ascitic Fluid'**
+  String get asciticFluidCardTitle;
+
+  /// Ascitic fluid analysis card subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Ascitic Fluid - Ascites analysis, SAAG gradient'**
+  String get asciticFluidCardSubtitle;
+
+  /// CSF analysis card title
+  ///
+  /// In en, this message translates to:
+  /// **'Cerebrospinal Fluid'**
+  String get csfAnalysisCardTitle;
+
+  /// CSF analysis card subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'CSF Analysis - Cerebrospinal fluid analysis, meningitis'**
+  String get csfAnalysisCardSubtitle;
+
+  /// Urinalysis card title
+  ///
+  /// In en, this message translates to:
+  /// **'Urinalysis'**
+  String get urinalysisCardTitle;
+
+  /// Urinalysis card subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Urinalysis - Urine analysis, protein, red blood cells'**
+  String get urinalysisCardSubtitle;
+
+  /// Pleural fluid analysis page title
+  ///
+  /// In en, this message translates to:
+  /// **'Pleural Fluid Analysis'**
+  String get pleuralFluidAnalysisTitle;
+
+  /// Pleural fluid parameters section title
+  ///
+  /// In en, this message translates to:
+  /// **'Pleural Fluid Parameters'**
+  String get pleuralFluidParameters;
+
+  /// Note about required fields for Light's criteria
+  ///
+  /// In en, this message translates to:
+  /// **'* Required for Light\'s criteria'**
+  String get requiredForLight;
+
+  /// Fluid appearance dropdown label
+  ///
+  /// In en, this message translates to:
+  /// **'Fluid Appearance'**
+  String get fluidAppearance;
+
+  /// Clear fluid appearance
+  ///
+  /// In en, this message translates to:
+  /// **'Clear'**
+  String get appearanceClear;
+
+  /// Turbid fluid appearance
+  ///
+  /// In en, this message translates to:
+  /// **'Turbid'**
+  String get appearanceTurbid;
+
+  /// Bloody fluid appearance
+  ///
+  /// In en, this message translates to:
+  /// **'Bloody'**
+  String get appearanceBloody;
+
+  /// Purulent fluid appearance
+  ///
+  /// In en, this message translates to:
+  /// **'Purulent'**
+  String get appearancePurulent;
+
+  /// Milky fluid appearance
+  ///
+  /// In en, this message translates to:
+  /// **'Milky'**
+  String get appearanceMilky;
+
+  /// Cholesterol yellow fluid appearance
+  ///
+  /// In en, this message translates to:
+  /// **'Cholesterol yellow'**
+  String get appearanceCholesterol;
+
+  /// Protein field label
+  ///
+  /// In en, this message translates to:
+  /// **'Protein (g/dL) *'**
+  String get proteinLabel;
+
+  /// LDH field label
+  ///
+  /// In en, this message translates to:
+  /// **'LDH (U/L) *'**
+  String get ldhLabel;
+
+  /// Glucose field label
+  ///
+  /// In en, this message translates to:
+  /// **'Glucose (mg/dL)'**
+  String get glucoseLabel;
+
+  /// Cell count field label
+  ///
+  /// In en, this message translates to:
+  /// **'Cell Count (/μL)'**
+  String get cellCountLabel;
+
+  /// Neutrophils field label
+  ///
+  /// In en, this message translates to:
+  /// **'Neutrophils (%)'**
+  String get neutrophilsLabel;
+
+  /// Lymphocytes field label
+  ///
+  /// In en, this message translates to:
+  /// **'Lymphocytes (%)'**
+  String get lymphocytesLabel;
+
+  /// Cholesterol field label
+  ///
+  /// In en, this message translates to:
+  /// **'Cholesterol (mg/dL)'**
+  String get cholesterolLabel;
+
+  /// Triglycerides field label
+  ///
+  /// In en, this message translates to:
+  /// **'Triglycerides (mg/dL)'**
+  String get triglyceridesLabel;
+
+  /// Serum parameters section title
+  ///
+  /// In en, this message translates to:
+  /// **'Serum Parameters'**
+  String get serumParameters;
+
+  /// Serum protein field label
+  ///
+  /// In en, this message translates to:
+  /// **'Serum Protein (g/dL) *'**
+  String get serumProteinLabel;
+
+  /// Serum LDH field label
+  ///
+  /// In en, this message translates to:
+  /// **'Serum LDH (U/L) *'**
+  String get serumLdhLabel;
+
+  /// Serum glucose field label
+  ///
+  /// In en, this message translates to:
+  /// **'Serum Glucose (mg/dL)'**
+  String get serumGlucoseLabel;
+
+  /// Analyze pleural fluid button text
+  ///
+  /// In en, this message translates to:
+  /// **'Analyze Pleural Fluid'**
+  String get analyzePleuralFluid;
+
+  /// Transudate fluid type
+  ///
+  /// In en, this message translates to:
+  /// **'Transudate'**
+  String get fluidTypeTransudate;
+
+  /// Exudate fluid type
+  ///
+  /// In en, this message translates to:
+  /// **'Exudate'**
+  String get fluidTypeExudate;
+
+  /// Indeterminate fluid type
+  ///
+  /// In en, this message translates to:
+  /// **'Indeterminate'**
+  String get fluidTypeIndeterminate;
+
+  /// Heart failure cause
+  ///
+  /// In en, this message translates to:
+  /// **'Heart failure'**
+  String get causeHeartFailure;
+
+  /// Cirrhosis cause
+  ///
+  /// In en, this message translates to:
+  /// **'Cirrhosis'**
+  String get causeCirrhosis;
+
+  /// Nephrotic syndrome cause
+  ///
+  /// In en, this message translates to:
+  /// **'Nephrotic syndrome'**
+  String get causeNephrotic;
+
+  /// Hypoalbuminemia cause
+  ///
+  /// In en, this message translates to:
+  /// **'Hypoalbuminemia'**
+  String get causeHypoalbuminemia;
+
+  /// Pneumonia cause
+  ///
+  /// In en, this message translates to:
+  /// **'Pneumonia'**
+  String get causePneumonia;
+
+  /// Malignancy cause
+  ///
+  /// In en, this message translates to:
+  /// **'Malignancy'**
+  String get causeMalignancy;
+
+  /// Tuberculosis cause
+  ///
+  /// In en, this message translates to:
+  /// **'Tuberculosis'**
+  String get causeTuberculosis;
+
+  /// Pulmonary embolism cause
+  ///
+  /// In en, this message translates to:
+  /// **'Pulmonary embolism'**
+  String get causePulmonaryEmbolism;
+
+  /// Pancreatitis cause
+  ///
+  /// In en, this message translates to:
+  /// **'Pancreatitis'**
+  String get causePancreatitis;
+
+  /// Rheumatoid arthritis cause
+  ///
+  /// In en, this message translates to:
+  /// **'Rheumatoid arthritis'**
+  String get causeRheumatoid;
+
+  /// Systemic lupus erythematosus cause
+  ///
+  /// In en, this message translates to:
+  /// **'Systemic lupus erythematosus'**
+  String get causeLupus;
+
+  /// Empyema cause
+  ///
+  /// In en, this message translates to:
+  /// **'Empyema'**
+  String get causeEmpyema;
+
+  /// Unknown cause
+  ///
+  /// In en, this message translates to:
+  /// **'Unknown cause'**
+  String get causeUnknown;
+
+  /// Required field validation message
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a value'**
+  String get pleaseEnterValue;
+
+  /// Invalid value validation message
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid value'**
+  String get invalidValue;
+
+  /// Invalid percentage validation message
+  ///
+  /// In en, this message translates to:
+  /// **'Must be between 0-100'**
+  String get invalidPercentage;
+
+  /// Fluid characteristics section title
+  ///
+  /// In en, this message translates to:
+  /// **'Fluid Characteristics'**
+  String get fluidCharacteristics;
+
+  /// Light's criteria section title
+  ///
+  /// In en, this message translates to:
+  /// **'Light\'s Criteria'**
+  String get lightCriteria;
+
+  /// Protein ratio label
+  ///
+  /// In en, this message translates to:
+  /// **'Protein Ratio'**
+  String get proteinRatio;
+
+  /// LDH ratio label
+  ///
+  /// In en, this message translates to:
+  /// **'LDH Ratio'**
+  String get ldhRatio;
+
+  /// Likely causes section title
+  ///
+  /// In en, this message translates to:
+  /// **'Likely Causes'**
+  String get likelyCauses;
+
+  /// Notes section title
+  ///
+  /// In en, this message translates to:
+  /// **'Notes'**
+  String get notes;
+
+  /// Notes field label with optional indication
+  ///
+  /// In en, this message translates to:
+  /// **'Notes (optional)'**
+  String get notesOptional;
+
+  /// Notes field placeholder text
+  ///
+  /// In en, this message translates to:
+  /// **'Additional information...'**
+  String get additionalInformation;
 
   /// Guidelines feature title
   ///
@@ -589,24 +1303,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Emergency Medicine'**
   String get emergency_medicine;
-
-  /// Emergency protocols title
-  ///
-  /// In en, this message translates to:
-  /// **'Emergency Protocols'**
-  String get emergency_protocols;
-
-  /// Emergency protocols main title
-  ///
-  /// In en, this message translates to:
-  /// **'Emergency Protocols'**
-  String get emergency_protocols_title;
-
-  /// Emergency protocols subtitle
-  ///
-  /// In en, this message translates to:
-  /// **'Quick management algorithms for common emergency situations'**
-  String get emergency_protocols_subtitle;
 
   /// Hypertensive crisis protocol title
   ///
@@ -1069,6 +1765,132 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'References'**
   String get references;
+
+  /// Ascitic fluid analysis page title
+  ///
+  /// In en, this message translates to:
+  /// **'Ascitic Fluid Analysis'**
+  String get asciticFluidAnalysisTitle;
+
+  /// Ascitic fluid parameters section title
+  ///
+  /// In en, this message translates to:
+  /// **'Ascitic Fluid Parameters'**
+  String get asciticFluidParameters;
+
+  /// Note about required fields for SAAG
+  ///
+  /// In en, this message translates to:
+  /// **'* Required for SAAG calculation'**
+  String get requiredForSAAG;
+
+  /// Albumin field label
+  ///
+  /// In en, this message translates to:
+  /// **'Albumin (g/dL) *'**
+  String get albuminLabel;
+
+  /// Amylase field label
+  ///
+  /// In en, this message translates to:
+  /// **'Amylase (U/L)'**
+  String get amylaseLabel;
+
+  /// Red blood cells field label
+  ///
+  /// In en, this message translates to:
+  /// **'Red Blood Cells (/μL)'**
+  String get redBloodCellsLabel;
+
+  /// Serum albumin field label
+  ///
+  /// In en, this message translates to:
+  /// **'Serum Albumin (g/dL) *'**
+  String get serumAlbuminLabel;
+
+  /// Analyze ascitic fluid button text
+  ///
+  /// In en, this message translates to:
+  /// **'Analyze Ascitic Fluid'**
+  String get analyzeAsciticFluid;
+
+  /// Transudate fluid type with SAAG
+  ///
+  /// In en, this message translates to:
+  /// **'Transudate (High SAAG)'**
+  String get fluidTypeTransudateSAAG;
+
+  /// Exudate fluid type with SAAG
+  ///
+  /// In en, this message translates to:
+  /// **'Exudate (Low SAAG)'**
+  String get fluidTypeExudateSAAG;
+
+  /// SAAG label
+  ///
+  /// In en, this message translates to:
+  /// **'SAAG'**
+  String get saagLabel;
+
+  /// Albumin ratio label
+  ///
+  /// In en, this message translates to:
+  /// **'Albumin Ratio'**
+  String get albuminRatio;
+
+  /// Peritonitis cause
+  ///
+  /// In en, this message translates to:
+  /// **'Peritonitis'**
+  String get causePeritonitis;
+
+  /// Nephrogenic ascites cause
+  ///
+  /// In en, this message translates to:
+  /// **'Nephrogenic ascites'**
+  String get causeNephrogenicAscites;
+
+  /// Spontaneous bacterial peritonitis cause
+  ///
+  /// In en, this message translates to:
+  /// **'Spontaneous bacterial peritonitis'**
+  String get causeSpontaneousBacterialPeritonitis;
+
+  /// Secondary bacterial peritonitis cause
+  ///
+  /// In en, this message translates to:
+  /// **'Secondary bacterial peritonitis'**
+  String get causeSecondaryBacterialPeritonitis;
+
+  /// Chylous ascites cause
+  ///
+  /// In en, this message translates to:
+  /// **'Chylous ascites'**
+  String get causeChylousAscites;
+
+  /// Hemorrhagic ascites cause
+  ///
+  /// In en, this message translates to:
+  /// **'Hemorrhagic ascites'**
+  String get causeHemorrhagicAscites;
+
+  /// Special tests section title
+  ///
+  /// In en, this message translates to:
+  /// **'Special Tests'**
+  String get specialTests;
+
+  /// Positive test result
+  ///
+  /// In en, this message translates to:
+  /// **'Positive'**
+  String get positive;
+
+  /// Negative test result
+  ///
+  /// In en, this message translates to:
+  /// **'Negative'**
+  String get negative;
 
   /// Medical disclaimer text for healthcare professionals
   ///
@@ -13441,6 +14263,180 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'1. WHO Guidelines for Snakebite Management\n2. Vietnamese Ministry of Health Protocol\n3. SEARO Regional Guidelines\n4. Clinical Toxinology Resources\n5. Antivenom Producer Guidelines\n6. Regional Poisoning Centers\n7. Emergency Medicine Textbooks'**
   String get references_content;
+
+  /// CSF analysis page title
+  ///
+  /// In en, this message translates to:
+  /// **'CSF Analysis'**
+  String get csfAnalysisTitle;
+
+  /// CSF analysis page subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Diagnosis of meningitis and neurological diseases'**
+  String get csfAnalysisSubtitle;
+
+  /// CSF parameters section title
+  ///
+  /// In en, this message translates to:
+  /// **'CSF Parameters'**
+  String get csfParameters;
+
+  /// Note about required fields for diagnosis
+  ///
+  /// In en, this message translates to:
+  /// **'* Required for diagnosis'**
+  String get requiredForDiagnosis;
+
+  /// Pressure field label
+  ///
+  /// In en, this message translates to:
+  /// **'Pressure (mmH2O)'**
+  String get pressureLabel;
+
+  /// Lactate field label
+  ///
+  /// In en, this message translates to:
+  /// **'Lactate (mmol/L)'**
+  String get lactateLabel;
+
+  /// Xanthochromic fluid appearance
+  ///
+  /// In en, this message translates to:
+  /// **'Yellow (xanthochromic)'**
+  String get appearanceXanthochromic;
+
+  /// Note about serum glucose ratio calculation
+  ///
+  /// In en, this message translates to:
+  /// **'* To calculate CSF/serum glucose ratio (default 90 mg/dL)'**
+  String get serumGlucoseRatioNote;
+
+  /// Analyze CSF button text
+  ///
+  /// In en, this message translates to:
+  /// **'Analyze CSF'**
+  String get analyzeCsf;
+
+  /// Normal CSF type
+  ///
+  /// In en, this message translates to:
+  /// **'Normal'**
+  String get csfTypeNormal;
+
+  /// Bacterial meningitis CSF type
+  ///
+  /// In en, this message translates to:
+  /// **'Bacterial meningitis'**
+  String get csfTypeBacterial;
+
+  /// Viral meningitis CSF type
+  ///
+  /// In en, this message translates to:
+  /// **'Viral meningitis'**
+  String get csfTypeViral;
+
+  /// Tuberculous meningitis CSF type
+  ///
+  /// In en, this message translates to:
+  /// **'Tuberculous meningitis'**
+  String get csfTypeTuberculous;
+
+  /// Fungal meningitis CSF type
+  ///
+  /// In en, this message translates to:
+  /// **'Fungal meningitis'**
+  String get csfTypeFungal;
+
+  /// Malignant meningitis CSF type
+  ///
+  /// In en, this message translates to:
+  /// **'Malignant meningitis'**
+  String get csfTypeMalignant;
+
+  /// Hemorrhagic CSF type
+  ///
+  /// In en, this message translates to:
+  /// **'Subarachnoid hemorrhage'**
+  String get csfTypeHemorrhagic;
+
+  /// Traumatic tap CSF type
+  ///
+  /// In en, this message translates to:
+  /// **'Traumatic tap'**
+  String get csfTypeTraumatic;
+
+  /// Key parameters section title
+  ///
+  /// In en, this message translates to:
+  /// **'Key Parameters:'**
+  String get keyParameters;
+
+  /// Cells parameter label
+  ///
+  /// In en, this message translates to:
+  /// **'Cells'**
+  String get cellsLabel;
+
+  /// Risk level label
+  ///
+  /// In en, this message translates to:
+  /// **'Risk Level:'**
+  String get riskLevel;
+
+  /// Likely diagnoses section title
+  ///
+  /// In en, this message translates to:
+  /// **'Likely Diagnoses:'**
+  String get likelyDiagnoses;
+
+  /// Default values notice
+  ///
+  /// In en, this message translates to:
+  /// **'Using default values:'**
+  String get usingDefaultValues;
+
+  /// Default serum glucose notice
+  ///
+  /// In en, this message translates to:
+  /// **'• Serum glucose: 90 mg/dL'**
+  String get defaultSerumGlucose;
+
+  /// Default CSF pressure notice
+  ///
+  /// In en, this message translates to:
+  /// **'• CSF pressure: 150 mmH2O'**
+  String get defaultCsfPressure;
+
+  /// Fluid appearance field label
+  ///
+  /// In en, this message translates to:
+  /// **'Fluid appearance'**
+  String get fluidAppearanceLabel;
+
+  /// Blood parameters section label
+  ///
+  /// In en, this message translates to:
+  /// **'Blood parameters'**
+  String get bloodParametersLabel;
+
+  /// Notes field label
+  ///
+  /// In en, this message translates to:
+  /// **'Notes'**
+  String get notesLabel;
+
+  /// Notes field hint text
+  ///
+  /// In en, this message translates to:
+  /// **'Additional information...'**
+  String get notesHint;
+
+  /// References section label
+  ///
+  /// In en, this message translates to:
+  /// **'References'**
+  String get referencesLabel;
 }
 
 class _AppLocalizationsDelegate
