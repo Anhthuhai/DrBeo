@@ -12,6 +12,24 @@
 .swiftpm/
 migrate_working_dir/
 
+# Development files
+*.py
+*.sh
+*_temp/
+*.md
+*TODO*
+*COMPLIANCE*
+*SUMMARY*
+*GUIDE*
+*.txt
+support_*.html
+cleanup_*.py
+restore_*.py
+create_*.py
+update_*.py
+preview_*.py
+check_*.py
+
 # IntelliJ related
 *.iml
 *.ipr

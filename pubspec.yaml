@@ -1,5 +1,5 @@
 name: dr_icu
-description: "Dr Bèo: Critical Care Medical Reference Tool - EXCLUSIVELY FOR LICENSED HEALTHCARE PROFESSIONALS - Evidence-based clinical protocols, scoring systems, and medical calculations for intensive care medicine. This application contains medical information derived from peer-reviewed literature and established clinical guidelines including AHA/ESC protocols, medical society recommendations, and validated scoring systems (Glasgow Coma Scale, APACHE II, SOFA, NIHSS). MEDICAL DISCLAIMER: This tool is intended solely for educational reference by qualified healthcare professionals. It does not constitute medical advice and should never replace clinical judgment, direct patient assessment, or institutional protocols. All medical decisions must be made by licensed healthcare providers with appropriate training and clinical oversight. Users assume full responsibility for any clinical applications."
+description: "Dr Bèo: Medical calculation tool for healthcare professionals. Includes clinical scoring systems, lab analysis, and unit conversion for medical use only."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev

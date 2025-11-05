@@ -13,7 +13,7 @@
     <key>teamID</key>
     <string>97WCHB36VR</string>
     <key>destination</key>
-    <string>export</string>
+    <string>upload</string>
     <key>signingStyle</key>
     <string>automatic</string>
     <key>stripSwiftSymbols</key>
