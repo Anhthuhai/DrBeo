@@ -629,23 +629,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get intensive_care => 'Intensive Care';
 
   @override
-  String get emergency_medicine => 'Emergency Medicine';
-
-  @override
-  String get hypertensive_crisis_title => 'Hypertensive Crisis';
-
-  @override
-  String get hypertensive_crisis_description =>
-      'Emergency management for BP ≥180/120 mmHg';
-
-  @override
-  String get hypoglycemia_crisis_title => 'Hypoglycemia Crisis';
-
-  @override
-  String get hypoglycemia_crisis_description =>
-      'Emergency management for glucose <70mg/dL';
-
-  @override
   String get hyperglycemic_hhs_title => 'Hyperglycemic Hyperosmolar State';
 
   @override
@@ -665,17 +648,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get acute_poisoning_description => 'Acute poisoning management';
 
   @override
-  String get anaphylactic_shock_title => 'Anaphylactic Shock';
-
-  @override
-  String get anaphylactic_shock_description =>
-      'Management of anaphylactic shock';
-
-  @override
-  String get anaphylactic_shock_subtitle =>
-      'Emergency management of severe allergic reactions';
-
-  @override
   String get immediate_actions => 'IMMEDIATE ACTIONS';
 
   @override
@@ -684,13 +656,6 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get stop_allergen_subtitle =>
       'Remove drugs, food, or allergen substances';
-
-  @override
-  String get inject_epinephrine => 'Inject Epinephrine immediately';
-
-  @override
-  String get epinephrine_dose =>
-      'IM 0.3-0.5mg (1:1000) into outer thigh muscle';
 
   @override
   String get call_support => 'Call for support';
@@ -706,9 +671,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get abc_support_subtitle => 'Oxygen, IV fluids, monitor vital signs';
 
   @override
-  String get recognize_anaphylaxis => 'Recognize anaphylaxis';
-
-  @override
   String get main_symptoms => 'Main symptoms';
 
   @override
@@ -716,9 +678,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get initial_treatment => 'Initial treatment';
-
-  @override
-  String get epinephrine_priority => 'Epinephrine (Priority #1)';
 
   @override
   String get respiratory_support => 'Respiratory support';
@@ -737,29 +696,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get prevention_recurrence => 'Prevention of recurrence';
-
-  @override
-  String get treatment_algorithm => 'Treatment algorithm';
-
-  @override
-  String get anaphylaxis_symptoms =>
-      '• Skin: Urticaria, itching, redness, facial/lip/tongue swelling\n• Respiratory: Wheezing, dyspnea, laryngeal edema\n• Cardiovascular: Hypotension, tachycardia, shock\n• Gastrointestinal: Vomiting, diarrhea, abdominal pain\n• Neurological: Anxiety, agitation, loss of consciousness';
-
-  @override
-  String get anaphylaxis_danger_signs =>
-      '• Severe dyspnea, wheezing\n• Systolic BP <90 mmHg\n• Laryngeal edema, hoarseness\n• Loss of consciousness, seizures\n• Cyanosis, SpO2 <90%';
-
-  @override
-  String get epinephrine_protocol =>
-      '• Epinephrine 1:1000 (1mg/mL)\n• Dose: 0.3-0.5mg IM (0.3-0.5mL)\n• Site: Outer thigh muscle (vastus lateralis)\n• May repeat after 5-15 minutes if needed\n• If no response: IV Epinephrine';
-
-  @override
-  String get respiratory_protocol =>
-      '• High-flow oxygen via mask (15L/min)\n• Position patient semi-upright\n• Prepare for intubation if laryngeal edema\n• Bronchodilator: Salbutamol nebulizer';
-
-  @override
-  String get circulatory_protocol =>
-      '• Large IV access (16-18G) x2\n• Normal saline 1-2L rapid\n• Monitor: ECG, BP, SpO2\n• If hypotension: Dopamine/Norepinephrine';
 
   @override
   String get h1_antihistamine => 'H1 Antihistamine';
@@ -790,84 +726,22 @@ class AppLocalizationsEn extends AppLocalizations {
       'Salbutamol 2.5-5mg nebulizer\nMay repeat every 20 minutes';
 
   @override
-  String get anaphylaxis_monitoring => '📊 Monitoring';
-
-  @override
-  String get monitoring_content =>
-      '• Vital signs every 5-15 minutes\n• Continuous SpO2\n• ECG monitoring\n• Urine output (target >0.5mL/kg/h)\n• Level of consciousness';
-
-  @override
   String get observation_time => 'Observation time';
-
-  @override
-  String get observation_content =>
-      '• Mild reaction: 4-6 hours\n• Severe reaction: 12-24 hours\n• Watch for biphasic reaction (4-12h later)\n• Discharge when stable >2h';
-
-  @override
-  String get refractory_anaphylaxis => 'Refractory anaphylaxis';
-
-  @override
-  String get refractory_content =>
-      '• Continuous IV epinephrine 0.05-0.1 mcg/kg/min\n• Glucagon 1-5mg IV (if on beta-blockers)\n• Vasopressin 40 units IV\n• Consider ECMO if cardiac arrest';
 
   @override
   String get beta_blocker_case => 'Patients on beta-blockers';
 
   @override
-  String get beta_blocker_content =>
-      '• May be resistant to epinephrine\n• Glucagon 1-5mg IV bolus\n• Followed by infusion 5-15 mcg/min\n• Atropine if bradycardia';
-
-  @override
   String get pregnancy_case => 'Pregnant women';
-
-  @override
-  String get pregnancy_content =>
-      '• Epinephrine remains first-line therapy\n• Left lateral position to avoid compression\n• Fetal monitoring if >20 weeks\n• Prepare for emergency cesarean section';
 
   @override
   String get discharge_medications => 'Discharge medications';
 
   @override
-  String get discharge_meds_content =>
-      '• EpiPen auto-injector with training\n• Antihistamine: Cetirizine 10mg daily\n• Prednisolone 1mg/kg/day x 3-5 days\n• Bronchodilator if asthma present';
-
-  @override
   String get patient_education => 'Patient education';
 
   @override
-  String get education_content =>
-      '• Identify and avoid allergen triggers\n• Always carry EpiPen\n• Proper EpiPen usage technique\n• When to seek emergency care\n• Wear allergy alert bracelet/card';
-
-  @override
   String get followup => 'Follow-up';
-
-  @override
-  String get followup_content =>
-      '• Follow-up in 1-2 weeks\n• Refer to allergist/immunologist\n• Consider allergy testing\n• Desensitization if indicated';
-
-  @override
-  String get algorithm_suspect => 'Suspect anaphylaxis';
-
-  @override
-  String get algorithm_epinephrine => 'Immediate IM epinephrine';
-
-  @override
-  String get algorithm_abc => 'ABC + Oxygen + IV access';
-
-  @override
-  String get algorithm_response => 'Good response?';
-
-  @override
-  String get algorithm_yes => 'Yes';
-
-  @override
-  String get algorithm_no => 'No';
-
-  @override
-  String get algorithm_supportive => 'Adjuvant medications + Monitoring';
-
-  @override
-  String get algorithm_repeat => 'Repeat epinephrine\nConsider IV infusion';
 
   @override
   String get myocardial_infarction_title => 'Myocardial Infarction';
@@ -877,9 +751,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get critical_care => 'Critical Care';
-
-  @override
-  String get patient_monitoring => 'Patient Monitoring';
 
   @override
   String get medical_calculation => 'Medical Calculation';
@@ -953,18 +824,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get negative => 'Negative';
 
   @override
-  String get medical_disclaimer =>
-      'FOR HEALTHCARE PROFESSIONALS ONLY\nReference tool - Not a substitute for clinical judgment';
-
-  @override
   String get medical_references_title => 'Medical References & Citations';
-
-  @override
-  String get medical_disclaimer_title => 'Medical Disclaimer';
-
-  @override
-  String get medical_disclaimer_content =>
-      'Dr Bèo is intended for educational and reference purposes only for qualified healthcare professionals. This app should NOT replace clinical judgment, institutional protocols, or professional medical training. All medical information is based on established clinical guidelines and literature as cited below.';
 
   @override
   String get medical_literature => 'Medical Literature';
@@ -1139,10 +999,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get none => 'None';
-
-  @override
-  String get has_non_surgical_or_emergency =>
-      'Has (non-surgical or emergency surgery)';
 
   @override
   String get has_elective_surgery => 'Has (elective surgery)';
@@ -1365,10 +1221,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get qsofa_description => 'Quick SOFA for Sepsis Screening';
-
-  @override
-  String get routine_monitoring =>
-      'Routine monitoring, no special intervention needed';
 
   @override
   String get sepsis_evaluation =>
@@ -1676,10 +1528,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get clinical_information => 'Clinical Information';
 
   @override
-  String get qsofa_clinical_content =>
-      'qSOFA (Quick SOFA) is a simple and rapid sepsis screening tool\n\nAdvantages:\n• Simple, no laboratory tests required\n• Quick bedside implementation\n• Early sepsis recognition\n• Activates treatment protocols\n\nLimitations:\n• Lower sensitivity than full SOFA\n• Does not replace clinical assessment\n• May miss early sepsis\n• Must be combined with infection suspicion\n\nSepsis 3.0 Definition:\n• Sepsis = Infection + qSOFA ≥2\n• Septic shock = Sepsis + vasopressor + lactate >2\n• Treatment within \"Golden Hour\"\n\nImportant notes:\n• qSOFA does not diagnose sepsis\n• Only a screening tool\n• Requires comprehensive clinical assessment\n• Continuous monitoring needed';
-
-  @override
   String get qsofa_respiratory_rate_criterion => 'Respiratory rate ≥22';
 
   @override
@@ -1705,9 +1553,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get qsofa_high_risk => 'High risk';
-
-  @override
-  String get qsofa_routine_monitoring => 'Routine monitoring';
 
   @override
   String get qsofa_immediate_sepsis_bundle => 'Immediate sepsis bundle';
@@ -2359,10 +2204,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get grace_clinical_info_title => 'Clinical Information';
 
   @override
-  String get grace_clinical_info_content =>
-      'GRACE Score assesses mortality risk in patients with acute coronary syndrome (ACS)\\n\\nClinical applications:\\n• Risk stratification and treatment strategy selection\\n• Decide early intervention vs conservative treatment\\n• Prognosis counseling for patients and families\\n• Assessment of referral indications\\n\\nIntervention strategy by timing:\\n• Low risk (≤108): Intervention within 72h - PCI can be delayed\\n• Moderate risk (109-140): Intervention within 24-72h - Selective PCI\\n• High risk (141-200): Intervention within 24h - Early PCI recommended\\n• Very high risk (>200): Emergency intervention within 2h - Emergency PCI\\n\\nNotes:\\n• Higher score indicates greater mortality risk\\n• Must combine with overall clinical assessment\\n• Regular monitoring and reassessment\\n• Applies to both STEMI and NSTEMI/UA';
-
-  @override
   String get grace_detailed_timing_title => 'Detailed intervention timing:';
 
   @override
@@ -2448,9 +2289,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get high_priority_transplant => 'High priority transplant';
-
-  @override
-  String get weekly_monitoring => 'Weekly monitoring';
 
   @override
   String get consider_living_donor => 'Consider living donor transplant';
@@ -3153,57 +2991,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Notify doctor, increase monitoring, consider transfer';
 
   @override
-  String get pews_action_emergency_team =>
-      'Call pediatric emergency team immediately, prepare ICU transfer';
-
-  @override
   String get pews_consciousness_title => 'Consciousness Level';
-
-  @override
-  String get pews_protocol_routine_title => 'PEWS 0-3: Routine Care';
-
-  @override
-  String get pews_protocol_increased_title => 'PEWS 4-6: Increased Monitoring';
-
-  @override
-  String get pews_protocol_urgent_title => 'PEWS ≥7: Urgent Intervention';
-
-  @override
-  String get pews_protocol_routine_1 => 'Monitor vital signs every 4-6 hours';
-
-  @override
-  String get pews_protocol_routine_2 => 'Record PEWS score';
-
-  @override
-  String get pews_protocol_routine_3 => 'Continue treatment plan';
-
-  @override
-  String get pews_protocol_routine_4 => 'Reassess if condition changes';
-
-  @override
-  String get pews_protocol_increased_1 => 'Notify attending physician';
-
-  @override
-  String get pews_protocol_increased_2 => 'Monitor vital signs every 1-2 hours';
-
-  @override
-  String get pews_protocol_increased_3 => 'Review underlying cause';
-
-  @override
-  String get pews_protocol_increased_4 => 'Consider pediatric consultation';
-
-  @override
-  String get pews_protocol_urgent_1 =>
-      'Call pediatric emergency team immediately';
-
-  @override
-  String get pews_protocol_urgent_2 => 'Continuous monitoring';
-
-  @override
-  String get pews_protocol_urgent_3 => 'Prepare for PICU transfer';
-
-  @override
-  String get pews_protocol_urgent_4 => 'ABC assessment';
 
   @override
   String get pews_clinical_info_title => 'Clinical Information';
@@ -3218,9 +3006,6 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get pews_references_text =>
       'Monaghan A. Detecting and managing deterioration in children. Paediatr Nurs. 2005;17(1):32-5.\n\nPearson GA, et al. Should paediatric early warning scores be used in all pediatric wards? Arch Dis Child. 2017;102(1):4-6.\n\nLambert V, et al. The Paediatric Early Warning System (PEWS): where we are now and where we need to go. Clin Risk. 2017;23(1):12-19.';
-
-  @override
-  String get pews_response_protocol_title => 'Response Protocol';
 
   @override
   String get pews_interp_low_risk => 'Low risk';
@@ -3245,9 +3030,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get pews_interp_notify_physician => 'Notify physician';
-
-  @override
-  String get pews_interp_emergency_team => 'Pediatric emergency team';
 
   @override
   String get pews_risk_stratification_title => 'PEWS Risk Stratification';
@@ -3718,10 +3500,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get crusade_clinical_info => 'Clinical Information';
 
   @override
-  String get crusade_clinical_info_content =>
-      'CRUSADE Score assesses bleeding risk in acute coronary syndrome\n\nClinical applications:\n• Selection of invasive vs conservative strategy\n• Decision on GPIIb/IIIa inhibitor use\n• Consideration of dual antiplatelet therapy\n• Optimization of anticoagulation dosing\n\nKey factors:\n• Hematocrit: reflects anemia\n• Creatinine: kidney function\n• Heart rate: severity of illness\n• Female gender: higher risk\n• Diabetes mellitus: vascular complications\n• Prior vascular disease: high risk\n\nImportant notes:\n• Do not exclude treatment when score is high\n• Balance ischemic vs bleeding risk\n• May adjust medication dosing\n• Monitor high-risk patients closely\n• Reassess when condition changes';
-
-  @override
   String get has_bled_title => 'HAS-BLED Score';
 
   @override
@@ -3854,10 +3632,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get has_bled_clinical_info => 'Clinical Information';
-
-  @override
-  String get has_bled_clinical_info_content =>
-      'HAS-BLED Score assesses bleeding risk when using anticoagulation\n\nClinical applications:\n• Assess bleeding risk before starting anticoagulation\n• Balance benefit/risk in treatment\n• Determine dosage and monitoring frequency\n• Patient counseling about risks\n\nFactor explanations:\n• H (Hypertension): Systolic BP >160 mmHg\n• A (Abnormal): Cr >2.26 mg/dL or dialysis\n• S (Stroke): History of stroke regardless of cause\n• B (Bleeding): History of major bleeding\n• L (Labile): Unstable INR, TTR <60%\n• E (Elderly): Age >65\n• D (Drugs): NSAID, aspirin, corticosteroids\n\nImportant notes:\n• High score does not mean contraindication to anticoagulation\n• Must consider with thromboembolism risk\n• Risk factors can be modified\n• Monitor closely if high score';
 
   @override
   String get has_bled_references => 'References';
@@ -4428,9 +4202,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get abcd2_urgency_priority => 'Priority - within 24h';
 
   @override
-  String get abcd2_urgency_emergency => 'Emergency - immediate';
-
-  @override
   String get abcd2_recommendation_low =>
       'May discharge with close outpatient follow-up, consider investigation of cause';
 
@@ -4715,41 +4486,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get race_action_evt => 'Transfer to EVT center';
 
   @override
-  String get race_emergency_protocol => 'Emergency LVO Protocol';
-
-  @override
-  String get race_protocol_stroke_code => '1. Activate stroke code';
-
-  @override
-  String get race_protocol_stroke_code_desc => 'Notify stroke team immediately';
-
-  @override
-  String get race_protocol_ct_cta => '2. Emergency CT/CTA';
-
-  @override
-  String get race_protocol_ct_cta_desc => 'CT and CTA within 20 minutes';
-
-  @override
-  String get race_protocol_transfer => '3. Transfer to EVT center';
-
-  @override
-  String get race_protocol_transfer_desc =>
-      'Contact cerebrovascular intervention center';
-
-  @override
-  String get race_protocol_tpa => '4. IV tPA (if eligible)';
-
-  @override
-  String get race_protocol_tpa_desc =>
-      'Intravenous thrombolysis before transfer';
-
-  @override
-  String get race_protocol_time => '5. Door-to-groin <90 min';
-
-  @override
-  String get race_protocol_time_desc => 'Target from hospital arrival to EVT';
-
-  @override
   String get race_clinical_information => 'Clinical Information';
 
   @override
@@ -4918,9 +4654,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get aspect_discuss_family => 'Discuss with family';
 
   @override
-  String get aspect_close_monitoring => 'Close monitoring';
-
-  @override
   String get aspect_high_complication_risk => 'High risk of complications';
 
   @override
@@ -5049,10 +4782,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get curb65_clinical_information => 'Clinical Information';
 
   @override
-  String get curb65_clinical_info_content =>
-      'CURB-65 Score assesses severity of community-acquired pneumonia\n\nCURB-65 criteria:\n• C (Confusion): Mental confusion or disorientation\n• U (Urea): Blood urea nitrogen >19 mg/dL (6.8 mmol/L)\n• R (Respiratory rate): ≥30 breaths per minute\n• B (Blood pressure): Systolic BP <90 mmHg\n• 65 (Age): Age ≥65 years\n\nClinical applications:\n• Treatment location decision (outpatient vs inpatient)\n• ICU admission consideration\n• Risk stratification for pneumonia patients\n• Prognosis assessment\n\nScore interpretation:\n• 0-1: Low risk, outpatient treatment possible\n• 2: Moderate risk, consider hospitalization\n• 3-5: High risk, hospitalization required\n• ≥4: Consider ICU admission\n\nImportant notes:\n• Must combine with clinical assessment\n• Consider comorbidities and social factors\n• Reevaluate if patient condition changes\n• Validated for community-acquired pneumonia';
-
-  @override
   String get curb65_risk_stratification => 'CURB-65 Risk Stratification';
 
   @override
@@ -5115,10 +4844,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get aspect_guideline_medium_discuss_family => 'Discuss with family';
-
-  @override
-  String get aspect_guideline_medium_close_monitoring =>
-      'Close monitoring required';
 
   @override
   String get aspect_guideline_low_title => 'ASPECT ≤5: Caution with EVT';
@@ -5542,10 +5267,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get psi_icu_criteria_title => 'ICU Consideration Criteria';
 
   @override
-  String get psi_icu_criteria_content =>
-      '• PSI Class IV-V: Requires close monitoring, consider ICU\n• Additional high-risk factors:\n  - Respiratory failure (PaO₂ < 60 mmHg)\n  - Altered mental status\n  - Hypotension (SBP < 90 mmHg)\n  - Multiple severe comorbidities\n  - Advanced age + severe symptoms\n• Class V (>130 points): ICU recommended due to high mortality (>27%)';
-
-  @override
   String psi_icu_recommendation(String recommendation) {
     return 'ICU: $recommendation';
   }
@@ -5727,9 +5448,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get rcri_management_standard => 'Standard perioperative management';
-
-  @override
-  String get rcri_management_monitoring => 'Cardiac monitoring during surgery';
 
   @override
   String get rcri_management_intensive =>
@@ -6273,12 +5991,6 @@ class AppLocalizationsEn extends AppLocalizations {
       'Major vascular surgery, major emergency';
 
   @override
-  String get preop_mortality_emergency => 'Emergency surgery';
-
-  @override
-  String get preop_mortality_emergency_desc => 'Surgery within 24 hours';
-
-  @override
   String get preop_mortality_comorbidities => 'Comorbidities';
 
   @override
@@ -6587,34 +6299,6 @@ class AppLocalizationsEn extends AppLocalizations {
       'Levey AS, Bosch JP, Lewis JB, et al. A more accurate method to estimate glomerular filtration rate from serum creatinine: a new prediction equation. Modification of Diet in Renal Disease Study Group. Ann Intern Med. 1999;130(6):461-70.';
 
   @override
-  String get medical_disclaimer_professional_only =>
-      'FOR HEALTHCARE PROFESSIONALS ONLY';
-
-  @override
-  String get medical_disclaimer_home_text =>
-      'This application is intended exclusively for licensed healthcare professionals. All medical information is provided for reference purposes only and should not replace clinical judgment, institutional protocols, or direct patient care.';
-
-  @override
-  String get medical_disclaimer_grace_text =>
-      'Clinical decision support tool. Always use clinical judgment and follow institutional protocols.';
-
-  @override
-  String get medical_disclaimer_sofa_text =>
-      'ICU assessment tool. Requires clinical correlation with patient status.';
-
-  @override
-  String get medical_disclaimer_qsofa_text =>
-      'Sepsis screening tool. Does not replace clinical assessment and laboratory evaluation.';
-
-  @override
-  String get medical_disclaimer_nihss_text =>
-      'Stroke assessment tool. Requires neurological examination and clinical correlation.';
-
-  @override
-  String get medical_disclaimer_mdrd_text =>
-      'Kidney function estimation. Consider clinical context and confirm with additional tests.';
-
-  @override
   String get cam_icu_title => 'CAM-ICU';
 
   @override
@@ -6631,10 +6315,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get cam_icu_assessment_title => '4-Feature CAM-ICU Assessment';
-
-  @override
-  String get medical_disclaimer_cam_icu_text =>
-      'Delirium screening tool for ICU. Always combine with comprehensive clinical assessment and does not replace specialist physician diagnosis.';
 
   @override
   String get cam_icu_reference_title => 'References';
@@ -6688,15 +6368,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get cam_icu_interpretation_label => 'Interpretation';
 
   @override
-  String get cam_icu_algorithm_explanation =>
-      'CAM-ICU positive if Feature 1 AND 2 AND (3 OR 4)';
-
-  @override
   String get yes => 'Yes';
-
-  @override
-  String get medical_disclaimer_rass_text =>
-      'Sedation and agitation assessment tool for ICU. Always combine with clinical assessment and does not replace physician treatment decisions.';
 
   @override
   String get rass_combative_interpretation => 'Combative - Attacks staff';
@@ -6835,10 +6507,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get cam_icu_clinical_info_title => 'Clinical Information';
-
-  @override
-  String get cam_icu_clinical_info_content =>
-      'CAM-ICU is a validated tool for delirium assessment in ICU patients\\n\\nDelirium characteristics:\\n• Acute onset and fluctuating course\\n• Inattention and cognitive dysfunction\\n• Altered level of consciousness\\n• Disorganized thinking\\n\\nImportance of early detection:\\n• Delirium increases morbidity and mortality\\n• Prolongs ICU and hospital stay\\n• Associated with long-term cognitive impairment\\n• Early intervention improves outcomes\\n\\nClinical management:\\n• Identify and treat underlying causes\\n• Non-pharmacological interventions first\\n• Avoid sedatives when possible\\n• Early mobilization and sleep hygiene\\n• Family involvement in care\\n\\nNote: Requires RASS assessment first. Cannot assess if patient deeply sedated (RASS -4 or -5).';
 
   @override
   String get cam_icu_cannot_assess => 'Cannot assess (RASS -4 or -5)';
@@ -6985,10 +6653,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get rass_clinical_info_title => 'Clinical Information';
 
   @override
-  String get rass_clinical_info_content =>
-      'RASS is a validated scale for assessing sedation and agitation in ICU patients\\n\\nClinical benefits:\\n• Standardized sedation assessment\\n• Improved communication between staff\\n• Guides sedation titration\\n• Reduces over-sedation complications\\n• Supports early mobilization\\n\\nSedation best practices:\\n• Target light sedation (RASS -2 to 0)\\n• Daily sedation interruption\\n• Spontaneous awakening trials\\n• Early mobilization protocols\\n• Pain assessment first\\n\\nComplications of deep sedation:\\n• Prolonged mechanical ventilation\\n• ICU delirium\\n• Muscle weakness\\n• Increased mortality\\n• Longer ICU stay\\n\\nImportant notes:\\n• Assess every 4-8 hours or after medication changes\\n• Consider CAM-ICU assessment if RASS ≥ -3\\n• Document trends over time';
-
-  @override
   String get rass_references_title => 'References';
 
   @override
@@ -7001,15 +6665,6 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get language_change_description =>
       'Changing the language will restart the app to apply the new language settings. All medical terms and protocols will be translated accordingly.';
-
-  @override
-  String get acute_stroke_title => 'Acute Ischemic Stroke';
-
-  @override
-  String get acute_stroke_subtitle => 'Time is Brain';
-
-  @override
-  String get stroke_emergency_algorithm => '🚨 EMERGENCY TREATMENT ALGORITHM';
 
   @override
   String get stroke_recognition => 'STROKE RECOGNITION';
@@ -7108,16 +6763,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get iv_access => '💉 Establish IV access (2 lines if possible)';
 
   @override
-  String get contraindications_check => 'CONTRAINDICATIONS CHECK';
-
-  @override
-  String get absolute_contraindications =>
-      '🚫 ABSOLUTE CONTRAINDICATIONS for IV tPA:';
-
-  @override
-  String get relative_contraindications => '⚠️ RELATIVE CONTRAINDICATIONS:';
-
-  @override
   String get imaging_diagnosis => 'IMAGING DIAGNOSIS';
 
   @override
@@ -7131,9 +6776,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get reperfusion_therapy => 'REPERFUSION THERAPY';
-
-  @override
-  String get iv_alteplase => 'IV ALTEPLASE (tPA)';
 
   @override
   String get endovascular_therapy => 'ENDOVASCULAR THERAPY (EVT)';
@@ -7173,61 +6815,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get clinical_discussion => '💭 CLINICAL DISCUSSION';
 
   @override
-  String get stroke_references => '📚 REFERENCES';
-
-  @override
-  String get stroke_references_note =>
-      'References based on international guidelines and recognized clinical studies in acute stroke treatment.';
-
-  @override
-  String get stroke_medical_disclaimer =>
-      'This information is for reference only and does not replace professional clinical assessment. All treatment decisions must be based on individual case evaluation and guidance from qualified physicians. In stroke emergencies, time is critical.';
-
-  @override
-  String get anaphylaxis_medical_disclaimer =>
-      'This anaphylaxis protocol is for reference only and does not replace professional clinical assessment. All treatment decisions must be based on individual patient evaluation and guidance from qualified physicians. In anaphylactic emergencies, immediate action with epinephrine is life-saving.';
-
-  @override
-  String get hypertensive_crisis_medical_disclaimer =>
-      'This hypertensive crisis protocol is for reference only and does not replace professional clinical assessment. All treatment decisions must be based on individual patient evaluation and guidance from qualified physicians. Blood pressure management requires careful monitoring and individualized approach.';
-
-  @override
-  String get hypoglycemia_medical_disclaimer =>
-      'This hypoglycemia protocol is for reference only and does not replace professional clinical assessment. All treatment decisions must be based on individual patient evaluation and guidance from qualified physicians. Severe hypoglycemia requires immediate glucose correction.';
-
-  @override
-  String get hyperglycemic_medical_disclaimer =>
-      'This hyperglycemic emergency protocol is for reference only and does not replace professional clinical assessment. All treatment decisions must be based on individual patient evaluation and guidance from qualified physicians. Diabetic emergencies require careful fluid and electrolyte management.';
-
-  @override
-  String get absolute_contraindications_content =>
-      '• Intracranial hemorrhage on CT/MRI\n• Symptom onset >4.5h (or unknown)\n• Stroke or head trauma within 3 months\n• History of intracranial hemorrhage\n• Suspected subarachnoid hemorrhage\n• Major surgery within 14 days\n• Severe head trauma within 3 months\n• Rapidly improving symptoms\n• Minor and isolated symptoms';
-
-  @override
-  String get relative_contraindications_content =>
-      '• SBP >185 or DBP >110 mmHg\n• Blood glucose <50mg/dL or >400mg/dL\n• Platelets <100,000/μL\n• INR >1.7 or PT >15 seconds\n• Heparin use within 48h + elevated aPTT\n• DOAC use within 48h';
-
-  @override
-  String get ct_plain_content =>
-      '• TARGET: <25 minutes from arrival\n• Rule out intracranial hemorrhage\n• Assess early ischemic signs\n• ASPECTS Score if >6h';
-
-  @override
-  String get cta_content =>
-      '• Identify large vessel occlusion site\n• Assess collateral circulation\n• Mandatory if >6h or suspected LVO\n• Guide EVT decision';
-
-  @override
-  String get ct_perfusion_content =>
-      '• Assess penumbra\n• Core infarct vs tissue at risk\n• EVT decision in 6-24h window\n• Mismatch ratio >1.8';
-
-  @override
-  String get alteplase_protocol =>
-      '• Dose: 0.9 mg/kg (max 90mg)\n• 10% of dose as bolus over 1 minute\n• Remaining 90% infused over 60 minutes\n• Monitor NIHSS every 15 minutes\n• No aspirin for 24 hours';
-
-  @override
-  String get evt_protocol =>
-      '• Indication: LVO with ASPECTS ≥6\n• Time window: <6h (or <24h conditionally)\n• Technique: Stent retriever or aspiration\n• Target: TICI 2b-3 recanalization\n• May combine with IV tPA';
-
-  @override
   String get bp_management =>
       '• If tPA eligible: <185/110 mmHg\n• Post-tPA: <180/105 mmHg for 24h\n• No tPA: permissive hypertension (SBP <220)';
 
@@ -7238,14 +6825,6 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get temperature_management =>
       '• Target: <37.5°C\n• Treat fever aggressively\n• Avoid excessive hypothermia';
-
-  @override
-  String get monitoring_24h_content =>
-      '• NIHSS every 15 min x 2h, then every 30 min x 6h\n• Vital signs every 15 min x 2h\n• Neuro checks every hour\n• Brain CT at 24h (or immediately if deterioration)\n• Monitor in Stroke Unit if available';
-
-  @override
-  String get warning_signs_content =>
-      '• NIHSS increase ≥4 points\n• Severe sudden headache\n• Nausea/vomiting\n• Sudden BP elevation\n• Decreased consciousness\n→ Emergency brain CT immediately!';
 
   @override
   String get case_1_title => 'Case 1: Stroke within time window';
@@ -7303,14 +6882,7 @@ class AppLocalizationsEn extends AppLocalizations {
       '🔍 Analysis:\n• MRI DWI-FLAIR mismatch may help\n• If FLAIR negative → likely <4.5h\n• CTA to identify LVO for EVT\n• CT perfusion to assess mismatch\n\n💡 Current trend: Expanding time windows with imaging selection';
 
   @override
-  String get medical_disclaimer_note => 'MEDICAL DISCLAIMER';
-
-  @override
   String get acute_ischemic_stroke_title => 'ACUTE ISCHEMIC STROKE PROTOCOL';
-
-  @override
-  String get acute_stroke_description =>
-      'Emergency stroke management - Time is Brain';
 
   @override
   String get snake_bite_title => 'Snake Bite';
@@ -7337,12 +6909,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get immobilize_subtitle => 'Splint bitten limb below heart level';
 
   @override
-  String get call_emergency_services => 'Call emergency services';
-
-  @override
-  String get emergency_services_subtitle => 'Immediate transport to hospital';
-
-  @override
   String get transport_hospital => 'Transport to hospital';
 
   @override
@@ -7352,25 +6918,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get snake_identification => 'Snake identification';
 
   @override
-  String get snake_identification_content =>
-      '• Description of snake (size, color, pattern)\n• Photo if safe to take\n• Geographic location\n• Time of bite\n• Bring dead snake if available';
-
-  @override
   String get bite_assessment => 'Bite assessment';
 
   @override
-  String get bite_assessment_content =>
-      '• Location and depth of bite marks\n• Swelling, bruising, bleeding\n• Fang marks vs scratch marks\n• Local pain and numbness\n• Surrounding tissue changes';
-
-  @override
   String get severity_signs => 'Severity signs';
-
-  @override
-  String get severity_signs_content =>
-      '• Systemic symptoms (nausea, vomiting)\n• Neurological signs (weakness, paralysis)\n• Respiratory distress\n• Cardiovascular instability\n• Coagulation disorders';
-
-  @override
-  String get treatment_protocol => 'Treatment protocol';
 
   @override
   String get first_aid => 'First aid';
@@ -7400,22 +6951,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get antivenom_indications => 'Indications';
 
   @override
-  String get antivenom_indications_content =>
-      '• Systemic envenomation symptoms\n• Progressive local swelling\n• Coagulation abnormalities\n• Neurotoxic signs\n• Cardiovascular instability';
-
-  @override
   String get antivenom_dosage => 'Dosage';
 
   @override
-  String get antivenom_dosage_content =>
-      '• Initial: 4-6 vials IV\n• Severe cases: 8-10 vials\n• Pediatric: Same dose as adults\n• Repeat if no improvement in 1-2 hours\n• Maximum: No established limit';
-
-  @override
   String get antivenom_administration => 'Administration';
-
-  @override
-  String get antivenom_administration_content =>
-      '• Dilute in 250-500mL normal saline\n• Start at 25-50mL/hr\n• Increase gradually if no reaction\n• Complete infusion in 1-2 hours\n• Monitor closely for allergic reactions';
 
   @override
   String get complications_management => 'Complications management';
@@ -7424,127 +6963,43 @@ class AppLocalizationsEn extends AppLocalizations {
   String get systemic_envenomation => 'Systemic envenomation';
 
   @override
-  String get systemic_envenomation_content =>
-      '• Respiratory support if needed\n• Blood pressure management\n• Coagulation factor replacement\n• Renal function monitoring\n• Neurological assessment';
-
-  @override
   String get local_complications => 'Local complications';
-
-  @override
-  String get local_complications_content =>
-      '• Compartment syndrome assessment\n• Surgical debridement if necrosis\n• Secondary infection prevention\n• Physical therapy\n• Wound reconstruction';
 
   @override
   String get allergic_reactions => 'Allergic reactions';
 
   @override
-  String get allergic_reactions_content =>
-      '• Stop antivenom immediately\n• Epinephrine 0.3-0.5mg IM\n• IV corticosteroids\n• H1 and H2 antihistamines\n• Resume antivenom if needed';
-
-  @override
   String get monitoring_followup => 'Monitoring and follow-up';
-
-  @override
-  String get immediate_monitoring => 'Immediate monitoring';
-
-  @override
-  String get immediate_monitoring_content =>
-      '• Vital signs every 15 minutes\n• Neurological assessment\n• Swelling progression marking\n• Coagulation studies\n• Urine output monitoring';
 
   @override
   String get discharge_criteria => 'Discharge criteria';
 
   @override
-  String get discharge_criteria_content =>
-      '• No systemic symptoms for 8-12 hours\n• Stable vital signs\n• Normal coagulation studies\n• Minimal local progression\n• Adequate follow-up arranged';
-
-  @override
-  String get algorithm_snake_bite => 'Snake bite suspected';
-
-  @override
-  String get algorithm_calm_immobilize => 'Calm patient + Immobilize limb';
-
-  @override
-  String get algorithm_assess_severity => 'Assess severity';
-
-  @override
-  String get algorithm_mild => 'Mild';
-
-  @override
-  String get algorithm_severe => 'Severe';
-
-  @override
-  String get algorithm_observation => 'Observation + Supportive care';
-
-  @override
-  String get algorithm_antivenom => 'Antivenom + ICU monitoring';
-
-  @override
-  String get snake_bite_medical_disclaimer =>
-      'This snake bite protocol is for reference only and does not replace professional clinical assessment. All treatment decisions must be based on individual patient evaluation and guidance from qualified physicians. Snake bite emergencies require immediate medical attention and antivenom therapy in a hospital environment with full emergency equipment.';
-
-  @override
   String get vietnamese_snakes_title => '🐍 Vietnamese Snake Identification';
-
-  @override
-  String get vietnamese_snakes_content =>
-      '🇻🇳 COMMON VENOMOUS SNAKES:\n• Cobra (Naja kaouthia): Hood spread, neurotoxic venom\n• Krait (Bungarus): Black-white bands, neurotoxic venom\n• Green pit viper (Trimeresurus): Green color, cytotoxic venom\n• Russell\'s viper: Spiny scales, hemotoxic venom\n\n📝 DOCUMENTATION:\n• Time and location of bite\n• Description of snake appearance\n• Photo if safe to take\n• DO NOT catch or kill snake';
 
   @override
   String get venom_type_signs_title => '⚠️ Severe signs by venom type';
 
   @override
-  String get venom_type_signs_content =>
-      '🧠 NEUROTOXIC VENOM:\n• Cobra, krait: Eyelid ptosis, difficulty speaking\n• Progressive muscle weakness from top down\n• Respiratory difficulty, risk of respiratory arrest\n• Clear consciousness\n\n🩸 HEMOTOXIC VENOM:\n• Russell\'s viper: Uncontrollable bleeding\n• Mucosal hemorrhage\n• Hematuria\n• Hemorrhagic shock\n\n🔥 CYTOTOXIC VENOM:\n• Green pit viper: Severe local pain\n• Rapid spreading edema\n• Tissue necrosis, infection\n• Compartment syndrome';
-
-  @override
   String get antivenom_types_title => 'Types of antivenoms';
-
-  @override
-  String get antivenom_types_content =>
-      '🐍 MONOVALENT (single species):\n• Anti-Cobra (Naja): Against cobra venom\n• Anti-Krait (Bungarus): Against krait venom\n• Anti-Russell Viper: Against viper venom\n\n🐍 POLYVALENT (multiple species):\n• Queen Saovabha Memorial Institute (Thailand)\n• Vietnamese Polyvalent (Vietnam)\n• Regional Southeast Asian Polyvalent';
 
   @override
   String get fab_fragments_title => '🧬 FAB FRAGMENTS - Advanced Technology';
 
   @override
-  String get fab_fragments_content =>
-      '📚 DEFINITION:\n• FAB = Fragment Antigen Binding\n• Small fragment of antibody (contains only antigen-binding region)\n• Fc portion removed (Fragment crystallizable)\n• 50% smaller than whole antibody\n\n✅ SUPERIOR ADVANTAGES:\n• Faster tissue penetration due to small size\n• Less allergic reactions (anaphylaxis < 1%)\n• Can be used repeatedly without resistance\n• Faster renal elimination\n• Safer for children and elderly\n• Fewer drug interactions\n\n🔬 MECHANISM OF ACTION:\n• Direct binding to venom toxins\n• Neutralizes phospholipase A2 enzyme\n• Prevents hemolytic and coagulant effects\n• Does not activate complement system\n\n🌍 AVAILABLE PRODUCTS:\n• CroFab® (USA): Against rattlesnake venom\n• DigiFab® (USA): Against digitalis poisoning\n• EchiTAb® (Australia): Against Echis venom\n• Polyvalent Fab (Thailand): Under development';
-
-  @override
   String get preparation_methods_title => 'Different preparation methods';
-
-  @override
-  String get preparation_methods_content =>
-      '📋 LIQUID ANTIVENOM:\n• Mix directly 1:1 with 0.9% NaCl\n• Volume: 50-100ml/vial\n• Infuse over 60-90 minutes\n• Rate: 1-2ml/minute initially\n\n📋 LYOPHILIZED ANTIVENOM:\n• Dissolve with 10ml sterile water\n• Then dilute in 100-200ml 0.9% NaCl\n• Shake gently, avoid foaming\n• Infuse over 30-60 minutes\n• Check for precipitates\n\n🧬 FAB FRAGMENTS (Special):\n• Dilute in 250ml 0.9% NaCl or D5W\n• Slow infusion: 4-6 hours (initial)\n• Rate: 25-50ml/hour initially\n• Can increase rate if well tolerated\n• Monitor closely first 30 minutes\n• Less allergic reactions but still vigilant';
 
   @override
   String get specific_dosages_title => 'Specific dosages';
 
   @override
-  String get specific_dosages_content =>
-      '💊 POLYVALENT ANTIVENOM:\n• Initial: 4-6 vials (40-60ml)\n• Severe: 8-12 vials\n• Maximum: 20 vials/24h\n• Repeat: every 6-12 hours if needed\n\n💊 MONOVALENT ANTIVENOM:\n• Cobra: 3-5 vials initial\n• Krait: 5-10 vials (more toxic)\n• Russell Viper: 4-8 vials\n• May need higher doses\n\n🧬 FAB FRAGMENTS (Different dosing):\n• Initial: 4-6 vials (equivalent to 40-60ml)\n• Severe: 8-12 vials\n• Frequency: Can repeat every 6-8 hours\n• Advantage: Lower dose but high efficacy\n• Children: 0.25-0.5ml/kg\n• Monitor response after 2-4 hours';
-
-  @override
   String get storage_title => 'Storage';
-
-  @override
-  String get storage_content =>
-      '🧊 STORAGE:\n• Temperature: 2-8°C (do not freeze)\n• Avoid direct sunlight\n• Check expiration date\n• Do not use if precipitates or cloudy\n• FAB Fragments: Special storage, shorter shelf life\n\n🌏 VIETNAM SITUATION:\n• FAB Fragments: No domestic production\n• Need import from USA, Australia, Europe\n• Research ongoing at IVAC\n• Expected availability in 2-3 years';
 
   @override
   String get followup_monitoring_title => 'Follow-up and adjustment';
 
   @override
-  String get followup_monitoring_content =>
-      '⏰ ASSESSMENT AFTER 1-2 HOURS:\n• Is swelling decreasing?\n• PT/aPTT improving?\n• Neurological symptoms resolving?\n\n🔄 IF NO IMPROVEMENT:\n• Repeat initial dose\n• Check antivenom type\n• Consider transfer to higher level\n\n⚠️ STOPPING CRITERIA:\n• Clear clinical improvement\n• Normal coagulation\n• No further progression';
-
-  @override
   String get fab_indications_title => '🎯 FAB FRAGMENTS INDICATIONS';
-
-  @override
-  String get fab_indications_content =>
-      '✅ PRIORITY USE WHEN:\n• Patient with history of antivenom allergy\n• Children under 12 years\n• Elderly >65 years\n• Immunocompromised patients\n• Need repeated antivenom doses\n• Snake bite in head/neck area (dangerous)\n\n🚨 ABSOLUTE INDICATIONS:\n• Anaphylaxis to conventional antivenom\n• Extremely venomous snakes (King Cobra, Sea Snake)\n• Severe poisoning with coagulopathy\n• Patients with severe cardiovascular disease\n\n⚠️ SPECIAL CONSIDERATIONS:\n• Still need to monitor allergic reactions\n• Higher efficacy but expensive\n• Need staff training for use\n• Priority for severe cases';
 
   @override
   String get sources_references_title => '📚 REFERENCES & SOURCES';
@@ -7556,18 +7011,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get vietnam_suppliers => '🏥 VIETNAM ANTIVENOM SUPPLIERS:';
 
   @override
-  String get vietnam_suppliers_content =>
-      '• National Institute of Hygiene and Epidemiology\n• National Hospital for Tropical Diseases\n• Cho Ray Hospital (Ho Chi Minh City)\n• Bach Mai Hospital (Hanoi)';
-
-  @override
   String get international_suppliers => '🌏 IMPORTED ANTIVENOMS:';
-
-  @override
-  String get international_suppliers_content =>
-      '• Queen Saovabha Memorial Institute (Thailand)\n• Myanmar Pharmaceutical Factory\n• Haffkine Bio-Pharmaceutical (India)';
-
-  @override
-  String get snake_algorithm_title => 'TREATMENT ALGORITHM';
 
   @override
   String get snake_assessment_title => 'INITIAL ASSESSMENT';
@@ -7591,70 +7035,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get snake_references_title => 'REFERENCES & SOURCES';
 
   @override
-  String get algorithm_step1_title => '1. Initial Assessment';
-
-  @override
-  String get algorithm_step1_content =>
-      '• ABC assessment\n• Vital signs\n• Bite description';
-
-  @override
-  String get algorithm_step2_title => '2. Severity Classification';
-
-  @override
-  String get algorithm_step2_content =>
-      '• Mild: Local pain only\n• Moderate: Spreading swelling\n• Severe: Systemic symptoms';
-
-  @override
-  String get algorithm_step3_title => '3. Treatment Decision';
-
-  @override
-  String get algorithm_step3_content =>
-      '• Mild: 24h observation\n• Moderate-Severe: Antivenom therapy';
-
-  @override
-  String get algorithm_step4_title => '4. Response Monitoring';
-
-  @override
-  String get algorithm_step4_content =>
-      '• Assess after 1-2h\n• Repeat if worsening';
-
-  @override
   String get initial_treatment_title => 'Initial Treatment';
 
   @override
-  String get initial_treatment_content =>
-      '• Clean wound with water\n• Gentle wound dressing\n• DO NOT cut, suck or apply prep\n• DO NOT apply tight tourniquet\n• DO NOT give alcohol';
-
-  @override
   String get pressure_bandage_title => 'Pressure Bandage';
-
-  @override
-  String get pressure_bandage_content =>
-      '• Start from hand/foot\n• Bandage entire limb\n• Moderate pressure\n• Check circulation';
-
-  @override
-  String get first_aid_content =>
-      '• Stay calm, don\'t panic\n• Clean wound with clean water\n• Remove jewelry from bitten area\n• Do NOT cut the wound\n• Do NOT suck venom by mouth\n• Apply lymphatic pressure bandage\n• Immobilize bitten limb\n• Transport to hospital immediately';
-
-  @override
-  String get hospital_treatment_content =>
-      '• Assess patient condition\n• Blood coagulation and kidney function tests\n• Classify envenoming severity\n• Indicate antivenom therapy\n• Monitor vital signs\n• Manage complications\n• Supportive treatment';
-
-  @override
-  String get antivenom_content =>
-      '• Assess antivenom indication\n• Prepare for allergic reaction management\n• Dilute antivenom according to guidelines\n• Infuse slowly with close monitoring\n• Dosage according to envenoming severity\n• Monitor treatment effectiveness\n• May require multiple infusions';
-
-  @override
-  String get complication_management_content =>
-      '• Antivenom allergic reactions\n• Coagulation disorders\n• Acute kidney failure\n• Compartment syndrome\n• Wound infection\n• Tissue necrosis\n• Motor disability';
-
-  @override
-  String get monitoring_care_content =>
-      '• Monitor vital signs\n• Check coagulation function\n• Assess kidney function\n• Wound care\n• Early physiotherapy\n• Psychological counseling\n• Prevention guidance';
-
-  @override
-  String get references_content =>
-      '1. WHO Guidelines for Snakebite Management\n2. Vietnamese Ministry of Health Protocol\n3. SEARO Regional Guidelines\n4. Clinical Toxinology Resources\n5. Antivenom Producer Guidelines\n6. Regional Poisoning Centers\n7. Emergency Medicine Textbooks';
 
   @override
   String get csfAnalysisTitle => 'CSF Analysis';
@@ -7743,5 +7127,310 @@ class AppLocalizationsEn extends AppLocalizations {
   String get notesHint => 'Additional information...';
 
   @override
+  String get pressureHintOptional => '70-180 (optional)';
+
+  @override
+  String get lactateHintOptional => '1.5-2.1 (optional)';
+
+  @override
+  String get serumGlucoseHintOptional => '70-110 (optional)';
+
+  @override
   String get referencesLabel => 'References';
+
+  @override
+  String get urinalysisTitle => 'Urinalysis';
+
+  @override
+  String get urinalysisSubtitle => 'Diagnose UTI, kidney disease, diabetes';
+
+  @override
+  String get physicalProperties => 'Physical Properties';
+
+  @override
+  String get chemicalAnalysis => 'Chemical Analysis';
+
+  @override
+  String get microscopicAnalysis => 'Microscopic Analysis (Optional)';
+
+  @override
+  String get analyzeUrine => 'Analyze Urine';
+
+  @override
+  String get newAnalysis => 'New Analysis';
+
+  @override
+  String get analysisResults => 'Analysis Results';
+
+  @override
+  String get colorLabel => 'Color';
+
+  @override
+  String get clarityLabel => 'Clarity';
+
+  @override
+  String get specificGravityLabel => 'Specific Gravity';
+
+  @override
+  String get colorPaleYellow => 'Pale Yellow';
+
+  @override
+  String get colorYellow => 'Yellow';
+
+  @override
+  String get colorDarkYellow => 'Dark Yellow';
+
+  @override
+  String get colorAmber => 'Amber';
+
+  @override
+  String get colorRed => 'Red';
+
+  @override
+  String get colorBrown => 'Brown';
+
+  @override
+  String get colorGreen => 'Green';
+
+  @override
+  String get colorBlue => 'Blue';
+
+  @override
+  String get colorColorless => 'Colorless';
+
+  @override
+  String get clarityClear => 'Clear';
+
+  @override
+  String get claritySlightlyCloudy => 'Sl. Cloudy';
+
+  @override
+  String get clarityCloudy => 'Cloudy';
+
+  @override
+  String get clarityTurbid => 'Turbid';
+
+  @override
+  String get testNegative => 'Negative';
+
+  @override
+  String get testPositive => 'Positive';
+
+  @override
+  String get testTrace => 'Trace';
+
+  @override
+  String get testSmall => 'Small';
+
+  @override
+  String get testModerate => 'Moderate';
+
+  @override
+  String get testLarge => 'Large';
+
+  @override
+  String get testNormal => 'Normal';
+
+  @override
+  String get testHigh => 'High';
+
+  @override
+  String get redBloodCellsHpf => 'Red blood cells (/hpf)';
+
+  @override
+  String get whiteBloodCellsHpf => 'White blood cells (/hpf)';
+
+  @override
+  String get epithelialCellsHpf => 'Epithelial cells (/hpf)';
+
+  @override
+  String get bacteriaHpf => 'Bacteria (/hpf)';
+
+  @override
+  String get castsLpf => 'Casts (/lpf)';
+
+  @override
+  String get crystalsHpf => 'Crystals (/hpf)';
+
+  @override
+  String get fewMany => 'Few/Many';
+
+  @override
+  String get abcd2_urgency_emergency => 'Emergency (High Risk)';
+
+  @override
+  String get has_non_surgical_or_emergency =>
+      'Non-surgical or emergency operation';
+
+  @override
+  String get pews_action_emergency_team => 'Contact emergency team immediately';
+
+  @override
+  String get pews_interp_emergency_team => 'Emergency team required';
+
+  @override
+  String get pews_response_protocol_title => 'Response Protocol';
+
+  @override
+  String get pews_protocol_routine_title => 'Routine Monitoring (Score 0-2)';
+
+  @override
+  String get pews_protocol_routine_1 => 'Continue current level of care';
+
+  @override
+  String get pews_protocol_routine_2 => 'Monitor vital signs every 4-6 hours';
+
+  @override
+  String get pews_protocol_routine_3 => 'Document score in medical record';
+
+  @override
+  String get pews_protocol_routine_4 =>
+      'Re-evaluate if clinical condition changes';
+
+  @override
+  String get pews_protocol_increased_title =>
+      'Increased Monitoring (Score 3-4)';
+
+  @override
+  String get pews_protocol_increased_1 => 'Increase monitoring frequency';
+
+  @override
+  String get pews_protocol_increased_2 => 'Monitor vital signs every 1-2 hours';
+
+  @override
+  String get pews_protocol_increased_3 => 'Consider bedside nurse assessment';
+
+  @override
+  String get pews_protocol_increased_4 =>
+      'Notify medical team if score persists';
+
+  @override
+  String get pews_protocol_urgent_title => 'Urgent Response (Score ≥5)';
+
+  @override
+  String get pews_protocol_urgent_1 => 'Immediate bedside assessment required';
+
+  @override
+  String get pews_protocol_urgent_2 =>
+      'Consider rapid response team activation';
+
+  @override
+  String get pews_protocol_urgent_3 => 'Continuous monitoring until stable';
+
+  @override
+  String get pews_protocol_urgent_4 => 'Document interventions and response';
+
+  @override
+  String get preop_mortality_emergency => 'Emergency Operation';
+
+  @override
+  String get preop_mortality_emergency_desc =>
+      'Emergency surgical procedures carry higher risk';
+
+  @override
+  String get race_emergency_protocol => 'Emergency Stroke Protocol';
+
+  @override
+  String get race_protocol_stroke_code => 'Activate Stroke Code';
+
+  @override
+  String get race_protocol_stroke_code_desc =>
+      'Immediate stroke team activation';
+
+  @override
+  String get race_protocol_ct_cta => 'Emergency CT/CTA';
+
+  @override
+  String get race_protocol_ct_cta_desc => 'Immediate imaging within 25 minutes';
+
+  @override
+  String get race_protocol_transfer => 'Consider Transfer';
+
+  @override
+  String get race_protocol_transfer_desc =>
+      'Transfer to comprehensive stroke center';
+
+  @override
+  String get race_protocol_tpa => 'Consider tPA';
+
+  @override
+  String get race_protocol_tpa_desc => 'Thrombolytic therapy evaluation';
+
+  @override
+  String get race_protocol_time => 'Time Critical';
+
+  @override
+  String get race_protocol_time_desc => 'Time is brain - act quickly';
+
+  @override
+  String get medical_disclaimer_professional_only => 'Medical Disclaimer';
+
+  @override
+  String get medical_disclaimer_home_text =>
+      'This application is intended for healthcare professionals only. All information provided is for educational purposes and should not replace clinical judgment.';
+
+  @override
+  String get medical_disclaimer_title => 'Medical Disclaimer';
+
+  @override
+  String get medical_disclaimer_content =>
+      'This application is designed for healthcare professionals and is intended for educational and reference purposes only. It should not be used as a substitute for professional medical judgment, experience, or clinical assessment. Always consult current medical literature and institutional protocols.';
+
+  @override
+  String get medical_disclaimer_cam_icu_text =>
+      'CAM-ICU assessment requires proper training and should be used as part of comprehensive clinical evaluation.';
+
+  @override
+  String get cam_icu_algorithm_explanation =>
+      'Follow the CAM-ICU algorithm step by step. Each step must be completed before proceeding to the next.';
+
+  @override
+  String get cam_icu_clinical_info_content =>
+      'The Confusion Assessment Method for the ICU (CAM-ICU) is a validated tool for detecting delirium in critically ill patients. It should be performed by trained healthcare professionals.';
+
+  @override
+  String get medical_disclaimer_grace_text =>
+      'GRACE Score should be interpreted in the context of clinical presentation and used alongside comprehensive cardiovascular assessment.';
+
+  @override
+  String get grace_clinical_info_content =>
+      'The Global Registry of Acute Coronary Events (GRACE) Score predicts in-hospital and 6-month mortality in patients with acute coronary syndromes.';
+
+  @override
+  String get medical_disclaimer_rass_text =>
+      'RASS assessment should be performed by trained healthcare professionals and used as part of comprehensive sedation monitoring.';
+
+  @override
+  String get rass_clinical_info_content =>
+      'The Richmond Agitation-Sedation Scale (RASS) is a validated tool for assessing sedation levels in critically ill patients.';
+
+  @override
+  String get routine_monitoring => 'Routine Monitoring';
+
+  @override
+  String get weekly_monitoring => 'Weekly Monitoring';
+
+  @override
+  String get qsofa_routine_monitoring =>
+      'Continue routine monitoring and reassess if clinical condition changes';
+
+  @override
+  String get qsofa_clinical_content =>
+      'Quick Sequential Organ Failure Assessment (qSOFA) is used for rapid identification of patients at risk for sepsis outside the ICU.';
+
+  @override
+  String get crusade_clinical_info_content =>
+      'CRUSADE Score predicts major bleeding risk in patients with non-ST elevation acute coronary syndromes.';
+
+  @override
+  String get has_bled_clinical_info_content =>
+      'HAS-BLED Score assesses bleeding risk in patients on anticoagulation therapy.';
+
+  @override
+  String get psi_icu_criteria_content =>
+      'ICU admission criteria based on Pneumonia Severity Index and clinical presentation.';
+
+  @override
+  String get rcri_management_monitoring =>
+      'Continue perioperative cardiac monitoring based on risk stratification';
 }

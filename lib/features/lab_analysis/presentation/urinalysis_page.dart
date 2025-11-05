@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../../../core/theme/colors.dart';
 import '../domain/entities/urinalysis_result.dart';
+import '../../../l10n/app_localizations.dart';
 
 // Formatter để chuyển dấu phẩy thành dấu chấm và chỉ cho phép số thập phân
 class CommaToDotFormatter extends TextInputFormatter {
@@ -223,48 +224,48 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
     }
   }
 
-  String _getColorText(UrineColor color) {
+  String _getColorText(UrineColor color, AppLocalizations localizations) {
     switch (color) {
       case UrineColor.pale_yellow:
-        return 'Vàng nhạt';
+        return localizations.colorPaleYellow;
       case UrineColor.yellow:
-        return 'Vàng';
+        return localizations.colorYellow;
       case UrineColor.dark_yellow:
-        return 'Vàng đậm';
+        return localizations.colorDarkYellow;
       case UrineColor.amber:
-        return 'Hổ phách';
+        return localizations.colorAmber;
       case UrineColor.red:
-        return 'Đỏ';
+        return localizations.colorRed;
       case UrineColor.brown:
-        return 'Nâu';
+        return localizations.colorBrown;
       case UrineColor.green:
-        return 'Xanh lá';
+        return localizations.colorGreen;
       case UrineColor.blue:
-        return 'Xanh dương';
+        return localizations.colorBlue;
       case UrineColor.colorless:
-        return 'Không màu';
+        return localizations.colorColorless;
     }
   }
 
-  String _getClarityText(UrineClarity clarity) {
+  String _getClarityText(UrineClarity clarity, AppLocalizations localizations) {
     switch (clarity) {
       case UrineClarity.clear:
-        return 'Trong';
+        return localizations.clarityClear;
       case UrineClarity.slightly_cloudy:
-        return 'Hơi đục';
+        return localizations.claritySlightlyCloudy;
       case UrineClarity.cloudy:
-        return 'Đục';
+        return localizations.clarityCloudy;
       case UrineClarity.turbid:
-        return 'Rất đục';
+        return localizations.clarityTurbid;
     }
   }
 
-  String _getProteinText(UrineProtein protein) {
+  String _getProteinText(UrineProtein protein, AppLocalizations localizations) {
     switch (protein) {
       case UrineProtein.negative:
-        return 'Âm tính';
+        return localizations.testNegative;
       case UrineProtein.trace:
-        return 'Trace';
+        return localizations.testTrace;
       case UrineProtein.plus_1:
         return '+1';
       case UrineProtein.plus_2:
@@ -276,12 +277,12 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
     }
   }
 
-  String _getGlucoseText(UrineGlucose glucose) {
+  String _getGlucoseText(UrineGlucose glucose, AppLocalizations localizations) {
     switch (glucose) {
       case UrineGlucose.negative:
-        return 'Âm tính';
+        return localizations.testNegative;
       case UrineGlucose.trace:
-        return 'Trace';
+        return localizations.testTrace;
       case UrineGlucose.plus_1:
         return '+1';
       case UrineGlucose.plus_2:
@@ -293,26 +294,36 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
     }
   }
 
-  String _getKetonesText(UrineKetones ketones) {
+  String _getKetonesText(UrineKetones ketones, AppLocalizations localizations) {
     switch (ketones) {
       case UrineKetones.negative:
-        return 'Âm tính';
+        return localizations.testNegative;
       case UrineKetones.trace:
-        return 'Trace';
+        return localizations.testTrace;
       case UrineKetones.small:
-        return 'Nhỏ';
+        return localizations.testSmall;
       case UrineKetones.moderate:
-        return 'Vừa';
+        return localizations.testModerate;
       case UrineKetones.large:
-        return 'Lớn';
+        return localizations.testLarge;
     }
+  }
+  
+  String _getNegativePositiveText(bool isNegative, AppLocalizations localizations) {
+    return isNegative ? localizations.testNegative : localizations.testPositive;
+  }
+  
+  String _getNormalHighText(bool isNormal, AppLocalizations localizations) {
+    return isNormal ? localizations.testNormal : localizations.testHigh;
   }
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+    
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Phân tích nước tiểu'),
+        title: Text(localizations.urinalysisTitle),
         backgroundColor: AppColors.primary,
         foregroundColor: Colors.white,
         actions: [
@@ -320,7 +331,7 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
             IconButton(
               icon: const Icon(Icons.refresh),
               onPressed: _clearForm,
-              tooltip: 'Phân tích mới',
+              tooltip: localizations.newAnalysis,
             ),
         ],
       ),
@@ -342,17 +353,17 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
                            size: 48, 
                            color: AppColors.primary),
                       const SizedBox(height: 8),
-                      const Text(
-                        'Phân tích nước tiểu',
-                        style: TextStyle(
+                      Text(
+                        localizations.urinalysisTitle,
+                        style: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       const SizedBox(height: 4),
-                      const Text(
-                        'Chẩn đoán nhiễm khuẩn, bệnh thận, đái tháo đường',
-                        style: TextStyle(fontSize: 14, color: Colors.grey),
+                      Text(
+                        localizations.urinalysisSubtitle,
+                        style: const TextStyle(fontSize: 14, color: Colors.grey),
                       ),
                     ],
                   ),
@@ -372,9 +383,9 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
                           children: [
                             Icon(Icons.visibility, color: AppColors.primary),
                             const SizedBox(width: 8),
-                            const Text(
-                              'Tính chất vật lý',
-                              style: TextStyle(
+                            Text(
+                              localizations.physicalProperties,
+                              style: const TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -383,49 +394,47 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
                         ),
                         const SizedBox(height: 16),
                         
-                        // Color and Clarity row
-                        Row(
+                        // Color and Clarity column (to avoid overflow)
+                        Column(
                           children: [
-                            Expanded(
-                              child: DropdownButtonFormField<UrineColor>(
-                                initialValue: _selectedColor,
-                                decoration: const InputDecoration(
-                                  labelText: 'Màu sắc',
-                                  border: OutlineInputBorder(),
-                                ),
-                                items: UrineColor.values.map((color) {
-                                  return DropdownMenuItem(
-                                    value: color,
-                                    child: Text(_getColorText(color)),
-                                  );
-                                }).toList(),
-                                onChanged: (value) {
-                                  setState(() {
-                                    _selectedColor = value!;
-                                  });
-                                },
+                            DropdownButtonFormField<UrineColor>(
+                              initialValue: _selectedColor,
+                              decoration: InputDecoration(
+                                labelText: localizations.colorLabel,
+                                border: const OutlineInputBorder(),
+                                contentPadding: const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
                               ),
+                              items: UrineColor.values.map((color) {
+                                return DropdownMenuItem(
+                                  value: color,
+                                  child: Text(_getColorText(color, localizations)),
+                                );
+                              }).toList(),
+                              onChanged: (value) {
+                                setState(() {
+                                  _selectedColor = value!;
+                                });
+                              },
                             ),
-                            const SizedBox(width: 16),
-                            Expanded(
-                              child: DropdownButtonFormField<UrineClarity>(
-                                initialValue: _selectedClarity,
-                                decoration: const InputDecoration(
-                                  labelText: 'Độ trong',
-                                  border: OutlineInputBorder(),
-                                ),
-                                items: UrineClarity.values.map((clarity) {
-                                  return DropdownMenuItem(
-                                    value: clarity,
-                                    child: Text(_getClarityText(clarity)),
-                                  );
-                                }).toList(),
-                                onChanged: (value) {
-                                  setState(() {
-                                    _selectedClarity = value!;
-                                  });
-                                },
+                            const SizedBox(height: 16),
+                            DropdownButtonFormField<UrineClarity>(
+                              initialValue: _selectedClarity,
+                              decoration: InputDecoration(
+                                labelText: localizations.clarityLabel,
+                                border: const OutlineInputBorder(),
+                                contentPadding: const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
                               ),
+                              items: UrineClarity.values.map((clarity) {
+                                return DropdownMenuItem(
+                                  value: clarity,
+                                  child: Text(_getClarityText(clarity, localizations)),
+                                );
+                              }).toList(),
+                              onChanged: (value) {
+                                setState(() {
+                                  _selectedClarity = value!;
+                                });
+                              },
                             ),
                           ],
                         ),
@@ -437,7 +446,7 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _specificGravityController,
-                                label: 'Tỷ trọng *',
+                                label: '${localizations.specificGravityLabel} *',
                                 hint: '1.003-1.030',
                                 validator: _validateRequiredNumber,
                               ),
@@ -470,9 +479,9 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
                           children: [
                             Icon(Icons.science, color: AppColors.secondary),
                             const SizedBox(width: 8),
-                            const Text(
-                              'Phân tích hóa học',
-                              style: TextStyle(
+                            Text(
+                              localizations.chemicalAnalysis,
+                              style: const TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -494,7 +503,7 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
                                 items: UrineProtein.values.map((protein) {
                                   return DropdownMenuItem(
                                     value: protein,
-                                    child: Text(_getProteinText(protein)),
+                                    child: Text(_getProteinText(protein, localizations)),
                                   );
                                 }).toList(),
                                 onChanged: (value) {
@@ -515,7 +524,7 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
                                 items: UrineGlucose.values.map((glucose) {
                                   return DropdownMenuItem(
                                     value: glucose,
-                                    child: Text(_getGlucoseText(glucose)),
+                                    child: Text(_getGlucoseText(glucose, localizations)),
                                   );
                                 }).toList(),
                                 onChanged: (value) {
@@ -542,7 +551,7 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
                                 items: UrineKetones.values.map((ketones) {
                                   return DropdownMenuItem(
                                     value: ketones,
-                                    child: Text(_getKetonesText(ketones)),
+                                    child: Text(_getKetonesText(ketones, localizations)),
                                   );
                                 }).toList(),
                                 onChanged: (value) {
@@ -563,7 +572,7 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
                                 items: UrineBlood.values.map((blood) {
                                   return DropdownMenuItem(
                                     value: blood,
-                                    child: Text(_getProteinText(UrineProtein.values[blood.index])),
+                                    child: Text(_getNegativePositiveText(blood == UrineBlood.negative, localizations)),
                                   );
                                 }).toList(),
                                 onChanged: (value) {
@@ -590,7 +599,7 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
                                 items: UrineLeukocytes.values.map((leukocytes) {
                                   return DropdownMenuItem(
                                     value: leukocytes,
-                                    child: Text(_getProteinText(UrineProtein.values[leukocytes.index])),
+                                    child: Text(_getNegativePositiveText(leukocytes == UrineLeukocytes.negative, localizations)),
                                   );
                                 }).toList(),
                                 onChanged: (value) {
@@ -611,7 +620,7 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
                                 items: UrineNitrites.values.map((nitrites) {
                                   return DropdownMenuItem(
                                     value: nitrites,
-                                    child: Text(nitrites == UrineNitrites.negative ? 'Âm tính' : 'Dương tính'),
+                                    child: Text(_getNegativePositiveText(nitrites == UrineNitrites.negative, localizations)),
                                   );
                                 }).toList(),
                                 onChanged: (value) {
@@ -638,7 +647,7 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
                                 items: UrineBilirubin.values.map((bilirubin) {
                                   return DropdownMenuItem(
                                     value: bilirubin,
-                                    child: Text(_getProteinText(UrineProtein.values[bilirubin.index])),
+                                    child: Text(_getNegativePositiveText(bilirubin == UrineBilirubin.negative, localizations)),
                                   );
                                 }).toList(),
                                 onChanged: (value) {
@@ -659,7 +668,7 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
                                 items: UrineUrobilinogen.values.map((urobilinogen) {
                                   return DropdownMenuItem(
                                     value: urobilinogen,
-                                    child: Text(urobilinogen == UrineUrobilinogen.normal ? 'Bình thường' : 'Cao'),
+                                    child: Text(_getNormalHighText(urobilinogen == UrineUrobilinogen.normal, localizations)),
                                   );
                                 }).toList(),
                                 onChanged: (value) {
@@ -690,8 +699,8 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
                             const SizedBox(width: 8),
                             Expanded(
                               child: Text(
-                                'Phân tích kính hiển vi (Tùy chọn)',
-                                style: TextStyle(
+                                localizations.microscopicAnalysis,
+                                style: const TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -707,7 +716,7 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _rbcController,
-                                label: 'Hồng cầu (/hpf)',
+                                label: localizations.redBloodCellsHpf,
                                 hint: '0-2',
                                 validator: _validateOptionalNumber,
                                 isInteger: true,
@@ -717,7 +726,7 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _wbcController,
-                                label: 'Bạch cầu (/hpf)',
+                                label: localizations.whiteBloodCellsHpf,
                                 hint: '0-5',
                                 validator: _validateOptionalNumber,
                                 isInteger: true,
@@ -733,7 +742,7 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _epithelialController,
-                                label: 'Tế bào biểu mô (/hpf)',
+                                label: localizations.epithelialCellsHpf,
                                 hint: '0-5',
                                 validator: _validateOptionalNumber,
                                 isInteger: true,
@@ -743,8 +752,8 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _bacteriaController,
-                                label: 'Vi khuẩn (/hpf)',
-                                hint: 'Ít/Nhiều',
+                                label: localizations.bacteriaHpf,
+                                hint: localizations.fewMany,
                                 validator: _validateOptionalNumber,
                                 isInteger: true,
                               ),
@@ -759,7 +768,7 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _castsController,
-                                label: 'Trụ (/lpf)',
+                                label: localizations.castsLpf,
                                 hint: '0-1',
                                 validator: _validateOptionalNumber,
                                 isInteger: true,
@@ -769,8 +778,8 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
                             Expanded(
                               child: _buildNumberField(
                                 controller: _crystalsController,
-                                label: 'Tinh thể (/hpf)',
-                                hint: 'Ít/Nhiều',
+                                label: localizations.crystalsHpf,
+                                hint: localizations.fewMany,
                                 validator: _validateOptionalNumber,
                                 isInteger: true,
                               ),
@@ -794,9 +803,9 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
                           children: [
                             Icon(Icons.note_add, color: Colors.grey[600]),
                             const SizedBox(width: 8),
-                            const Text(
-                              'Ghi chú (Tùy chọn)',
-                              style: TextStyle(
+                            Text(
+                              localizations.notesOptional,
+                              style: const TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
                               ),
@@ -806,9 +815,9 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
                         const SizedBox(height: 12),
                         TextFormField(
                           controller: _notesController,
-                          decoration: const InputDecoration(
-                            hintText: 'Nhập ghi chú thêm...',
-                            border: OutlineInputBorder(),
+                          decoration: InputDecoration(
+                            hintText: localizations.notesHint,
+                            border: const OutlineInputBorder(),
                           ),
                           maxLines: 3,
                         ),
@@ -829,24 +838,24 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
-                  child: const Row(
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.analytics),
-                      SizedBox(width: 8),
+                      const Icon(Icons.analytics),
+                      const SizedBox(width: 8),
                       Text(
-                        'Phân tích nước tiểu',
-                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                        localizations.analyzeUrine,
+                        style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
                 ),
               ],
               
-              if (_showResults) _buildResultsCard(),
+              if (_showResults) _buildResultsCard(localizations),
               
               const SizedBox(height: 16),
-              _buildCitationWidget(),
+              _buildCitationWidget(localizations),
             ],
           ),
         ),
@@ -881,28 +890,30 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
 
   // Validators
   String? _validateRequiredNumber(String? value) {
+    final localizations = AppLocalizations.of(context)!;
     if (value == null || value.isEmpty) {
-      return 'Vui lòng nhập giá trị';
+      return localizations.pleaseEnterValue;
     }
     final number = parseLocalizedDouble(value);
     if (number < 0) {
-      return 'Giá trị không hợp lệ';
+      return localizations.invalidValue;
     }
     return null;
   }
 
   String? _validateOptionalNumber(String? value) {
+    final localizations = AppLocalizations.of(context)!;
     if (value == null || value.isEmpty) {
       return null; // Optional field
     }
     final number = double.tryParse(value);
     if (number == null || number < 0) {
-      return 'Giá trị không hợp lệ';
+      return localizations.invalidValue;
     }
     return null;
   }
 
-  Widget _buildResultsCard() {
+  Widget _buildResultsCard(AppLocalizations localizations) {
     final result = _currentResult!;
     final urinalysisType = result.urinalysisType;
     final likelyCauses = result.likelyCauses;
@@ -917,9 +928,9 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
               children: [
                 Icon(Icons.assignment_turned_in, color: AppColors.primary),
                 const SizedBox(width: 8),
-                const Text(
-                  'Kết quả phân tích',
-                  style: TextStyle(
+                Text(
+                  localizations.analysisResults,
+                  style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
@@ -967,13 +978,13 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
             const SizedBox(height: 16),
             
             // Risk and urgency assessment
-            _buildUrgencyCard(result.riskLevel, result.urgencyLevel),
+            _buildUrgencyCard(result.riskLevel, result.urgencyLevel, localizations),
             const SizedBox(height: 16),
             
             // Likely causes
-            const Text(
-              'Chẩn đoán có thể:',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            Text(
+              localizations.likelyDiagnoses,
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
             
@@ -1005,7 +1016,7 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
     );
   }
 
-  Widget _buildUrgencyCard(String riskLevel, String urgencyLevel) {
+  Widget _buildUrgencyCard(String riskLevel, String urgencyLevel, AppLocalizations localizations) {
     Color color = _getRiskColor(riskLevel);
     IconData icon = _getRiskIcon(riskLevel);
 
@@ -1024,7 +1035,7 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
               Icon(icon, color: color),
               const SizedBox(width: 8),
               Text(
-                'Mức độ nguy cơ: $riskLevel',
+                '${localizations.riskLevel}: $riskLevel',
                 style: TextStyle(
                   color: color,
                   fontWeight: FontWeight.bold,
@@ -1123,7 +1134,7 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
     }
   }
 
-  Widget _buildCitationWidget() {
+  Widget _buildCitationWidget(AppLocalizations localizations) {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
@@ -1139,7 +1150,7 @@ class _UrinalysisPageState extends State<UrinalysisPage> {
               Icon(Icons.article, color: Colors.blue.shade700, size: 16),
               const SizedBox(width: 6),
               Text(
-                'Tài liệu tham khảo',
+                localizations.referencesLabel,
                 style: TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.bold,

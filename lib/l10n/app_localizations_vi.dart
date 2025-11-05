@@ -626,23 +626,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String get intensive_care => 'Hồi sức tích cực';
 
   @override
-  String get emergency_medicine => 'Y học cấp cứu';
-
-  @override
-  String get hypertensive_crisis_title => 'Cơn Tăng Huyết Áp';
-
-  @override
-  String get hypertensive_crisis_description =>
-      'Xử lý cấp cứu THA ≥180/120 mmHg';
-
-  @override
-  String get hypoglycemia_crisis_title => 'Cơn Hạ Đường Huyết';
-
-  @override
-  String get hypoglycemia_crisis_description =>
-      'Xử lý cấp cứu glucose <70mg/dL';
-
-  @override
   String get hyperglycemic_hhs_title =>
       'Cơn Tăng Đường Huyết Tăng Áp Lực Thẩm Thấu';
 
@@ -663,16 +646,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String get acute_poisoning_description => 'Xử lý ngộ độc cấp tính';
 
   @override
-  String get anaphylactic_shock_title => 'Sốc Phản Vệ';
-
-  @override
-  String get anaphylactic_shock_description => 'Xử lý sốc phản vệ';
-
-  @override
-  String get anaphylactic_shock_subtitle =>
-      'Xử lý cấp cứu phản ứng dị ứng nặng';
-
-  @override
   String get immediate_actions => 'HÀNH ĐỘNG NGAY LẬP TỨC';
 
   @override
@@ -681,12 +654,6 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String get stop_allergen_subtitle =>
       'Loại bỏ thuốc, thực phẩm, hoặc chất gây dị ứng';
-
-  @override
-  String get inject_epinephrine => 'Tiêm Epinephrine ngay';
-
-  @override
-  String get epinephrine_dose => 'IM 0.3-0.5mg (1:1000) vào cơ đùi ngoài';
 
   @override
   String get call_support => 'Gọi hỗ trợ';
@@ -701,9 +668,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String get abc_support_subtitle => 'Oxy, truyền dịch, theo dõi vital signs';
 
   @override
-  String get recognize_anaphylaxis => 'Nhận biết sốc phản vệ';
-
-  @override
   String get main_symptoms => 'Triệu chứng chính';
 
   @override
@@ -711,9 +675,6 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get initial_treatment => 'Xử trí ban đầu';
-
-  @override
-  String get epinephrine_priority => 'Epinephrine (Ưu tiên số 1)';
 
   @override
   String get respiratory_support => 'Hỗ trợ hô hấp';
@@ -732,29 +693,6 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get prevention_recurrence => 'Phòng ngừa tái phát';
-
-  @override
-  String get treatment_algorithm => 'Sơ đồ thuật toán';
-
-  @override
-  String get anaphylaxis_symptoms =>
-      '• Da: Mày đay, ngứa, đỏ da, phù mặt/môi/lưỡi\n• Hô hấp: Khò khè, khó thở, phù thanh quản\n• Tim mạch: Hạ huyết áp, nhịp tim nhanh, choáng\n• Tiêu hóa: Nôn mửa, tiêu chảy, đau bụng\n• Thần kinh: Lo âu, bồn chồn, mất ý thức';
-
-  @override
-  String get anaphylaxis_danger_signs =>
-      '• Khó thở nặng, thở khò khè\n• Huyết áp tâm thu <90 mmHg\n• Phù thanh quản, khàn tiếng\n• Mất ý thức, co giật\n• Cyan tím, SpO2 <90%';
-
-  @override
-  String get epinephrine_protocol =>
-      '• Epinephrine 1:1000 (1mg/mL)\n• Liều: 0.3-0.5mg IM (0.3-0.5mL)\n• Vị trí: Cơ đùi ngoài (vastus lateralis)\n• Có thể lặp lại sau 5-15 phút nếu cần\n• Nếu không đáp ứng: Epinephrine IV';
-
-  @override
-  String get respiratory_protocol =>
-      '• Oxy high-flow qua mask (15L/phút)\n• Đặt bệnh nhân tư thế nửa ngồi\n• Chuẩn bị intubation nếu phù thanh quản\n• Bronchodilator: Salbutamol nebulizer';
-
-  @override
-  String get circulatory_protocol =>
-      '• IV access lớn (16-18G) x2\n• Normal saline 1-2L nhanh\n• Monitor: EKG, BP, SpO2\n• Nếu hypotension: Dopamine/Norepinephrine';
 
   @override
   String get h1_antihistamine => 'H1 Antihistamine';
@@ -785,84 +723,22 @@ class AppLocalizationsVi extends AppLocalizations {
       'Salbutamol 2.5-5mg nebulizer\nCó thể lặp lại mỗi 20 phút';
 
   @override
-  String get anaphylaxis_monitoring => '📊 Monitoring';
-
-  @override
-  String get monitoring_content =>
-      '• Vital signs mỗi 5-15 phút\n• SpO2 liên tục\n• EKG monitor\n• Nước tiểu (target >0.5mL/kg/h)\n• Mức độ ý thức';
-
-  @override
   String get observation_time => 'Thời gian quan sát';
-
-  @override
-  String get observation_content =>
-      '• Phản ứng nhẹ: 4-6 giờ\n• Phản ứng nặng: 12-24 giờ\n• Lưu ý biphasic reaction (4-12h sau)\n• Discharge khi ổn định >2h';
-
-  @override
-  String get refractory_anaphylaxis => 'Sốc phản vệ kháng trị';
-
-  @override
-  String get refractory_content =>
-      '• Epinephrine IV liên tục 0.05-0.1 mcg/kg/phút\n• Glucagon 1-5mg IV (nếu dùng beta-blocker)\n• Vasopressin 40 units IV\n• Cân nhắc ECMO nếu cardiac arrest';
 
   @override
   String get beta_blocker_case => 'Bệnh nhân dùng beta-blocker';
 
   @override
-  String get beta_blocker_content =>
-      '• Có thể kháng epinephrine\n• Glucagon 1-5mg IV bolus\n• Theo sau bởi infusion 5-15 mcg/phút\n• Atropine nếu bradycardia';
-
-  @override
   String get pregnancy_case => 'Phụ nữ có thai';
-
-  @override
-  String get pregnancy_content =>
-      '• Epinephrine vẫn là thuốc đầu tay\n• Tư thế nghiêng trái để tránh compression\n• Monitor thai nhi nếu >20 tuần\n• Chuẩn bị cesarean section khẩn cấp';
 
   @override
   String get discharge_medications => 'Kê đơn ra viện';
 
   @override
-  String get discharge_meds_content =>
-      '• EpiPen auto-injector và hướng dẫn sử dụng\n• Antihistamine: Cetirizine 10mg/ngày\n• Prednisolone 1mg/kg/ngày x 3-5 ngày\n• Bronchodilator nếu có asthma';
-
-  @override
   String get patient_education => 'Giáo dục bệnh nhân';
 
   @override
-  String get education_content =>
-      '• Xác định và tránh tác nhân gây dị ứng\n• Luôn mang theo EpiPen\n• Cách sử dụng EpiPen đúng cách\n• Khi nào cần đến cấp cứu ngay\n• Đeo vòng/thẻ cảnh báo dị ứng';
-
-  @override
   String get followup => 'Follow-up';
-
-  @override
-  String get followup_content =>
-      '• Khám lại sau 1-2 tuần\n• Tham khảo ý kiến bác sĩ dị ứng\n• Cân nhắc allergy testing\n• Desensitization nếu cần thiết';
-
-  @override
-  String get algorithm_suspect => 'Nghi ngờ sốc phản vệ';
-
-  @override
-  String get algorithm_epinephrine => 'Epinephrine IM ngay lập tức';
-
-  @override
-  String get algorithm_abc => 'ABC + Oxy + IV access';
-
-  @override
-  String get algorithm_response => 'Đáp ứng tốt?';
-
-  @override
-  String get algorithm_yes => 'Có';
-
-  @override
-  String get algorithm_no => 'Không';
-
-  @override
-  String get algorithm_supportive => 'Thuốc bổ trợ + Theo dõi';
-
-  @override
-  String get algorithm_repeat => 'Epinephrine lặp lại\nCân nhắc IV infusion';
 
   @override
   String get myocardial_infarction_title => 'Nhồi Máu Cơ Tim';
@@ -872,9 +748,6 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get critical_care => 'Chăm sóc đặc biệt';
-
-  @override
-  String get patient_monitoring => 'Theo dõi bệnh nhân';
 
   @override
   String get medical_calculation => 'Tính toán y khoa';
@@ -948,19 +821,8 @@ class AppLocalizationsVi extends AppLocalizations {
   String get negative => 'Âm tính';
 
   @override
-  String get medical_disclaimer =>
-      'DÀNH CHO NHÂN VIÊN Y TẾ\nCông cụ tham khảo - Không thay thế phán đoán lâm sàng';
-
-  @override
   String get medical_references_title =>
       'Tài Liệu Tham Khảo & Trích Dẫn Y Khoa';
-
-  @override
-  String get medical_disclaimer_title => 'Tuyên Bố Y Khoa';
-
-  @override
-  String get medical_disclaimer_content =>
-      'Dr Bèo được thiết kế chỉ nhằm mục đích giáo dục và tham khảo cho các nhân viên y tế có chuyên môn. Ứng dụng này KHÔNG nên thay thế phán đoán lâm sàng, quy trình của cơ sở y tế, hoặc đào tạo y khoa chuyên nghiệp. Tất cả thông tin y khoa đều dựa trên các hướng dẫn lâm sàng và tài liệu đã được thiết lập như được trích dẫn bên dưới.';
 
   @override
   String get medical_literature => 'Tài liệu y khoa';
@@ -1135,10 +997,6 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get none => 'Không có';
-
-  @override
-  String get has_non_surgical_or_emergency =>
-      'Có (không phẫu thuật hoặc phẫu thuật cấp cứu)';
 
   @override
   String get has_elective_surgery => 'Có (phẫu thuật chương trình)';
@@ -1361,10 +1219,6 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get qsofa_description => 'Quick SOFA cho tầm soát nhiễm khuẩn huyết';
-
-  @override
-  String get routine_monitoring =>
-      'Theo dõi thường quy, không cần can thiệp đặc biệt';
 
   @override
   String get sepsis_evaluation =>
@@ -1666,10 +1520,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String get clinical_information => 'Thông tin lâm sàng';
 
   @override
-  String get qsofa_clinical_content =>
-      'qSOFA (Quick SOFA) là công cụ sàng lọc sepsis đơn giản và nhanh chóng\n\nƯu điểm:\n• Đơn giản, không cần xét nghiệm\n• Thực hiện nhanh tại bedside\n• Giúp nhận diện sớm sepsis\n• Kích hoạt quy trình điều trị\n\nGiới hạn:\n• Độ nhạy thấp hơn SOFA đầy đủ\n• Không thay thế đánh giá lâm sàng\n• Có thể bỏ sót sepsis sớm\n• Cần kết hợp với nghi ngờ nhiễm trùng\n\nSepsis 3.0 Definition:\n• Sepsis = Nhiễm trùng + qSOFA ≥2\n• Sốc sepsis = Sepsis + vasopressor + lactate >2\n• Điều trị trong \"Golden Hour\"\n\nLưu ý quan trọng:\n• qSOFA không chẩn đoán sepsis\n• Chỉ là công cụ sàng lọc\n• Cần đánh giá tổng thể lâm sàng\n• Theo dõi diễn biến liên tục';
-
-  @override
   String get qsofa_respiratory_rate_criterion => 'Tần số thở ≥22';
 
   @override
@@ -1693,9 +1543,6 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get qsofa_high_risk => 'Nguy cơ cao';
-
-  @override
-  String get qsofa_routine_monitoring => 'Theo dõi thường quy';
 
   @override
   String get qsofa_immediate_sepsis_bundle => 'Sepsis bundle tức thì';
@@ -2344,10 +2191,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String get grace_clinical_info_title => 'Thông tin lâm sàng';
 
   @override
-  String get grace_clinical_info_content =>
-      'GRACE Score đánh giá nguy cơ tử vong ở bệnh nhân hội chứng mạch vành cấp (ACS)\\n\\nỨng dụng lâm sàng:\\n• Phân tầng nguy cơ và lựa chọn chiến lược điều trị\\n• Quyết định can thiệp sớm hay bảo tồn\\n• Tư vấn tiên lượng cho bệnh nhân và gia đình\\n• Đánh giá chỉ định chuyển tuyến\\n\\nChiến lược can thiệp theo thời gian:\\n• Nguy cơ thấp (≤108): Can thiệp trong 72h - PCI có thể trì hoãn\\n• Nguy cơ trung bình (109-140): Can thiệp trong 24-72h - PCI chọn lọc\\n• Nguy cơ cao (141-200): Can thiệp trong 24h - PCI sớm được khuyến cáo\\n• Nguy cơ rất cao (>200): Can thiệp khẩn cấp trong 2h - PCI cấp cứu\\n\\nLưu ý:\\n• Điểm số càng cao, nguy cơ tử vong càng lớn\\n• Cần kết hợp với đánh giá lâm sàng tổng thể\\n• Theo dõi và tái đánh giá định kỳ\\n• Áp dụng cho cả STEMI và NSTEMI/UA';
-
-  @override
   String get grace_detailed_timing_title => 'Chi tiết thời điểm can thiệp:';
 
   @override
@@ -2432,9 +2275,6 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get high_priority_transplant => 'Ưu tiên cao ghép gan';
-
-  @override
-  String get weekly_monitoring => 'Theo dõi hàng tuần';
 
   @override
   String get consider_living_donor => 'Cân nhắc ghép sống';
@@ -3138,56 +2978,7 @@ class AppLocalizationsVi extends AppLocalizations {
       'Thông báo bác sĩ, tăng cường theo dõi, xem xét chuyển khoa';
 
   @override
-  String get pews_action_emergency_team =>
-      'Gọi team cấp cứu nhi khoa ngay lập tức, chuẩn bị chuyển ICU';
-
-  @override
   String get pews_consciousness_title => 'Mức độ ý thức';
-
-  @override
-  String get pews_protocol_routine_title => 'PEWS 0-3: Chăm sóc thường quy';
-
-  @override
-  String get pews_protocol_increased_title => 'PEWS 4-6: Tăng cường theo dõi';
-
-  @override
-  String get pews_protocol_urgent_title => 'PEWS ≥7: Can thiệp tích cực';
-
-  @override
-  String get pews_protocol_routine_1 => 'Theo dõi sinh hiệu 4-6 giờ/lần';
-
-  @override
-  String get pews_protocol_routine_2 => 'Ghi nhận điểm PEWS';
-
-  @override
-  String get pews_protocol_routine_3 => 'Tiếp tục kế hoạch điều trị';
-
-  @override
-  String get pews_protocol_routine_4 => 'Đánh giá lại nếu tình trạng thay đổi';
-
-  @override
-  String get pews_protocol_increased_1 => 'Thông báo bác sĩ trực';
-
-  @override
-  String get pews_protocol_increased_2 => 'Theo dõi sinh hiệu 1-2 giờ/lần';
-
-  @override
-  String get pews_protocol_increased_3 => 'Xem xét nguyên nhân';
-
-  @override
-  String get pews_protocol_increased_4 => 'Cân nhắc chuyển khoa nhi';
-
-  @override
-  String get pews_protocol_urgent_1 => 'Gọi team cấp cứu nhi ngay';
-
-  @override
-  String get pews_protocol_urgent_2 => 'Theo dõi liên tục';
-
-  @override
-  String get pews_protocol_urgent_3 => 'Chuẩn bị chuyển PICU';
-
-  @override
-  String get pews_protocol_urgent_4 => 'ABC assessment';
 
   @override
   String get pews_clinical_info_title => 'Thông tin lâm sàng';
@@ -3202,9 +2993,6 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String get pews_references_text =>
       'Monaghan A. Detecting and managing deterioration in children. Paediatr Nurs. 2005;17(1):32-5.\n\nPearson GA, et al. Should paediatric early warning scores be used in all pediatric wards? Arch Dis Child. 2017;102(1):4-6.\n\nLambert V, et al. The Paediatric Early Warning System (PEWS): where we are now and where we need to go. Clin Risk. 2017;23(1):12-19.';
-
-  @override
-  String get pews_response_protocol_title => 'Quy trình đáp ứng';
 
   @override
   String get pews_interp_low_risk => 'Nguy cơ thấp';
@@ -3229,9 +3017,6 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get pews_interp_notify_physician => 'Thông báo bác sĩ';
-
-  @override
-  String get pews_interp_emergency_team => 'Team cấp cứu nhi';
 
   @override
   String get pews_risk_stratification_title => 'Phân tầng nguy cơ PEWS';
@@ -3689,10 +3474,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String get crusade_clinical_info => 'Thông tin lâm sàng';
 
   @override
-  String get crusade_clinical_info_content =>
-      'CRUSADE Score đánh giá nguy cơ chảy máu trong hội chứng vành cấp, giúp cân bằng lợi ích và nguy cơ của liệu pháp kháng đông.';
-
-  @override
   String get has_bled_title => 'Thang điểm HAS-BLED';
 
   @override
@@ -3816,10 +3597,6 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get has_bled_clinical_info => 'Thông tin lâm sàng';
-
-  @override
-  String get has_bled_clinical_info_content =>
-      'HAS-BLED đánh giá nguy cơ chảy máu khi dùng kháng đông trong rung nhĩ, giúp cân bằng nguy cơ và lợi ích.';
 
   @override
   String get has_bled_references => 'Tài liệu tham khảo';
@@ -4367,9 +4144,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String get abcd2_urgency_priority => 'Ưu tiên';
 
   @override
-  String get abcd2_urgency_emergency => 'Cấp cứu';
-
-  @override
   String get abcd2_recommendation_low => 'Khám ngoại trú trong 1 tuần';
 
   @override
@@ -4643,39 +4417,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String get race_action_evt => 'Kích hoạt EVT';
 
   @override
-  String get race_emergency_protocol => 'Quy trình cấp cứu';
-
-  @override
-  String get race_protocol_stroke_code => 'Kích hoạt Stroke Code';
-
-  @override
-  String get race_protocol_stroke_code_desc => 'Báo động đội đột quỵ';
-
-  @override
-  String get race_protocol_ct_cta => 'CT/CTA ngay';
-
-  @override
-  String get race_protocol_ct_cta_desc => 'Chụp CT não và CTA';
-
-  @override
-  String get race_protocol_transfer => 'Chuyển viện';
-
-  @override
-  String get race_protocol_transfer_desc => 'Nếu không có khả năng EVT';
-
-  @override
-  String get race_protocol_tpa => 'Cân nhắc tPA';
-
-  @override
-  String get race_protocol_tpa_desc => 'Tiêu sợi huyết tĩnh mạch';
-
-  @override
-  String get race_protocol_time => 'Mục tiêu thời gian';
-
-  @override
-  String get race_protocol_time_desc => 'Door-to-groin <90 phút';
-
-  @override
   String get race_clinical_information => 'Thông tin lâm sàng';
 
   @override
@@ -4839,9 +4580,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String get aspect_discuss_family => 'Thảo luận với gia đình';
 
   @override
-  String get aspect_close_monitoring => 'Theo dõi chặt chẽ';
-
-  @override
   String get aspect_high_complication_risk => 'Nguy cơ biến chứng cao';
 
   @override
@@ -4966,10 +4704,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String get curb65_clinical_information => 'Thông tin lâm sàng';
 
   @override
-  String get curb65_clinical_info_content =>
-      'CURB-65 đánh giá mức độ nặng của viêm phổi cộng đồng và hướng dẫn quyết định nơi điều trị.';
-
-  @override
   String get curb65_risk_stratification => 'Phân tầng nguy cơ';
 
   @override
@@ -5035,10 +4769,6 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String get aspect_guideline_medium_discuss_family =>
       '• Thảo luận với gia đình';
-
-  @override
-  String get aspect_guideline_medium_close_monitoring =>
-      '• Theo dõi chặt chẽ sau can thiệp';
 
   @override
   String get aspect_guideline_low_title => 'ASPECT 0-5 điểm';
@@ -5455,10 +5185,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String get psi_icu_criteria_title => 'Tiêu chí ICU';
 
   @override
-  String get psi_icu_criteria_content =>
-      'Ngoài PSI, cân nhắc ICU khi có sốc nhiễm trùng, suy hô hấp cần thở máy, hoặc suy đa tạng.';
-
-  @override
   String psi_icu_recommendation(String recommendation) {
     return 'Khuyến nghị ICU';
   }
@@ -5632,9 +5358,6 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get rcri_management_standard => 'Quản lý tiêu chuẩn';
-
-  @override
-  String get rcri_management_monitoring => 'Theo dõi tăng cường';
 
   @override
   String get rcri_management_intensive => 'Quản lý tích cực';
@@ -6155,12 +5878,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String get preop_mortality_surgery_high_desc => 'Phẫu thuật lớn, mạch máu';
 
   @override
-  String get preop_mortality_emergency => 'Phẫu thuật cấp cứu';
-
-  @override
-  String get preop_mortality_emergency_desc => 'Phẫu thuật không thể trì hoãn';
-
-  @override
   String get preop_mortality_comorbidities => 'Bệnh kèm theo';
 
   @override
@@ -6452,33 +6169,6 @@ class AppLocalizationsVi extends AppLocalizations {
       'Levey AS, et al. A more accurate method to estimate glomerular filtration rate from serum creatinine. Ann Intern Med. 1999;130(6):461-70.';
 
   @override
-  String get medical_disclaimer_professional_only => 'DÀNH CHO CÁN BỘ Y TẾ';
-
-  @override
-  String get medical_disclaimer_home_text =>
-      'Ứng dụng này được thiết kế dành riêng cho các cán bộ y tế có chứng chỉ hành nghề. Tất cả thông tin y khoa chỉ mang tính tham khảo và không thể thay thế phán đoán lâm sàng, quy trình của cơ sở y tế, hoặc chăm sóc trực tiếp bệnh nhân.';
-
-  @override
-  String get medical_disclaimer_grace_text =>
-      'Công cụ hỗ trợ quyết định lâm sàng. Luôn sử dụng phán đoán lâm sàng và tuân thủ quy trình của cơ sở y tế.';
-
-  @override
-  String get medical_disclaimer_sofa_text =>
-      'Công cụ đánh giá ICU. Cần kết hợp với tình trạng lâm sàng của bệnh nhân.';
-
-  @override
-  String get medical_disclaimer_qsofa_text =>
-      'Công cụ sàng lọc nhiễm trùng huyết. Không thay thế đánh giá lâm sàng và xét nghiệm.';
-
-  @override
-  String get medical_disclaimer_nihss_text =>
-      'Công cụ đánh giá đột quỵ. Cần khám thần kinh và kết hợp lâm sàng.';
-
-  @override
-  String get medical_disclaimer_mdrd_text =>
-      'Ước tính chức năng thận. Cân nhắc bối cảnh lâm sàng và xác nhận bằng các xét nghiệm bổ sung.';
-
-  @override
   String get cam_icu_title => 'CAM-ICU';
 
   @override
@@ -6495,10 +6185,6 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get cam_icu_assessment_title => 'Đánh giá 4 đặc điểm CAM-ICU';
-
-  @override
-  String get medical_disclaimer_cam_icu_text =>
-      'Công cụ sàng lọc lú lẫn tại ICU. Luôn kết hợp với đánh giá lâm sàng toàn diện và không thay thế chẩn đoán của bác sĩ chuyên khoa.';
 
   @override
   String get cam_icu_reference_title => 'Tài liệu tham khảo';
@@ -6550,15 +6236,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get cam_icu_interpretation_label => 'Giải thích';
 
   @override
-  String get cam_icu_algorithm_explanation =>
-      'CAM-ICU dương tính nếu có Feature 1 hoặc 2 VÀ có Feature 3 hoặc 4';
-
-  @override
   String get yes => 'Có';
-
-  @override
-  String get medical_disclaimer_rass_text =>
-      'Công cụ đánh giá an thần và kích động tại ICU. Luôn kết hợp với đánh giá lâm sàng và không thay thế quyết định điều trị của bác sĩ.';
 
   @override
   String get rass_combative_interpretation => 'Hung hăng - Tấn công nhân viên';
@@ -6695,10 +6373,6 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get cam_icu_clinical_info_title => 'Thông tin lâm sàng';
-
-  @override
-  String get cam_icu_clinical_info_content =>
-      'CAM-ICU (Confusion Assessment Method for ICU) là công cụ đánh giá lú lẫn ở bệnh nhân ICU\n\nƯu điểm:\n• Đánh giá nhanh chóng và chính xác\n• Phù hợp cho bệnh nhân thở máy\n• Độ nhạy và độ đặc hiệu cao\n• Không cần khám thần kinh chuyên sâu\n\nCách thực hiện:\n• Đánh giá tất cả 4 feature\n• Có thể kết hợp với RASS\n• Thực hiện hàng ngày ở ICU\n• Ghi nhận thay đổi theo thời gian\n\nLưu ý quan trọng:\n• Cần đào tạo sử dụng CAM-ICU\n• Phân biệt với dementia\n• Theo dõi nguyên nhân gây lú lẫn\n• Điều trị kịp thời khi phát hiện';
 
   @override
   String get cam_icu_cannot_assess => 'Không thể đánh giá';
@@ -6839,10 +6513,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String get rass_clinical_info_title => 'Thông tin lâm sàng';
 
   @override
-  String get rass_clinical_info_content =>
-      'RASS (Richmond Agitation-Sedation Scale) là công cụ đánh giá mức độ kích động và an thần\n\nƯu điểm:\n• Đơn giản, dễ sử dụng\n• Độ tin cậy cao giữa các người đánh giá\n• Phù hợp cho bệnh nhân ICU\n• Kết hợp tốt với CAM-ICU\n\nCách sử dụng:\n• Đánh giá trước tiên không kích thích\n• Sau đó gọi tên bệnh nhân\n• Cuối cùng kích thích vật lý nếu cần\n• Ghi nhận phản ứng đầu tiên\n\nMục tiêu điều trị:\n• RASS 0 hoặc -1 ở hầu hết bệnh nhân\n• RASS -2 đến -3 nếu cần an thần sâu\n• Tránh RASS +2 trở lên (kích động)\n• Tránh RASS -4 hoặc -5 trừ khi cần thiết\n\nGhi chú quan trọng:\n• Đánh giá định kỳ mỗi ca\n• Điều chỉnh thuốc an thần theo RASS\n• Phối hợp với đánh giá đau và delirium';
-
-  @override
   String get rass_references_title => 'Tài liệu tham khảo RASS';
 
   @override
@@ -6855,15 +6525,6 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String get language_change_description =>
       'Thay đổi ngôn ngữ sẽ khởi động lại ứng dụng để áp dụng cài đặt ngôn ngữ mới. Tất cả các thuật ngữ y tế và quy trình sẽ được dịch tương ứng.';
-
-  @override
-  String get acute_stroke_title => 'Đột Quỵ Thiếu Máu Não Cấp';
-
-  @override
-  String get acute_stroke_subtitle => 'Time is Brain - Thời gian là não bộ';
-
-  @override
-  String get stroke_emergency_algorithm => '🚨 SƠ ĐỒ TIẾP CẬN XỬ TRÍ CẤP CỨU';
 
   @override
   String get stroke_recognition => 'NHẬN DIỆN CƠN ĐỘT QUỴ';
@@ -6962,16 +6623,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String get iv_access => '💉 Lập đường truyền tĩnh mạch (2 đường nếu có thể)';
 
   @override
-  String get contraindications_check => 'KIỂM TRA CHỐNG CHỈ ĐỊNH';
-
-  @override
-  String get absolute_contraindications =>
-      '🚫 CHỐNG CHỈ ĐỊNH TUYỆT ĐỐI IV tPA:';
-
-  @override
-  String get relative_contraindications => '⚠️ CHỐNG CHỈ ĐỊNH TƯƠNG ĐỐI:';
-
-  @override
   String get imaging_diagnosis => 'CHẨN ĐOÁN HÌNH ẢNH';
 
   @override
@@ -6985,9 +6636,6 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get reperfusion_therapy => 'ĐIỀU TRỊ TÁI TƯỚI MÁU';
-
-  @override
-  String get iv_alteplase => 'IV ALTEPLASE (tPA)';
 
   @override
   String get endovascular_therapy => 'ENDOVASCULAR THERAPY (EVT)';
@@ -7027,61 +6675,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String get clinical_discussion => '💭 TRANH LUẬN LÂM SÀNG';
 
   @override
-  String get stroke_references => '📚 TÀI LIỆU THAM KHẢO';
-
-  @override
-  String get stroke_references_note =>
-      'Tài liệu tham khảo dựa trên các guideline quốc tế và các nghiên cứu lâm sàng được công nhận trong lĩnh vực điều trị đột quỵ cấp tính.';
-
-  @override
-  String get stroke_medical_disclaimer =>
-      'Thông tin này chỉ mang tính tham khảo và không thay thế cho đánh giá lâm sàng chuyên nghiệp. Mọi quyết định điều trị phải dựa trên đánh giá cụ thể của từng trường hợp và theo hướng dẫn của bác sĩ có chuyên môn. Trong cấp cứu đột quỵ, thời gian là yếu tố quyết định.';
-
-  @override
-  String get anaphylaxis_medical_disclaimer =>
-      'Quy trình điều trị sốc phản vệ này chỉ mang tính tham khảo và không thay thế cho đánh giá lâm sàng chuyên nghiệp. Mọi quyết định điều trị phải dựa trên đánh giá cụ thể của từng bệnh nhân và theo hướng dẫn của bác sĩ có chuyên môn. Trong cấp cứu sốc phản vệ, việc tiêm epinephrine ngay lập tức có thể cứu sống bệnh nhân.';
-
-  @override
-  String get hypertensive_crisis_medical_disclaimer =>
-      'Quy trình điều trị cơn tăng huyết áp này chỉ mang tính tham khảo và không thay thế cho đánh giá lâm sàng chuyên nghiệp. Mọi quyết định điều trị phải dựa trên đánh giá cụ thể của từng bệnh nhân và theo hướng dẫn của bác sĩ có chuyên môn. Quản lý huyết áp cần theo dõi cẩn thận và cá thể hóa.';
-
-  @override
-  String get hypoglycemia_medical_disclaimer =>
-      'Quy trình điều trị hạ đường huyết này chỉ mang tính tham khảo và không thay thế cho đánh giá lâm sàng chuyên nghiệp. Mọi quyết định điều trị phải dựa trên đánh giá cụ thể của từng bệnh nhân và theo hướng dẫn của bác sĩ có chuyên môn. Hạ đường huyết nặng cần bổ sung glucose ngay lập tức.';
-
-  @override
-  String get hyperglycemic_medical_disclaimer =>
-      'Quy trình điều trị cấp cứu tăng đường huyết này chỉ mang tính tham khảo và không thay thế cho đánh giá lâm sàng chuyên nghiệp. Mọi quyết định điều trị phải dựa trên đánh giá cụ thể của từng bệnh nhân và theo hướng dẫn của bác sĩ có chuyên môn. Cấp cứu tiểu đường cần quản lý cẩn thận dịch truyền và điện giải.';
-
-  @override
-  String get absolute_contraindications_content =>
-      '• Xuất huyết não trên CT/MRI\n• Thời gian khởi phát >4.5h (hoặc không rõ)\n• Đột quỵ hoặc chấn thương sọ não trong 3 tháng\n• Tiền sử xuất huyết não\n• Nghi ngờ xuất huyết dưới nhện\n• Phẫu thuật lớn trong 14 ngày\n• Chấn thương đầu nặng trong 3 tháng\n• Triệu chứng nhanh chóng thuyên giảm\n• Triệu chứng nhẹ và cô lập';
-
-  @override
-  String get relative_contraindications_content =>
-      '• HA tâm thu >185 hoặc tâm trương >110 mmHg\n• Đường huyết <50mg/dL hoặc >400mg/dL\n• Tiểu cầu <100,000/μL\n• INR >1.7 hoặc PT >15 giây\n• Dùng heparin trong 48h + aPTT cao\n• Dùng DOAC trong 48h';
-
-  @override
-  String get ct_plain_content =>
-      '• MỤC TIÊU: <25 phút từ lúc đến\n• Loại trừ xuất huyết não\n• Đánh giá dấu hiệu thiếu máu não sớm\n• ASPECTS Score nếu >6h';
-
-  @override
-  String get cta_content =>
-      '• Xác định vị trí tắc mạch máu lớn\n• Đánh giá tuần hoàn bàng hệ\n• Bắt buộc nếu >6h hoặc nghi ngờ LVO\n• Hướng dẫn EVT';
-
-  @override
-  String get ct_perfusion_content =>
-      '• Đánh giá penumbra\n• Core infarct vs tissue at risk\n• Quyết định EVT trong cửa sổ 6-24h\n• Mismatch ratio >1.8';
-
-  @override
-  String get alteplase_protocol =>
-      '• Liều: 0.9 mg/kg (tối đa 90mg)\n• 10% liều đầu tiên trong 1 phút\n• 90% còn lại truyền trong 60 phút\n• Theo dõi NIHSS mỗi 15 phút\n• Không dùng Aspirin trong 24h đầu';
-
-  @override
-  String get evt_protocol =>
-      '• Chỉ định: LVO với ASPECTS ≥6\n• Thời gian: <6h (hoặc <24h có điều kiện)\n• Kỹ thuật: Stent retriever hoặc aspiration\n• Mục tiêu: TICI 2b-3 recanalization\n• Có thể kết hợp với IV tPA';
-
-  @override
   String get bp_management =>
       '• Nếu đủ điều kiện tPA: <185/110 mmHg\n• Sau tPA: <180/105 mmHg trong 24h\n• Không tPA: cho phép HA cao (SBP <220)';
 
@@ -7092,14 +6685,6 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String get temperature_management =>
       '• Mục tiêu: <37.5°C\n• Điều trị sốt tích cực\n• Tránh hạ thân nhiệt quá mức';
-
-  @override
-  String get monitoring_24h_content =>
-      '• NIHSS mỗi 15 phút x 2h, sau đó mỗi 30 phút x 6h\n• Vital signs mỗi 15 phút x 2h\n• Neuro check mỗi 1h\n• CT não sau 24h (hoặc ngay nếu xấu đi)\n• Theo dõi tại Stroke Unit nếu có';
-
-  @override
-  String get warning_signs_content =>
-      '• NIHSS tăng ≥4 điểm\n• Đau đầu dữ dội đột ngột\n• Buồn nôn/nôn\n• HA tăng đột ngột\n• Ý thức giảm\n→ CT não cấp cứu ngay!';
 
   @override
   String get case_1_title => 'Ca 1: Đột quỵ trong cửa sổ thời gian';
@@ -7157,15 +6742,8 @@ class AppLocalizationsVi extends AppLocalizations {
       '🔍 Phân tích:\n• MRI DWI-FLAIR mismatch có thể giúp\n• Nếu FLAIR âm tính → có thể <4.5h\n• CTA để tìm LVO cho EVT\n• CT perfusion để đánh giá mismatch\n\n💡 Xu hướng hiện tại: Mở rộng cửa sổ thời gian với imaging selection';
 
   @override
-  String get medical_disclaimer_note => 'LƯU Ý Y KHOA';
-
-  @override
   String get acute_ischemic_stroke_title =>
       'QUY TRÌNH XỬ TRÍ ĐỘT QUỴ THIẾU MÁU NÃO CẤP TÍNH';
-
-  @override
-  String get acute_stroke_description =>
-      'Xử lý cấp cứu đột quỵ - Time is Brain';
 
   @override
   String get snake_bite_title => 'Rắn cắn';
@@ -7190,12 +6768,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String get immobilize_subtitle => 'Cố định vùng cắn';
 
   @override
-  String get call_emergency_services => '• Gọi cấp cứu 115\n• Báo cáo chi tiết';
-
-  @override
-  String get emergency_services_subtitle => 'Gọi cấp cứu';
-
-  @override
   String get transport_hospital =>
       '• Vận chuyển nhanh\n• Giữ vùng cắn thấp hơn tim';
 
@@ -7206,25 +6778,10 @@ class AppLocalizationsVi extends AppLocalizations {
   String get snake_identification => 'Nhận diện loài rắn';
 
   @override
-  String get snake_identification_content =>
-      '• Ghi nhận thời gian và địa điểm\n• Mô tả hình dáng, màu sắc rắn\n• Chụp ảnh nếu an toàn\n• Không bắt hoặc giết rắn';
-
-  @override
   String get bite_assessment => 'Đánh giá vết cắn';
 
   @override
-  String get bite_assessment_content =>
-      '• Vị trí vết cắn\n• Số lượng vết thủng\n• Dấu hiệu phù nề\n• Màu sắc thay đổi';
-
-  @override
   String get severity_signs => 'Dấu hiệu nghiêm trọng';
-
-  @override
-  String get severity_signs_content =>
-      '• Đau dữ dội lan rộng\n• Phù nề tiến triển nhanh\n• Tê bì, yếu cơ\n• Buồn nôn, nôn\n• Khó thở, rối loạn ý thức\n• Chảy máu bất thường';
-
-  @override
-  String get treatment_protocol => 'Quy trình điều trị';
 
   @override
   String get first_aid => 'Sơ cứu';
@@ -7254,22 +6811,10 @@ class AppLocalizationsVi extends AppLocalizations {
   String get antivenom_indications => 'Chỉ định sử dụng';
 
   @override
-  String get antivenom_indications_content =>
-      '• Phù nề lan rộng\n• Triệu chứng toàn thân\n• Rối loạn đông máu\n• Tổn thương thần kinh\n• Suy tuần hoàn';
-
-  @override
   String get antivenom_dosage => 'Liều dùng';
 
   @override
-  String get antivenom_dosage_content =>
-      '• Khởi đầu: 4-6 lọ\n• Đánh giá sau 1-2h\n• Lặp lại nếu cần\n• Tối đa: 10-15 lọ/24h';
-
-  @override
   String get antivenom_administration => 'Cách truyền';
-
-  @override
-  String get antivenom_administration_content =>
-      '• Pha trong 100-200ml NaCl 0.9%\n• Truyền chậm 15-30 phút\n• Sẵn sàng xử lý dị ứng\n• Theo dõi chặt chẽ';
 
   @override
   String get complications_management => 'Xử lý biến chứng';
@@ -7278,127 +6823,43 @@ class AppLocalizationsVi extends AppLocalizations {
   String get systemic_envenomation => 'Ngộ độc toàn thân';
 
   @override
-  String get systemic_envenomation_content =>
-      '• Rối loạn đông máu\n• Suy thận cấp\n• Sốc\n• Suy hô hấp';
-
-  @override
   String get local_complications => 'Biến chứng tại chỗ';
-
-  @override
-  String get local_complications_content =>
-      '• Hội chứng khoang\n• Hoại tử mô\n• Nhiễm trùng thứ phát\n• Mất chức năng chi';
 
   @override
   String get allergic_reactions => 'Phản ứng dị ứng';
 
   @override
-  String get allergic_reactions_content =>
-      '• Epinephrine ngay lập tức\n• Corticosteroid\n• Antihistamine\n• Hỗ trợ hô hấp';
-
-  @override
   String get monitoring_followup => 'Theo dõi và tái khám';
-
-  @override
-  String get immediate_monitoring => 'Theo dõi tức thì';
-
-  @override
-  String get immediate_monitoring_content =>
-      '• Vital signs mỗi 15 phút\n• Đông máu mỗi 6h\n• Chức năng thận\n• Dấu hiệu nhiễm trùng';
 
   @override
   String get discharge_criteria => 'Tiêu chí xuất viện';
 
   @override
-  String get discharge_criteria_content =>
-      '• Ổn định >24h\n• Đông máu bình thường\n• Không tiến triển xấu\n• Không nhiễm trùng';
-
-  @override
-  String get algorithm_snake_bite => 'Thuật toán rắn cắn';
-
-  @override
-  String get algorithm_calm_immobilize => 'Bình tĩnh + Cố định';
-
-  @override
-  String get algorithm_assess_severity => 'Đánh giá mức độ nặng';
-
-  @override
-  String get algorithm_mild => 'Nhẹ: Theo dõi';
-
-  @override
-  String get algorithm_severe => 'Nặng: Huyết thanh';
-
-  @override
-  String get algorithm_observation => 'Theo dõi 24-48h';
-
-  @override
-  String get algorithm_antivenom => 'Huyết thanh kháng nọc';
-
-  @override
-  String get snake_bite_medical_disclaimer =>
-      'Thông tin này chỉ mang tính tham khảo. Luôn tìm kiếm chăm sóc y tế khẩn cấp khi bị rắn cắn.';
-
-  @override
   String get vietnamese_snakes_title => '🐍 Nhận diện loài rắn Việt Nam';
-
-  @override
-  String get vietnamese_snakes_content =>
-      '🇻🇳 RẮN ĐỘC PHỔ BIẾN:\n• Rắn hổ mang (Naja kaouthia): Cổ xòe, nọc thần kinh\n• Rắn cạp nia (Bungarus): Sọc đen-trắng, nọc thần kinh\n• Rắn lục (Trimeresurus): Màu xanh, nọc gây hoại tử\n• Rắn cạp nong (Russell viper): Vảy gai, nọc đông máu\n\n📝 GHI NHẬN:\n• Thời gian và địa điểm cắn\n• Mô tả hình dáng, màu sắc\n• Chụp ảnh nếu an toàn\n• KHÔNG bắt hoặc giết rắn';
 
   @override
   String get venom_type_signs_title => '⚠️ Dấu hiệu nghiêm trọng theo loại nọc';
 
   @override
-  String get venom_type_signs_content =>
-      '🧠 NỌC THẦN KINH (Neurotoxic):\n• Hổ mang, cạp nia: Liệt mí mắt, khó nói\n• Yếu cơ tiến triển từ trên xuống\n• Khó thở, nguy cơ ngừng thở\n• Ý thức tỉnh táo\n\n🩸 NỌC ĐÔNG MÁU (Hemotoxic):\n• Cạp nong: Chảy máu không cầm\n• Xuất huyết niêm mạc\n• Nước tiểu có máu\n• Shock mất máu\n\n🔥 NỌC HOẠI TỬ (Cytotoxic):\n• Rắn lục: Đau dữ dội tại chỗ\n• Phù nề lan rộng nhanh\n• Hoại tử mô, nhiễm trùng\n• Hội chứng khoang';
-
-  @override
   String get antivenom_types_title => 'Các loại huyết thanh kháng nọc';
-
-  @override
-  String get antivenom_types_content =>
-      '🐍 MONOVALENT (đơn giá):\n• Anti-Cobra (Naja): Chống nọc rắn hổ mang\n• Anti-Krait (Bungarus): Chống nọc rắn cạp nia\n• Anti-Russell Viper: Chống nọc rắn lục\n\n🐍 POLYVALENT (đa giá):\n• Queen Saovabha Memorial Institute (Thái Lan)\n• Vietnamese Polyvalent (Việt Nam)\n• Regional Southeast Asian Polyvalent';
 
   @override
   String get fab_fragments_title => '🧬 FAB FRAGMENTS - Công nghệ tiên tiến';
 
   @override
-  String get fab_fragments_content =>
-      '📚 ĐỊNH NGHĨA:\n• FAB = Fragment Antigen Binding\n• Là phần nhỏ của kháng thể (chỉ chứa vùng liên kết kháng nguyên)\n• Loại bỏ phần Fc (Fragment crystallizable)\n• Kích thước nhỏ hơn 50% so với kháng thể nguyên vẹn\n\n✅ ƯU ĐIỂM VƯỢT TRỘI:\n• Thấm vào mô nhanh hơn do kích thước nhỏ\n• Ít gây phản ứng dị ứng (anaphylaxis < 1%)\n• Có thể dùng nhiều lần mà không bị kháng thuốc\n• Thải trừ qua thận nhanh hơn\n• An toàn cho trẻ em và người già\n• Tương tác thuốc ít hơn\n\n🔬 CƠ CHẾ HOẠT ĐỘNG:\n• Liên kết trực tiếp với nọc độc\n• Vô hiệu hóa enzyme phospholipase A2\n• Ngăn chặn tác dụng hemolytic và coagulant\n• Không kích hoạt hệ bổ thể\n\n🌍 SẢN PHẨM HIỆN CÓ:\n• CroFab® (Mỹ): Chống nọc rắn chuông\n• DigiFab® (Mỹ): Chống ngộ độc Digitalis\n• EchiTAb® (Úc): Chống nọc rắn Echis\n• Polyvalent Fab (Thái Lan): Đang phát triển';
-
-  @override
   String get preparation_methods_title => 'Cách pha chế khác nhau';
-
-  @override
-  String get preparation_methods_content =>
-      '📋 HUYẾT THANH LỎNG (Liquid):\n• Pha trực tiếp 1:1 với NaCl 0.9%\n• Thể tích: 50-100ml/lọ\n• Truyền trong 60-90 phút\n• Tốc độ: 1-2ml/phút ban đầu\n\n📋 HUYẾT THANH KHÔ (Lyophilized):\n• Hòa tan với 10ml nước cất vô trùng\n• Sau đó pha trong 100-200ml NaCl 0.9%\n• Lắc nhẹ, không tạo bọt\n• Truyền trong 30-60 phút\n• Kiểm tra không có cặn\n\n🧬 FAB FRAGMENTS (Đặc biệt):\n• Pha trong 250ml NaCl 0.9% hoặc D5W\n• Truyền chậm: 4-6 giờ (đầu tiên)\n• Tốc độ: 25-50ml/giờ ban đầu\n• Có thể tăng tốc độ nếu dung nạp tốt\n• Theo dõi sát trong 30 phút đầu\n• Ít phản ứng dị ứng nhưng vẫn cần cảnh giác';
 
   @override
   String get specific_dosages_title => 'Liều dùng cụ thể';
 
   @override
-  String get specific_dosages_content =>
-      '💊 POLYVALENT ANTIVENOM:\n• Khởi đầu: 4-6 lọ (40-60ml)\n• Nặng: 8-12 lọ\n• Tối đa: 20 lọ/24h\n• Lặp lại: mỗi 6-12 giờ nếu cần\n\n💊 MONOVALENT ANTIVENOM:\n• Cobra: 3-5 lọ khởi đầu\n• Krait: 5-10 lọ (nọc độc hơn)\n• Russell Viper: 4-8 lọ\n• Có thể cần liều cao hơn\n\n🧬 FAB FRAGMENTS (Liều khác biệt):\n• Khởi đầu: 4-6 lọ (tương đương 40-60ml)\n• Nặng: 8-12 lọ\n• Tần suất: Có thể lặp lại mỗi 6-8 giờ\n• Ưu điểm: Liều thấp hơn nhưng hiệu quả cao\n• Trẻ em: 0.25-0.5ml/kg\n• Theo dõi đáp ứng sau 2-4 giờ';
-
-  @override
   String get storage_title => 'Bảo quản';
-
-  @override
-  String get storage_content =>
-      '🧊 BẢO QUẢN:\n• Nhiệt độ: 2-8°C (không đông lạnh)\n• Tránh ánh sáng trực tiếp\n• Kiểm tra hạn sử dụng\n• Không sử dụng nếu có cặn, đục\n• FAB Fragments: Bảo quản đặc biệt, hạn sử dụng ngắn hơn\n\n🌏 TÌNH HÌNH VIỆT NAM:\n• FAB Fragments: Chưa có sản xuất trong nước\n• Cần nhập khẩu từ Mỹ, Úc, châu Âu\n• Đang nghiên cứu sản xuất tại IVAC\n• Dự kiến có trong 2-3 năm tới';
 
   @override
   String get followup_monitoring_title => 'Theo dõi và điều chỉnh';
 
   @override
-  String get followup_monitoring_content =>
-      '⏰ ĐÁNH GIÁ SAU 1-2 GIỜ:\n• Phù nề có giảm?\n• PT/aPTT cải thiện?\n• Triệu chứng thần kinh thuyên giảm?\n\n🔄 NẾU KHÔNG CẢI THIỆN:\n• Lặp lại liều ban đầu\n• Kiểm tra loại huyết thanh\n• Xem xét chuyển tuyến cao hơn\n\n⚠️ DẤU HIỆU NGỪNG:\n• Cải thiện lâm sàng rõ rệt\n• Đông máu bình thường\n• Không tiến triển thêm';
-
-  @override
   String get fab_indications_title => '🎯 CHỈ ĐỊNH SỬ DỤNG FAB FRAGMENTS';
-
-  @override
-  String get fab_indications_content =>
-      '✅ ƯU TIÊN SỬ DỤNG KHI:\n• Bệnh nhân có tiền sử dị ứng huyết thanh\n• Trẻ em dưới 12 tuổi\n• Người cao tuổi >65 tuổi\n• Bệnh nhân suy giảm miễn dịch\n• Cần dùng huyết thanh nhiều lần\n• Rắn cắn ở vùng đầu cổ (nguy hiểm)\n\n🚨 CHỈ ĐỊNH TUYỆT ĐỐI:\n• Phản ứng anaphylaxis với huyết thanh thường\n• Rắn cực độc (King Cobra, Sea Snake)\n• Ngộ độc nặng với rối loạn đông máu\n• Bệnh nhân có bệnh lý tim mạch nặng\n\n⚠️ CHÚ Ý ĐẶC BIỆT:\n• Vẫn cần theo dõi phản ứng dị ứng\n• Hiệu quả cao hơn nhưng đắt tiền\n• Cần đào tạo nhân viên sử dụng\n• Ưu tiên cho các trường hợp nặng';
 
   @override
   String get sources_references_title =>
@@ -7411,18 +6872,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get vietnam_suppliers => '🏥 NGUỒN CUNG CẤP HUYẾT THANH VIỆT NAM:';
 
   @override
-  String get vietnam_suppliers_content =>
-      '• Viện Vệ sinh Dịch tễ Trung ương\n• Bệnh viện Nhiệt đới Trung ương\n• Bệnh viện Chợ Rẫy (TP.HCM)\n• Bệnh viện Bạch Mai (Hà Nội)';
-
-  @override
   String get international_suppliers => '🌏 HUYẾT THANH NHẬP KHẨU:';
-
-  @override
-  String get international_suppliers_content =>
-      '• Queen Saovabha Memorial Institute (Thái Lan)\n• Myanmar Pharmaceutical Factory\n• Haffkine Bio-Pharmaceutical (Ấn Độ)';
-
-  @override
-  String get snake_algorithm_title => 'THUẬT TOÁN ĐIỀU TRỊ';
 
   @override
   String get snake_assessment_title => 'ĐÁNH GIÁ BAN ĐẦU';
@@ -7446,70 +6896,10 @@ class AppLocalizationsVi extends AppLocalizations {
   String get snake_references_title => 'TÀI LIỆU THAM KHẢO & NGUỒN CUNG CẤP';
 
   @override
-  String get algorithm_step1_title => '1. Đánh giá ban đầu';
-
-  @override
-  String get algorithm_step1_content =>
-      '• ABC assessment\n• Vital signs\n• Mô tả vết cắn';
-
-  @override
-  String get algorithm_step2_title => '2. Phân loại độ nặng';
-
-  @override
-  String get algorithm_step2_content =>
-      '• Nhẹ: Chỉ đau tại chỗ\n• Trung bình: Phù lan rộng\n• Nặng: Triệu chứng toàn thân';
-
-  @override
-  String get algorithm_step3_title => '3. Quyết định điều trị';
-
-  @override
-  String get algorithm_step3_content =>
-      '• Nhẹ: Theo dõi 24h\n• Trung bình-Nặng: Huyết thanh kháng nọc';
-
-  @override
-  String get algorithm_step4_title => '4. Theo dõi đáp ứng';
-
-  @override
-  String get algorithm_step4_content =>
-      '• Đánh giá sau 1-2h\n• Lặp lại nếu tiến triển xấu';
-
-  @override
   String get initial_treatment_title => 'Xử lý ban đầu';
 
   @override
-  String get initial_treatment_content =>
-      '• Rửa vết thương bằng nước sạch\n• Băng vết thương nhẹ nhàng\n• KHÔNG cắt, hút hoặc prep vết thương\n• KHÔNG bó garo quá chặt\n• KHÔNG cho uống rượu';
-
-  @override
   String get pressure_bandage_title => 'Băng áp lực';
-
-  @override
-  String get pressure_bandage_content =>
-      '• Bắt đầu từ bàn tay/chân\n• Băng lên toàn bộ chi\n• Áp lực vừa phải\n• Kiểm tra tuần hoàn';
-
-  @override
-  String get first_aid_content =>
-      '• Giữ bình tĩnh, không hoảng sợ\n• Rửa vết thương bằng nước sạch\n• Tháo trang sức ở vùng bị cắn\n• Không cắt vết thương\n• Không hút nọc bằng miệng\n• Băng ép giảm áp lực lympho\n• Cố định chi bị cắn\n• Vận chuyển ngay đến bệnh viện';
-
-  @override
-  String get hospital_treatment_content =>
-      '• Đánh giá tình trạng bệnh nhân\n• Xét nghiệm đông máu, chức năng thận\n• Phân loại mức độ ngộ độc\n• Chỉ định huyết thanh kháng nọc\n• Theo dõi dấu hiệu sống\n• Xử lý biến chứng\n• Điều trị hỗ trợ';
-
-  @override
-  String get antivenom_content =>
-      '• Đánh giá chỉ định huyết thanh\n• Chuẩn bị xử trí phản ứng dị ứng\n• Pha loãng huyết thanh theo hướng dẫn\n• Truyền chậm, theo dõi chặt chẽ\n• Liều lượng theo mức độ ngộ độc\n• Theo dõi hiệu quả điều trị\n• Có thể cần nhiều lần truyền';
-
-  @override
-  String get complication_management_content =>
-      '• Phản ứng dị ứng huyết thanh\n• Rối loạn đông máu\n• Suy thận cấp\n• Hội chứng khoang\n• Nhiễm trùng vết thương\n• Hoại tử mô\n• Tàn phế vận động';
-
-  @override
-  String get monitoring_care_content =>
-      '• Theo dõi dấu hiệu sống\n• Kiểm tra chức năng đông máu\n• Đánh giá chức năng thận\n• Chăm sóc vết thương\n• Vật lý trị liệu sớm\n• Tư vấn tâm lý\n• Hướng dẫn phòng ngừa';
-
-  @override
-  String get references_content =>
-      '1. WHO Guidelines for Snakebite Management\n2. Vietnamese Ministry of Health Protocol\n3. SEARO Regional Guidelines\n4. Clinical Toxinology Resources\n5. Antivenom Producer Guidelines\n6. Regional Poisoning Centers\n7. Emergency Medicine Textbooks';
 
   @override
   String get csfAnalysisTitle => 'Phân tích dịch não tủy';
@@ -7598,5 +6988,310 @@ class AppLocalizationsVi extends AppLocalizations {
   String get notesHint => 'Thông tin bổ sung...';
 
   @override
+  String get pressureHintOptional => '70-180 (tùy chọn)';
+
+  @override
+  String get lactateHintOptional => '1.5-2.1 (tùy chọn)';
+
+  @override
+  String get serumGlucoseHintOptional => '70-110 (tùy chọn)';
+
+  @override
   String get referencesLabel => 'Tài liệu tham khảo';
+
+  @override
+  String get urinalysisTitle => 'Phân tích nước tiểu';
+
+  @override
+  String get urinalysisSubtitle =>
+      'Chẩn đoán nhiễm khuẩn, bệnh thận, đái tháo đường';
+
+  @override
+  String get physicalProperties => 'Tính chất vật lý';
+
+  @override
+  String get chemicalAnalysis => 'Phân tích hóa học';
+
+  @override
+  String get microscopicAnalysis => 'Phân tích vi thể (Tùy chọn)';
+
+  @override
+  String get analyzeUrine => 'Phân tích nước tiểu';
+
+  @override
+  String get newAnalysis => 'Phân tích mới';
+
+  @override
+  String get analysisResults => 'Kết quả phân tích';
+
+  @override
+  String get colorLabel => 'Màu sắc';
+
+  @override
+  String get clarityLabel => 'Độ trong';
+
+  @override
+  String get specificGravityLabel => 'Tỷ trọng';
+
+  @override
+  String get colorPaleYellow => 'Vàng nhạt';
+
+  @override
+  String get colorYellow => 'Vàng';
+
+  @override
+  String get colorDarkYellow => 'Vàng đậm';
+
+  @override
+  String get colorAmber => 'Hổ phách';
+
+  @override
+  String get colorRed => 'Đỏ';
+
+  @override
+  String get colorBrown => 'Nâu';
+
+  @override
+  String get colorGreen => 'Xanh lá';
+
+  @override
+  String get colorBlue => 'Xanh dương';
+
+  @override
+  String get colorColorless => 'Không màu';
+
+  @override
+  String get clarityClear => 'Trong';
+
+  @override
+  String get claritySlightlyCloudy => 'Hơi đục';
+
+  @override
+  String get clarityCloudy => 'Đục';
+
+  @override
+  String get clarityTurbid => 'Rất đục';
+
+  @override
+  String get testNegative => 'Âm tính';
+
+  @override
+  String get testPositive => 'Dương tính';
+
+  @override
+  String get testTrace => 'Trace';
+
+  @override
+  String get testSmall => 'Nhỏ';
+
+  @override
+  String get testModerate => 'Vừa';
+
+  @override
+  String get testLarge => 'Lớn';
+
+  @override
+  String get testNormal => 'Bình thường';
+
+  @override
+  String get testHigh => 'Cao';
+
+  @override
+  String get redBloodCellsHpf => 'Hồng cầu (/hpf)';
+
+  @override
+  String get whiteBloodCellsHpf => 'Bạch cầu (/hpf)';
+
+  @override
+  String get epithelialCellsHpf => 'Tế bào biểu mô (/hpf)';
+
+  @override
+  String get bacteriaHpf => 'Vi khuẩn (/hpf)';
+
+  @override
+  String get castsLpf => 'Trụ (/lpf)';
+
+  @override
+  String get crystalsHpf => 'Tinh thể (/hpf)';
+
+  @override
+  String get fewMany => 'Ít/Nhiều';
+
+  @override
+  String get abcd2_urgency_emergency => 'Cấp cứu (Nguy cơ cao)';
+
+  @override
+  String get has_non_surgical_or_emergency =>
+      'Phẫu thuật không theo kế hoạch hoặc cấp cứu';
+
+  @override
+  String get pews_action_emergency_team => 'Liên hệ đội cấp cứu ngay lập tức';
+
+  @override
+  String get pews_interp_emergency_team => 'Cần đội cấp cứu';
+
+  @override
+  String get pews_response_protocol_title => 'Quy trình Ứng phó';
+
+  @override
+  String get pews_protocol_routine_title => 'Theo dõi Thường quy (Điểm 0-2)';
+
+  @override
+  String get pews_protocol_routine_1 => 'Tiếp tục mức độ chăm sóc hiện tại';
+
+  @override
+  String get pews_protocol_routine_2 => 'Theo dõi sinh hiệu mỗi 4-6 giờ';
+
+  @override
+  String get pews_protocol_routine_3 => 'Ghi lại điểm số trong hồ sơ y tế';
+
+  @override
+  String get pews_protocol_routine_4 =>
+      'Đánh giá lại nếu tình trạng lâm sàng thay đổi';
+
+  @override
+  String get pews_protocol_increased_title => 'Theo dõi Tăng cường (Điểm 3-4)';
+
+  @override
+  String get pews_protocol_increased_1 => 'Tăng tần suất theo dõi';
+
+  @override
+  String get pews_protocol_increased_2 => 'Theo dõi sinh hiệu mỗi 1-2 giờ';
+
+  @override
+  String get pews_protocol_increased_3 => 'Xem xét đánh giá tại giường bệnh';
+
+  @override
+  String get pews_protocol_increased_4 =>
+      'Thông báo đội y tế nếu điểm số duy trì';
+
+  @override
+  String get pews_protocol_urgent_title => 'Ứng phó Khẩn cấp (Điểm ≥5)';
+
+  @override
+  String get pews_protocol_urgent_1 =>
+      'Cần đánh giá tại giường bệnh ngay lập tức';
+
+  @override
+  String get pews_protocol_urgent_2 => 'Xem xét kích hoạt đội ứng phó nhanh';
+
+  @override
+  String get pews_protocol_urgent_3 => 'Theo dõi liên tục cho đến khi ổn định';
+
+  @override
+  String get pews_protocol_urgent_4 => 'Ghi lại can thiệp và phản ứng';
+
+  @override
+  String get preop_mortality_emergency => 'Phẫu thuật Cấp cứu';
+
+  @override
+  String get preop_mortality_emergency_desc =>
+      'Các thủ thuật phẫu thuật cấp cứu có nguy cơ cao hơn';
+
+  @override
+  String get race_emergency_protocol => 'Quy trình Đột quỵ Cấp cứu';
+
+  @override
+  String get race_protocol_stroke_code => 'Kích hoạt Mã Đột quỵ';
+
+  @override
+  String get race_protocol_stroke_code_desc =>
+      'Kích hoạt đội đột quỵ ngay lập tức';
+
+  @override
+  String get race_protocol_ct_cta => 'CT/CTA Cấp cứu';
+
+  @override
+  String get race_protocol_ct_cta_desc => 'Chụp ảnh ngay trong vòng 25 phút';
+
+  @override
+  String get race_protocol_transfer => 'Xem xét Chuyển viện';
+
+  @override
+  String get race_protocol_transfer_desc =>
+      'Chuyển đến trung tâm đột quỵ toàn diện';
+
+  @override
+  String get race_protocol_tpa => 'Xem xét tPA';
+
+  @override
+  String get race_protocol_tpa_desc => 'Đánh giá liệu pháp tiêu huyết khối';
+
+  @override
+  String get race_protocol_time => 'Thời gian Quan trọng';
+
+  @override
+  String get race_protocol_time_desc => 'Thời gian là não bộ - hành động nhanh';
+
+  @override
+  String get medical_disclaimer_professional_only => 'Tuyên bố Y khoa';
+
+  @override
+  String get medical_disclaimer_home_text =>
+      'Ứng dụng này chỉ dành cho các chuyên gia y tế. Tất cả thông tin được cung cấp chỉ mang tính chất giáo dục và không thể thay thế đánh giá lâm sàng.';
+
+  @override
+  String get medical_disclaimer_title => 'Tuyên bố Y khoa';
+
+  @override
+  String get medical_disclaimer_content =>
+      'Ứng dụng này được thiết kế cho các chuyên gia y tế và chỉ mang tính chất giáo dục và tham khảo. Không được sử dụng để thay thế đánh giá y khoa chuyên nghiệp, kinh nghiệm hoặc đánh giá lâm sàng. Luôn tham khảo tài liệu y khoa hiện tại và quy trình của cơ sở y tế.';
+
+  @override
+  String get medical_disclaimer_cam_icu_text =>
+      'Đánh giá CAM-ICU yêu cầu đào tạo phù hợp và nên được sử dụng như một phần của đánh giá lâm sàng toàn diện.';
+
+  @override
+  String get cam_icu_algorithm_explanation =>
+      'Làm theo thuật toán CAM-ICU từng bước một. Mỗi bước phải được hoàn thành trước khi tiếp tục bước tiếp theo.';
+
+  @override
+  String get cam_icu_clinical_info_content =>
+      'Phương pháp Đánh giá Lú lẫn cho ICU (CAM-ICU) là một công cụ đã được xác thực để phát hiện lú lẫn ở bệnh nhân nguy kịch. Nên được thực hiện bởi các chuyên gia y tế được đào tạo.';
+
+  @override
+  String get medical_disclaimer_grace_text =>
+      'Điểm GRACE nên được giải thích trong bối cảnh biểu hiện lâm sàng và sử dụng cùng với đánh giá tim mạch toàn diện.';
+
+  @override
+  String get grace_clinical_info_content =>
+      'Điểm Global Registry of Acute Coronary Events (GRACE) dự đoán tỷ lệ tử vong trong bệnh viện và 6 tháng ở bệnh nhân mắc hội chứng mạch vành cấp.';
+
+  @override
+  String get medical_disclaimer_rass_text =>
+      'Đánh giá RASS nên được thực hiện bởi các chuyên gia y tế được đào tạo và sử dụng như một phần của theo dõi an thần toàn diện.';
+
+  @override
+  String get rass_clinical_info_content =>
+      'Thang đo Kích động-An thần Richmond (RASS) là một công cụ đã được xác thực để đánh giá mức độ an thần ở bệnh nhân nguy kịch.';
+
+  @override
+  String get routine_monitoring => 'Theo dõi Thường quy';
+
+  @override
+  String get weekly_monitoring => 'Theo dõi Hàng tuần';
+
+  @override
+  String get qsofa_routine_monitoring =>
+      'Tiếp tục theo dõi thường quy và đánh giá lại nếu tình trạng lâm sàng thay đổi';
+
+  @override
+  String get qsofa_clinical_content =>
+      'Đánh giá Suy suy cơ quan Tuần tự Nhanh (qSOFA) được sử dụng để nhận diện nhanh bệnh nhân có nguy cơ nhiễm trùng huyết ngoài ICU.';
+
+  @override
+  String get crusade_clinical_info_content =>
+      'Điểm CRUSADE dự đoán nguy cơ chảy máu lớn ở bệnh nhân mắc hội chứng mạch vành cấp không ST chênh lên.';
+
+  @override
+  String get has_bled_clinical_info_content =>
+      'Điểm HAS-BLED đánh giá nguy cơ chảy máu ở bệnh nhân điều trị chống đông máu.';
+
+  @override
+  String get psi_icu_criteria_content =>
+      'Tiêu chí nhập ICU dựa trên Chỉ số Mức độ nghiêm trọng Viêm phổi và biểu hiện lâm sàng.';
+
+  @override
+  String get rcri_management_monitoring =>
+      'Tiếp tục theo dõi tim mạch trong phẫu thuật dựa trên phân tầng nguy cơ';
 }

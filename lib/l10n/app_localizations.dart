@@ -1298,36 +1298,6 @@ abstract class AppLocalizations {
   /// **'Intensive Care'**
   String get intensive_care;
 
-  /// Emergency medicine
-  ///
-  /// In en, this message translates to:
-  /// **'Emergency Medicine'**
-  String get emergency_medicine;
-
-  /// Hypertensive crisis protocol title
-  ///
-  /// In en, this message translates to:
-  /// **'Hypertensive Crisis'**
-  String get hypertensive_crisis_title;
-
-  /// Hypertensive crisis description
-  ///
-  /// In en, this message translates to:
-  /// **'Emergency management for BP ≥180/120 mmHg'**
-  String get hypertensive_crisis_description;
-
-  /// Hypoglycemia crisis protocol title
-  ///
-  /// In en, this message translates to:
-  /// **'Hypoglycemia Crisis'**
-  String get hypoglycemia_crisis_title;
-
-  /// Hypoglycemia crisis description
-  ///
-  /// In en, this message translates to:
-  /// **'Emergency management for glucose <70mg/dL'**
-  String get hypoglycemia_crisis_description;
-
   /// Hyperglycemic HHS protocol title
   ///
   /// In en, this message translates to:
@@ -1364,24 +1334,6 @@ abstract class AppLocalizations {
   /// **'Acute poisoning management'**
   String get acute_poisoning_description;
 
-  /// Anaphylactic shock protocol title
-  ///
-  /// In en, this message translates to:
-  /// **'Anaphylactic Shock'**
-  String get anaphylactic_shock_title;
-
-  /// Anaphylactic shock description
-  ///
-  /// In en, this message translates to:
-  /// **'Management of anaphylactic shock'**
-  String get anaphylactic_shock_description;
-
-  /// Anaphylactic shock subtitle
-  ///
-  /// In en, this message translates to:
-  /// **'Emergency management of severe allergic reactions'**
-  String get anaphylactic_shock_subtitle;
-
   /// Immediate actions title
   ///
   /// In en, this message translates to:
@@ -1399,18 +1351,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Remove drugs, food, or allergen substances'**
   String get stop_allergen_subtitle;
-
-  /// Inject epinephrine
-  ///
-  /// In en, this message translates to:
-  /// **'Inject Epinephrine immediately'**
-  String get inject_epinephrine;
-
-  /// Epinephrine dose
-  ///
-  /// In en, this message translates to:
-  /// **'IM 0.3-0.5mg (1:1000) into outer thigh muscle'**
-  String get epinephrine_dose;
 
   /// Call support
   ///
@@ -1436,12 +1376,6 @@ abstract class AppLocalizations {
   /// **'Oxygen, IV fluids, monitor vital signs'**
   String get abc_support_subtitle;
 
-  /// Recognize anaphylaxis
-  ///
-  /// In en, this message translates to:
-  /// **'Recognize anaphylaxis'**
-  String get recognize_anaphylaxis;
-
   /// Main symptoms
   ///
   /// In en, this message translates to:
@@ -1459,12 +1393,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Initial treatment'**
   String get initial_treatment;
-
-  /// Epinephrine priority
-  ///
-  /// In en, this message translates to:
-  /// **'Epinephrine (Priority #1)'**
-  String get epinephrine_priority;
 
   /// Respiratory support
   ///
@@ -1501,42 +1429,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Prevention of recurrence'**
   String get prevention_recurrence;
-
-  /// Treatment algorithm
-  ///
-  /// In en, this message translates to:
-  /// **'Treatment algorithm'**
-  String get treatment_algorithm;
-
-  /// Anaphylaxis symptoms content
-  ///
-  /// In en, this message translates to:
-  /// **'• Skin: Urticaria, itching, redness, facial/lip/tongue swelling\n• Respiratory: Wheezing, dyspnea, laryngeal edema\n• Cardiovascular: Hypotension, tachycardia, shock\n• Gastrointestinal: Vomiting, diarrhea, abdominal pain\n• Neurological: Anxiety, agitation, loss of consciousness'**
-  String get anaphylaxis_symptoms;
-
-  /// Anaphylaxis danger signs content
-  ///
-  /// In en, this message translates to:
-  /// **'• Severe dyspnea, wheezing\n• Systolic BP <90 mmHg\n• Laryngeal edema, hoarseness\n• Loss of consciousness, seizures\n• Cyanosis, SpO2 <90%'**
-  String get anaphylaxis_danger_signs;
-
-  /// Epinephrine protocol content
-  ///
-  /// In en, this message translates to:
-  /// **'• Epinephrine 1:1000 (1mg/mL)\n• Dose: 0.3-0.5mg IM (0.3-0.5mL)\n• Site: Outer thigh muscle (vastus lateralis)\n• May repeat after 5-15 minutes if needed\n• If no response: IV Epinephrine'**
-  String get epinephrine_protocol;
-
-  /// Respiratory protocol content
-  ///
-  /// In en, this message translates to:
-  /// **'• High-flow oxygen via mask (15L/min)\n• Position patient semi-upright\n• Prepare for intubation if laryngeal edema\n• Bronchodilator: Salbutamol nebulizer'**
-  String get respiratory_protocol;
-
-  /// Circulatory protocol content
-  ///
-  /// In en, this message translates to:
-  /// **'• Large IV access (16-18G) x2\n• Normal saline 1-2L rapid\n• Monitor: ECG, BP, SpO2\n• If hypotension: Dopamine/Norepinephrine'**
-  String get circulatory_protocol;
 
   /// H1 antihistamine medication
   ///
@@ -1586,41 +1478,11 @@ abstract class AppLocalizations {
   /// **'Salbutamol 2.5-5mg nebulizer\nMay repeat every 20 minutes'**
   String get bronchodilator_dose;
 
-  /// Anaphylaxis monitoring section
-  ///
-  /// In en, this message translates to:
-  /// **'📊 Monitoring'**
-  String get anaphylaxis_monitoring;
-
-  /// Monitoring content
-  ///
-  /// In en, this message translates to:
-  /// **'• Vital signs every 5-15 minutes\n• Continuous SpO2\n• ECG monitoring\n• Urine output (target >0.5mL/kg/h)\n• Level of consciousness'**
-  String get monitoring_content;
-
   /// Observation time
   ///
   /// In en, this message translates to:
   /// **'Observation time'**
   String get observation_time;
-
-  /// Observation content
-  ///
-  /// In en, this message translates to:
-  /// **'• Mild reaction: 4-6 hours\n• Severe reaction: 12-24 hours\n• Watch for biphasic reaction (4-12h later)\n• Discharge when stable >2h'**
-  String get observation_content;
-
-  /// Refractory anaphylaxis
-  ///
-  /// In en, this message translates to:
-  /// **'Refractory anaphylaxis'**
-  String get refractory_anaphylaxis;
-
-  /// Refractory anaphylaxis content
-  ///
-  /// In en, this message translates to:
-  /// **'• Continuous IV epinephrine 0.05-0.1 mcg/kg/min\n• Glucagon 1-5mg IV (if on beta-blockers)\n• Vasopressin 40 units IV\n• Consider ECMO if cardiac arrest'**
-  String get refractory_content;
 
   /// Beta blocker case
   ///
@@ -1628,23 +1490,11 @@ abstract class AppLocalizations {
   /// **'Patients on beta-blockers'**
   String get beta_blocker_case;
 
-  /// Beta blocker case content
-  ///
-  /// In en, this message translates to:
-  /// **'• May be resistant to epinephrine\n• Glucagon 1-5mg IV bolus\n• Followed by infusion 5-15 mcg/min\n• Atropine if bradycardia'**
-  String get beta_blocker_content;
-
   /// Pregnancy case
   ///
   /// In en, this message translates to:
   /// **'Pregnant women'**
   String get pregnancy_case;
-
-  /// Pregnancy case content
-  ///
-  /// In en, this message translates to:
-  /// **'• Epinephrine remains first-line therapy\n• Left lateral position to avoid compression\n• Fetal monitoring if >20 weeks\n• Prepare for emergency cesarean section'**
-  String get pregnancy_content;
 
   /// Discharge medications
   ///
@@ -1652,83 +1502,17 @@ abstract class AppLocalizations {
   /// **'Discharge medications'**
   String get discharge_medications;
 
-  /// Discharge medications content
-  ///
-  /// In en, this message translates to:
-  /// **'• EpiPen auto-injector with training\n• Antihistamine: Cetirizine 10mg daily\n• Prednisolone 1mg/kg/day x 3-5 days\n• Bronchodilator if asthma present'**
-  String get discharge_meds_content;
-
   /// Patient education
   ///
   /// In en, this message translates to:
   /// **'Patient education'**
   String get patient_education;
 
-  /// Patient education content
-  ///
-  /// In en, this message translates to:
-  /// **'• Identify and avoid allergen triggers\n• Always carry EpiPen\n• Proper EpiPen usage technique\n• When to seek emergency care\n• Wear allergy alert bracelet/card'**
-  String get education_content;
-
   /// Follow-up section
   ///
   /// In en, this message translates to:
   /// **'Follow-up'**
   String get followup;
-
-  /// Follow-up content
-  ///
-  /// In en, this message translates to:
-  /// **'• Follow-up in 1-2 weeks\n• Refer to allergist/immunologist\n• Consider allergy testing\n• Desensitization if indicated'**
-  String get followup_content;
-
-  /// Algorithm suspect anaphylaxis
-  ///
-  /// In en, this message translates to:
-  /// **'Suspect anaphylaxis'**
-  String get algorithm_suspect;
-
-  /// Algorithm epinephrine
-  ///
-  /// In en, this message translates to:
-  /// **'Immediate IM epinephrine'**
-  String get algorithm_epinephrine;
-
-  /// Algorithm ABC
-  ///
-  /// In en, this message translates to:
-  /// **'ABC + Oxygen + IV access'**
-  String get algorithm_abc;
-
-  /// Algorithm good response
-  ///
-  /// In en, this message translates to:
-  /// **'Good response?'**
-  String get algorithm_response;
-
-  /// Algorithm yes
-  ///
-  /// In en, this message translates to:
-  /// **'Yes'**
-  String get algorithm_yes;
-
-  /// Algorithm no
-  ///
-  /// In en, this message translates to:
-  /// **'No'**
-  String get algorithm_no;
-
-  /// Algorithm supportive care
-  ///
-  /// In en, this message translates to:
-  /// **'Adjuvant medications + Monitoring'**
-  String get algorithm_supportive;
-
-  /// Algorithm repeat epinephrine
-  ///
-  /// In en, this message translates to:
-  /// **'Repeat epinephrine\nConsider IV infusion'**
-  String get algorithm_repeat;
 
   /// Myocardial infarction protocol title
   ///
@@ -1747,12 +1531,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Critical Care'**
   String get critical_care;
-
-  /// Patient monitoring
-  ///
-  /// In en, this message translates to:
-  /// **'Patient Monitoring'**
-  String get patient_monitoring;
 
   /// Medical calculation
   ///
@@ -1892,29 +1670,11 @@ abstract class AppLocalizations {
   /// **'Negative'**
   String get negative;
 
-  /// Medical disclaimer text for healthcare professionals
-  ///
-  /// In en, this message translates to:
-  /// **'FOR HEALTHCARE PROFESSIONALS ONLY\nReference tool - Not a substitute for clinical judgment'**
-  String get medical_disclaimer;
-
   /// Medical references page title
   ///
   /// In en, this message translates to:
   /// **'Medical References & Citations'**
   String get medical_references_title;
-
-  /// Medical disclaimer section title
-  ///
-  /// In en, this message translates to:
-  /// **'Medical Disclaimer'**
-  String get medical_disclaimer_title;
-
-  /// Detailed medical disclaimer content
-  ///
-  /// In en, this message translates to:
-  /// **'Dr Bèo is intended for educational and reference purposes only for qualified healthcare professionals. This app should NOT replace clinical judgment, institutional protocols, or professional medical training. All medical information is based on established clinical guidelines and literature as cited below.'**
-  String get medical_disclaimer_content;
 
   /// Medical literature
   ///
@@ -2263,12 +2023,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'None'**
   String get none;
-
-  /// Chronic health with non-surgical or emergency surgery
-  ///
-  /// In en, this message translates to:
-  /// **'Has (non-surgical or emergency surgery)'**
-  String get has_non_surgical_or_emergency;
 
   /// Chronic health with elective surgery
   ///
@@ -2701,12 +2455,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Quick SOFA for Sepsis Screening'**
   String get qsofa_description;
-
-  /// Low risk recommendation
-  ///
-  /// In en, this message translates to:
-  /// **'Routine monitoring, no special intervention needed'**
-  String get routine_monitoring;
 
   /// High risk recommendation
   ///
@@ -3284,12 +3032,6 @@ abstract class AppLocalizations {
   /// **'Clinical Information'**
   String get clinical_information;
 
-  /// qSOFA clinical information content
-  ///
-  /// In en, this message translates to:
-  /// **'qSOFA (Quick SOFA) is a simple and rapid sepsis screening tool\n\nAdvantages:\n• Simple, no laboratory tests required\n• Quick bedside implementation\n• Early sepsis recognition\n• Activates treatment protocols\n\nLimitations:\n• Lower sensitivity than full SOFA\n• Does not replace clinical assessment\n• May miss early sepsis\n• Must be combined with infection suspicion\n\nSepsis 3.0 Definition:\n• Sepsis = Infection + qSOFA ≥2\n• Septic shock = Sepsis + vasopressor + lactate >2\n• Treatment within \"Golden Hour\"\n\nImportant notes:\n• qSOFA does not diagnose sepsis\n• Only a screening tool\n• Requires comprehensive clinical assessment\n• Continuous monitoring needed'**
-  String get qsofa_clinical_content;
-
   /// qSOFA respiratory rate criterion
   ///
   /// In en, this message translates to:
@@ -3337,12 +3079,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'High risk'**
   String get qsofa_high_risk;
-
-  /// qSOFA low risk management
-  ///
-  /// In en, this message translates to:
-  /// **'Routine monitoring'**
-  String get qsofa_routine_monitoring;
 
   /// qSOFA high risk management
   ///
@@ -4580,12 +4316,6 @@ abstract class AppLocalizations {
   /// **'Clinical Information'**
   String get grace_clinical_info_title;
 
-  /// GRACE clinical information content
-  ///
-  /// In en, this message translates to:
-  /// **'GRACE Score assesses mortality risk in patients with acute coronary syndrome (ACS)\\n\\nClinical applications:\\n• Risk stratification and treatment strategy selection\\n• Decide early intervention vs conservative treatment\\n• Prognosis counseling for patients and families\\n• Assessment of referral indications\\n\\nIntervention strategy by timing:\\n• Low risk (≤108): Intervention within 72h - PCI can be delayed\\n• Moderate risk (109-140): Intervention within 24-72h - Selective PCI\\n• High risk (141-200): Intervention within 24h - Early PCI recommended\\n• Very high risk (>200): Emergency intervention within 2h - Emergency PCI\\n\\nNotes:\\n• Higher score indicates greater mortality risk\\n• Must combine with overall clinical assessment\\n• Regular monitoring and reassessment\\n• Applies to both STEMI and NSTEMI/UA'**
-  String get grace_clinical_info_content;
-
   /// GRACE detailed timing section title
   ///
   /// In en, this message translates to:
@@ -4747,12 +4477,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'High priority transplant'**
   String get high_priority_transplant;
-
-  /// Weekly monitoring guideline
-  ///
-  /// In en, this message translates to:
-  /// **'Weekly monitoring'**
-  String get weekly_monitoring;
 
   /// Living donor transplant guideline
   ///
@@ -6050,107 +5774,11 @@ abstract class AppLocalizations {
   /// **'Notify doctor, increase monitoring, consider transfer'**
   String get pews_action_notify_doctor;
 
-  /// PEWS action for high scores
-  ///
-  /// In en, this message translates to:
-  /// **'Call pediatric emergency team immediately, prepare ICU transfer'**
-  String get pews_action_emergency_team;
-
   /// PEWS consciousness level section header
   ///
   /// In en, this message translates to:
   /// **'Consciousness Level'**
   String get pews_consciousness_title;
-
-  /// PEWS routine care protocol title
-  ///
-  /// In en, this message translates to:
-  /// **'PEWS 0-3: Routine Care'**
-  String get pews_protocol_routine_title;
-
-  /// PEWS increased monitoring protocol title
-  ///
-  /// In en, this message translates to:
-  /// **'PEWS 4-6: Increased Monitoring'**
-  String get pews_protocol_increased_title;
-
-  /// PEWS urgent intervention protocol title
-  ///
-  /// In en, this message translates to:
-  /// **'PEWS ≥7: Urgent Intervention'**
-  String get pews_protocol_urgent_title;
-
-  /// PEWS routine care protocol step 1
-  ///
-  /// In en, this message translates to:
-  /// **'Monitor vital signs every 4-6 hours'**
-  String get pews_protocol_routine_1;
-
-  /// PEWS routine care protocol step 2
-  ///
-  /// In en, this message translates to:
-  /// **'Record PEWS score'**
-  String get pews_protocol_routine_2;
-
-  /// PEWS routine care protocol step 3
-  ///
-  /// In en, this message translates to:
-  /// **'Continue treatment plan'**
-  String get pews_protocol_routine_3;
-
-  /// PEWS routine care protocol step 4
-  ///
-  /// In en, this message translates to:
-  /// **'Reassess if condition changes'**
-  String get pews_protocol_routine_4;
-
-  /// PEWS increased monitoring protocol step 1
-  ///
-  /// In en, this message translates to:
-  /// **'Notify attending physician'**
-  String get pews_protocol_increased_1;
-
-  /// PEWS increased monitoring protocol step 2
-  ///
-  /// In en, this message translates to:
-  /// **'Monitor vital signs every 1-2 hours'**
-  String get pews_protocol_increased_2;
-
-  /// PEWS increased monitoring protocol step 3
-  ///
-  /// In en, this message translates to:
-  /// **'Review underlying cause'**
-  String get pews_protocol_increased_3;
-
-  /// PEWS increased monitoring protocol step 4
-  ///
-  /// In en, this message translates to:
-  /// **'Consider pediatric consultation'**
-  String get pews_protocol_increased_4;
-
-  /// PEWS urgent intervention protocol step 1
-  ///
-  /// In en, this message translates to:
-  /// **'Call pediatric emergency team immediately'**
-  String get pews_protocol_urgent_1;
-
-  /// PEWS urgent intervention protocol step 2
-  ///
-  /// In en, this message translates to:
-  /// **'Continuous monitoring'**
-  String get pews_protocol_urgent_2;
-
-  /// PEWS urgent intervention protocol step 3
-  ///
-  /// In en, this message translates to:
-  /// **'Prepare for PICU transfer'**
-  String get pews_protocol_urgent_3;
-
-  /// PEWS urgent intervention protocol step 4
-  ///
-  /// In en, this message translates to:
-  /// **'ABC assessment'**
-  String get pews_protocol_urgent_4;
 
   /// PEWS clinical information section title
   ///
@@ -6175,12 +5803,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Monaghan A. Detecting and managing deterioration in children. Paediatr Nurs. 2005;17(1):32-5.\n\nPearson GA, et al. Should paediatric early warning scores be used in all pediatric wards? Arch Dis Child. 2017;102(1):4-6.\n\nLambert V, et al. The Paediatric Early Warning System (PEWS): where we are now and where we need to go. Clin Risk. 2017;23(1):12-19.'**
   String get pews_references_text;
-
-  /// PEWS response protocol section title
-  ///
-  /// In en, this message translates to:
-  /// **'Response Protocol'**
-  String get pews_response_protocol_title;
 
   /// PEWS low risk interpretation
   ///
@@ -6229,12 +5851,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Notify physician'**
   String get pews_interp_notify_physician;
-
-  /// PEWS emergency team action
-  ///
-  /// In en, this message translates to:
-  /// **'Pediatric emergency team'**
-  String get pews_interp_emergency_team;
 
   /// PEWS risk stratification section title
   ///
@@ -7124,12 +6740,6 @@ abstract class AppLocalizations {
   /// **'Clinical Information'**
   String get crusade_clinical_info;
 
-  /// CRUSADE clinical information content
-  ///
-  /// In en, this message translates to:
-  /// **'CRUSADE Score assesses bleeding risk in acute coronary syndrome\n\nClinical applications:\n• Selection of invasive vs conservative strategy\n• Decision on GPIIb/IIIa inhibitor use\n• Consideration of dual antiplatelet therapy\n• Optimization of anticoagulation dosing\n\nKey factors:\n• Hematocrit: reflects anemia\n• Creatinine: kidney function\n• Heart rate: severity of illness\n• Female gender: higher risk\n• Diabetes mellitus: vascular complications\n• Prior vascular disease: high risk\n\nImportant notes:\n• Do not exclude treatment when score is high\n• Balance ischemic vs bleeding risk\n• May adjust medication dosing\n• Monitor high-risk patients closely\n• Reassess when condition changes'**
-  String get crusade_clinical_info_content;
-
   /// HAS-BLED score page title
   ///
   /// In en, this message translates to:
@@ -7369,12 +6979,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Clinical Information'**
   String get has_bled_clinical_info;
-
-  /// HAS-BLED clinical information content
-  ///
-  /// In en, this message translates to:
-  /// **'HAS-BLED Score assesses bleeding risk when using anticoagulation\n\nClinical applications:\n• Assess bleeding risk before starting anticoagulation\n• Balance benefit/risk in treatment\n• Determine dosage and monitoring frequency\n• Patient counseling about risks\n\nFactor explanations:\n• H (Hypertension): Systolic BP >160 mmHg\n• A (Abnormal): Cr >2.26 mg/dL or dialysis\n• S (Stroke): History of stroke regardless of cause\n• B (Bleeding): History of major bleeding\n• L (Labile): Unstable INR, TTR <60%\n• E (Elderly): Age >65\n• D (Drugs): NSAID, aspirin, corticosteroids\n\nImportant notes:\n• High score does not mean contraindication to anticoagulation\n• Must consider with thromboembolism risk\n• Risk factors can be modified\n• Monitor closely if high score'**
-  String get has_bled_clinical_info_content;
 
   /// HAS-BLED references section title
   ///
@@ -8426,12 +8030,6 @@ abstract class AppLocalizations {
   /// **'Priority - within 24h'**
   String get abcd2_urgency_priority;
 
-  /// Emergency urgency level
-  ///
-  /// In en, this message translates to:
-  /// **'Emergency - immediate'**
-  String get abcd2_urgency_emergency;
-
   /// Low risk recommendation
   ///
   /// In en, this message translates to:
@@ -8960,72 +8558,6 @@ abstract class AppLocalizations {
   /// **'Transfer to EVT center'**
   String get race_action_evt;
 
-  /// Emergency protocol section title
-  ///
-  /// In en, this message translates to:
-  /// **'Emergency LVO Protocol'**
-  String get race_emergency_protocol;
-
-  /// Stroke code activation step
-  ///
-  /// In en, this message translates to:
-  /// **'1. Activate stroke code'**
-  String get race_protocol_stroke_code;
-
-  /// Stroke code description
-  ///
-  /// In en, this message translates to:
-  /// **'Notify stroke team immediately'**
-  String get race_protocol_stroke_code_desc;
-
-  /// CT/CTA step
-  ///
-  /// In en, this message translates to:
-  /// **'2. Emergency CT/CTA'**
-  String get race_protocol_ct_cta;
-
-  /// CT/CTA description
-  ///
-  /// In en, this message translates to:
-  /// **'CT and CTA within 20 minutes'**
-  String get race_protocol_ct_cta_desc;
-
-  /// Transfer step
-  ///
-  /// In en, this message translates to:
-  /// **'3. Transfer to EVT center'**
-  String get race_protocol_transfer;
-
-  /// Transfer description
-  ///
-  /// In en, this message translates to:
-  /// **'Contact cerebrovascular intervention center'**
-  String get race_protocol_transfer_desc;
-
-  /// tPA step
-  ///
-  /// In en, this message translates to:
-  /// **'4. IV tPA (if eligible)'**
-  String get race_protocol_tpa;
-
-  /// tPA description
-  ///
-  /// In en, this message translates to:
-  /// **'Intravenous thrombolysis before transfer'**
-  String get race_protocol_tpa_desc;
-
-  /// Time target step
-  ///
-  /// In en, this message translates to:
-  /// **'5. Door-to-groin <90 min'**
-  String get race_protocol_time;
-
-  /// Time target description
-  ///
-  /// In en, this message translates to:
-  /// **'Target from hospital arrival to EVT'**
-  String get race_protocol_time_desc;
-
   /// Clinical information section title
   ///
   /// In en, this message translates to:
@@ -9344,12 +8876,6 @@ abstract class AppLocalizations {
   /// **'Discuss with family'**
   String get aspect_discuss_family;
 
-  /// Close monitoring
-  ///
-  /// In en, this message translates to:
-  /// **'Close monitoring'**
-  String get aspect_close_monitoring;
-
   /// High complication risk
   ///
   /// In en, this message translates to:
@@ -9584,12 +9110,6 @@ abstract class AppLocalizations {
   /// **'Clinical Information'**
   String get curb65_clinical_information;
 
-  /// CURB-65 clinical information detailed text
-  ///
-  /// In en, this message translates to:
-  /// **'CURB-65 Score assesses severity of community-acquired pneumonia\n\nCURB-65 criteria:\n• C (Confusion): Mental confusion or disorientation\n• U (Urea): Blood urea nitrogen >19 mg/dL (6.8 mmol/L)\n• R (Respiratory rate): ≥30 breaths per minute\n• B (Blood pressure): Systolic BP <90 mmHg\n• 65 (Age): Age ≥65 years\n\nClinical applications:\n• Treatment location decision (outpatient vs inpatient)\n• ICU admission consideration\n• Risk stratification for pneumonia patients\n• Prognosis assessment\n\nScore interpretation:\n• 0-1: Low risk, outpatient treatment possible\n• 2: Moderate risk, consider hospitalization\n• 3-5: High risk, hospitalization required\n• ≥4: Consider ICU admission\n\nImportant notes:\n• Must combine with clinical assessment\n• Consider comorbidities and social factors\n• Reevaluate if patient condition changes\n• Validated for community-acquired pneumonia'**
-  String get curb65_clinical_info_content;
-
   /// CURB-65 risk stratification section title
   ///
   /// In en, this message translates to:
@@ -9709,12 +9229,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Discuss with family'**
   String get aspect_guideline_medium_discuss_family;
-
-  /// Close monitoring text
-  ///
-  /// In en, this message translates to:
-  /// **'Close monitoring required'**
-  String get aspect_guideline_medium_close_monitoring;
 
   /// Low ASPECT score guideline title
   ///
@@ -10490,12 +10004,6 @@ abstract class AppLocalizations {
   /// **'ICU Consideration Criteria'**
   String get psi_icu_criteria_title;
 
-  /// PSI ICU criteria content
-  ///
-  /// In en, this message translates to:
-  /// **'• PSI Class IV-V: Requires close monitoring, consider ICU\n• Additional high-risk factors:\n  - Respiratory failure (PaO₂ < 60 mmHg)\n  - Altered mental status\n  - Hypotension (SBP < 90 mmHg)\n  - Multiple severe comorbidities\n  - Advanced age + severe symptoms\n• Class V (>130 points): ICU recommended due to high mortality (>27%)'**
-  String get psi_icu_criteria_content;
-
   /// PSI ICU recommendation
   ///
   /// In en, this message translates to:
@@ -10825,12 +10333,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Standard perioperative management'**
   String get rcri_management_standard;
-
-  /// RCRI monitoring management
-  ///
-  /// In en, this message translates to:
-  /// **'Cardiac monitoring during surgery'**
-  String get rcri_management_monitoring;
 
   /// RCRI intensive management
   ///
@@ -11810,18 +11312,6 @@ abstract class AppLocalizations {
   /// **'Major vascular surgery, major emergency'**
   String get preop_mortality_surgery_high_desc;
 
-  /// Emergency surgery label
-  ///
-  /// In en, this message translates to:
-  /// **'Emergency surgery'**
-  String get preop_mortality_emergency;
-
-  /// Emergency surgery description
-  ///
-  /// In en, this message translates to:
-  /// **'Surgery within 24 hours'**
-  String get preop_mortality_emergency_desc;
-
   /// Comorbidities section title
   ///
   /// In en, this message translates to:
@@ -12386,48 +11876,6 @@ abstract class AppLocalizations {
   /// **'Levey AS, Bosch JP, Lewis JB, et al. A more accurate method to estimate glomerular filtration rate from serum creatinine: a new prediction equation. Modification of Diet in Renal Disease Study Group. Ann Intern Med. 1999;130(6):461-70.'**
   String get mdrd_gfr_reference_text;
 
-  /// Medical disclaimer professional title
-  ///
-  /// In en, this message translates to:
-  /// **'FOR HEALTHCARE PROFESSIONALS ONLY'**
-  String get medical_disclaimer_professional_only;
-
-  /// Home page medical disclaimer
-  ///
-  /// In en, this message translates to:
-  /// **'This application is intended exclusively for licensed healthcare professionals. All medical information is provided for reference purposes only and should not replace clinical judgment, institutional protocols, or direct patient care.'**
-  String get medical_disclaimer_home_text;
-
-  /// GRACE score medical disclaimer
-  ///
-  /// In en, this message translates to:
-  /// **'Clinical decision support tool. Always use clinical judgment and follow institutional protocols.'**
-  String get medical_disclaimer_grace_text;
-
-  /// SOFA score medical disclaimer
-  ///
-  /// In en, this message translates to:
-  /// **'ICU assessment tool. Requires clinical correlation with patient status.'**
-  String get medical_disclaimer_sofa_text;
-
-  /// qSOFA score medical disclaimer
-  ///
-  /// In en, this message translates to:
-  /// **'Sepsis screening tool. Does not replace clinical assessment and laboratory evaluation.'**
-  String get medical_disclaimer_qsofa_text;
-
-  /// NIHSS score medical disclaimer
-  ///
-  /// In en, this message translates to:
-  /// **'Stroke assessment tool. Requires neurological examination and clinical correlation.'**
-  String get medical_disclaimer_nihss_text;
-
-  /// MDRD GFR medical disclaimer
-  ///
-  /// In en, this message translates to:
-  /// **'Kidney function estimation. Consider clinical context and confirm with additional tests.'**
-  String get medical_disclaimer_mdrd_text;
-
   /// CAM-ICU assessment tool title
   ///
   /// In en, this message translates to:
@@ -12463,12 +11911,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'4-Feature CAM-ICU Assessment'**
   String get cam_icu_assessment_title;
-
-  /// CAM-ICU medical disclaimer text
-  ///
-  /// In en, this message translates to:
-  /// **'Delirium screening tool for ICU. Always combine with comprehensive clinical assessment and does not replace specialist physician diagnosis.'**
-  String get medical_disclaimer_cam_icu_text;
 
   /// CAM-ICU reference title
   ///
@@ -12560,23 +12002,11 @@ abstract class AppLocalizations {
   /// **'Interpretation'**
   String get cam_icu_interpretation_label;
 
-  /// CAM-ICU algorithm explanation
-  ///
-  /// In en, this message translates to:
-  /// **'CAM-ICU positive if Feature 1 AND 2 AND (3 OR 4)'**
-  String get cam_icu_algorithm_explanation;
-
   /// Yes button text
   ///
   /// In en, this message translates to:
   /// **'Yes'**
   String get yes;
-
-  /// RASS medical disclaimer text
-  ///
-  /// In en, this message translates to:
-  /// **'Sedation and agitation assessment tool for ICU. Always combine with clinical assessment and does not replace physician treatment decisions.'**
-  String get medical_disclaimer_rass_text;
 
   /// RASS +4 interpretation
   ///
@@ -12823,12 +12253,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Clinical Information'**
   String get cam_icu_clinical_info_title;
-
-  /// CAM-ICU clinical information content
-  ///
-  /// In en, this message translates to:
-  /// **'CAM-ICU is a validated tool for delirium assessment in ICU patients\\n\\nDelirium characteristics:\\n• Acute onset and fluctuating course\\n• Inattention and cognitive dysfunction\\n• Altered level of consciousness\\n• Disorganized thinking\\n\\nImportance of early detection:\\n• Delirium increases morbidity and mortality\\n• Prolongs ICU and hospital stay\\n• Associated with long-term cognitive impairment\\n• Early intervention improves outcomes\\n\\nClinical management:\\n• Identify and treat underlying causes\\n• Non-pharmacological interventions first\\n• Avoid sedatives when possible\\n• Early mobilization and sleep hygiene\\n• Family involvement in care\\n\\nNote: Requires RASS assessment first. Cannot assess if patient deeply sedated (RASS -4 or -5).'**
-  String get cam_icu_clinical_info_content;
 
   /// CAM-ICU cannot assess message
   ///
@@ -13088,12 +12512,6 @@ abstract class AppLocalizations {
   /// **'Clinical Information'**
   String get rass_clinical_info_title;
 
-  /// RASS clinical information content
-  ///
-  /// In en, this message translates to:
-  /// **'RASS is a validated scale for assessing sedation and agitation in ICU patients\\n\\nClinical benefits:\\n• Standardized sedation assessment\\n• Improved communication between staff\\n• Guides sedation titration\\n• Reduces over-sedation complications\\n• Supports early mobilization\\n\\nSedation best practices:\\n• Target light sedation (RASS -2 to 0)\\n• Daily sedation interruption\\n• Spontaneous awakening trials\\n• Early mobilization protocols\\n• Pain assessment first\\n\\nComplications of deep sedation:\\n• Prolonged mechanical ventilation\\n• ICU delirium\\n• Muscle weakness\\n• Increased mortality\\n• Longer ICU stay\\n\\nImportant notes:\\n• Assess every 4-8 hours or after medication changes\\n• Consider CAM-ICU assessment if RASS ≥ -3\\n• Document trends over time'**
-  String get rass_clinical_info_content;
-
   /// RASS references section title
   ///
   /// In en, this message translates to:
@@ -13117,24 +12535,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Changing the language will restart the app to apply the new language settings. All medical terms and protocols will be translated accordingly.'**
   String get language_change_description;
-
-  /// Acute ischemic stroke title
-  ///
-  /// In en, this message translates to:
-  /// **'Acute Ischemic Stroke'**
-  String get acute_stroke_title;
-
-  /// Acute ischemic stroke subtitle
-  ///
-  /// In en, this message translates to:
-  /// **'Time is Brain'**
-  String get acute_stroke_subtitle;
-
-  /// Stroke emergency algorithm title
-  ///
-  /// In en, this message translates to:
-  /// **'🚨 EMERGENCY TREATMENT ALGORITHM'**
-  String get stroke_emergency_algorithm;
 
   /// Stroke recognition step
   ///
@@ -13310,24 +12710,6 @@ abstract class AppLocalizations {
   /// **'💉 Establish IV access (2 lines if possible)'**
   String get iv_access;
 
-  /// Contraindications check title
-  ///
-  /// In en, this message translates to:
-  /// **'CONTRAINDICATIONS CHECK'**
-  String get contraindications_check;
-
-  /// Absolute contraindications title
-  ///
-  /// In en, this message translates to:
-  /// **'🚫 ABSOLUTE CONTRAINDICATIONS for IV tPA:'**
-  String get absolute_contraindications;
-
-  /// Relative contraindications title
-  ///
-  /// In en, this message translates to:
-  /// **'⚠️ RELATIVE CONTRAINDICATIONS:'**
-  String get relative_contraindications;
-
   /// Imaging diagnosis title
   ///
   /// In en, this message translates to:
@@ -13357,12 +12739,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'REPERFUSION THERAPY'**
   String get reperfusion_therapy;
-
-  /// IV alteplase title
-  ///
-  /// In en, this message translates to:
-  /// **'IV ALTEPLASE (tPA)'**
-  String get iv_alteplase;
 
   /// Endovascular therapy title
   ///
@@ -13436,90 +12812,6 @@ abstract class AppLocalizations {
   /// **'💭 CLINICAL DISCUSSION'**
   String get clinical_discussion;
 
-  /// Stroke references title
-  ///
-  /// In en, this message translates to:
-  /// **'📚 REFERENCES'**
-  String get stroke_references;
-
-  /// Stroke references note
-  ///
-  /// In en, this message translates to:
-  /// **'References based on international guidelines and recognized clinical studies in acute stroke treatment.'**
-  String get stroke_references_note;
-
-  /// Stroke medical disclaimer
-  ///
-  /// In en, this message translates to:
-  /// **'This information is for reference only and does not replace professional clinical assessment. All treatment decisions must be based on individual case evaluation and guidance from qualified physicians. In stroke emergencies, time is critical.'**
-  String get stroke_medical_disclaimer;
-
-  /// Anaphylaxis medical disclaimer
-  ///
-  /// In en, this message translates to:
-  /// **'This anaphylaxis protocol is for reference only and does not replace professional clinical assessment. All treatment decisions must be based on individual patient evaluation and guidance from qualified physicians. In anaphylactic emergencies, immediate action with epinephrine is life-saving.'**
-  String get anaphylaxis_medical_disclaimer;
-
-  /// Hypertensive crisis medical disclaimer
-  ///
-  /// In en, this message translates to:
-  /// **'This hypertensive crisis protocol is for reference only and does not replace professional clinical assessment. All treatment decisions must be based on individual patient evaluation and guidance from qualified physicians. Blood pressure management requires careful monitoring and individualized approach.'**
-  String get hypertensive_crisis_medical_disclaimer;
-
-  /// Hypoglycemia medical disclaimer
-  ///
-  /// In en, this message translates to:
-  /// **'This hypoglycemia protocol is for reference only and does not replace professional clinical assessment. All treatment decisions must be based on individual patient evaluation and guidance from qualified physicians. Severe hypoglycemia requires immediate glucose correction.'**
-  String get hypoglycemia_medical_disclaimer;
-
-  /// Hyperglycemic medical disclaimer
-  ///
-  /// In en, this message translates to:
-  /// **'This hyperglycemic emergency protocol is for reference only and does not replace professional clinical assessment. All treatment decisions must be based on individual patient evaluation and guidance from qualified physicians. Diabetic emergencies require careful fluid and electrolyte management.'**
-  String get hyperglycemic_medical_disclaimer;
-
-  /// Absolute contraindications content
-  ///
-  /// In en, this message translates to:
-  /// **'• Intracranial hemorrhage on CT/MRI\n• Symptom onset >4.5h (or unknown)\n• Stroke or head trauma within 3 months\n• History of intracranial hemorrhage\n• Suspected subarachnoid hemorrhage\n• Major surgery within 14 days\n• Severe head trauma within 3 months\n• Rapidly improving symptoms\n• Minor and isolated symptoms'**
-  String get absolute_contraindications_content;
-
-  /// Relative contraindications content
-  ///
-  /// In en, this message translates to:
-  /// **'• SBP >185 or DBP >110 mmHg\n• Blood glucose <50mg/dL or >400mg/dL\n• Platelets <100,000/μL\n• INR >1.7 or PT >15 seconds\n• Heparin use within 48h + elevated aPTT\n• DOAC use within 48h'**
-  String get relative_contraindications_content;
-
-  /// CT plain content
-  ///
-  /// In en, this message translates to:
-  /// **'• TARGET: <25 minutes from arrival\n• Rule out intracranial hemorrhage\n• Assess early ischemic signs\n• ASPECTS Score if >6h'**
-  String get ct_plain_content;
-
-  /// CTA content
-  ///
-  /// In en, this message translates to:
-  /// **'• Identify large vessel occlusion site\n• Assess collateral circulation\n• Mandatory if >6h or suspected LVO\n• Guide EVT decision'**
-  String get cta_content;
-
-  /// CT perfusion content
-  ///
-  /// In en, this message translates to:
-  /// **'• Assess penumbra\n• Core infarct vs tissue at risk\n• EVT decision in 6-24h window\n• Mismatch ratio >1.8'**
-  String get ct_perfusion_content;
-
-  /// Alteplase protocol
-  ///
-  /// In en, this message translates to:
-  /// **'• Dose: 0.9 mg/kg (max 90mg)\n• 10% of dose as bolus over 1 minute\n• Remaining 90% infused over 60 minutes\n• Monitor NIHSS every 15 minutes\n• No aspirin for 24 hours'**
-  String get alteplase_protocol;
-
-  /// EVT protocol
-  ///
-  /// In en, this message translates to:
-  /// **'• Indication: LVO with ASPECTS ≥6\n• Time window: <6h (or <24h conditionally)\n• Technique: Stent retriever or aspiration\n• Target: TICI 2b-3 recanalization\n• May combine with IV tPA'**
-  String get evt_protocol;
-
   /// Blood pressure management
   ///
   /// In en, this message translates to:
@@ -13537,18 +12829,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'• Target: <37.5°C\n• Treat fever aggressively\n• Avoid excessive hypothermia'**
   String get temperature_management;
-
-  /// 24-hour monitoring content
-  ///
-  /// In en, this message translates to:
-  /// **'• NIHSS every 15 min x 2h, then every 30 min x 6h\n• Vital signs every 15 min x 2h\n• Neuro checks every hour\n• Brain CT at 24h (or immediately if deterioration)\n• Monitor in Stroke Unit if available'**
-  String get monitoring_24h_content;
-
-  /// Warning signs content
-  ///
-  /// In en, this message translates to:
-  /// **'• NIHSS increase ≥4 points\n• Severe sudden headache\n• Nausea/vomiting\n• Sudden BP elevation\n• Decreased consciousness\n→ Emergency brain CT immediately!'**
-  String get warning_signs_content;
 
   /// Case 1 title
   ///
@@ -13640,23 +12920,11 @@ abstract class AppLocalizations {
   /// **'🔍 Analysis:\n• MRI DWI-FLAIR mismatch may help\n• If FLAIR negative → likely <4.5h\n• CTA to identify LVO for EVT\n• CT perfusion to assess mismatch\n\n💡 Current trend: Expanding time windows with imaging selection'**
   String get discussion_2_analysis;
 
-  /// Medical disclaimer note title
-  ///
-  /// In en, this message translates to:
-  /// **'MEDICAL DISCLAIMER'**
-  String get medical_disclaimer_note;
-
   /// Acute ischemic stroke protocol title
   ///
   /// In en, this message translates to:
   /// **'ACUTE ISCHEMIC STROKE PROTOCOL'**
   String get acute_ischemic_stroke_title;
-
-  /// Acute stroke description
-  ///
-  /// In en, this message translates to:
-  /// **'Emergency stroke management - Time is Brain'**
-  String get acute_stroke_description;
 
   /// Snake bite protocol title
   ///
@@ -13700,18 +12968,6 @@ abstract class AppLocalizations {
   /// **'Splint bitten limb below heart level'**
   String get immobilize_subtitle;
 
-  /// Call emergency services
-  ///
-  /// In en, this message translates to:
-  /// **'Call emergency services'**
-  String get call_emergency_services;
-
-  /// Emergency services subtitle
-  ///
-  /// In en, this message translates to:
-  /// **'Immediate transport to hospital'**
-  String get emergency_services_subtitle;
-
   /// Transport to hospital
   ///
   /// In en, this message translates to:
@@ -13730,41 +12986,17 @@ abstract class AppLocalizations {
   /// **'Snake identification'**
   String get snake_identification;
 
-  /// Snake identification content
-  ///
-  /// In en, this message translates to:
-  /// **'• Description of snake (size, color, pattern)\n• Photo if safe to take\n• Geographic location\n• Time of bite\n• Bring dead snake if available'**
-  String get snake_identification_content;
-
   /// Bite assessment
   ///
   /// In en, this message translates to:
   /// **'Bite assessment'**
   String get bite_assessment;
 
-  /// Bite assessment content
-  ///
-  /// In en, this message translates to:
-  /// **'• Location and depth of bite marks\n• Swelling, bruising, bleeding\n• Fang marks vs scratch marks\n• Local pain and numbness\n• Surrounding tissue changes'**
-  String get bite_assessment_content;
-
   /// Severity signs
   ///
   /// In en, this message translates to:
   /// **'Severity signs'**
   String get severity_signs;
-
-  /// Severity signs content
-  ///
-  /// In en, this message translates to:
-  /// **'• Systemic symptoms (nausea, vomiting)\n• Neurological signs (weakness, paralysis)\n• Respiratory distress\n• Cardiovascular instability\n• Coagulation disorders'**
-  String get severity_signs_content;
-
-  /// Treatment protocol
-  ///
-  /// In en, this message translates to:
-  /// **'Treatment protocol'**
-  String get treatment_protocol;
 
   /// First aid
   ///
@@ -13814,35 +13046,17 @@ abstract class AppLocalizations {
   /// **'Indications'**
   String get antivenom_indications;
 
-  /// Antivenom indications content
-  ///
-  /// In en, this message translates to:
-  /// **'• Systemic envenomation symptoms\n• Progressive local swelling\n• Coagulation abnormalities\n• Neurotoxic signs\n• Cardiovascular instability'**
-  String get antivenom_indications_content;
-
   /// Antivenom dosage
   ///
   /// In en, this message translates to:
   /// **'Dosage'**
   String get antivenom_dosage;
 
-  /// Antivenom dosage content
-  ///
-  /// In en, this message translates to:
-  /// **'• Initial: 4-6 vials IV\n• Severe cases: 8-10 vials\n• Pediatric: Same dose as adults\n• Repeat if no improvement in 1-2 hours\n• Maximum: No established limit'**
-  String get antivenom_dosage_content;
-
   /// Antivenom administration
   ///
   /// In en, this message translates to:
   /// **'Administration'**
   String get antivenom_administration;
-
-  /// Antivenom administration content
-  ///
-  /// In en, this message translates to:
-  /// **'• Dilute in 250-500mL normal saline\n• Start at 25-50mL/hr\n• Increase gradually if no reaction\n• Complete infusion in 1-2 hours\n• Monitor closely for allergic reactions'**
-  String get antivenom_administration_content;
 
   /// Complications management
   ///
@@ -13856,23 +13070,11 @@ abstract class AppLocalizations {
   /// **'Systemic envenomation'**
   String get systemic_envenomation;
 
-  /// Systemic envenomation content
-  ///
-  /// In en, this message translates to:
-  /// **'• Respiratory support if needed\n• Blood pressure management\n• Coagulation factor replacement\n• Renal function monitoring\n• Neurological assessment'**
-  String get systemic_envenomation_content;
-
   /// Local complications
   ///
   /// In en, this message translates to:
   /// **'Local complications'**
   String get local_complications;
-
-  /// Local complications content
-  ///
-  /// In en, this message translates to:
-  /// **'• Compartment syndrome assessment\n• Surgical debridement if necrosis\n• Secondary infection prevention\n• Physical therapy\n• Wound reconstruction'**
-  String get local_complications_content;
 
   /// Allergic reactions
   ///
@@ -13880,29 +13082,11 @@ abstract class AppLocalizations {
   /// **'Allergic reactions'**
   String get allergic_reactions;
 
-  /// Allergic reactions content
-  ///
-  /// In en, this message translates to:
-  /// **'• Stop antivenom immediately\n• Epinephrine 0.3-0.5mg IM\n• IV corticosteroids\n• H1 and H2 antihistamines\n• Resume antivenom if needed'**
-  String get allergic_reactions_content;
-
   /// Monitoring and follow-up
   ///
   /// In en, this message translates to:
   /// **'Monitoring and follow-up'**
   String get monitoring_followup;
-
-  /// Immediate monitoring
-  ///
-  /// In en, this message translates to:
-  /// **'Immediate monitoring'**
-  String get immediate_monitoring;
-
-  /// Immediate monitoring content
-  ///
-  /// In en, this message translates to:
-  /// **'• Vital signs every 15 minutes\n• Neurological assessment\n• Swelling progression marking\n• Coagulation studies\n• Urine output monitoring'**
-  String get immediate_monitoring_content;
 
   /// Discharge criteria
   ///
@@ -13910,71 +13094,11 @@ abstract class AppLocalizations {
   /// **'Discharge criteria'**
   String get discharge_criteria;
 
-  /// Discharge criteria content
-  ///
-  /// In en, this message translates to:
-  /// **'• No systemic symptoms for 8-12 hours\n• Stable vital signs\n• Normal coagulation studies\n• Minimal local progression\n• Adequate follow-up arranged'**
-  String get discharge_criteria_content;
-
-  /// Algorithm snake bite
-  ///
-  /// In en, this message translates to:
-  /// **'Snake bite suspected'**
-  String get algorithm_snake_bite;
-
-  /// Algorithm calm immobilize
-  ///
-  /// In en, this message translates to:
-  /// **'Calm patient + Immobilize limb'**
-  String get algorithm_calm_immobilize;
-
-  /// Algorithm assess severity
-  ///
-  /// In en, this message translates to:
-  /// **'Assess severity'**
-  String get algorithm_assess_severity;
-
-  /// Algorithm mild
-  ///
-  /// In en, this message translates to:
-  /// **'Mild'**
-  String get algorithm_mild;
-
-  /// Algorithm severe
-  ///
-  /// In en, this message translates to:
-  /// **'Severe'**
-  String get algorithm_severe;
-
-  /// Algorithm observation
-  ///
-  /// In en, this message translates to:
-  /// **'Observation + Supportive care'**
-  String get algorithm_observation;
-
-  /// Algorithm antivenom
-  ///
-  /// In en, this message translates to:
-  /// **'Antivenom + ICU monitoring'**
-  String get algorithm_antivenom;
-
-  /// Snake bite medical disclaimer
-  ///
-  /// In en, this message translates to:
-  /// **'This snake bite protocol is for reference only and does not replace professional clinical assessment. All treatment decisions must be based on individual patient evaluation and guidance from qualified physicians. Snake bite emergencies require immediate medical attention and antivenom therapy in a hospital environment with full emergency equipment.'**
-  String get snake_bite_medical_disclaimer;
-
   /// Vietnamese snakes identification title
   ///
   /// In en, this message translates to:
   /// **'🐍 Vietnamese Snake Identification'**
   String get vietnamese_snakes_title;
-
-  /// Vietnamese snakes identification content
-  ///
-  /// In en, this message translates to:
-  /// **'🇻🇳 COMMON VENOMOUS SNAKES:\n• Cobra (Naja kaouthia): Hood spread, neurotoxic venom\n• Krait (Bungarus): Black-white bands, neurotoxic venom\n• Green pit viper (Trimeresurus): Green color, cytotoxic venom\n• Russell\'s viper: Spiny scales, hemotoxic venom\n\n📝 DOCUMENTATION:\n• Time and location of bite\n• Description of snake appearance\n• Photo if safe to take\n• DO NOT catch or kill snake'**
-  String get vietnamese_snakes_content;
 
   /// Venom type signs title
   ///
@@ -13982,23 +13106,11 @@ abstract class AppLocalizations {
   /// **'⚠️ Severe signs by venom type'**
   String get venom_type_signs_title;
 
-  /// Venom type signs content
-  ///
-  /// In en, this message translates to:
-  /// **'🧠 NEUROTOXIC VENOM:\n• Cobra, krait: Eyelid ptosis, difficulty speaking\n• Progressive muscle weakness from top down\n• Respiratory difficulty, risk of respiratory arrest\n• Clear consciousness\n\n🩸 HEMOTOXIC VENOM:\n• Russell\'s viper: Uncontrollable bleeding\n• Mucosal hemorrhage\n• Hematuria\n• Hemorrhagic shock\n\n🔥 CYTOTOXIC VENOM:\n• Green pit viper: Severe local pain\n• Rapid spreading edema\n• Tissue necrosis, infection\n• Compartment syndrome'**
-  String get venom_type_signs_content;
-
   /// Antivenom types title
   ///
   /// In en, this message translates to:
   /// **'Types of antivenoms'**
   String get antivenom_types_title;
-
-  /// Antivenom types content
-  ///
-  /// In en, this message translates to:
-  /// **'🐍 MONOVALENT (single species):\n• Anti-Cobra (Naja): Against cobra venom\n• Anti-Krait (Bungarus): Against krait venom\n• Anti-Russell Viper: Against viper venom\n\n🐍 POLYVALENT (multiple species):\n• Queen Saovabha Memorial Institute (Thailand)\n• Vietnamese Polyvalent (Vietnam)\n• Regional Southeast Asian Polyvalent'**
-  String get antivenom_types_content;
 
   /// FAB Fragments title
   ///
@@ -14006,23 +13118,11 @@ abstract class AppLocalizations {
   /// **'🧬 FAB FRAGMENTS - Advanced Technology'**
   String get fab_fragments_title;
 
-  /// FAB Fragments content
-  ///
-  /// In en, this message translates to:
-  /// **'📚 DEFINITION:\n• FAB = Fragment Antigen Binding\n• Small fragment of antibody (contains only antigen-binding region)\n• Fc portion removed (Fragment crystallizable)\n• 50% smaller than whole antibody\n\n✅ SUPERIOR ADVANTAGES:\n• Faster tissue penetration due to small size\n• Less allergic reactions (anaphylaxis < 1%)\n• Can be used repeatedly without resistance\n• Faster renal elimination\n• Safer for children and elderly\n• Fewer drug interactions\n\n🔬 MECHANISM OF ACTION:\n• Direct binding to venom toxins\n• Neutralizes phospholipase A2 enzyme\n• Prevents hemolytic and coagulant effects\n• Does not activate complement system\n\n🌍 AVAILABLE PRODUCTS:\n• CroFab® (USA): Against rattlesnake venom\n• DigiFab® (USA): Against digitalis poisoning\n• EchiTAb® (Australia): Against Echis venom\n• Polyvalent Fab (Thailand): Under development'**
-  String get fab_fragments_content;
-
   /// Preparation methods title
   ///
   /// In en, this message translates to:
   /// **'Different preparation methods'**
   String get preparation_methods_title;
-
-  /// Preparation methods content
-  ///
-  /// In en, this message translates to:
-  /// **'📋 LIQUID ANTIVENOM:\n• Mix directly 1:1 with 0.9% NaCl\n• Volume: 50-100ml/vial\n• Infuse over 60-90 minutes\n• Rate: 1-2ml/minute initially\n\n📋 LYOPHILIZED ANTIVENOM:\n• Dissolve with 10ml sterile water\n• Then dilute in 100-200ml 0.9% NaCl\n• Shake gently, avoid foaming\n• Infuse over 30-60 minutes\n• Check for precipitates\n\n🧬 FAB FRAGMENTS (Special):\n• Dilute in 250ml 0.9% NaCl or D5W\n• Slow infusion: 4-6 hours (initial)\n• Rate: 25-50ml/hour initially\n• Can increase rate if well tolerated\n• Monitor closely first 30 minutes\n• Less allergic reactions but still vigilant'**
-  String get preparation_methods_content;
 
   /// Specific dosages title
   ///
@@ -14030,23 +13130,11 @@ abstract class AppLocalizations {
   /// **'Specific dosages'**
   String get specific_dosages_title;
 
-  /// Specific dosages content
-  ///
-  /// In en, this message translates to:
-  /// **'💊 POLYVALENT ANTIVENOM:\n• Initial: 4-6 vials (40-60ml)\n• Severe: 8-12 vials\n• Maximum: 20 vials/24h\n• Repeat: every 6-12 hours if needed\n\n💊 MONOVALENT ANTIVENOM:\n• Cobra: 3-5 vials initial\n• Krait: 5-10 vials (more toxic)\n• Russell Viper: 4-8 vials\n• May need higher doses\n\n🧬 FAB FRAGMENTS (Different dosing):\n• Initial: 4-6 vials (equivalent to 40-60ml)\n• Severe: 8-12 vials\n• Frequency: Can repeat every 6-8 hours\n• Advantage: Lower dose but high efficacy\n• Children: 0.25-0.5ml/kg\n• Monitor response after 2-4 hours'**
-  String get specific_dosages_content;
-
   /// Storage title
   ///
   /// In en, this message translates to:
   /// **'Storage'**
   String get storage_title;
-
-  /// Storage content
-  ///
-  /// In en, this message translates to:
-  /// **'🧊 STORAGE:\n• Temperature: 2-8°C (do not freeze)\n• Avoid direct sunlight\n• Check expiration date\n• Do not use if precipitates or cloudy\n• FAB Fragments: Special storage, shorter shelf life\n\n🌏 VIETNAM SITUATION:\n• FAB Fragments: No domestic production\n• Need import from USA, Australia, Europe\n• Research ongoing at IVAC\n• Expected availability in 2-3 years'**
-  String get storage_content;
 
   /// Follow-up monitoring title
   ///
@@ -14054,23 +13142,11 @@ abstract class AppLocalizations {
   /// **'Follow-up and adjustment'**
   String get followup_monitoring_title;
 
-  /// Follow-up monitoring content
-  ///
-  /// In en, this message translates to:
-  /// **'⏰ ASSESSMENT AFTER 1-2 HOURS:\n• Is swelling decreasing?\n• PT/aPTT improving?\n• Neurological symptoms resolving?\n\n🔄 IF NO IMPROVEMENT:\n• Repeat initial dose\n• Check antivenom type\n• Consider transfer to higher level\n\n⚠️ STOPPING CRITERIA:\n• Clear clinical improvement\n• Normal coagulation\n• No further progression'**
-  String get followup_monitoring_content;
-
   /// FAB Fragments indications title
   ///
   /// In en, this message translates to:
   /// **'🎯 FAB FRAGMENTS INDICATIONS'**
   String get fab_indications_title;
-
-  /// FAB Fragments indications content
-  ///
-  /// In en, this message translates to:
-  /// **'✅ PRIORITY USE WHEN:\n• Patient with history of antivenom allergy\n• Children under 12 years\n• Elderly >65 years\n• Immunocompromised patients\n• Need repeated antivenom doses\n• Snake bite in head/neck area (dangerous)\n\n🚨 ABSOLUTE INDICATIONS:\n• Anaphylaxis to conventional antivenom\n• Extremely venomous snakes (King Cobra, Sea Snake)\n• Severe poisoning with coagulopathy\n• Patients with severe cardiovascular disease\n\n⚠️ SPECIAL CONSIDERATIONS:\n• Still need to monitor allergic reactions\n• Higher efficacy but expensive\n• Need staff training for use\n• Priority for severe cases'**
-  String get fab_indications_content;
 
   /// Sources and references title
   ///
@@ -14090,29 +13166,11 @@ abstract class AppLocalizations {
   /// **'🏥 VIETNAM ANTIVENOM SUPPLIERS:'**
   String get vietnam_suppliers;
 
-  /// Vietnam suppliers content
-  ///
-  /// In en, this message translates to:
-  /// **'• National Institute of Hygiene and Epidemiology\n• National Hospital for Tropical Diseases\n• Cho Ray Hospital (Ho Chi Minh City)\n• Bach Mai Hospital (Hanoi)'**
-  String get vietnam_suppliers_content;
-
   /// International suppliers
   ///
   /// In en, this message translates to:
   /// **'🌏 IMPORTED ANTIVENOMS:'**
   String get international_suppliers;
-
-  /// International suppliers content
-  ///
-  /// In en, this message translates to:
-  /// **'• Queen Saovabha Memorial Institute (Thailand)\n• Myanmar Pharmaceutical Factory\n• Haffkine Bio-Pharmaceutical (India)'**
-  String get international_suppliers_content;
-
-  /// Snake bite algorithm title
-  ///
-  /// In en, this message translates to:
-  /// **'TREATMENT ALGORITHM'**
-  String get snake_algorithm_title;
 
   /// Snake bite assessment title
   ///
@@ -14156,113 +13214,17 @@ abstract class AppLocalizations {
   /// **'REFERENCES & SOURCES'**
   String get snake_references_title;
 
-  /// Algorithm step 1 title
-  ///
-  /// In en, this message translates to:
-  /// **'1. Initial Assessment'**
-  String get algorithm_step1_title;
-
-  /// Algorithm step 1 content
-  ///
-  /// In en, this message translates to:
-  /// **'• ABC assessment\n• Vital signs\n• Bite description'**
-  String get algorithm_step1_content;
-
-  /// Algorithm step 2 title
-  ///
-  /// In en, this message translates to:
-  /// **'2. Severity Classification'**
-  String get algorithm_step2_title;
-
-  /// Algorithm step 2 content
-  ///
-  /// In en, this message translates to:
-  /// **'• Mild: Local pain only\n• Moderate: Spreading swelling\n• Severe: Systemic symptoms'**
-  String get algorithm_step2_content;
-
-  /// Algorithm step 3 title
-  ///
-  /// In en, this message translates to:
-  /// **'3. Treatment Decision'**
-  String get algorithm_step3_title;
-
-  /// Algorithm step 3 content
-  ///
-  /// In en, this message translates to:
-  /// **'• Mild: 24h observation\n• Moderate-Severe: Antivenom therapy'**
-  String get algorithm_step3_content;
-
-  /// Algorithm step 4 title
-  ///
-  /// In en, this message translates to:
-  /// **'4. Response Monitoring'**
-  String get algorithm_step4_title;
-
-  /// Algorithm step 4 content
-  ///
-  /// In en, this message translates to:
-  /// **'• Assess after 1-2h\n• Repeat if worsening'**
-  String get algorithm_step4_content;
-
   /// Initial treatment title
   ///
   /// In en, this message translates to:
   /// **'Initial Treatment'**
   String get initial_treatment_title;
 
-  /// Initial treatment content
-  ///
-  /// In en, this message translates to:
-  /// **'• Clean wound with water\n• Gentle wound dressing\n• DO NOT cut, suck or apply prep\n• DO NOT apply tight tourniquet\n• DO NOT give alcohol'**
-  String get initial_treatment_content;
-
   /// Pressure bandage title
   ///
   /// In en, this message translates to:
   /// **'Pressure Bandage'**
   String get pressure_bandage_title;
-
-  /// Pressure bandage content
-  ///
-  /// In en, this message translates to:
-  /// **'• Start from hand/foot\n• Bandage entire limb\n• Moderate pressure\n• Check circulation'**
-  String get pressure_bandage_content;
-
-  /// First aid content
-  ///
-  /// In en, this message translates to:
-  /// **'• Stay calm, don\'t panic\n• Clean wound with clean water\n• Remove jewelry from bitten area\n• Do NOT cut the wound\n• Do NOT suck venom by mouth\n• Apply lymphatic pressure bandage\n• Immobilize bitten limb\n• Transport to hospital immediately'**
-  String get first_aid_content;
-
-  /// Hospital treatment content
-  ///
-  /// In en, this message translates to:
-  /// **'• Assess patient condition\n• Blood coagulation and kidney function tests\n• Classify envenoming severity\n• Indicate antivenom therapy\n• Monitor vital signs\n• Manage complications\n• Supportive treatment'**
-  String get hospital_treatment_content;
-
-  /// Antivenom treatment content
-  ///
-  /// In en, this message translates to:
-  /// **'• Assess antivenom indication\n• Prepare for allergic reaction management\n• Dilute antivenom according to guidelines\n• Infuse slowly with close monitoring\n• Dosage according to envenoming severity\n• Monitor treatment effectiveness\n• May require multiple infusions'**
-  String get antivenom_content;
-
-  /// Complication management content
-  ///
-  /// In en, this message translates to:
-  /// **'• Antivenom allergic reactions\n• Coagulation disorders\n• Acute kidney failure\n• Compartment syndrome\n• Wound infection\n• Tissue necrosis\n• Motor disability'**
-  String get complication_management_content;
-
-  /// Monitoring and care content
-  ///
-  /// In en, this message translates to:
-  /// **'• Monitor vital signs\n• Check coagulation function\n• Assess kidney function\n• Wound care\n• Early physiotherapy\n• Psychological counseling\n• Prevention guidance'**
-  String get monitoring_care_content;
-
-  /// References content
-  ///
-  /// In en, this message translates to:
-  /// **'1. WHO Guidelines for Snakebite Management\n2. Vietnamese Ministry of Health Protocol\n3. SEARO Regional Guidelines\n4. Clinical Toxinology Resources\n5. Antivenom Producer Guidelines\n6. Regional Poisoning Centers\n7. Emergency Medicine Textbooks'**
-  String get references_content;
 
   /// CSF analysis page title
   ///
@@ -14432,11 +13394,575 @@ abstract class AppLocalizations {
   /// **'Additional information...'**
   String get notesHint;
 
+  /// CSF pressure hint text with optional indication
+  ///
+  /// In en, this message translates to:
+  /// **'70-180 (optional)'**
+  String get pressureHintOptional;
+
+  /// Lactate hint text with optional indication
+  ///
+  /// In en, this message translates to:
+  /// **'1.5-2.1 (optional)'**
+  String get lactateHintOptional;
+
+  /// Serum glucose hint text with optional indication
+  ///
+  /// In en, this message translates to:
+  /// **'70-110 (optional)'**
+  String get serumGlucoseHintOptional;
+
   /// References section label
   ///
   /// In en, this message translates to:
   /// **'References'**
   String get referencesLabel;
+
+  /// Urinalysis page title
+  ///
+  /// In en, this message translates to:
+  /// **'Urinalysis'**
+  String get urinalysisTitle;
+
+  /// Urinalysis page subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Diagnose UTI, kidney disease, diabetes'**
+  String get urinalysisSubtitle;
+
+  /// Physical properties section title
+  ///
+  /// In en, this message translates to:
+  /// **'Physical Properties'**
+  String get physicalProperties;
+
+  /// Chemical analysis section title
+  ///
+  /// In en, this message translates to:
+  /// **'Chemical Analysis'**
+  String get chemicalAnalysis;
+
+  /// Microscopic analysis section title
+  ///
+  /// In en, this message translates to:
+  /// **'Microscopic Analysis (Optional)'**
+  String get microscopicAnalysis;
+
+  /// Analyze urine button text
+  ///
+  /// In en, this message translates to:
+  /// **'Analyze Urine'**
+  String get analyzeUrine;
+
+  /// New analysis button tooltip
+  ///
+  /// In en, this message translates to:
+  /// **'New Analysis'**
+  String get newAnalysis;
+
+  /// Analysis results section title
+  ///
+  /// In en, this message translates to:
+  /// **'Analysis Results'**
+  String get analysisResults;
+
+  /// Color dropdown label
+  ///
+  /// In en, this message translates to:
+  /// **'Color'**
+  String get colorLabel;
+
+  /// Clarity dropdown label
+  ///
+  /// In en, this message translates to:
+  /// **'Clarity'**
+  String get clarityLabel;
+
+  /// Specific gravity field label
+  ///
+  /// In en, this message translates to:
+  /// **'Specific Gravity'**
+  String get specificGravityLabel;
+
+  /// Pale yellow color
+  ///
+  /// In en, this message translates to:
+  /// **'Pale Yellow'**
+  String get colorPaleYellow;
+
+  /// Yellow color
+  ///
+  /// In en, this message translates to:
+  /// **'Yellow'**
+  String get colorYellow;
+
+  /// Dark yellow color
+  ///
+  /// In en, this message translates to:
+  /// **'Dark Yellow'**
+  String get colorDarkYellow;
+
+  /// Amber color
+  ///
+  /// In en, this message translates to:
+  /// **'Amber'**
+  String get colorAmber;
+
+  /// Red color
+  ///
+  /// In en, this message translates to:
+  /// **'Red'**
+  String get colorRed;
+
+  /// Brown color
+  ///
+  /// In en, this message translates to:
+  /// **'Brown'**
+  String get colorBrown;
+
+  /// Green color
+  ///
+  /// In en, this message translates to:
+  /// **'Green'**
+  String get colorGreen;
+
+  /// Blue color
+  ///
+  /// In en, this message translates to:
+  /// **'Blue'**
+  String get colorBlue;
+
+  /// Colorless
+  ///
+  /// In en, this message translates to:
+  /// **'Colorless'**
+  String get colorColorless;
+
+  /// Clear clarity
+  ///
+  /// In en, this message translates to:
+  /// **'Clear'**
+  String get clarityClear;
+
+  /// Slightly cloudy clarity
+  ///
+  /// In en, this message translates to:
+  /// **'Sl. Cloudy'**
+  String get claritySlightlyCloudy;
+
+  /// Cloudy clarity
+  ///
+  /// In en, this message translates to:
+  /// **'Cloudy'**
+  String get clarityCloudy;
+
+  /// Turbid clarity
+  ///
+  /// In en, this message translates to:
+  /// **'Turbid'**
+  String get clarityTurbid;
+
+  /// Negative test result
+  ///
+  /// In en, this message translates to:
+  /// **'Negative'**
+  String get testNegative;
+
+  /// Positive test result
+  ///
+  /// In en, this message translates to:
+  /// **'Positive'**
+  String get testPositive;
+
+  /// Trace test result
+  ///
+  /// In en, this message translates to:
+  /// **'Trace'**
+  String get testTrace;
+
+  /// Small test result
+  ///
+  /// In en, this message translates to:
+  /// **'Small'**
+  String get testSmall;
+
+  /// Moderate test result
+  ///
+  /// In en, this message translates to:
+  /// **'Moderate'**
+  String get testModerate;
+
+  /// Large test result
+  ///
+  /// In en, this message translates to:
+  /// **'Large'**
+  String get testLarge;
+
+  /// Normal test result
+  ///
+  /// In en, this message translates to:
+  /// **'Normal'**
+  String get testNormal;
+
+  /// High test result
+  ///
+  /// In en, this message translates to:
+  /// **'High'**
+  String get testHigh;
+
+  /// Red blood cells per high power field label
+  ///
+  /// In en, this message translates to:
+  /// **'Red blood cells (/hpf)'**
+  String get redBloodCellsHpf;
+
+  /// White blood cells per high power field label
+  ///
+  /// In en, this message translates to:
+  /// **'White blood cells (/hpf)'**
+  String get whiteBloodCellsHpf;
+
+  /// Epithelial cells per high power field label
+  ///
+  /// In en, this message translates to:
+  /// **'Epithelial cells (/hpf)'**
+  String get epithelialCellsHpf;
+
+  /// Bacteria per high power field label
+  ///
+  /// In en, this message translates to:
+  /// **'Bacteria (/hpf)'**
+  String get bacteriaHpf;
+
+  /// Casts per low power field label
+  ///
+  /// In en, this message translates to:
+  /// **'Casts (/lpf)'**
+  String get castsLpf;
+
+  /// Crystals per high power field label
+  ///
+  /// In en, this message translates to:
+  /// **'Crystals (/hpf)'**
+  String get crystalsHpf;
+
+  /// Few or Many hint text
+  ///
+  /// In en, this message translates to:
+  /// **'Few/Many'**
+  String get fewMany;
+
+  /// ABCD2 emergency risk level
+  ///
+  /// In en, this message translates to:
+  /// **'Emergency (High Risk)'**
+  String get abcd2_urgency_emergency;
+
+  /// APACHE II non-surgical or emergency operation
+  ///
+  /// In en, this message translates to:
+  /// **'Non-surgical or emergency operation'**
+  String get has_non_surgical_or_emergency;
+
+  /// PEWS emergency team action
+  ///
+  /// In en, this message translates to:
+  /// **'Contact emergency team immediately'**
+  String get pews_action_emergency_team;
+
+  /// PEWS emergency team interpretation
+  ///
+  /// In en, this message translates to:
+  /// **'Emergency team required'**
+  String get pews_interp_emergency_team;
+
+  /// PEWS response protocol title
+  ///
+  /// In en, this message translates to:
+  /// **'Response Protocol'**
+  String get pews_response_protocol_title;
+
+  /// PEWS routine protocol title
+  ///
+  /// In en, this message translates to:
+  /// **'Routine Monitoring (Score 0-2)'**
+  String get pews_protocol_routine_title;
+
+  /// PEWS routine protocol step 1
+  ///
+  /// In en, this message translates to:
+  /// **'Continue current level of care'**
+  String get pews_protocol_routine_1;
+
+  /// PEWS routine protocol step 2
+  ///
+  /// In en, this message translates to:
+  /// **'Monitor vital signs every 4-6 hours'**
+  String get pews_protocol_routine_2;
+
+  /// PEWS routine protocol step 3
+  ///
+  /// In en, this message translates to:
+  /// **'Document score in medical record'**
+  String get pews_protocol_routine_3;
+
+  /// PEWS routine protocol step 4
+  ///
+  /// In en, this message translates to:
+  /// **'Re-evaluate if clinical condition changes'**
+  String get pews_protocol_routine_4;
+
+  /// PEWS increased protocol title
+  ///
+  /// In en, this message translates to:
+  /// **'Increased Monitoring (Score 3-4)'**
+  String get pews_protocol_increased_title;
+
+  /// PEWS increased protocol step 1
+  ///
+  /// In en, this message translates to:
+  /// **'Increase monitoring frequency'**
+  String get pews_protocol_increased_1;
+
+  /// PEWS increased protocol step 2
+  ///
+  /// In en, this message translates to:
+  /// **'Monitor vital signs every 1-2 hours'**
+  String get pews_protocol_increased_2;
+
+  /// PEWS increased protocol step 3
+  ///
+  /// In en, this message translates to:
+  /// **'Consider bedside nurse assessment'**
+  String get pews_protocol_increased_3;
+
+  /// PEWS increased protocol step 4
+  ///
+  /// In en, this message translates to:
+  /// **'Notify medical team if score persists'**
+  String get pews_protocol_increased_4;
+
+  /// PEWS urgent protocol title
+  ///
+  /// In en, this message translates to:
+  /// **'Urgent Response (Score ≥5)'**
+  String get pews_protocol_urgent_title;
+
+  /// PEWS urgent protocol step 1
+  ///
+  /// In en, this message translates to:
+  /// **'Immediate bedside assessment required'**
+  String get pews_protocol_urgent_1;
+
+  /// PEWS urgent protocol step 2
+  ///
+  /// In en, this message translates to:
+  /// **'Consider rapid response team activation'**
+  String get pews_protocol_urgent_2;
+
+  /// PEWS urgent protocol step 3
+  ///
+  /// In en, this message translates to:
+  /// **'Continuous monitoring until stable'**
+  String get pews_protocol_urgent_3;
+
+  /// PEWS urgent protocol step 4
+  ///
+  /// In en, this message translates to:
+  /// **'Document interventions and response'**
+  String get pews_protocol_urgent_4;
+
+  /// Preoperative mortality emergency operation
+  ///
+  /// In en, this message translates to:
+  /// **'Emergency Operation'**
+  String get preop_mortality_emergency;
+
+  /// Preoperative mortality emergency description
+  ///
+  /// In en, this message translates to:
+  /// **'Emergency surgical procedures carry higher risk'**
+  String get preop_mortality_emergency_desc;
+
+  /// RACE emergency stroke protocol
+  ///
+  /// In en, this message translates to:
+  /// **'Emergency Stroke Protocol'**
+  String get race_emergency_protocol;
+
+  /// RACE protocol stroke code
+  ///
+  /// In en, this message translates to:
+  /// **'Activate Stroke Code'**
+  String get race_protocol_stroke_code;
+
+  /// RACE protocol stroke code description
+  ///
+  /// In en, this message translates to:
+  /// **'Immediate stroke team activation'**
+  String get race_protocol_stroke_code_desc;
+
+  /// RACE protocol CT/CTA
+  ///
+  /// In en, this message translates to:
+  /// **'Emergency CT/CTA'**
+  String get race_protocol_ct_cta;
+
+  /// RACE protocol CT/CTA description
+  ///
+  /// In en, this message translates to:
+  /// **'Immediate imaging within 25 minutes'**
+  String get race_protocol_ct_cta_desc;
+
+  /// RACE protocol transfer
+  ///
+  /// In en, this message translates to:
+  /// **'Consider Transfer'**
+  String get race_protocol_transfer;
+
+  /// RACE protocol transfer description
+  ///
+  /// In en, this message translates to:
+  /// **'Transfer to comprehensive stroke center'**
+  String get race_protocol_transfer_desc;
+
+  /// RACE protocol tPA
+  ///
+  /// In en, this message translates to:
+  /// **'Consider tPA'**
+  String get race_protocol_tpa;
+
+  /// RACE protocol tPA description
+  ///
+  /// In en, this message translates to:
+  /// **'Thrombolytic therapy evaluation'**
+  String get race_protocol_tpa_desc;
+
+  /// RACE protocol time
+  ///
+  /// In en, this message translates to:
+  /// **'Time Critical'**
+  String get race_protocol_time;
+
+  /// RACE protocol time description
+  ///
+  /// In en, this message translates to:
+  /// **'Time is brain - act quickly'**
+  String get race_protocol_time_desc;
+
+  /// Medical disclaimer professional only
+  ///
+  /// In en, this message translates to:
+  /// **'Medical Disclaimer'**
+  String get medical_disclaimer_professional_only;
+
+  /// Medical disclaimer home text
+  ///
+  /// In en, this message translates to:
+  /// **'This application is intended for healthcare professionals only. All information provided is for educational purposes and should not replace clinical judgment.'**
+  String get medical_disclaimer_home_text;
+
+  /// Medical disclaimer title
+  ///
+  /// In en, this message translates to:
+  /// **'Medical Disclaimer'**
+  String get medical_disclaimer_title;
+
+  /// Medical disclaimer content
+  ///
+  /// In en, this message translates to:
+  /// **'This application is designed for healthcare professionals and is intended for educational and reference purposes only. It should not be used as a substitute for professional medical judgment, experience, or clinical assessment. Always consult current medical literature and institutional protocols.'**
+  String get medical_disclaimer_content;
+
+  /// CAM-ICU medical disclaimer text
+  ///
+  /// In en, this message translates to:
+  /// **'CAM-ICU assessment requires proper training and should be used as part of comprehensive clinical evaluation.'**
+  String get medical_disclaimer_cam_icu_text;
+
+  /// CAM-ICU algorithm explanation
+  ///
+  /// In en, this message translates to:
+  /// **'Follow the CAM-ICU algorithm step by step. Each step must be completed before proceeding to the next.'**
+  String get cam_icu_algorithm_explanation;
+
+  /// CAM-ICU clinical info content
+  ///
+  /// In en, this message translates to:
+  /// **'The Confusion Assessment Method for the ICU (CAM-ICU) is a validated tool for detecting delirium in critically ill patients. It should be performed by trained healthcare professionals.'**
+  String get cam_icu_clinical_info_content;
+
+  /// GRACE medical disclaimer text
+  ///
+  /// In en, this message translates to:
+  /// **'GRACE Score should be interpreted in the context of clinical presentation and used alongside comprehensive cardiovascular assessment.'**
+  String get medical_disclaimer_grace_text;
+
+  /// GRACE clinical info content
+  ///
+  /// In en, this message translates to:
+  /// **'The Global Registry of Acute Coronary Events (GRACE) Score predicts in-hospital and 6-month mortality in patients with acute coronary syndromes.'**
+  String get grace_clinical_info_content;
+
+  /// RASS medical disclaimer text
+  ///
+  /// In en, this message translates to:
+  /// **'RASS assessment should be performed by trained healthcare professionals and used as part of comprehensive sedation monitoring.'**
+  String get medical_disclaimer_rass_text;
+
+  /// RASS clinical info content
+  ///
+  /// In en, this message translates to:
+  /// **'The Richmond Agitation-Sedation Scale (RASS) is a validated tool for assessing sedation levels in critically ill patients.'**
+  String get rass_clinical_info_content;
+
+  /// Routine monitoring
+  ///
+  /// In en, this message translates to:
+  /// **'Routine Monitoring'**
+  String get routine_monitoring;
+
+  /// Weekly monitoring
+  ///
+  /// In en, this message translates to:
+  /// **'Weekly Monitoring'**
+  String get weekly_monitoring;
+
+  /// qSOFA routine monitoring
+  ///
+  /// In en, this message translates to:
+  /// **'Continue routine monitoring and reassess if clinical condition changes'**
+  String get qsofa_routine_monitoring;
+
+  /// qSOFA clinical content
+  ///
+  /// In en, this message translates to:
+  /// **'Quick Sequential Organ Failure Assessment (qSOFA) is used for rapid identification of patients at risk for sepsis outside the ICU.'**
+  String get qsofa_clinical_content;
+
+  /// CRUSADE clinical info content
+  ///
+  /// In en, this message translates to:
+  /// **'CRUSADE Score predicts major bleeding risk in patients with non-ST elevation acute coronary syndromes.'**
+  String get crusade_clinical_info_content;
+
+  /// HAS-BLED clinical info content
+  ///
+  /// In en, this message translates to:
+  /// **'HAS-BLED Score assesses bleeding risk in patients on anticoagulation therapy.'**
+  String get has_bled_clinical_info_content;
+
+  /// PSI ICU criteria content
+  ///
+  /// In en, this message translates to:
+  /// **'ICU admission criteria based on Pneumonia Severity Index and clinical presentation.'**
+  String get psi_icu_criteria_content;
+
+  /// RCRI management monitoring
+  ///
+  /// In en, this message translates to:
+  /// **'Continue perioperative cardiac monitoring based on risk stratification'**
+  String get rcri_management_monitoring;
 }
 
 class _AppLocalizationsDelegate

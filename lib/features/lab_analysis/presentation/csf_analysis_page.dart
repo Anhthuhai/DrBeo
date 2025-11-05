@@ -339,7 +339,7 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
                               child: _buildNumberField(
                                 controller: _pressureController,
                                 label: localizations.pressureLabel,
-                                hint: '70-180 (tùy chọn)',
+                                hint: localizations.pressureHintOptional,
                                 validator: _validateOptionalNumber,
                               ),
                             ),
@@ -390,7 +390,7 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
                               child: _buildNumberField(
                                 controller: _lactateController,
                                 label: localizations.lactateLabel,
-                                hint: '1.5-2.1 (tùy chọn)',
+                                hint: localizations.lactateHintOptional,
                                 validator: _validateOptionalNumber,
                               ),
                             ),
@@ -457,7 +457,7 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
                         _buildNumberField(
                           controller: _serumGlucoseController,
                           label: 'Glucose máu (mg/dL)',
-                          hint: '70-110 (tùy chọn)',
+                          hint: localizations.serumGlucoseHintOptional,
                           validator: _validateOptionalNumber,
                         ),
                       ],
@@ -470,7 +470,7 @@ class _CsfAnalysisPageState extends State<CsfAnalysisPage> {
                 TextFormField(
                   controller: _notesController,
                   decoration: InputDecoration(
-                    labelText: '${localizations.notesLabel} (tùy chọn)',
+                    labelText: localizations.notesOptional,
                     hintText: localizations.notesHint,
                     border: const OutlineInputBorder(),
                   ),

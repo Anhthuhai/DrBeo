@@ -23,46 +23,46 @@ class _NotificationsPageState extends State<NotificationsPage> {
     // Simulate loading delay
     await Future.delayed(const Duration(milliseconds: 500));
     
-    // Create sample notifications
+    // Create notifications based on actual app features
     final notifications = [
       NotificationItem(
         id: '1',
-        title: 'Cập nhật mới',
-        message: 'Đã thêm Protocol Cơn Tăng Huyết Áp với 4 tranh luận lâm sàng chi tiết',
-        time: DateTime.now().subtract(const Duration(hours: 2)),
-        type: NotificationType.update,
+        title: 'Chào mừng bạn đến với DR ICU',
+        message: 'Ứng dụng hỗ trợ tính toán điểm số lâm sàng, phân tích xét nghiệm và chuyển đổi đơn vị y tế',
+        time: DateTime.now().subtract(const Duration(hours: 1)),
+        type: NotificationType.feature,
         isRead: false,
       ),
       NotificationItem(
         id: '2',
-        title: 'Chức năng mới',
-        message: 'Thêm chức năng Bookmark để lưu các protocol yêu thích',
+        title: 'Tính năng Clinical Scores',
+        message: 'Hỗ trợ 20+ thang điểm lâm sàng như SOFA, qSOFA, APACHE II, NIHSS, GRACE, CRUSADE, v.v.',
         time: DateTime.now().subtract(const Duration(days: 1)),
         type: NotificationType.feature,
         isRead: false,
       ),
       NotificationItem(
         id: '3',
-        title: 'Lời nhắc',
-        message: 'Hãy kiểm tra lại các thông số đã tính toán trước khi áp dụng lâm sàng',
+        title: 'Lab Analysis',
+        message: 'Phân tích kết quả xét nghiệm nước tiểu, dịch não tủy với hướng dẫn chi tiết',
         time: DateTime.now().subtract(const Duration(days: 2)),
-        type: NotificationType.reminder,
+        type: NotificationType.feature,
         isRead: true,
       ),
       NotificationItem(
         id: '4',
-        title: 'Cập nhật hướng dẫn',
-        message: 'Guidelines 2024 cho điều trị tăng huyết áp đã được cập nhật',
-        time: DateTime.now().subtract(const Duration(days: 5)),
-        type: NotificationType.guideline,
+        title: 'Unit Converter',
+        message: 'Chuyển đổi đơn vị y tế thông dụng: mg/dL ↔ mmol/L, mmHg ↔ kPa, °C ↔ °F',
+        time: DateTime.now().subtract(const Duration(days: 3)),
+        type: NotificationType.feature,
         isRead: true,
       ),
       NotificationItem(
         id: '5',
-        title: 'Bảo trì hệ thống',
-        message: 'Ứng dụng sẽ được bảo trì vào 2h sáng ngày mai để cải thiện hiệu suất',
-        time: DateTime.now().subtract(const Duration(days: 7)),
-        type: NotificationType.maintenance,
+        title: 'Lời nhắc quan trọng',
+        message: 'Ứng dụng chỉ dành cho chuyên gia y tế. Luôn kiểm tra kết quả tính toán trước khi áp dụng lâm sàng',
+        time: DateTime.now().subtract(const Duration(days: 5)),
+        type: NotificationType.reminder,
         isRead: true,
       ),
     ];
