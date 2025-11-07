@@ -172,7 +172,7 @@ class _AspectScorePageState extends State<AspectScorePage> {
                         child: Text(
                           Localizations.localeOf(context).languageCode == 'vi'
                               ? 'LƯU Ý Y KHOA HÌNH ẢNH: Kết quả chỉ mang tính tham khảo. Luôn tham khảo ý kiến bác sĩ chuyên khoa thần kinh và chẩn đoán hình ảnh trước khi đưa ra quyết định.'
-                              : 'IMAGING MEDICAL DISCLAIMER: Results are for reference only. Always consult with neurologist and radiologist before making decisions.',
+                              : 'EDUCATIONAL DISCLAIMER: Results are for educational reference only. This is a learning tool, not for clinical decision making.',
                           style: TextStyle(
                             fontSize: 11,
                             color: Colors.red.shade700,

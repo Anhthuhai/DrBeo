@@ -2,7 +2,7 @@
   "@@locale": "vi",
   "appTitle": "Dr Bèo",
   "welcomeMessage": "Chào mừng đến với Dr Bèo",
-  "welcomeSubtitle": "Công cụ hỗ trợ cho bác sĩ và sinh viên thực hành tại khoa hồi sức tích cực",
+  "welcomeSubtitle": "Công cụ tham khảo giáo dục cho sinh viên y khoa và chuyên gia y tế đang học tập",
   "clinicalScores": "Thang điểm lâm sàng",
   "clinicalScoresDescription": "Glasgow, APACHE, SOFA...",
   "diagnosticTools": "Công cụ chẩn đoán",
@@ -738,14 +738,11 @@
   "@prevention_recurrence": {
     "description": "Prevention of recurrence"
   },
-  "@treatment_algorithm": {
-    "description": "Treatment algorithm"
-  },
   "h1_antihistamine": "H1 Antihistamine",
   "@h1_antihistamine": {
     "description": "H1 antihistamine medication"
   },
-  "h1_antihistamine_dose": "Diphenhydramine 25-50mg IV hoặc\nChlorpheniramine 10mg IV",
+  "h1_antihistamine_dose": "Thuốc kháng histamin H1 theo chỉ định lâm sàng",
   "@h1_antihistamine_dose": {
     "description": "H1 antihistamine dose"
   },
@@ -753,7 +750,7 @@
   "@h2_antihistamine": {
     "description": "H2 antihistamine medication"
   },
-  "h2_antihistamine_dose": "Ranitidine 50mg IV hoặc\nFamotidine 20mg IV",
+  "h2_antihistamine_dose": "Thuốc kháng histamin H2 theo chỉ định lâm sàng",
   "@h2_antihistamine_dose": {
     "description": "H2 antihistamine dose"
   },
@@ -761,7 +758,7 @@
   "@corticosteroid": {
     "description": "Corticosteroid medication"
   },
-  "corticosteroid_dose": "Hydrocortisone 200mg IV hoặc\nMethylprednisolone 125mg IV",
+  "corticosteroid_dose": "Corticosteroid theo chỉ định lâm sàng",
   "@corticosteroid_dose": {
     "description": "Corticosteroid dose"
   },
@@ -769,7 +766,7 @@
   "@bronchodilator": {
     "description": "Bronchodilator medication"
   },
-  "bronchodilator_dose": "Salbutamol 2.5-5mg nebulizer\nCó thể lặp lại mỗi 20 phút",
+  "bronchodilator_dose": "Thuốc giãn phế quản theo chỉ định lâm sàng",
   "@bronchodilator_dose": {
     "description": "Bronchodilator dose"
   },
@@ -1608,11 +1605,11 @@
   "@meld_reference_text": {
     "description": "MELD score reference citation"
   },
-  "clinical_scores_title": "Thang điểm lâm sàng",
+  "clinical_scores_title": "Công cụ học tập lâm sàng",
   "@clinical_scores_title": {
     "description": "Clinical scores page title"
   },
-  "clinical_scores_subtitle": "Các thang điểm thường dùng trong ICU",
+  "clinical_scores_subtitle": "Hệ thống thang điểm giáo dục cho việc học y khoa",
   "gcs_list_description": "Đánh giá mức độ ý thức bệnh nhân",
   "apache_list_description": "Dự đoán tỷ lệ tử vong trong ICU",
   "sofa_list_description": "Đánh giá suy đa tạng",
@@ -2199,17 +2196,12 @@
   "creatinine_clearance_stage_3b": "Giai đoạn 3b (30-44)",
   "creatinine_clearance_stage_4": "Giai đoạn 4 (15-29)",
   "creatinine_clearance_stage_5": "Giai đoạn 5 (<15)",
-  "creatinine_clearance_dosing_normal": "Liều bình thường",
-  "creatinine_clearance_dosing_reduce_25_50": "Giảm liều 25-50%",
-  "creatinine_clearance_dosing_reduce_50_75": "Giảm liều 50-75%",
-  "creatinine_clearance_dosing_contraindicated": "Chống chỉ định",
   "creatinine_clearance_recommendation_normal": "Theo dõi định kỳ",
   "creatinine_clearance_recommendation_mild": "Kiểm tra 6-12 tháng",
   "creatinine_clearance_recommendation_mild_moderate": "Kiểm tra 3-6 tháng",
   "creatinine_clearance_recommendation_moderate_severe": "Kiểm tra 1-3 tháng",
   "creatinine_clearance_recommendation_severe": "Kiểm tra hàng tháng",
   "creatinine_clearance_recommendation_esrd": "Cần thẩm phân",
-  "creatinine_clearance_drug_dosing": "Điều chỉnh liều thuốc",
   "creatinine_clearance_clinical_recommendation": "Khuyến nghị lâm sàng",
   "creatinine_clearance_reference_values": "Giá trị tham chiếu",
   "creatinine_clearance_range_90": "≥90 mL/phút/1.73m²",
@@ -2219,7 +2211,7 @@
   "creatinine_clearance_range_15_29": "15-29 mL/phút/1.73m²",
   "creatinine_clearance_range_under_15": "<15 mL/phút/1.73m²",
   "creatinine_clearance_clinical_info": "Thông tin lâm sàng",
-  "creatinine_clearance_clinical_text": "Độ thanh thải creatinine đánh giá chức năng thận và hướng dẫn điều chỉnh liều thuốc. Sử dụng công thức Cockcroft-Gault.",
+  "creatinine_clearance_clinical_text": "Độ thanh thải creatinine đánh giá chức năng thận cho mục đích giáo dục và tham khảo học tập. Sử dụng công thức Cockcroft-Gault.",
   "creatinine_clearance_reference_title": "Tài liệu tham khảo",
   "creatinine_clearance_reference_text": "Cockcroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine. Nephron. 1976;16(1):31-41.",
   "timi_stemi_title": "Thang điểm TIMI STEMI",
@@ -2311,8 +2303,8 @@
   "crusade_vascular_yes": "Có tiền sử BMM ngoại vi",
   "crusade_recommendation_very_low": "Điều trị chuẩn, theo dõi thường quy",
   "crusade_recommendation_low": "Theo dõi chặt chẽ hơn",
-  "crusade_recommendation_moderate": "Cân nhắc điều chỉnh thuốc",
-  "crusade_recommendation_high": "Giảm liều kháng đông",
+  "crusade_recommendation_moderate": "Cân nhắc theo dõi chặt chẽ",
+  "crusade_recommendation_high": "Theo dõi nguy cơ chảy máu",
   "crusade_recommendation_very_high": "Tránh thuốc có nguy cơ cao",
   "crusade_major_bleeding_very_low": "3.1%",
   "crusade_major_bleeding_low": "5.5%",
@@ -3160,11 +3152,6 @@
   "mdrd_gfr_action_moderate_severe": "Kiểm tra 1-3 tháng",
   "mdrd_gfr_action_severe": "Chuẩn bị thẩm phân",
   "mdrd_gfr_action_esrd": "Thẩm phân/ghép thận",
-  "mdrd_gfr_drug_dosing": "Điều chỉnh liều thuốc",
-  "mdrd_gfr_dosing_normal": "Liều bình thường",
-  "mdrd_gfr_dosing_reduce_25_50": "Giảm liều 25-50%",
-  "mdrd_gfr_dosing_reduce_50_75": "Giảm liều 50-75%",
-  "mdrd_gfr_dosing_avoid": "Tránh thuốc độc thận",
   "mdrd_gfr_comparison_title": "So sánh với Cockcroft-Gault",
   "mdrd_gfr_cockcroft_gault": "Cockcroft-Gault",
   "mdrd_gfr_estimated_unit": "mL/phút ước tính",
@@ -3813,11 +3800,11 @@
   "@antivenom_prep_steps": {
     "description": "Antivenom preparation steps"
   },
-  "antivenom_dosage": "Liều dùng",
+  "antivenom_dosage": "Điều trị",
   "@antivenom_dosage": {
     "description": "Antivenom dosage subtitle"
   },
-  "antivenom_dose_details": "• Khởi đầu: 4-6 lọ\n• Đánh giá đáp ứng sau 1-2h\n• Lặp lại nếu cần thiết\n• Tối đa: 10-15 lọ/24h",
+  "antivenom_dose_details": "• Đánh giá chỉ định điều trị\n• Theo dõi đáp ứng lâm sàng\n• Điều chỉnh theo tình trạng bệnh nhân\n• Theo dõi tác dụng phụ",
   "@antivenom_dose_details": {
     "description": "Antivenom dose details"
   },

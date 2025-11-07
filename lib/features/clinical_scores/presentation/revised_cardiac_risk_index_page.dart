@@ -245,7 +245,7 @@ class _RevisedCardiacRiskIndexPageState extends State<RevisedCardiacRiskIndexPag
                         child: Text(
                           Localizations.localeOf(context).languageCode == 'vi'
                               ? 'LƯU Ý Y KHOA PHẪU THUẬT: Kết quả chỉ mang tính tham khảo. Luôn tham khảo ý kiến bác sĩ gây mê hồi sức và phẫu thuật viên trước khi đưa ra quyết định.'
-                              : 'SURGICAL MEDICAL DISCLAIMER: Results are for reference only. Always consult with anesthesiologist and surgeon before making decisions.',
+                              : 'EDUCATIONAL DISCLAIMER: Results are for educational reference only. This is a learning tool, not for clinical decision making.',
                           style: TextStyle(
                             fontSize: 11,
                             color: Colors.red.shade700,

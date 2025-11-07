@@ -43,9 +43,9 @@ class _MdrdGfrPageState extends State<MdrdGfrPage> {
 
     if (age > 0 && creatinine > 0) {
       // MDRD GFR = 175 × (Scr)^-1.154 × (Age)^-0.203 × (0.742 if female) × (1.212 if African American)
-      double gfr = (175 * 
+      double gfr = 175.0 * 
                    math.pow(creatinine, -1.154) * 
-                   math.pow(age, -0.203)).toDouble();
+                   math.pow(age, -0.203);
       
       if (_isFemale) {
         gfr *= 0.742;
@@ -149,22 +149,6 @@ class _MdrdGfrPageState extends State<MdrdGfrPage> {
     }
     if (_gfr > 0) {
       return AppLocalizations.of(context)!.mdrd_gfr_action_esrd;
-    }
-    return '';
-  }
-
-  String drugDosing(BuildContext context) {
-    if (_gfr >= 60) {
-      return AppLocalizations.of(context)!.mdrd_gfr_dosing_normal;
-    }
-    if (_gfr >= 30) {
-      return AppLocalizations.of(context)!.mdrd_gfr_dosing_reduce_25_50;
-    }
-    if (_gfr >= 15) {
-      return AppLocalizations.of(context)!.mdrd_gfr_dosing_reduce_50_75;
-    }
-    if (_gfr > 0) {
-      return AppLocalizations.of(context)!.mdrd_gfr_dosing_avoid;
     }
     return '';
   }
@@ -457,27 +441,6 @@ class _MdrdGfrPageState extends State<MdrdGfrPage> {
                     color: AppTheme.darkGrey,
                   ),
                 ),
-                const SizedBox(height: 12),
-                Row(
-                  children: [
-                    Icon(Icons.medication, color: gfrColor, size: 20),
-                    const SizedBox(width: 8),
-                    Text(
-                      AppLocalizations.of(context)!.mdrd_gfr_drug_dosing,
-                      style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        color: gfrColor,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 4),
-                Text(
-                  drugDosing(context),
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: AppTheme.darkGrey,
-                  ),
-                ),
               ],
             ),
           ),
@@ -513,6 +476,7 @@ class _MdrdGfrPageState extends State<MdrdGfrPage> {
                 child: TextField(
                   controller: _ageController,
                   keyboardType: TextInputType.number,
+                  onChanged: (value) => _calculateGFR(),
                   decoration: InputDecoration(
                     labelText: AppLocalizations.of(context)!.mdrd_gfr_age,
                     suffixText: AppLocalizations.of(context)!.mdrd_gfr_age_unit,
@@ -928,11 +892,5 @@ class _StickyHeaderDelegate extends SliverPersistentHeaderDelegate {
   @override
   bool shouldRebuild(_StickyHeaderDelegate oldDelegate) {
     return child != oldDelegate.child;
-  }
-}
-
-extension Pow on double {
-  double pow(double exponent) {
-    return math.pow(this, exponent).toDouble();
   }
 }

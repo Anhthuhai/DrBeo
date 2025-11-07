@@ -8,7 +8,7 @@
   "@welcomeMessage": {
     "description": "Welcome message on home page"
   },
-  "welcomeSubtitle": "Support tool for doctors and students practicing in intensive care units",
+  "welcomeSubtitle": "Educational reference tool for medical students and healthcare professionals learning",
   "@welcomeSubtitle": {
     "description": "Subtitle on home page"
   },
@@ -908,14 +908,11 @@
   "@prevention_recurrence": {
     "description": "Prevention of recurrence"
   },
-  "@treatment_algorithm": {
-    "description": "Treatment algorithm"
-  },
   "h1_antihistamine": "H1 Antihistamine",
   "@h1_antihistamine": {
     "description": "H1 antihistamine medication"
   },
-  "h1_antihistamine_dose": "Diphenhydramine 25-50mg IV or\nChlorpheniramine 10mg IV",
+  "h1_antihistamine_dose": "H1 antihistamine as clinically indicated",
   "@h1_antihistamine_dose": {
     "description": "H1 antihistamine dose"
   },
@@ -923,7 +920,7 @@
   "@h2_antihistamine": {
     "description": "H2 antihistamine medication"
   },
-  "h2_antihistamine_dose": "Ranitidine 50mg IV or\nFamotidine 20mg IV",
+  "h2_antihistamine_dose": "H2 antihistamine as clinically indicated",
   "@h2_antihistamine_dose": {
     "description": "H2 antihistamine dose"
   },
@@ -931,7 +928,7 @@
   "@corticosteroid": {
     "description": "Corticosteroid medication"
   },
-  "corticosteroid_dose": "Hydrocortisone 200mg IV or\nMethylprednisolone 125mg IV",
+  "corticosteroid_dose": "Corticosteroid as clinically indicated",
   "@corticosteroid_dose": {
     "description": "Corticosteroid dose"
   },
@@ -939,7 +936,7 @@
   "@bronchodilator": {
     "description": "Bronchodilator medication"
   },
-  "bronchodilator_dose": "Salbutamol 2.5-5mg nebulizer\nMay repeat every 20 minutes",
+  "bronchodilator_dose": "Bronchodilator as clinically indicated",
   "@bronchodilator_dose": {
     "description": "Bronchodilator dose"
   },
@@ -2979,11 +2976,11 @@
   "@meld_reference_text": {
     "description": "MELD score reference citation"
   },
-  "clinical_scores_title": "Clinical Scores",
+  "clinical_scores_title": "Clinical Learning Tools",
   "@clinical_scores_title": {
     "description": "Clinical scores page title"
   },
-  "clinical_scores_subtitle": "Common scores used in ICU",
+  "clinical_scores_subtitle": "Educational scoring systems for medical learning",
   "@clinical_scores_subtitle": {
     "description": "Clinical scores page subtitle"
   },
@@ -3329,7 +3326,7 @@
   },
   "dapt_guideline_discontinue_2": "Aspirin dose 75-100mg daily",
   "@dapt_guideline_discontinue_2": {
-    "description": "Aspirin dosing guideline"
+    "description": "Aspirin therapy guideline"
   },
   "dapt_guideline_discontinue_3": "Monitor cardiovascular events",
   "@dapt_guideline_discontinue_3": {
@@ -3351,7 +3348,7 @@
   "@dapt_guideline_special_2": {
     "description": "Elderly patients guideline"
   },
-  "dapt_guideline_special_3": "Drug interactions: adjust dosing",
+  "dapt_guideline_special_3": "Drug interactions: Clinical assessment required",
   "@dapt_guideline_special_3": {
     "description": "Drug interactions guideline"
   },
@@ -3483,22 +3480,6 @@
   "@creatinine_clearance_stage_5": {
     "description": "CKD Stage 5"
   },
-  "creatinine_clearance_dosing_normal": "Normal dose",
-  "@creatinine_clearance_dosing_normal": {
-    "description": "Normal drug dosing"
-  },
-  "creatinine_clearance_dosing_reduce_25_50": "Reduce dose 25-50%",
-  "@creatinine_clearance_dosing_reduce_25_50": {
-    "description": "Reduce dose 25-50%"
-  },
-  "creatinine_clearance_dosing_reduce_50_75": "Reduce dose 50-75%",
-  "@creatinine_clearance_dosing_reduce_50_75": {
-    "description": "Reduce dose 50-75%"
-  },
-  "creatinine_clearance_dosing_contraindicated": "Contraindicated or dialysis needed",
-  "@creatinine_clearance_dosing_contraindicated": {
-    "description": "Drug contraindicated or dialysis needed"
-  },
   "creatinine_clearance_recommendation_normal": "Normal monitoring, control risk factors",
   "@creatinine_clearance_recommendation_normal": {
     "description": "Recommendation for normal function"
@@ -3522,10 +3503,6 @@
   "creatinine_clearance_recommendation_esrd": "Dialysis or kidney transplant",
   "@creatinine_clearance_recommendation_esrd": {
     "description": "Recommendation for ESRD"
-  },
-  "creatinine_clearance_drug_dosing": "Drug dose adjustment",
-  "@creatinine_clearance_drug_dosing": {
-    "description": "Drug dosing section label"
   },
   "creatinine_clearance_clinical_recommendation": "Clinical recommendation:",
   "@creatinine_clearance_clinical_recommendation": {
@@ -3563,7 +3540,7 @@
   "@creatinine_clearance_clinical_info": {
     "description": "Clinical information section title"
   },
-  "creatinine_clearance_clinical_text": "Cockcroft-Gault Formula:\nCrCl = [(140 - age) × weight] / (72 × creatinine)\nFemale: multiply by 0.85\n\nImportant Notes:\n• Accuracy decreases when GFR > 60 ml/min\n• Not accurate in obese, elderly, acute illness\n• Drug dosing should be adjusted based on creatinine clearance\n• Monitor kidney function regularly in CKD patients\n• Consider CKD-EPI equation for higher accuracy",
+  "creatinine_clearance_clinical_text": "Cockcroft-Gault Formula:\nCrCl = [(140 - age) × weight] / (72 × creatinine)\nFemale: multiply by 0.85\n\nImportant Notes:\n• Accuracy decreases when GFR > 60 ml/min\n• Not accurate in obese, elderly, acute illness\n• Used for educational understanding of kidney function assessment\n• Monitor kidney function regularly in CKD patients\n• Consider CKD-EPI equation for higher accuracy",
   "@creatinine_clearance_clinical_text": {
     "description": "Clinical information text"
   },
@@ -4508,7 +4485,7 @@
   "@has_bled_approach_low": {
     "description": "HAS-BLED low risk clinical approach"
   },
-  "has_bled_approach_moderate": "Consider dose reduction or more frequent monitoring",
+  "has_bled_approach_moderate": "Consider more frequent monitoring and bleeding assessment",
   "@has_bled_approach_moderate": {
     "description": "HAS-BLED moderate risk clinical approach"
   },
@@ -4726,7 +4703,7 @@
   "@improve_standard_prophylaxis": {
     "description": "IMPROVE standard prophylaxis strategy"
   },
-  "improve_careful_prophylaxis": "Careful prophylaxis, reduce dose",
+  "improve_careful_prophylaxis": "Careful prophylaxis",
   "@improve_careful_prophylaxis": {
     "description": "IMPROVE careful prophylaxis strategy"
   },
@@ -7916,26 +7893,6 @@
   "@mdrd_gfr_action_esrd": {
     "description": "ESRD action"
   },
-  "mdrd_gfr_drug_dosing": "Drug Dosing Adjustment",
-  "@mdrd_gfr_drug_dosing": {
-    "description": "Drug dosing label"
-  },
-  "mdrd_gfr_dosing_normal": "Normal dose for most medications",
-  "@mdrd_gfr_dosing_normal": {
-    "description": "Normal dosing"
-  },
-  "mdrd_gfr_dosing_reduce_25_50": "Reduce renally-excreted drugs by 25-50%",
-  "@mdrd_gfr_dosing_reduce_25_50": {
-    "description": "Reduce dose 25-50%"
-  },
-  "mdrd_gfr_dosing_reduce_50_75": "Reduce renally-excreted drugs by 50-75%",
-  "@mdrd_gfr_dosing_reduce_50_75": {
-    "description": "Reduce dose 50-75%"
-  },
-  "mdrd_gfr_dosing_avoid": "Avoid nephrotoxic drugs, strict dose adjustment",
-  "@mdrd_gfr_dosing_avoid": {
-    "description": "Avoid nephrotoxic drugs"
-  },
   "mdrd_gfr_comparison_title": "Comparison with Other Methods",
   "@mdrd_gfr_comparison_title": {
     "description": "Comparison section title"
@@ -8776,7 +8733,7 @@
   "@antivenom_indications": {
     "description": "Antivenom indications"
   },
-  "antivenom_dosage": "Dosage",
+  "antivenom_dosage": "Treatment",
   "@antivenom_dosage": {
     "description": "Antivenom dosage"
   },

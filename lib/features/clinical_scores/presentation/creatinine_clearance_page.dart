@@ -124,43 +124,7 @@ class _CreatinineClearancePageState extends State<CreatinineClearancePage> {
     return '';
   }
 
-  String drugDosing(BuildContext context) {
-    if (_clearance >= 60) {
-      return AppLocalizations.of(context)!.creatinine_clearance_dosing_normal;
-    }
-    if (_clearance >= 30) {
-      return AppLocalizations.of(context)!.creatinine_clearance_dosing_reduce_25_50;
-    }
-    if (_clearance >= 15) {
-      return AppLocalizations.of(context)!.creatinine_clearance_dosing_reduce_50_75;
-    }
-    if (_clearance > 0) {
-      return AppLocalizations.of(context)!.creatinine_clearance_dosing_contraindicated;
-    }
-    return '';
-  }
 
-  String recommendations(BuildContext context) {
-    if (_clearance >= 90) {
-      return AppLocalizations.of(context)!.creatinine_clearance_recommendation_normal;
-    }
-    if (_clearance >= 60) {
-      return AppLocalizations.of(context)!.creatinine_clearance_recommendation_mild;
-    }
-    if (_clearance >= 45) {
-      return AppLocalizations.of(context)!.creatinine_clearance_recommendation_mild_moderate;
-    }
-    if (_clearance >= 30) {
-      return AppLocalizations.of(context)!.creatinine_clearance_recommendation_moderate_severe;
-    }
-    if (_clearance >= 15) {
-      return AppLocalizations.of(context)!.creatinine_clearance_recommendation_severe;
-    }
-    if (_clearance > 0) {
-      return AppLocalizations.of(context)!.creatinine_clearance_recommendation_esrd;
-    }
-    return '';
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -268,7 +232,7 @@ class _CreatinineClearancePageState extends State<CreatinineClearancePage> {
                         child: Text(
                           Localizations.localeOf(context).languageCode == 'vi'
                               ? 'LƯU Ý Y KHOA THẬN: Kết quả chỉ mang tính tham khảo. Luôn tham khảo ý kiến bác sĩ chuyên khoa thận trước khi đưa ra quyết định điều trị dựa trên độ thanh thải creatinine.'
-                              : 'NEPHROLOGY MEDICAL DISCLAIMER: Results are for reference only. Always consult with nephrologist before making treatment decisions based on creatinine clearance.',
+                              : 'EDUCATIONAL DISCLAIMER: Results are for educational reference only. This is a learning tool, not for clinical decision making.',
                           style: TextStyle(
                             fontSize: 11,
                             color: Colors.red.shade700,
@@ -339,9 +303,6 @@ class _CreatinineClearancePageState extends State<CreatinineClearancePage> {
                 // Reference Values
                 _buildReferenceSection(),
 
-                // Clinical Information
-                _buildClinicalInfo(),
-
                 // Medical Citation
                 Container(
                   margin: const EdgeInsets.all(16),
@@ -399,60 +360,22 @@ class _CreatinineClearancePageState extends State<CreatinineClearancePage> {
       ),
       child: Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Column(
-                children: [
-                  Text(
-                    AppLocalizations.of(context)!.creatinine_clearance_drug_dosing,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      color: Colors.grey.shade700,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    drugDosing(context),
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 14,
-                      color: clearanceColor,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ),
-            ],
+          Text(
+            stage(context),
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 16,
+              color: clearanceColor,
+            ),
+            textAlign: TextAlign.center,
           ),
-          const SizedBox(height: 12),
-          Container(
-            padding: const EdgeInsets.all(12),
-            decoration: BoxDecoration(
-              color: clearanceColor.withValues(alpha: 0.1),
-              borderRadius: BorderRadius.circular(8),
-              border: Border.all(color: clearanceColor.withValues(alpha: 0.2)),
+          const SizedBox(height: 8),
+          Text(
+            kidneyFunction(context),
+            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+              color: AppTheme.darkGrey,
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  AppLocalizations.of(context)!.creatinine_clearance_clinical_recommendation,
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    color: clearanceColor,
-                  ),
-                ),
-                const SizedBox(height: 4),
-                Text(
-                  recommendations(context),
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: AppTheme.darkGrey,
-                  ),
-                ),
-              ],
-            ),
+            textAlign: TextAlign.center,
           ),
         ],
       ),
@@ -728,41 +651,6 @@ class _CreatinineClearancePageState extends State<CreatinineClearancePage> {
                 color: Colors.grey.shade700,
               ),
             ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildClinicalInfo() {
-    return Container(
-      margin: const EdgeInsets.all(16),
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        color: Colors.blue.shade50,
-        border: Border.all(color: Colors.blue.shade200),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Icon(Icons.info, color: Colors.blue.shade600),
-              const SizedBox(width: 8),
-              Text(
-                AppLocalizations.of(context)!.creatinine_clearance_clinical_info,
-                style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                  fontWeight: FontWeight.w600,
-                  color: Colors.blue.shade600,
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 12),
-          Text(
-            AppLocalizations.of(context)!.creatinine_clearance_clinical_text,
-            style: const TextStyle(height: 1.4),
           ),
         ],
       ),

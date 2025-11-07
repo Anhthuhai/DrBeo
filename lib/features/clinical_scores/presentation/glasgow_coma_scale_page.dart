@@ -129,7 +129,7 @@ class _GlasgowComaScalePageState extends State<GlasgowComaScalePage> {
                           child: Text(
                             Localizations.localeOf(context).languageCode == 'vi'
                                 ? 'LƯU Ý Y KHOA THẦN KINH: Kết quả chỉ mang tính tham khảo. Luôn tham khảo ý kiến bác sĩ chuyên khoa thần kinh trước khi đưa ra quyết định điều trị.'
-                                : 'NEUROLOGICAL MEDICAL DISCLAIMER: Results are for reference only. Always consult with neurologist before making treatment decisions.',
+                                : 'EDUCATIONAL DISCLAIMER: Results are for educational reference only. This is a learning tool, not for clinical decision making.',
                             style: TextStyle(
                               fontSize: 11,
                               color: Colors.red.shade700,

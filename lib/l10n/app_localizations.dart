@@ -113,7 +113,7 @@ abstract class AppLocalizations {
   /// Subtitle on home page
   ///
   /// In en, this message translates to:
-  /// **'Support tool for doctors and students practicing in intensive care units'**
+  /// **'Educational reference tool for medical students and healthcare professionals learning'**
   String get welcomeSubtitle;
 
   /// Clinical scores feature title
@@ -1439,7 +1439,7 @@ abstract class AppLocalizations {
   /// H1 antihistamine dose
   ///
   /// In en, this message translates to:
-  /// **'Diphenhydramine 25-50mg IV or\nChlorpheniramine 10mg IV'**
+  /// **'H1 antihistamine as clinically indicated'**
   String get h1_antihistamine_dose;
 
   /// H2 antihistamine medication
@@ -1451,7 +1451,7 @@ abstract class AppLocalizations {
   /// H2 antihistamine dose
   ///
   /// In en, this message translates to:
-  /// **'Ranitidine 50mg IV or\nFamotidine 20mg IV'**
+  /// **'H2 antihistamine as clinically indicated'**
   String get h2_antihistamine_dose;
 
   /// Corticosteroid medication
@@ -1463,7 +1463,7 @@ abstract class AppLocalizations {
   /// Corticosteroid dose
   ///
   /// In en, this message translates to:
-  /// **'Hydrocortisone 200mg IV or\nMethylprednisolone 125mg IV'**
+  /// **'Corticosteroid as clinically indicated'**
   String get corticosteroid_dose;
 
   /// Bronchodilator medication
@@ -1475,7 +1475,7 @@ abstract class AppLocalizations {
   /// Bronchodilator dose
   ///
   /// In en, this message translates to:
-  /// **'Salbutamol 2.5-5mg nebulizer\nMay repeat every 20 minutes'**
+  /// **'Bronchodilator as clinically indicated'**
   String get bronchodilator_dose;
 
   /// Observation time
@@ -4505,13 +4505,13 @@ abstract class AppLocalizations {
   /// Clinical scores page title
   ///
   /// In en, this message translates to:
-  /// **'Clinical Scores'**
+  /// **'Clinical Learning Tools'**
   String get clinical_scores_title;
 
   /// Clinical scores page subtitle
   ///
   /// In en, this message translates to:
-  /// **'Common scores used in ICU'**
+  /// **'Educational scoring systems for medical learning'**
   String get clinical_scores_subtitle;
 
   /// Glasgow Coma Scale list description
@@ -5024,7 +5024,7 @@ abstract class AppLocalizations {
   /// **'Switch to aspirin monotherapy'**
   String get dapt_guideline_discontinue_1;
 
-  /// Aspirin dosing guideline
+  /// Aspirin therapy guideline
   ///
   /// In en, this message translates to:
   /// **'Aspirin dose 75-100mg daily'**
@@ -5063,7 +5063,7 @@ abstract class AppLocalizations {
   /// Drug interactions guideline
   ///
   /// In en, this message translates to:
-  /// **'Drug interactions: adjust dosing'**
+  /// **'Drug interactions: Clinical assessment required'**
   String get dapt_guideline_special_3;
 
   /// Surgery guideline
@@ -5258,30 +5258,6 @@ abstract class AppLocalizations {
   /// **'CKD Stage 5'**
   String get creatinine_clearance_stage_5;
 
-  /// Normal drug dosing
-  ///
-  /// In en, this message translates to:
-  /// **'Normal dose'**
-  String get creatinine_clearance_dosing_normal;
-
-  /// Reduce dose 25-50%
-  ///
-  /// In en, this message translates to:
-  /// **'Reduce dose 25-50%'**
-  String get creatinine_clearance_dosing_reduce_25_50;
-
-  /// Reduce dose 50-75%
-  ///
-  /// In en, this message translates to:
-  /// **'Reduce dose 50-75%'**
-  String get creatinine_clearance_dosing_reduce_50_75;
-
-  /// Drug contraindicated or dialysis needed
-  ///
-  /// In en, this message translates to:
-  /// **'Contraindicated or dialysis needed'**
-  String get creatinine_clearance_dosing_contraindicated;
-
   /// Recommendation for normal function
   ///
   /// In en, this message translates to:
@@ -5317,12 +5293,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Dialysis or kidney transplant'**
   String get creatinine_clearance_recommendation_esrd;
-
-  /// Drug dosing section label
-  ///
-  /// In en, this message translates to:
-  /// **'Drug dose adjustment'**
-  String get creatinine_clearance_drug_dosing;
 
   /// Clinical recommendation label
   ///
@@ -5381,7 +5351,7 @@ abstract class AppLocalizations {
   /// Clinical information text
   ///
   /// In en, this message translates to:
-  /// **'Cockcroft-Gault Formula:\nCrCl = [(140 - age) × weight] / (72 × creatinine)\nFemale: multiply by 0.85\n\nImportant Notes:\n• Accuracy decreases when GFR > 60 ml/min\n• Not accurate in obese, elderly, acute illness\n• Drug dosing should be adjusted based on creatinine clearance\n• Monitor kidney function regularly in CKD patients\n• Consider CKD-EPI equation for higher accuracy'**
+  /// **'Cockcroft-Gault Formula:\nCrCl = [(140 - age) × weight] / (72 × creatinine)\nFemale: multiply by 0.85\n\nImportant Notes:\n• Accuracy decreases when GFR > 60 ml/min\n• Not accurate in obese, elderly, acute illness\n• Used for educational understanding of kidney function assessment\n• Monitor kidney function regularly in CKD patients\n• Consider CKD-EPI equation for higher accuracy'**
   String get creatinine_clearance_clinical_text;
 
   /// Reference section title
@@ -6809,7 +6779,7 @@ abstract class AppLocalizations {
   /// HAS-BLED moderate risk clinical approach
   ///
   /// In en, this message translates to:
-  /// **'Consider dose reduction or more frequent monitoring'**
+  /// **'Consider more frequent monitoring and bleeding assessment'**
   String get has_bled_approach_moderate;
 
   /// HAS-BLED high risk clinical approach
@@ -7121,7 +7091,7 @@ abstract class AppLocalizations {
   /// IMPROVE careful prophylaxis strategy
   ///
   /// In en, this message translates to:
-  /// **'Careful prophylaxis, reduce dose'**
+  /// **'Careful prophylaxis'**
   String get improve_careful_prophylaxis;
 
   /// IMPROVE mechanical prophylaxis strategy
@@ -11756,36 +11726,6 @@ abstract class AppLocalizations {
   /// **'Urgent dialysis or kidney transplant'**
   String get mdrd_gfr_action_esrd;
 
-  /// Drug dosing label
-  ///
-  /// In en, this message translates to:
-  /// **'Drug Dosing Adjustment'**
-  String get mdrd_gfr_drug_dosing;
-
-  /// Normal dosing
-  ///
-  /// In en, this message translates to:
-  /// **'Normal dose for most medications'**
-  String get mdrd_gfr_dosing_normal;
-
-  /// Reduce dose 25-50%
-  ///
-  /// In en, this message translates to:
-  /// **'Reduce renally-excreted drugs by 25-50%'**
-  String get mdrd_gfr_dosing_reduce_25_50;
-
-  /// Reduce dose 50-75%
-  ///
-  /// In en, this message translates to:
-  /// **'Reduce renally-excreted drugs by 50-75%'**
-  String get mdrd_gfr_dosing_reduce_50_75;
-
-  /// Avoid nephrotoxic drugs
-  ///
-  /// In en, this message translates to:
-  /// **'Avoid nephrotoxic drugs, strict dose adjustment'**
-  String get mdrd_gfr_dosing_avoid;
-
   /// Comparison section title
   ///
   /// In en, this message translates to:
@@ -13049,7 +12989,7 @@ abstract class AppLocalizations {
   /// Antivenom dosage
   ///
   /// In en, this message translates to:
-  /// **'Dosage'**
+  /// **'Treatment'**
   String get antivenom_dosage;
 
   /// Antivenom administration

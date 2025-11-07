@@ -16,7 +16,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get welcomeSubtitle =>
-      'Support tool for doctors and students practicing in intensive care units';
+      'Educational reference tool for medical students and healthcare professionals learning';
 
   @override
   String get clinicalScores => 'Clinical Scores';
@@ -702,28 +702,26 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get h1_antihistamine_dose =>
-      'Diphenhydramine 25-50mg IV or\nChlorpheniramine 10mg IV';
+      'H1 antihistamine as clinically indicated';
 
   @override
   String get h2_antihistamine => 'H2 Antihistamine';
 
   @override
   String get h2_antihistamine_dose =>
-      'Ranitidine 50mg IV or\nFamotidine 20mg IV';
+      'H2 antihistamine as clinically indicated';
 
   @override
   String get corticosteroid => 'Corticosteroid';
 
   @override
-  String get corticosteroid_dose =>
-      'Hydrocortisone 200mg IV or\nMethylprednisolone 125mg IV';
+  String get corticosteroid_dose => 'Corticosteroid as clinically indicated';
 
   @override
   String get bronchodilator => 'Bronchodilator';
 
   @override
-  String get bronchodilator_dose =>
-      'Salbutamol 2.5-5mg nebulizer\nMay repeat every 20 minutes';
+  String get bronchodilator_dose => 'Bronchodilator as clinically indicated';
 
   @override
   String get observation_time => 'Observation time';
@@ -2305,10 +2303,11 @@ class AppLocalizationsEn extends AppLocalizations {
       'Kamath PS, et al. A model to predict survival in patients with end-stage liver disease. Hepatology. 2001;33(2):464-70.';
 
   @override
-  String get clinical_scores_title => 'Clinical Scores';
+  String get clinical_scores_title => 'Clinical Learning Tools';
 
   @override
-  String get clinical_scores_subtitle => 'Common scores used in ICU';
+  String get clinical_scores_subtitle =>
+      'Educational scoring systems for medical learning';
 
   @override
   String get gcs_list_description => 'Eye, verbal, motor response assessment';
@@ -2605,7 +2604,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get dapt_guideline_special_2 => 'Elderly patients: careful assessment';
 
   @override
-  String get dapt_guideline_special_3 => 'Drug interactions: adjust dosing';
+  String get dapt_guideline_special_3 =>
+      'Drug interactions: Clinical assessment required';
 
   @override
   String get dapt_guideline_special_4 => 'Surgery: minimal interruption';
@@ -2712,19 +2712,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get creatinine_clearance_stage_5 => 'CKD Stage 5';
 
   @override
-  String get creatinine_clearance_dosing_normal => 'Normal dose';
-
-  @override
-  String get creatinine_clearance_dosing_reduce_25_50 => 'Reduce dose 25-50%';
-
-  @override
-  String get creatinine_clearance_dosing_reduce_50_75 => 'Reduce dose 50-75%';
-
-  @override
-  String get creatinine_clearance_dosing_contraindicated =>
-      'Contraindicated or dialysis needed';
-
-  @override
   String get creatinine_clearance_recommendation_normal =>
       'Normal monitoring, control risk factors';
 
@@ -2747,9 +2734,6 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get creatinine_clearance_recommendation_esrd =>
       'Dialysis or kidney transplant';
-
-  @override
-  String get creatinine_clearance_drug_dosing => 'Drug dose adjustment';
 
   @override
   String get creatinine_clearance_clinical_recommendation =>
@@ -2781,7 +2765,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get creatinine_clearance_clinical_text =>
-      'Cockcroft-Gault Formula:\nCrCl = [(140 - age) × weight] / (72 × creatinine)\nFemale: multiply by 0.85\n\nImportant Notes:\n• Accuracy decreases when GFR > 60 ml/min\n• Not accurate in obese, elderly, acute illness\n• Drug dosing should be adjusted based on creatinine clearance\n• Monitor kidney function regularly in CKD patients\n• Consider CKD-EPI equation for higher accuracy';
+      'Cockcroft-Gault Formula:\nCrCl = [(140 - age) × weight] / (72 × creatinine)\nFemale: multiply by 0.85\n\nImportant Notes:\n• Accuracy decreases when GFR > 60 ml/min\n• Not accurate in obese, elderly, acute illness\n• Used for educational understanding of kidney function assessment\n• Monitor kidney function regularly in CKD patients\n• Consider CKD-EPI equation for higher accuracy';
 
   @override
   String get creatinine_clearance_reference_title => 'Reference';
@@ -3538,7 +3522,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get has_bled_approach_moderate =>
-      'Consider dose reduction or more frequent monitoring';
+      'Consider more frequent monitoring and bleeding assessment';
 
   @override
   String get has_bled_approach_high =>
@@ -3703,7 +3687,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get improve_standard_prophylaxis => 'Standard prophylaxis';
 
   @override
-  String get improve_careful_prophylaxis => 'Careful prophylaxis, reduce dose';
+  String get improve_careful_prophylaxis => 'Careful prophylaxis';
 
   @override
   String get improve_mechanical_prophylaxis =>
@@ -6232,24 +6216,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get mdrd_gfr_action_esrd => 'Urgent dialysis or kidney transplant';
 
   @override
-  String get mdrd_gfr_drug_dosing => 'Drug Dosing Adjustment';
-
-  @override
-  String get mdrd_gfr_dosing_normal => 'Normal dose for most medications';
-
-  @override
-  String get mdrd_gfr_dosing_reduce_25_50 =>
-      'Reduce renally-excreted drugs by 25-50%';
-
-  @override
-  String get mdrd_gfr_dosing_reduce_50_75 =>
-      'Reduce renally-excreted drugs by 50-75%';
-
-  @override
-  String get mdrd_gfr_dosing_avoid =>
-      'Avoid nephrotoxic drugs, strict dose adjustment';
-
-  @override
   String get mdrd_gfr_comparison_title => 'Comparison with Other Methods';
 
   @override
@@ -6951,7 +6917,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get antivenom_indications => 'Indications';
 
   @override
-  String get antivenom_dosage => 'Dosage';
+  String get antivenom_dosage => 'Treatment';
 
   @override
   String get antivenom_administration => 'Administration';

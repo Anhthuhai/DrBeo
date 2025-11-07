@@ -200,7 +200,7 @@ class _DaptScorePageState extends State<DaptScorePage> {
                         child: Text(
                           Localizations.localeOf(context).languageCode == 'vi'
                               ? 'LƯU Ý Y KHOA TIM MẠCH: Kết quả chỉ mang tính tham khảo. Luôn tham khảo ý kiến bác sĩ chuyên khoa tim mạch trước khi đưa ra quyết định điều trị kháng tiểu cầu.'
-                              : 'CARDIOLOGY MEDICAL DISCLAIMER: Results are for reference only. Always consult with cardiologist before making antiplatelet treatment decisions.',
+                              : 'EDUCATIONAL DISCLAIMER: Results are for educational reference only. This is a learning tool, not for clinical decision making.',
                           style: TextStyle(
                             fontSize: 11,
                             color: Colors.red.shade700,

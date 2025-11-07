@@ -16,7 +16,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get welcomeSubtitle =>
-      'Công cụ hỗ trợ cho bác sĩ và sinh viên thực hành tại khoa hồi sức tích cực';
+      'Công cụ tham khảo giáo dục cho sinh viên y khoa và chuyên gia y tế đang học tập';
 
   @override
   String get clinicalScores => 'Thang điểm lâm sàng';
@@ -699,28 +699,27 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get h1_antihistamine_dose =>
-      'Diphenhydramine 25-50mg IV hoặc\nChlorpheniramine 10mg IV';
+      'Thuốc kháng histamin H1 theo chỉ định lâm sàng';
 
   @override
   String get h2_antihistamine => 'H2 Antihistamine';
 
   @override
   String get h2_antihistamine_dose =>
-      'Ranitidine 50mg IV hoặc\nFamotidine 20mg IV';
+      'Thuốc kháng histamin H2 theo chỉ định lâm sàng';
 
   @override
   String get corticosteroid => 'Corticosteroid';
 
   @override
-  String get corticosteroid_dose =>
-      'Hydrocortisone 200mg IV hoặc\nMethylprednisolone 125mg IV';
+  String get corticosteroid_dose => 'Corticosteroid theo chỉ định lâm sàng';
 
   @override
   String get bronchodilator => 'Bronchodilator';
 
   @override
   String get bronchodilator_dose =>
-      'Salbutamol 2.5-5mg nebulizer\nCó thể lặp lại mỗi 20 phút';
+      'Thuốc giãn phế quản theo chỉ định lâm sàng';
 
   @override
   String get observation_time => 'Thời gian quan sát';
@@ -2291,10 +2290,11 @@ class AppLocalizationsVi extends AppLocalizations {
       'Kamath PS, et al. A model to predict survival in patients with end-stage liver disease. Hepatology. 2001;33(2):464-70.';
 
   @override
-  String get clinical_scores_title => 'Thang điểm lâm sàng';
+  String get clinical_scores_title => 'Công cụ học tập lâm sàng';
 
   @override
-  String get clinical_scores_subtitle => 'Các thang điểm thường dùng trong ICU';
+  String get clinical_scores_subtitle =>
+      'Hệ thống thang điểm giáo dục cho việc học y khoa';
 
   @override
   String get gcs_list_description => 'Đánh giá mức độ ý thức bệnh nhân';
@@ -2701,18 +2701,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String get creatinine_clearance_stage_5 => 'Giai đoạn 5 (<15)';
 
   @override
-  String get creatinine_clearance_dosing_normal => 'Liều bình thường';
-
-  @override
-  String get creatinine_clearance_dosing_reduce_25_50 => 'Giảm liều 25-50%';
-
-  @override
-  String get creatinine_clearance_dosing_reduce_50_75 => 'Giảm liều 50-75%';
-
-  @override
-  String get creatinine_clearance_dosing_contraindicated => 'Chống chỉ định';
-
-  @override
   String get creatinine_clearance_recommendation_normal => 'Theo dõi định kỳ';
 
   @override
@@ -2732,9 +2720,6 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get creatinine_clearance_recommendation_esrd => 'Cần thẩm phân';
-
-  @override
-  String get creatinine_clearance_drug_dosing => 'Điều chỉnh liều thuốc';
 
   @override
   String get creatinine_clearance_clinical_recommendation =>
@@ -2766,7 +2751,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get creatinine_clearance_clinical_text =>
-      'Độ thanh thải creatinine đánh giá chức năng thận và hướng dẫn điều chỉnh liều thuốc. Sử dụng công thức Cockcroft-Gault.';
+      'Độ thanh thải creatinine đánh giá chức năng thận cho mục đích giáo dục và tham khảo học tập. Sử dụng công thức Cockcroft-Gault.';
 
   @override
   String get creatinine_clearance_reference_title => 'Tài liệu tham khảo';
@@ -3339,10 +3324,10 @@ class AppLocalizationsVi extends AppLocalizations {
   String get crusade_recommendation_low => 'Theo dõi chặt chẽ hơn';
 
   @override
-  String get crusade_recommendation_moderate => 'Cân nhắc điều chỉnh thuốc';
+  String get crusade_recommendation_moderate => 'Cân nhắc theo dõi chặt chẽ';
 
   @override
-  String get crusade_recommendation_high => 'Giảm liều kháng đông';
+  String get crusade_recommendation_high => 'Theo dõi nguy cơ chảy máu';
 
   @override
   String get crusade_recommendation_very_high => 'Tránh thuốc có nguy cơ cao';
@@ -6107,21 +6092,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String get mdrd_gfr_action_esrd => 'Thẩm phân/ghép thận';
 
   @override
-  String get mdrd_gfr_drug_dosing => 'Điều chỉnh liều thuốc';
-
-  @override
-  String get mdrd_gfr_dosing_normal => 'Liều bình thường';
-
-  @override
-  String get mdrd_gfr_dosing_reduce_25_50 => 'Giảm liều 25-50%';
-
-  @override
-  String get mdrd_gfr_dosing_reduce_50_75 => 'Giảm liều 50-75%';
-
-  @override
-  String get mdrd_gfr_dosing_avoid => 'Tránh thuốc độc thận';
-
-  @override
   String get mdrd_gfr_comparison_title => 'So sánh với Cockcroft-Gault';
 
   @override
@@ -6811,7 +6781,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get antivenom_indications => 'Chỉ định sử dụng';
 
   @override
-  String get antivenom_dosage => 'Liều dùng';
+  String get antivenom_dosage => 'Điều trị';
 
   @override
   String get antivenom_administration => 'Cách truyền';

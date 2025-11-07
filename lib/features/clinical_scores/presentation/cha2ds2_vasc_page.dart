@@ -180,7 +180,7 @@ class _Cha2ds2VascPageState extends State<Cha2ds2VascPage> {
                         child: Text(
                           Localizations.localeOf(context).languageCode == 'vi'
                               ? 'LƯU Ý Y KHOA: Kết quả chỉ mang tính tham khảo. Luôn tham khảo ý kiến bác sĩ chuyên khoa tim mạch trước khi đưa ra quyết định điều trị.'
-                              : 'MEDICAL DISCLAIMER: Results are for reference only. Always consult with a cardiologist before making treatment decisions.',
+                              : 'EDUCATIONAL DISCLAIMER: Results are for educational reference only. This is a learning tool, not for clinical decision making.',
                           style: TextStyle(
                             fontSize: 11,
                             color: Colors.red.shade700,

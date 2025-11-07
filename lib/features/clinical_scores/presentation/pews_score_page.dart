@@ -349,7 +349,7 @@ class _PewsScorePageState extends State<PewsScorePage> {
                         child: Text(
                           Localizations.localeOf(context).languageCode == 'vi'
                               ? 'LƯU Ý Y KHOA NHI: Kết quả chỉ mang tính tham khảo. Luôn tham khảo ý kiến bác sĩ nhi khoa trước khi đưa ra quyết định điều trị.'
-                              : 'PEDIATRIC MEDICAL DISCLAIMER: Results are for reference only. Always consult with a pediatric specialist before making treatment decisions.',
+                              : 'EDUCATIONAL DISCLAIMER: Results are for educational reference only. This is a learning tool, not for clinical decision making.',
                           style: TextStyle(
                             fontSize: 11,
                             color: Colors.red.shade700,

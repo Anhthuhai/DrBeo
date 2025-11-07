@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../l10n/app_localizations.dart';
+import '../../../shared/services/bookmark_service.dart';
+import '../../../shared/models/bookmark_item.dart';
 import 'glasgow_coma_scale_page.dart';
 import 'apache_ii_page.dart';
 import 'sofa_score_page.dart';
@@ -36,6 +38,8 @@ import 'creatinine_clearance_page.dart';
 import 'mdrd_gfr_page.dart';
 import 'cam_icu_page.dart';
 import 'rass_score_page.dart';
+import 'fluid_balance_page.dart';
+import 'ideal_body_weight_page.dart';
 
 class ClinicalScoresPage extends StatefulWidget {
   const ClinicalScoresPage({super.key});
@@ -47,6 +51,21 @@ class ClinicalScoresPage extends StatefulWidget {
 class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
   final TextEditingController _searchController = TextEditingController();
   String _searchQuery = '';
+  late BookmarkService _bookmarkService;
+
+  @override
+  void initState() {
+    super.initState();
+    _bookmarkService = BookmarkService.instance;
+    _initializeBookmarks();
+  }
+
+  Future<void> _initializeBookmarks() async {
+    await _bookmarkService.initialize();
+    if (mounted) {
+      setState(() {});
+    }
+  }
 
   @override
   void dispose() {
@@ -57,6 +76,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
   List<Map<String, dynamic>> get _scoresList => [
     // Core ICU Scores
     {
+      'id': 'glasgow_coma_scale',
       'title': 'Glasgow Coma Scale (GCS)',
       'subtitle': 'Eye, Verbal, Motor Response Assessment',
       'description': AppLocalizations.of(context)!.gcs_list_description,
@@ -65,6 +85,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'page': const GlasgowComaScalePage(),
     },
     {
+      'id': 'apache_ii',
       'title': 'APACHE II',
       'subtitle': 'Acute Physiology and Chronic Health Evaluation',
       'description': AppLocalizations.of(context)!.apache_list_description,
@@ -73,6 +94,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'page': const ApacheIIPage(),
     },
     {
+      'id': 'sofa_score',
       'title': 'SOFA Score',
       'subtitle': 'Sequential Organ Failure Assessment',
       'description': AppLocalizations.of(context)!.sofa_list_description,
@@ -81,6 +103,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'page': const SOFAScorePage(),
     },
     {
+      'id': 'saps_ii',
       'title': 'SAPS II',
       'subtitle': 'Simplified Acute Physiology Score',
       'description': AppLocalizations.of(context)!.saps_list_description,
@@ -89,6 +112,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'page': const SAPSII(),
     },
     {
+      'id': 'qsofa_score',
       'title': 'qSOFA Score',
       'subtitle': 'Quick Sequential Organ Failure Assessment',
       'description': AppLocalizations.of(context)!.qsofa_list_description,
@@ -97,6 +121,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'page': const QsofaScorePage(),
     },
     {
+      'id': 'cam_icu',
       'title': 'CAM-ICU',
       'subtitle': 'Confusion Assessment Method for ICU',
       'description': AppLocalizations.of(context)!.cam_icu_list_description,
@@ -105,6 +130,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'page': const CamIcuPage(),
     },
     {
+      'id': 'rass',
       'title': 'RASS',
       'subtitle': 'Richmond Agitation-Sedation Scale',
       'description': AppLocalizations.of(context)!.rass_list_description,
@@ -115,6 +141,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
     
     // Early Warning Systems
     {
+      'id': 'mews',
       'title': 'MEWS',
       'subtitle': 'Modified Early Warning Score',
       'description': AppLocalizations.of(context)!.mews_list_description,
@@ -123,6 +150,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'page': const MEWSPage(),
     },
     {
+      'id': 'pews',
       'title': 'PEWS',
       'subtitle': 'Pediatric Early Warning Score',
       'description': AppLocalizations.of(context)!.pews_list_description,
@@ -133,6 +161,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
     
     // Cardiovascular Scores
     {
+      'id': 'grace_score',
       'title': 'GRACE Score',
       'subtitle': 'Global Registry of Acute Coronary Events',
       'description': AppLocalizations.of(context)!.grace_list_description,
@@ -141,6 +170,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'page': const GraceScorePage(),
     },
     {
+      'id': 'timi_stemi',
       'title': 'TIMI STEMI',
       'subtitle': 'TIMI Risk Score for STEMI',
       'description': AppLocalizations.of(context)!.timi_stemi_list_description,
@@ -149,6 +179,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'page': const TimiStemiPage(),
     },
     {
+      'id': 'timi_ua_nstemi',
       'title': 'TIMI UA/NSTEMI',
       'subtitle': 'TIMI Risk Score for UA/NSTEMI',
       'description': AppLocalizations.of(context)!.timi_ua_nstemi_list_description,
@@ -159,6 +190,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
     
     // Bleeding Risk Scores
     {
+      'id': 'crusade_score',
       'title': 'CRUSADE Score',
       'subtitle': 'Bleeding Risk in ACS',
       'description': AppLocalizations.of(context)!.crusade_list_description,
@@ -167,6 +199,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'page': const CrusadeBleedingRiskPage(),
     },
     {
+      'id': 'has_bled_score',
       'title': 'HAS-BLED Score',
       'subtitle': 'Bleeding Risk Assessment',
       'description': AppLocalizations.of(context)!.has_bled_list_description,
@@ -175,6 +208,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'page': const HasBledScorePage(),
     },
     {
+      'id': 'improve_bleeding_risk',
       'title': 'IMPROVE Bleeding Risk',
       'subtitle': 'Bleeding Risk in Medical Patients',
       'description': AppLocalizations.of(context)!.improve_list_description,
@@ -185,6 +219,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
     
     // Stroke & Thrombosis Scores
     {
+      'id': 'cha2ds2_vasc',
       'title': 'CHA2DS2-VASc',
       'subtitle': 'Stroke Risk in Atrial Fibrillation',
       'description': AppLocalizations.of(context)!.cha2ds2_vasc_list_description,
@@ -193,6 +228,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'page': const Cha2ds2VascPage(),
     },
     {
+      'id': 'wells_dvt_score',
       'title': 'Wells DVT Score',
       'subtitle': 'Deep Vein Thrombosis Probability',
       'description': AppLocalizations.of(context)!.wells_dvt_list_description,
@@ -201,6 +237,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'page': const WellsDvtScorePage(),
     },
     {
+      'id': 'padua_prediction_score',
       'title': 'Padua Prediction Score',
       'subtitle': 'VTE Risk in Medical Patients',
       'description': AppLocalizations.of(context)!.padua_list_description,
@@ -209,6 +246,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'page': const PaduaPredictionScorePage(),
     },
     {
+      'id': 'abcd2_score',
       'title': 'ABCD2 Score',
       'subtitle': 'Stroke Risk after TIA',
       'description': AppLocalizations.of(context)!.abcd2_list_description,
@@ -217,6 +255,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'page': const Abcd2Page(),
     },
     {
+      'id': 'nihss',
       'title': 'NIHSS',
       'subtitle': 'National Institutes of Health Stroke Scale',
       'description': AppLocalizations.of(context)!.nihss_list_description,
@@ -225,6 +264,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'page': const NihssPage(),
     },
     {
+      'id': 'race_scale',
       'title': 'RACE Scale',
       'subtitle': 'Rapid Arterial Occlusion Evaluation',
       'description': AppLocalizations.of(context)!.race_list_description,
@@ -233,6 +273,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'page': const RaceScalePage(),
     },
     {
+      'id': 'aspect_score',
       'title': 'ASPECT Score',
       'subtitle': 'Alberta Stroke Program Early CT Score',
       'description': AppLocalizations.of(context)!.aspect_list_description,
@@ -243,6 +284,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
     
     // Cardiology Diagnostics
     {
+      'id': 'modified_sgarbossa_criteria',
       'title': 'Modified Sgarbossa Criteria',
       'subtitle': 'STEMI in LBBB',
       'description': AppLocalizations.of(context)!.sgarbossa_list_description,
@@ -253,6 +295,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
     
     // Gastrointestinal & Liver Scores
     {
+      'id': 'ranson_criteria',
       'title': 'Ranson Criteria',
       'subtitle': 'Acute Pancreatitis Severity',
       'description': AppLocalizations.of(context)!.ranson_list_description,
@@ -261,6 +304,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'page': const RansonPage(),
     },
     {
+      'id': 'child_pugh_score',
       'title': 'Child-Pugh Score',
       'subtitle': 'Liver Disease Severity',
       'description': AppLocalizations.of(context)!.child_pugh_list_description,
@@ -269,6 +313,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'page': const ChildPughPage(),
     },
     {
+      'id': 'meld_score',
       'title': 'MELD Score',
       'subtitle': 'Model for End-Stage Liver Disease',
       'description': AppLocalizations.of(context)!.meld_list_description,
@@ -279,6 +324,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
     
     // Respiratory Scores
     {
+      'id': 'curb_65',
       'title': 'CURB-65',
       'subtitle': 'Community-Acquired Pneumonia Severity',
       'description': AppLocalizations.of(context)!.curb65_list_description,
@@ -287,6 +333,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'page': const Curb65Page(),
     },
     {
+      'id': 'psi',
       'title': 'PSI',
       'subtitle': 'Pneumonia Severity Index',
       'description': AppLocalizations.of(context)!.psi_list_description,
@@ -297,6 +344,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
     
     // Perioperative Scores
     {
+      'id': 'asa_physical_status',
       'title': 'ASA Physical Status',
       'subtitle': 'American Society of Anesthesiologists',
       'description': AppLocalizations.of(context)!.asa_list_description,
@@ -305,6 +353,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'page': const AsaPhysicalStatusPage(),
     },
     {
+      'id': 'revised_cardiac_risk_index',
       'title': 'Revised Cardiac Risk Index',
       'subtitle': 'Perioperative Cardiac Risk',
       'description': AppLocalizations.of(context)!.cardiac_risk_list_description,
@@ -313,6 +362,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'page': const RevisedCardiacRiskIndexPage(),
     },
     {
+      'id': 'surgical_apgar_score',
       'title': 'Surgical Apgar Score',
       'subtitle': 'Postoperative Outcome Prediction',
       'description': AppLocalizations.of(context)!.apgar_list_description,
@@ -321,6 +371,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'page': const SurgicalApgarScorePage(),
     },
     {
+      'id': 'preoperative_mortality_prediction',
       'title': 'Preoperative Mortality Prediction',
       'subtitle': 'Surgical Risk Assessment',
       'description': AppLocalizations.of(context)!.preop_mortality_list_description,
@@ -331,6 +382,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
     
     // Medication & Treatment Scores
     {
+      'id': 'dapt_score',
       'title': 'DAPT Score',
       'subtitle': 'Dual Antiplatelet Therapy',
       'description': AppLocalizations.of(context)!.dapt_list_description,
@@ -341,6 +393,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
     
     // Renal Function Scores
     {
+      'id': 'creatinine_clearance',
       'title': 'Creatinine Clearance',
       'subtitle': 'Kidney Function Assessment',
       'description': AppLocalizations.of(context)!.creatinine_clearance_list_description,
@@ -349,12 +402,52 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'page': const CreatinineClearancePage(),
     },
     {
+      'id': 'mdrd_gfr',
       'title': 'MDRD GFR',
       'subtitle': 'Modification of Diet in Renal Disease',
       'description': AppLocalizations.of(context)!.mdrd_list_description,
       'icon': Icons.water,
       'color': Colors.lightBlue.shade700,
       'page': const MdrdGfrPage(),
+    },
+    
+    // Fluid Management
+    {
+      'id': 'fluid_balance',
+      'title': Localizations.localeOf(context).languageCode == 'vi' 
+          ? 'Tính Cân Bằng Dịch' 
+          : 'Fluid Balance Calculator',
+      'subtitle': Localizations.localeOf(context).languageCode == 'vi'
+          ? 'Theo dõi cân bằng dịch xuất nhập'
+          : 'Intake and Output Balance Monitoring',
+      'description': Localizations.localeOf(context).languageCode == 'vi'
+          ? 'Công cụ tính toán và theo dõi cân bằng dịch hàng ngày cho bệnh nhân'
+          : 'Tool for calculating and monitoring daily fluid balance in patients',
+      'searchKeywords': Localizations.localeOf(context).languageCode == 'vi'
+          ? 'tính cân bằng dịch xuất nhập fluid balance dịch truyền nước tiểu diuresis'
+          : 'fluid balance intake output urine diuresis water insensible loss',
+      'icon': Icons.water_drop,
+      'color': Colors.blue.shade600,
+      'page': const FluidBalancePage(),
+    },
+
+    {
+      'id': 'ideal_body_weight',
+      'title': Localizations.localeOf(context).languageCode == 'vi' 
+          ? 'Cân Nặng Lý Tưởng' 
+          : 'Ideal Body Weight',
+      'subtitle': Localizations.localeOf(context).languageCode == 'vi'
+          ? 'Tính IBW và thông số thở máy'
+          : 'IBW and Ventilator Settings',
+      'description': Localizations.localeOf(context).languageCode == 'vi'
+          ? 'Tính cân nặng lý tưởng và tidal volume cho thở máy dựa trên chiều cao và giới tính'
+          : 'Calculate ideal body weight and tidal volume for ventilator based on height and gender',
+      'searchKeywords': Localizations.localeOf(context).languageCode == 'vi'
+          ? 'cân nặng lý tưởng ideal body weight ibw thở máy ventilator tidal volume devine hamwi robinson'
+          : 'ideal body weight ibw ventilator tidal volume devine hamwi robinson mechanical ventilation',
+      'icon': Icons.monitor_weight,
+      'color': Colors.purple.shade600,
+      'page': const IdealBodyWeightPage(),
     },
   ];
 
@@ -363,10 +456,31 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       return _scoresList;
     }
     return _scoresList.where((score) {
-      return score['title'].toLowerCase().contains(_searchQuery.toLowerCase()) ||
-             score['subtitle'].toLowerCase().contains(_searchQuery.toLowerCase()) ||
-             score['description'].toLowerCase().contains(_searchQuery.toLowerCase());
+      final query = _searchQuery.toLowerCase();
+      return score['title'].toLowerCase().contains(query) ||
+             score['subtitle'].toLowerCase().contains(query) ||
+             score['description'].toLowerCase().contains(query) ||
+             (score['searchKeywords'] != null && 
+              score['searchKeywords'].toLowerCase().contains(query));
     }).toList();
+  }
+
+  Future<void> _toggleBookmark(Map<String, dynamic> scoreData) async {
+    final scoreId = scoreData['id'] as String? ?? 
+        (scoreData['title'] as String).toLowerCase().replaceAll(' ', '_');
+    
+    final bookmarkItem = BookmarkItem(
+      id: scoreId,
+      title: scoreData['title'] as String,
+      subtitle: scoreData['subtitle'] as String,
+      description: scoreData['description'] as String,
+      iconName: scoreData['icon'].toString(),
+      colorValue: (scoreData['color'] as Color).toARGB32().toString(),
+      pageType: scoreData['page'].runtimeType.toString(),
+    );
+
+    await _bookmarkService.toggleBookmark(bookmarkItem);
+    setState(() {});
   }
 
   @override
@@ -457,22 +571,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
                         final score = _filteredScores[index];
                         return Column(
                           children: [
-                            _buildScoreCard(
-                              context,
-                              score['title'],
-                              score['subtitle'],
-                              score['description'],
-                              score['icon'],
-                              score['color'],
-                              () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => score['page'],
-                                  ),
-                                );
-                              },
-                            ),
+                            _buildScoreCard(context, score),
                             if (index < _filteredScores.length - 1)
                               const SizedBox(height: 12),
                           ],
@@ -488,13 +587,21 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
 
   Widget _buildScoreCard(
     BuildContext context,
-    String title,
-    String subtitle,
-    String description,
-    IconData icon,
-    Color color,
-    VoidCallback onTap,
+    Map<String, dynamic> scoreData,
   ) {
+    final title = scoreData['title'] as String;
+    final subtitle = scoreData['subtitle'] as String;
+    final description = scoreData['description'] as String;
+    final icon = scoreData['icon'] as IconData;
+    final color = scoreData['color'] as Color;
+    final scoreId = scoreData['id'] as String? ?? title.toLowerCase().replaceAll(' ', '_');
+    
+    void onTap() => Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => scoreData['page']),
+    );
+    final isBookmarked = _bookmarkService.isBookmarked(scoreId);
+
     return InkWell(
       onTap: onTap,
       borderRadius: BorderRadius.circular(12),
@@ -561,6 +668,27 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
                 ],
               ),
             ),
+            // Bookmark button
+            IconButton(
+              onPressed: () => _toggleBookmark(scoreData),
+              icon: AnimatedSwitcher(
+                duration: const Duration(milliseconds: 200),
+                child: Icon(
+                  isBookmarked ? Icons.bookmark : Icons.bookmark_border,
+                  key: ValueKey(isBookmarked),
+                  color: isBookmarked ? Colors.amber.shade600 : Colors.grey.shade400,
+                  size: 24,
+                ),
+              ),
+              tooltip: isBookmarked 
+                ? (Localizations.localeOf(context).languageCode == 'vi' 
+                   ? 'Bỏ đánh dấu' 
+                   : 'Remove bookmark')
+                : (Localizations.localeOf(context).languageCode == 'vi' 
+                   ? 'Đánh dấu' 
+                   : 'Add bookmark'),
+            ),
+            const SizedBox(width: 8),
             Icon(
               Icons.arrow_forward_ios,
               color: Colors.grey.shade400,
