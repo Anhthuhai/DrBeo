@@ -537,7 +537,7 @@ class _PewsScorePageState extends State<PewsScorePage> {
           
           TextField(
             controller: _ageController,
-            keyboardType: TextInputType.number,
+            keyboardType: const TextInputType.numberWithOptions(decimal: true),
             decoration: InputDecoration(
               labelText: localizations.pews_age_label,
               suffixText: localizations.pews_age_unit,
@@ -553,7 +553,7 @@ class _PewsScorePageState extends State<PewsScorePage> {
           
           TextField(
             controller: _heartRateController,
-            keyboardType: TextInputType.number,
+            keyboardType: const TextInputType.numberWithOptions(decimal: true),
             decoration: InputDecoration(
               labelText: localizations.pews_heart_rate_label,
               suffixText: localizations.unit_per_minute,
@@ -569,7 +569,7 @@ class _PewsScorePageState extends State<PewsScorePage> {
           
           TextField(
             controller: _respiratoryRateController,
-            keyboardType: TextInputType.number,
+            keyboardType: const TextInputType.numberWithOptions(decimal: true),
             decoration: InputDecoration(
               labelText: localizations.pews_respiratory_rate_label,
               suffixText: localizations.unit_per_minute,
@@ -585,7 +585,7 @@ class _PewsScorePageState extends State<PewsScorePage> {
           
           TextField(
             controller: _systolicBpController,
-            keyboardType: TextInputType.number,
+            keyboardType: const TextInputType.numberWithOptions(decimal: true),
             decoration: InputDecoration(
               labelText: localizations.pews_systolic_bp_label,
               suffixText: 'mmHg',

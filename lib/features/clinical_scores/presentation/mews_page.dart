@@ -186,102 +186,68 @@ class _MEWSPageState extends State<MEWSPage> {
           ),
         ],
       ),
-      body: Column(
-        children: [
-          // Score Display
-          Container(
-            width: double.infinity,
-            margin: const EdgeInsets.all(16),
-            padding: const EdgeInsets.all(20),
-            decoration: BoxDecoration(
-              color: scoreColor.withValues(alpha: 0.1),
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: scoreColor.withValues(alpha: 0.3)),
-            ),
-            child: Column(
-              children: [
-                Text(
-                  Localizations.localeOf(context).languageCode == 'vi' 
-                      ? 'Thang điểm MEWS' 
-                      : 'MEWS Score',
-                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    color: AppTheme.darkGrey,
-                  ),
-                ),
-                const SizedBox(height: 8),
-                Text(
-                  totalScore.toString(),
-                  style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                    color: scoreColor,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(height: 4),
-                Text(
-                  '(BP$systolicBPScore + HR$heartRateScore + RR$respiratoryRateScore + T$temperatureScore + A$avpuScore)',
-                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                    color: AppTheme.mediumGrey,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-                const SizedBox(height: 8),
-                Text(
-                  getInterpretation(localizations),
-                  style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                    color: scoreColor,
-                    fontWeight: FontWeight.w600,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-                const SizedBox(height: 4),
-                Text(
-                  getActionRequired(localizations),
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: scoreColor,
-                    fontWeight: FontWeight.w500,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-              ],
+      body: CustomScrollView(
+        slivers: [
+          // Sticky Score Header
+          SliverPersistentHeader(
+            pinned: true,
+            delegate: _MEWSScoreHeaderDelegate(
+              minHeight: 45,
+              maxHeight: 75,
+              scoreColor: scoreColor,
+              totalScore: totalScore,
+              systolicBPScore: systolicBPScore,
+              heartRateScore: heartRateScore,
+              respiratoryRateScore: respiratoryRateScore,
+              temperatureScore: temperatureScore,
+              avpuScore: avpuScore,
+              interpretation: getInterpretation(localizations),
+              actionRequired: getActionRequired(localizations),
+              localizations: localizations,
             ),
           ),
 
-          // Medical Disclaimer Banner
-          Container(
-            width: double.infinity,
-            margin: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-            padding: const EdgeInsets.all(12),
-            decoration: BoxDecoration(
-              color: Colors.red.shade50,
-              borderRadius: BorderRadius.circular(8),
-              border: Border.all(color: Colors.red.shade200),
-            ),
-            child: Row(
-              children: [
-                Icon(Icons.warning, color: Colors.red.shade700, size: 20),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: Text(
-                    Localizations.localeOf(context).languageCode == 'vi'
-                        ? 'LƯU Ý Y KHOA: Kết quả chỉ mang tính tham khảo. Luôn tham khảo ý kiến bác sĩ chuyên khoa trước khi đưa ra quyết định điều trị.'
-                        : 'EDUCATIONAL DISCLAIMER: Results are for educational reference only. This is a learning tool, not for clinical decision making.',
-                    style: TextStyle(
-                      fontSize: 11,
-                      color: Colors.red.shade700,
-                      fontWeight: FontWeight.w500,
+          // Compact Disclaimer Banner
+          SliverToBoxAdapter(
+            child: Container(
+              width: double.infinity,
+              margin: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+              decoration: BoxDecoration(
+                color: Colors.red.shade50,
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(color: Colors.red.shade200),
+              ),
+              child: Row(
+                children: [
+                  Icon(Icons.warning, color: Colors.red.shade700, size: 16),
+                  const SizedBox(width: 6),
+                  Expanded(
+                    child: Text(
+                      Localizations.localeOf(context).languageCode == 'vi'
+                          ? 'CÔNG CỤ GIÁO DỤC: Chỉ dùng để học tập, không thay thế đánh giá lâm sàng'
+                          : 'EDUCATIONAL TOOL: For learning only, not for clinical decisions',
+                      style: TextStyle(
+                        fontSize: 10,
+                        color: Colors.red.shade700,
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
 
-          // Parameters
-          Expanded(
-            child: ListView(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              children: [
-                _buildVitalSignSection(
+          // Parameters as Sliver List
+          SliverList(
+            delegate: SliverChildListDelegate([
+              const SizedBox(height: 8),
+              const SizedBox(height: 8),
+              
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: _buildVitalSignSection(
                   localizations.mews_systolic_bp,
                   systolicBPController,
                   Icons.favorite,
@@ -289,9 +255,12 @@ class _MEWSPageState extends State<MEWSPage> {
                   systolicBPScore,
                   localizations,
                 ),
-                const SizedBox(height: 16),
-                
-                _buildVitalSignSection(
+              ),
+              const SizedBox(height: 12),
+              
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: _buildVitalSignSection(
                   localizations.mews_heart_rate,
                   heartRateController,
                   Icons.monitor_heart,
@@ -299,9 +268,12 @@ class _MEWSPageState extends State<MEWSPage> {
                   heartRateScore,
                   localizations,
                 ),
-                const SizedBox(height: 16),
-                
-                _buildVitalSignSection(
+              ),
+              const SizedBox(height: 12),
+              
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: _buildVitalSignSection(
                   localizations.mews_respiratory_rate,
                   respiratoryRateController,
                   Icons.air,
@@ -309,9 +281,12 @@ class _MEWSPageState extends State<MEWSPage> {
                   respiratoryRateScore,
                   localizations,
                 ),
-                const SizedBox(height: 16),
-                
-                _buildVitalSignSection(
+              ),
+              const SizedBox(height: 12),
+              
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: _buildVitalSignSection(
                   localizations.mews_temperature,
                   temperatureController,
                   Icons.device_thermostat,
@@ -319,17 +294,23 @@ class _MEWSPageState extends State<MEWSPage> {
                   temperatureScore,
                   localizations,
                 ),
-                const SizedBox(height: 16),
-                
-                _buildAVPUSection(localizations),
-                
-                // Medical Citation
-                const SizedBox(height: 16),
-                _buildCitationWidget(localizations),
-                
-                const SizedBox(height: 20),
-              ],
-            ),
+              ),
+              const SizedBox(height: 12),
+              
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: _buildAVPUSection(localizations),
+              ),
+              
+              // Medical Citation
+              const SizedBox(height: 16),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: _buildCitationWidget(localizations),
+              ),
+              
+              const SizedBox(height: 20),
+            ]),
           ),
         ],
       ),
@@ -345,9 +326,9 @@ class _MEWSPageState extends State<MEWSPage> {
     AppLocalizations localizations,
   ) {
     return Container(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(8),
         border: Border.all(color: color.withValues(alpha: 0.3)),
         color: color.withValues(alpha: 0.05),
       ),
@@ -356,49 +337,51 @@ class _MEWSPageState extends State<MEWSPage> {
         children: [
           Row(
             children: [
-              Icon(icon, color: color, size: 24),
-              const SizedBox(width: 8),
-              Text(
-                title,
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: color,
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 12),
-          Row(
-            children: [
+              Icon(icon, color: color, size: 20),
+              const SizedBox(width: 6),
               Expanded(
-                child: TextField(
-                  controller: controller,
-                  keyboardType: const TextInputType.numberWithOptions(decimal: true),
-                  decoration: InputDecoration(
-                    border: const OutlineInputBorder(),
-                    isDense: true,
-                    hintText: localizations.mews_enter_value,
+                child: Text(
+                  title,
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                    color: color,
                   ),
                 ),
               ),
-              const SizedBox(width: 12),
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 decoration: BoxDecoration(
                   color: score == 0 ? Colors.green : 
                          score <= 2 ? Colors.orange : Colors.red,
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(6),
                 ),
                 child: Text(
                   localizations.mews_score_label(score),
                   style: const TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
+                    fontSize: 12,
                   ),
                 ),
               ),
             ],
+          ),
+          const SizedBox(height: 8),
+          SizedBox(
+            height: 40,
+            child: TextField(
+              controller: controller,
+              keyboardType: const TextInputType.numberWithOptions(decimal: true),
+              decoration: InputDecoration(
+                border: const OutlineInputBorder(),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                isDense: true,
+                hintText: localizations.mews_enter_value,
+                hintStyle: const TextStyle(fontSize: 14),
+              ),
+              style: const TextStyle(fontSize: 14),
+            ),
           ),
         ],
       ),
@@ -407,9 +390,9 @@ class _MEWSPageState extends State<MEWSPage> {
 
   Widget _buildAVPUSection(AppLocalizations localizations) {
     return Container(
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(8),
         border: Border.all(color: Colors.purple.shade300),
         color: Colors.purple.withValues(alpha: 0.05),
       ),
@@ -418,64 +401,72 @@ class _MEWSPageState extends State<MEWSPage> {
         children: [
           Row(
             children: [
-              Icon(Icons.psychology, color: Colors.purple.shade600, size: 24),
-              const SizedBox(width: 8),
+              Icon(Icons.psychology, color: Colors.purple.shade600, size: 20),
+              const SizedBox(width: 6),
               Text(
                 localizations.mews_consciousness_level,
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 14,
                   fontWeight: FontWeight.bold,
                   color: Colors.purple.shade600,
                 ),
               ),
             ],
           ),
-          const SizedBox(height: 12),
+          const SizedBox(height: 8),
           Column(
             children: [
-              RadioListTile<int>(
-                title: Text(localizations.mews_avpu_alert),
-                subtitle: Text(localizations.mews_avpu_alert_subtitle),
-                value: 0,
-                // ignore: deprecated_member_use
-                groupValue: avpuScore,
-                // ignore: deprecated_member_use
-                onChanged: (value) => setState(() => avpuScore = value!),
-                dense: true,
-              ),
-              RadioListTile<int>(
-                title: Text(localizations.mews_avpu_voice),
-                subtitle: Text(localizations.mews_avpu_voice_subtitle),
-                value: 1,
-                // ignore: deprecated_member_use
-                groupValue: avpuScore,
-                // ignore: deprecated_member_use
-                onChanged: (value) => setState(() => avpuScore = value!),
-                dense: true,
-              ),
-              RadioListTile<int>(
-                title: Text(localizations.mews_avpu_pain),
-                subtitle: Text(localizations.mews_avpu_pain_subtitle),
-                value: 2,
-                // ignore: deprecated_member_use
-                groupValue: avpuScore,
-                // ignore: deprecated_member_use
-                onChanged: (value) => setState(() => avpuScore = value!),
-                dense: true,
-              ),
-              RadioListTile<int>(
-                title: Text(localizations.mews_avpu_unresponsive),
-                subtitle: Text(localizations.mews_avpu_unresponsive_subtitle),
-                value: 3,
-                // ignore: deprecated_member_use
-                groupValue: avpuScore,
-                // ignore: deprecated_member_use
-                onChanged: (value) => setState(() => avpuScore = value!),
-                dense: true,
-              ),
+              _buildCompactRadioTile(localizations.mews_avpu_alert, 0),
+              _buildCompactRadioTile(localizations.mews_avpu_voice, 1),
+              _buildCompactRadioTile(localizations.mews_avpu_pain, 2),
+              _buildCompactRadioTile(localizations.mews_avpu_unresponsive, 3),
             ],
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildCompactRadioTile(String title, int value) {
+    final isSelected = avpuScore == value;
+    return InkWell(
+      onTap: () => setState(() => avpuScore = value),
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 4),
+        child: Row(
+          children: [
+            Container(
+              width: 18,
+              height: 18,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(
+                  color: isSelected 
+                    ? Theme.of(context).primaryColor 
+                    : Colors.grey,
+                  width: 2,
+                ),
+                color: isSelected 
+                  ? Theme.of(context).primaryColor 
+                  : Colors.transparent,
+              ),
+              child: isSelected
+                ? const Icon(
+                    Icons.circle,
+                    size: 10,
+                    color: Colors.white,
+                  )
+                : null,
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Text(
+                title,
+                style: const TextStyle(fontSize: 13),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -494,39 +485,193 @@ class _MEWSPageState extends State<MEWSPage> {
 
   Widget _buildCitationWidget(AppLocalizations localizations) {
     return Container(
-      padding: const EdgeInsets.all(12),
+      padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
         color: Colors.blue.shade50,
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(6),
         border: Border.all(color: Colors.blue.shade200),
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Icon(Icons.article, color: Colors.blue.shade700, size: 16),
-              const SizedBox(width: 6),
-              Text(
-                localizations.mews_references_title,
-                style: TextStyle(
-                  fontSize: 12,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.blue.shade700,
-                ),
+      child: ExpansionTile(
+        title: Row(
+          children: [
+            Icon(Icons.article, color: Colors.blue.shade700, size: 14),
+            const SizedBox(width: 4),
+            Text(
+              localizations.mews_references_title,
+              style: TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
+                color: Colors.blue.shade700,
               ),
-            ],
-          ),
-          const SizedBox(height: 6),
+            ),
+          ],
+        ),
+        childrenPadding: const EdgeInsets.only(top: 4, bottom: 8),
+        children: [
           Text(
             'Subbe CP, et al. Validation of a modified Early Warning Score in medical admissions. QJM. 2001;94(10):521-6.\n\nGoldhill DR, et al. A physiologically-based early warning score for ward patients: the association between score and outcome. Anaesthesia. 2005;60(6):547-53.',
             style: TextStyle(
-              fontSize: 11,
+              fontSize: 10,
               color: Colors.blue.shade600,
             ),
           ),
         ],
       ),
     );
+  }
+}
+
+// Sticky Header Delegate for Score Display
+class _MEWSScoreHeaderDelegate extends SliverPersistentHeaderDelegate {
+  final double minHeight;
+  final double maxHeight;
+  final Color scoreColor;
+  final int totalScore;
+  final int systolicBPScore;
+  final int heartRateScore;
+  final int respiratoryRateScore;
+  final int temperatureScore;
+  final int avpuScore;
+  final String interpretation;
+  final String actionRequired;
+  final AppLocalizations localizations;
+
+  _MEWSScoreHeaderDelegate({
+    required this.minHeight,
+    required this.maxHeight,
+    required this.scoreColor,
+    required this.totalScore,
+    required this.systolicBPScore,
+    required this.heartRateScore,
+    required this.respiratoryRateScore,
+    required this.temperatureScore,
+    required this.avpuScore,
+    required this.interpretation,
+    required this.actionRequired,
+    required this.localizations,
+  });
+
+  @override
+  Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {
+    final progress = (shrinkOffset / maxExtent).clamp(0.0, 1.0);
+    final isVietnamese = Localizations.localeOf(context).languageCode == 'vi';
+    
+    return Material(
+      elevation: progress * 4,
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          border: Border(
+            bottom: BorderSide(
+              color: scoreColor.withValues(alpha: 0.2 + (progress * 0.3)),
+              width: 1 + progress,
+            ),
+          ),
+        ),
+        child: SafeArea(
+          bottom: false,
+          child: Container(
+            padding: EdgeInsets.symmetric(
+              horizontal: 10, 
+              vertical: 4 + (2 * (1 - progress)),
+            ),
+            decoration: BoxDecoration(
+              color: scoreColor.withValues(alpha: 0.05 + (progress * 0.05)),
+            ),
+            child: progress > 0.7
+                ? _buildCompactHeader(isVietnamese)
+                : _buildFullHeader(context, isVietnamese, progress),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildCompactHeader(bool isVietnamese) {
+    return Container(
+      width: double.infinity,
+      height: minHeight,
+      alignment: Alignment.center,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          // Score section
+          Text(
+            '$totalScore MEWS',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              color: scoreColor,
+            ),
+          ),
+          // Interpretation
+          Flexible(
+            child: Text(
+              interpretation,
+              style: TextStyle(
+                fontSize: 10,
+                fontWeight: FontWeight.w600,
+                color: scoreColor,
+              ),
+              overflow: TextOverflow.ellipsis,
+              maxLines: 1,
+              textAlign: TextAlign.right,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildFullHeader(BuildContext context, bool isVietnamese, double progress) {
+    final opacity = (1 - progress).clamp(0.0, 1.0);
+    
+    return Opacity(
+      opacity: opacity,
+      child: Container(
+        width: double.infinity,
+        height: maxHeight * (1 - progress) + minHeight * progress,
+        alignment: Alignment.center,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            // Score section
+            Text(
+              '$totalScore MEWS',
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: scoreColor,
+              ),
+            ),
+            // Interpretation section
+            Flexible(
+              child: Text(
+                interpretation,
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w600,
+                  color: scoreColor,
+                ),
+                overflow: TextOverflow.ellipsis,
+                maxLines: 1,
+                textAlign: TextAlign.right,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  @override
+  double get maxExtent => maxHeight;
+
+  @override
+  double get minExtent => minHeight;
+
+  @override
+  bool shouldRebuild(covariant SliverPersistentHeaderDelegate oldDelegate) {
+    return oldDelegate != this;
   }
 }

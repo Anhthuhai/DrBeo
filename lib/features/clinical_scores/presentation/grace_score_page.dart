@@ -583,7 +583,7 @@ class _GraceScorePageState extends State<GraceScorePage> {
               Expanded(
                 child: TextField(
                   controller: _ageController,
-                  keyboardType: TextInputType.number,
+                  keyboardType: const TextInputType.numberWithOptions(decimal: true),
                   decoration: InputDecoration(
                     labelText: AppLocalizations.of(context)!.grace_age_label.split('(')[0].trim(),
                     suffixText: AppLocalizations.of(context)!.years,
@@ -599,7 +599,7 @@ class _GraceScorePageState extends State<GraceScorePage> {
               Expanded(
                 child: TextField(
                   controller: _heartRateController,
-                  keyboardType: TextInputType.number,
+                  keyboardType: const TextInputType.numberWithOptions(decimal: true),
                   decoration: InputDecoration(
                     labelText: AppLocalizations.of(context)!.grace_heart_rate_label.split('(')[0].trim(),
                     suffixText: AppLocalizations.of(context)!.grace_per_minute_unit,
@@ -620,7 +620,7 @@ class _GraceScorePageState extends State<GraceScorePage> {
               Expanded(
                 child: TextField(
                   controller: _systolicBPController,
-                  keyboardType: TextInputType.number,
+                  keyboardType: const TextInputType.numberWithOptions(decimal: true),
                   decoration: InputDecoration(
                     labelText: AppLocalizations.of(context)!.grace_systolic_bp_label.split('(')[0].trim(),
                     suffixText: 'mmHg',
@@ -674,7 +674,7 @@ class _GraceScorePageState extends State<GraceScorePage> {
               flex: 5,
               child: TextField(
                 controller: controller,
-                keyboardType: TextInputType.number,
+                keyboardType: const TextInputType.numberWithOptions(decimal: true),
                 onChanged: onValueChanged,
                 decoration: InputDecoration(
                   labelText: label,

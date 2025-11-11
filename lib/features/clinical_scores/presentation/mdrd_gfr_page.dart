@@ -475,7 +475,7 @@ class _MdrdGfrPageState extends State<MdrdGfrPage> {
               Expanded(
                 child: TextField(
                   controller: _ageController,
-                  keyboardType: TextInputType.number,
+                  keyboardType: const TextInputType.numberWithOptions(decimal: true),
                   onChanged: (value) => _calculateGFR(),
                   decoration: InputDecoration(
                     labelText: AppLocalizations.of(context)!.mdrd_gfr_age,
@@ -582,7 +582,7 @@ class _MdrdGfrPageState extends State<MdrdGfrPage> {
               flex: 5,
               child: TextField(
                 controller: controller,
-                keyboardType: TextInputType.number,
+                keyboardType: const TextInputType.numberWithOptions(decimal: true),
                 onChanged: onValueChanged,
                 decoration: InputDecoration(
                   labelText: label,

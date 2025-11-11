@@ -103,10 +103,12 @@ class _AspectScorePageState extends State<AspectScorePage> {
             pinned: true,
             automaticallyImplyLeading: false,
             toolbarHeight: 70,
-            backgroundColor: riskColor.withValues(alpha: 0.1),
+            backgroundColor: Colors.white,
+            elevation: 4,
+            shadowColor: riskColor.withValues(alpha: 0.3),
             flexibleSpace: Container(
               decoration: BoxDecoration(
-                color: riskColor.withValues(alpha: 0.1),
+                color: Colors.white,
                 border: Border(
                   bottom: BorderSide(color: riskColor.withValues(alpha: 0.3)),
                 ),

@@ -428,7 +428,7 @@ class _SurgicalApgarScorePageState extends State<SurgicalApgarScorePage> {
           
           TextField(
             controller: _heartRateController,
-            keyboardType: TextInputType.number,
+            keyboardType: const TextInputType.numberWithOptions(decimal: true),
             decoration: InputDecoration(
               labelText: AppLocalizations.of(context)!.surgical_apgar_heart_rate_label,
               suffixText: AppLocalizations.of(context)!.surgical_apgar_heart_rate_unit,
@@ -444,7 +444,7 @@ class _SurgicalApgarScorePageState extends State<SurgicalApgarScorePage> {
           
           TextField(
             controller: _bloodPressureController,
-            keyboardType: TextInputType.number,
+            keyboardType: const TextInputType.numberWithOptions(decimal: true),
             decoration: InputDecoration(
               labelText: AppLocalizations.of(context)!.surgical_apgar_blood_pressure_label,
               suffixText: AppLocalizations.of(context)!.surgical_apgar_blood_pressure_unit,
@@ -460,7 +460,7 @@ class _SurgicalApgarScorePageState extends State<SurgicalApgarScorePage> {
           
           TextField(
             controller: _bloodLossController,
-            keyboardType: TextInputType.number,
+            keyboardType: const TextInputType.numberWithOptions(decimal: true),
             decoration: InputDecoration(
               labelText: AppLocalizations.of(context)!.surgical_apgar_blood_loss_label,
               suffixText: AppLocalizations.of(context)!.surgical_apgar_blood_loss_unit,

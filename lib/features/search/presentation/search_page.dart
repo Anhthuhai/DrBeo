@@ -87,7 +87,8 @@ class _SearchPageState extends State<SearchPage> {
 
   void _performSearch(String query) {
     final results = <SearchResult>[];
-    final lowerQuery = query.toLowerCase();
+    final lowerQuery = query.toLowerCase().trim();
+    final queryWords = lowerQuery.split(RegExp(r'\s+'));
 
     for (final item in _allItems) {
       // Apply filter if selected
@@ -97,19 +98,51 @@ class _SearchPageState extends State<SearchPage> {
       
       int score = 0;
       
-      // Exact title match
+      // Exact matches
+      if (item.title.toLowerCase() == lowerQuery) {
+        score += 1000;
+      } else if (item.subtitle.toLowerCase() == lowerQuery) {
+        score += 800;
+      }
+      
+      // Contains matches
       if (item.title.toLowerCase().contains(lowerQuery)) {
+        score += 200;
+      }
+      
+      if (item.subtitle.toLowerCase().contains(lowerQuery)) {
         score += 100;
       }
       
-      // Subtitle match
-      if (item.subtitle.toLowerCase().contains(lowerQuery)) {
+      if (item.category.toLowerCase().contains(lowerQuery)) {
         score += 50;
       }
       
-      // Category match
-      if (item.category.toLowerCase().contains(lowerQuery)) {
-        score += 25;
+      // Word-based matching for better results
+      for (final word in queryWords) {
+        if (word.length < 2) continue;
+        
+        if (item.title.toLowerCase().contains(word)) {
+          score += 75;
+        }
+        if (item.subtitle.toLowerCase().contains(word)) {
+          score += 40;
+        }
+        if (item.category.toLowerCase().contains(word)) {
+          score += 20;
+        }
+      }
+      
+      // Acronym matching
+      final titleWords = item.title.split(RegExp(r'[\s\-_]+'));
+      final acronym = titleWords
+          .where((w) => w.isNotEmpty)
+          .map((w) => w[0])
+          .join('')
+          .toLowerCase();
+      
+      if (acronym == lowerQuery) {
+        score += 500;
       }
       
       if (score > 0) {

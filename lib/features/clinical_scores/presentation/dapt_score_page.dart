@@ -418,7 +418,7 @@ class _DaptScorePageState extends State<DaptScorePage> {
           
           TextField(
             controller: _ageController,
-            keyboardType: TextInputType.number,
+            keyboardType: const TextInputType.numberWithOptions(decimal: true),
             decoration: InputDecoration(
               labelText: AppLocalizations.of(context)!.dapt_age_label,
               suffixText: AppLocalizations.of(context)!.dapt_age_unit,

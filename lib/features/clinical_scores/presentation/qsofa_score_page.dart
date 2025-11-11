@@ -380,7 +380,7 @@ class _QsofaScorePageState extends State<QsofaScorePage> {
           
           TextField(
             controller: _respiratoryRateController,
-            keyboardType: TextInputType.number,
+            keyboardType: const TextInputType.numberWithOptions(decimal: true),
             decoration: InputDecoration(
               labelText: l10n.respiratory_rate,
               suffixText: 'breaths/min',
@@ -396,7 +396,7 @@ class _QsofaScorePageState extends State<QsofaScorePage> {
           
           TextField(
             controller: _systolicBpController,
-            keyboardType: TextInputType.number,
+            keyboardType: const TextInputType.numberWithOptions(decimal: true),
             decoration: InputDecoration(
               labelText: l10n.systolic_bp,
               suffixText: 'mmHg',

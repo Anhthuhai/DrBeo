@@ -565,7 +565,7 @@ class _CrusadeBleedingRiskPageState extends State<CrusadeBleedingRiskPage> {
           // Heart Rate
           TextField(
             controller: _heartRateController,
-            keyboardType: TextInputType.number,
+            keyboardType: const TextInputType.numberWithOptions(decimal: true),
             decoration: InputDecoration(
               labelText: AppLocalizations.of(context)!.crusade_heart_rate,
               suffixText: AppLocalizations.of(context)!.crusade_heart_rate_unit,
@@ -582,7 +582,7 @@ class _CrusadeBleedingRiskPageState extends State<CrusadeBleedingRiskPage> {
           // Systolic BP
           TextField(
             controller: _systolicBpController,
-            keyboardType: TextInputType.number,
+            keyboardType: const TextInputType.numberWithOptions(decimal: true),
             decoration: InputDecoration(
               labelText: AppLocalizations.of(context)!.crusade_systolic_bp,
               suffixText: AppLocalizations.of(context)!.crusade_systolic_bp_unit,

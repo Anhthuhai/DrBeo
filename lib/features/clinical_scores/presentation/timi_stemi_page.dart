@@ -524,7 +524,7 @@ class _TimiStemiPageState extends State<TimiStemiPage> {
               Expanded(
                 child: TextField(
                   controller: _ageController,
-                  keyboardType: TextInputType.number,
+                  keyboardType: const TextInputType.numberWithOptions(decimal: true),
                   decoration: InputDecoration(
                     labelText: Localizations.localeOf(context).languageCode == 'vi' 
                       ? 'Tuổi' 
@@ -542,7 +542,7 @@ class _TimiStemiPageState extends State<TimiStemiPage> {
               Expanded(
                 child: TextField(
                   controller: _weightController,
-                  keyboardType: TextInputType.number,
+                  keyboardType: const TextInputType.numberWithOptions(decimal: true),
                   decoration: InputDecoration(
                     labelText: Localizations.localeOf(context).languageCode == 'vi' 
                       ? 'Cân nặng' 
@@ -565,7 +565,7 @@ class _TimiStemiPageState extends State<TimiStemiPage> {
               Expanded(
                 child: TextField(
                   controller: _heartRateController,
-                  keyboardType: TextInputType.number,
+                  keyboardType: const TextInputType.numberWithOptions(decimal: true),
                   decoration: InputDecoration(
                     labelText: Localizations.localeOf(context).languageCode == 'vi' 
                       ? 'Nhịp tim'
@@ -583,7 +583,7 @@ class _TimiStemiPageState extends State<TimiStemiPage> {
               Expanded(
                 child: TextField(
                   controller: _systolicBPController,
-                  keyboardType: TextInputType.number,
+                  keyboardType: const TextInputType.numberWithOptions(decimal: true),
                   decoration: InputDecoration(
                     labelText: Localizations.localeOf(context).languageCode == 'vi' 
                       ? 'Huyết áp tâm thu'

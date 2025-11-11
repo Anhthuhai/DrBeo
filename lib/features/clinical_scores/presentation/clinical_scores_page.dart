@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../core/theme/app_theme.dart';
+import '../../../core/utils/search_helper.dart';
 import '../../../l10n/app_localizations.dart';
 import '../../../shared/services/bookmark_service.dart';
 import '../../../shared/models/bookmark_item.dart';
@@ -80,6 +81,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'title': 'Glasgow Coma Scale (GCS)',
       'subtitle': 'Eye, Verbal, Motor Response Assessment',
       'description': AppLocalizations.of(context)!.gcs_list_description,
+      'searchKeywords': 'glasgow coma scale gcs eye verbal motor response consciousness ý thức mắt nói vận động hôn mê',
       'icon': Icons.visibility,
       'color': Colors.blue.shade600,
       'page': const GlasgowComaScalePage(),
@@ -89,6 +91,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'title': 'APACHE II',
       'subtitle': 'Acute Physiology and Chronic Health Evaluation',
       'description': AppLocalizations.of(context)!.apache_list_description,
+      'searchKeywords': 'apache icu mortality prediction dự đoán tử vong hồi sức cấp cứu intensive care',
       'icon': Icons.monitor_heart,
       'color': Colors.red.shade600,
       'page': const ApacheIIPage(),
@@ -98,6 +101,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'title': 'SOFA Score',
       'subtitle': 'Sequential Organ Failure Assessment',
       'description': AppLocalizations.of(context)!.sofa_list_description,
+      'searchKeywords': 'sofa sequential organ failure assessment suy đa cơ quan',
       'icon': Icons.favorite,
       'color': Colors.orange.shade600,
       'page': const SOFAScorePage(),
@@ -107,6 +111,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'title': 'SAPS II',
       'subtitle': 'Simplified Acute Physiology Score',
       'description': AppLocalizations.of(context)!.saps_list_description,
+      'searchKeywords': 'saps simplified acute physiology score icu mortality dự đoán tử vong',
       'icon': Icons.analytics,
       'color': Colors.purple.shade600,
       'page': const SAPSII(),
@@ -145,6 +150,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'title': 'MEWS',
       'subtitle': 'Modified Early Warning Score',
       'description': AppLocalizations.of(context)!.mews_list_description,
+      'searchKeywords': 'mews modified early warning score cảnh báo sớm vital signs dấu hiệu sinh tồn',
       'icon': Icons.warning_amber,
       'color': Colors.amber.shade600,
       'page': const MEWSPage(),
@@ -165,6 +171,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'title': 'GRACE Score',
       'subtitle': 'Global Registry of Acute Coronary Events',
       'description': AppLocalizations.of(context)!.grace_list_description,
+      'searchKeywords': 'grace score acute coronary events acs stemi nstemi tim mạch đau ngực',
       'icon': Icons.monitor_heart_outlined,
       'color': Colors.red.shade700,
       'page': const GraceScorePage(),
@@ -174,6 +181,7 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
       'title': 'TIMI STEMI',
       'subtitle': 'TIMI Risk Score for STEMI',
       'description': AppLocalizations.of(context)!.timi_stemi_list_description,
+      'searchKeywords': 'timi stemi st elevation myocardial infarction nhồi máu cơ tim',
       'icon': Icons.favorite_border,
       'color': Colors.red.shade500,
       'page': const TimiStemiPage(),
@@ -455,14 +463,10 @@ class _ClinicalScoresPageState extends State<ClinicalScoresPage> {
     if (_searchQuery.isEmpty) {
       return _scoresList;
     }
-    return _scoresList.where((score) {
-      final query = _searchQuery.toLowerCase();
-      return score['title'].toLowerCase().contains(query) ||
-             score['subtitle'].toLowerCase().contains(query) ||
-             score['description'].toLowerCase().contains(query) ||
-             (score['searchKeywords'] != null && 
-              score['searchKeywords'].toLowerCase().contains(query));
-    }).toList();
+    
+    // Use enhanced search helper
+    final searchResults = SearchHelper.searchClinicalScores(_scoresList, _searchQuery);
+    return searchResults.map((result) => result.item).toList();
   }
 
   Future<void> _toggleBookmark(Map<String, dynamic> scoreData) async {
